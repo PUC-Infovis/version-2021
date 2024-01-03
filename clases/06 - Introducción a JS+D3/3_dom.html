@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>DOM</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>JavaScript y D3</h1>
+					<h2 style="color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>DOM</h1>
+					<h1 style="font-size: 1.6em; color: black;">JavaScript y D3</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+					<br>
+
+					<p>Forma de representar el contenido de un documento HTML como objeto de programación.</p>
+
+				</section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code"><code data-trim data-line-numbers class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  ...
+&lt;/html&gt;
+          </code></pre>
+
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+        <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code"><code data-trim data-line-numbers class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code></pre>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code"><code data-trim data-line-numbers class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code></pre>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+          <br>
+          <img src="./assets/DOM.png" height="400px" style="display: block;"/>
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey; position: absolute; bottom: 2em;">(Fuente: <a href="https://en.wikipedia.org/wiki/Document_Object_Model/">DOM en Wikipedia</a>)</p>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code"><code data-trim data-line-numbers="|1|3" class="javascript">
+            console.log(document.URL);
+
+            document.children; // [&lt;html&gt;]
+          </code></pre>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code"><code data-trim data-line-numbers class="javascript">
+            const elemento = document.getElementById("identificador");
+          </code></pre>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code"><code data-trim data-line-numbers class="javascript">
+            const elemento = document.getElementById("identificador");
+          </code></pre>
+
+          <br>
+
+          <pre data-id="code1"><code data-trim data-line-numbers class="javascript">
+            const parrafo = document.createElement("p");
+          </code></pre>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code"><code data-trim data-line-numbers class="javascript">
+            const elemento = document.getElementById("identificador");
+          </code></pre>
+
+          <br>
+
+          <pre data-id="code1"><code data-trim data-line-numbers class="javascript">
+            const parrafo = document.createElement("p");
+            const texto = document.createTextNode("¡Soy texto!");
+          </code></pre>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code"><code data-trim data-line-numbers class="javascript">
+            const elemento = document.getElementById("identificador");
+          </code></pre>
+
+          <br>
+
+          <pre data-id="code1"><code data-trim data-line-numbers class="javascript">
+            const parrafo = document.createElement("p");
+            const texto = document.createTextNode("¡Soy texto!");
+            parrafo.appendChild(texto);
+          </code></pre>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code1"><code data-trim data-line-numbers class="javascript">
+            const elementoRaiz = document.getElementById("raiz");
+
+            const parrafo = document.createElement("p");
+            const texto = document.createTextNode("¡Soy texto!");
+            parrafo.appendChild(texto);
+
+            elementoRaiz.appendChild(parrafo);
+          </code></pre>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code2"><code data-trim class="javascript">
+            // Define una única clase a elemento
+            elemento.className = "importante";
+          </code></pre>
+
+          <pre data-id="code3"><code data-trim class="javascript">
+            // Agrega una clase al elemento
+            elemento.classList.add("otra clase");
+
+            // Remueve una clase al elemento
+            elemento.classList.remove("otra clase");
+          </code></pre>
+
+          <pre data-id="code4"><code data-trim class="javascript">
+            // Define una único id a elemento
+            elemento.id = "principal";
+          </code></pre>
+
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code1"><code data-trim class="javascript">
+            // Conecta ocurrencia de evento sobre elemento a función
+            elemento.addEventListener(evento, funcion);
+          </code></pre>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code1"><code data-trim data-line-numbers="|6|6-14|9-11|13" class="javascript">
+            const raiz = document.getElementById("raiz");
+            const principal = document.getElementById("principal");
+            
+            let contador = 0;
+            
+            principal.addEventListener("click", () => {
+              contador += 1;
+            
+              const parrafo = document.createElement("p");
+              const texto = document.createTextNode(`Número de clics: ${contador}`);
+              parrafo.appendChild(texto);
+            
+              raiz.appendChild(parrafo);
+            });            
+          </code></pre>
+
+        </section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>DOM</h1>
+					<h1 style="font-size: 1.6em; color: black;">JavaScript y D3</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

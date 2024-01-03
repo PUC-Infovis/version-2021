@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Abstracción de datos</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Abstracción de datos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>El contenido</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>El contenido</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. Semantica y tipos de datos</h4>
+					<h4 style="color: black;">2. Tipos de <i>datasets</i></h4>
+					<h4 style="color: black;">3. Tipos de atributos</h4>
+					<h4 style="color: black;">4. Abstracción y derivaciones de datos</h4>
+        </section>
+        
+
+        <section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Redes 🕸 - ¿enlaces con atributos?</h3>
+
+          <br>
+          
+          <p>Algunas respuestas en Loom:</p>
+          <ul>
+            <li>Rutas de vuelos, enlazan origen y destino, y pueden tener atributos: distancia, tiempo de vuelo, altura, etc...</li>
+            <li>Relaciones genealógicas entre personas, con tipos: si son hermanos, padres o parejas. </li>
+            <li>Las amistades en Facebook, tienen atributo de fecha de inicio.</li>
+            <li>En aplicación tipo Uber, las interacciones entre usuaries y conductores, la relación puede tener atributos como la fecha/hora, precio del viaje, dirección de origen y destino.</li>
+            <li>Deuda entre personas, donde el monto de la deuda es un atributo.</li>
+            <li>Colaboración entre artistas musicales, donde la cantidad de colaboraciones puede ser un atributo.</li>
+          </ul>
+					
+        </section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3>Grilla 🥅🗑 - <i>Datasets</i> de campo</h3>
+
+          <br>
+          
+          <p>Valores de atributos asociados a celdas que se encuentran ubicadas en un espacio continuo. Al ser un espacio continuo, conceptualmente hay infinitas posiciones para medir.</p>
+
+          <p>El tipo de dato de grilla específica como hacer la medición: si uniformemente, según una estructura geométrica, u otras estrategias.</p>
+
+          <p>El viento es un fenómeno continuo que se puede medir como campo, otros son la temperatura, velocidad, fuerza, presión...</p>
+					
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3>Grilla 🥅🗑 - <i>Datasets</i> de campo</h3>
+
+          <br>
+
+          <img src="./assets/campo.png" height="300px" style="margin-right: 50px;"/> 
+          <img src="./assets/scivis.jpg" height="300px"/> 
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey;">(Fuente: The Visualization Handbook (Hansen y Johnson))</p>
+          <p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://www.cs.rug.nl/svcg/SciVis/SciVis">Scientific Visualization Research</a>)</p>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade" data-background-iframe="http://hint.fm/wind/" data-background-interactive style="height: 100%;">
+			
+          <p style="font-size: 1em; color: grey; position: absolute; bottom: 2em;">(Fuente: <a href="http://hint.fm/wind/"><i>Mind maps</i></a>). </p>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3>InfoVis versus SciVis</h3>
+
+          <br>
+
+          <p><span style="color:#f92696;">Visualización de Información (InfoVis)</span> se enfoca en datos "abstractos": tablas, redes, geométricos.</p>
+
+          <br>
+
+          <p><span style="color:#f92696;">Visualización Científica (SciVis)</span> se enfoca en datos "espaciales": geométricos y campos.</p>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Atributos llave 🔑 - ¿ejemplos?</h3>
+
+          <br>
+          
+          <p>Algunas respuestas en Loom:</p>
+          <ul>
+            <li>Número de alumno.</li>
+            <li>Patentes de auto.</li>
+            <li>¿Huella digital?</li>
+          </ul>
+
+          <br>
+          
+          <p>¿Se les ocurren casos de atributos temporales? Tanto como llave o como valor.</p>
+        </section>
+        
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Derivación de datos</h3>
+          
+          <br>
+
+					<p>Proceso de transformación de datos iniciales a otra forma, y realizar su abstracción una vez transformado.</p>
+
+          <br>
+					<p>Temperatura 🌡:</p>
+					<p> 25°C, -14°C, 27°C, 11°C, 40°C (Cuantitativo)</p>
+					<p> Cálido, Frío, Caluroso, Frío, Caluroso (Ordinal)</p>
+          <p> Seguro, Peligroso, Seguro, Seguro, Peligroso (Categórico)</p>
+        </section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Más dudas</h3>
+
+          <br>
+          
+          <ul>
+            <li>¿Por qué las posiciones se consideran como un tipo de dato aparte a los atributos? A primera vista me hace sentido que posición sea un caso específico de atributo.</li>
+            <li>¿Una foto puede considerarse una grilla? </li>
+            <li>¿Pueden haber atributos no cuantitativos? </li>
+          </ul>
+
+        </section>
+        
+        
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Abstracción de datos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Nos vemos!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

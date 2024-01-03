@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Examen Nicolás Castillo</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+
+    <body> 
+        
+        <div class='container'> 
+
+            <div>
+                <h1 class="title"> 👨🏽‍💻 Tendencias y relaciones en tecnologías de Programación</h1>
+            </div>
+
+            <p class="introduction"> 
+                La biblia, tambien conocida como <span class="stackoverflow">StackOverflow</span>, realiza una encuesta anual
+                en donde le preguntan a sus usuarios sobre sus experiencias con las tecnologías de programación. 
+                Estas preguntas tienen que ver, por ejemplo, con las tecnologías que aman, odia, les interesan, o que estan usando actualmente.
+            </p>
+
+            <div class="flex-container"> 
+                
+                <div class='container-top'> 
+
+                    <div class="info-chart-top"> 
+                        <h2 class="subtitle">Acerca del grafico de la derecha... 👀 </h2> 
+                        <br>
+                        <p> 
+                            A la derecha se puede ver un <span class="bumpchart">bump chart</span> que enseña un ranking (top 10) 
+                            de los lenguajes de programación más usados por los usuarios de StackOverflow durante los ultimos 6 años.
+
+                            <br>
+
+                            <li> 
+                                Coloca el cursor sobre una de las lineas para hacerle enfasis a esta.
+                            </li>
+                            <br>
+                            <li>
+                                Selecciona/deselecciona lineas apretando los nombres correspondientes en las leyendas.
+                            </li>
+                            <br>
+                            <li>
+                                "Mostrar todos" devolverá todas las lineas a la visualización.
+                            </li>
+                            <br>
+                            <li>
+                                Ojo! Las herramientas seleccionadas en el ranking tambien afectaran los nodos correspondientes en la red de abajo!
+                            </li>
+
+                        </p>
+
+                    
+                    </div>
+
+                    <div class="subcontainer-top"> 
+
+                        <div class="chart-container" ></div> 
+                    
+                        <div class="chart-leyend-container">
+                            <div class="btn-show-all"> Mostrar todos</div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                
+                <div class="container-bottom">
+                    
+                    <div class='subcontainer-bottom'>
+                        
+                        <div class='net-leyend-container' id='net-leyend-container'>
+                                <div class="leyendItem" id="leyend-language" > Lenguaje </div>
+                                <div class="leyendItem" id="leyend-framework"> Framework </div>
+                                <div class="leyendItem" id="leyend-platform"> Plataforma </div>
+                                <div class="leyendItem" id="leyend-database"> Bases de datos </div>
+                                <div class="leyendItem" id="leyend-showall"> Mostrar todos </div>
+                        </div>
+                        
+                        <div class="netgraph-container"> </div>
+                    </div>
+                    
+                    <div class="info-chart-bottom"> 
+                        <h2 class="subtitle">Acerca de la red ... 🤔 </h2> 
+                        
+                        <p> 
+                            A la izquierda tenemos una <span class="netgraph"> red de nodos</span> que codifican las relaciones 
+                            entre distintas tecnologías de programación. Tambien se pueden ver si estas tecnologías corresponden a 
+                            un lenguaje de programación, un <span class="italic"> framework </span>, una plataforma o base de datos.
+
+                            <br>
+
+                            <li> 
+                                Los nodos correspondientes a las tecnologías seleccionadas en el grafico de arriba se encuentran con su nombre
+                                pintado con el color respectivo.
+                            </li>
+                            <br>
+                            <li>
+                                Puedes presionar un nodo para filtrar el grupo.
+                            </li>
+                            <br>
+                            <li>
+                                Al presionar "Mostrar todos", la red volvera a su estado inicial.
+                            </li>
+                            <br>
+                            <li>
+                                Al colocar el cursos sobre un item en la leyenda, los nodos correspondientes al item se haran más grandes.
+                            </li>
+                            <br>
+                            <li>
+                                Al ubicar el cursos sobre un nodo, todos los nodos relacionados de forma directa o indirecta a este se hacen más grandes y los enlaces se vuelven más claros.
+                            </li>
+                            <br> 
+                        </p>
+                        <p> 
+                            Por ultimo, si filtras un grupo de nodos aún podras ver los otros por si solos al colocar el cursos sobre los items en la leyenda.
+                            Ademas, puedes armar los enlaces colocando el cursor sobre estos nodos llegando así a una visualización distinta!
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <script> 
+            firstClickToggle = true;
+            
+            function showInforme() {
+                var informe = document.getElementById("container-informe");
+                var btn = document.getElementById("btn-show");
+                
+                if (informe.style.display === "none" || firstClickToggle) {
+                    firstClickToggle = false;
+                    informe.style.display = "block";
+                    btn.innerHTML = "📂 Esconder informe"
+                } else {
+                    informe.style.display = "none"
+                    btn.innerHTML = "📁 Mostrar informe"
+                }
+            }
+        </script>
+
+        </div>
+
+
+        <script src='colors.js'></script>
+        <script src='rankingchart.js'></script>
+        <script src='netgraph.js'></script>
+
+    </body>
+
+</html>

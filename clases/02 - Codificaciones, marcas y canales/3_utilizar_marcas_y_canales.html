@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Utilizar marcas y canales</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Codificaciones, marcas y canales</h1>
+					<h2 style="color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Utilizar marcas y canales</h1>
+					<h1 style="font-size: 1.6em; color: black;">Codificaciones, marcas y canales</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+				</section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Tipos de canales</h3>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Tipos de canales</h3>
+
+          <br>
+          
+          <h4 style="color: black;">Canales de identidad</h4>
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Tipos de canales</h3>
+
+          <br>
+
+          <h4 style="color: black;">Canales de identidad</h4>
+          <h4 style="color: black;">Canales de magnitud</h4>
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Canales de identidad</h4>
+
+          <br>
+
+          <p>Ayudan a entender qué es algo, o dónde está algo.</p>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Canales de identidad</h4>
+
+          <br>
+
+          <p>Ayudan a entender qué es algo, o dónde está algo.</p>
+
+          <p><span style="color: #f92696;">Ejemplos</span>: Forma de marca, matiz de color de relleno, región espacial.</p>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Canales de magnitud</h4>
+
+          <br>
+
+          <p>Ayudan a entender cuánto hay de algo.</p>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Canales de magnitud</h4>
+
+          <br>
+
+          <p>Ayudan a entender cuánto hay de algo.</p>
+
+          <p><span style="color: #f92696;">Ejemplos</span>: Largo, área, posición, luminancia de color, saturación de color.</p>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Tipos de marcas</h4>
+
+          <br>
+
+          <h4 style="color: black">Marca ≅ Entidades en los datos </h4>
+
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Tipos de marcas</h4>
+
+          <br>
+
+          <h4 style="color: black">Marca ≅ Entidades en los datos </h4>
+
+          <p><span style="color: #f92696;">Ejemplos</span>: Puntos, líneas y áreas.</p>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Tipos de marcas</h4>
+
+          <br>
+
+          <p>¡Marcas de conexión!</p>
+
+          <svg width="600" height="250">
+						<circle fill="black" cx="50" cy="50" r="10"></circle>
+						<circle fill="black" cx="100" cy="100" r="10"></circle>
+						<circle fill="black" cx="150" cy="50" r="10"></circle>
+						<circle fill="black" cx="200" cy="100" r="10"></circle>
+						<circle fill="black" cx="150" cy="150" r="10"></circle>
+            <circle fill="black" cx="250" cy="50" r="10"></circle>
+						<circle fill="black" cx="250" cy="150" r="10"></circle>
+
+            <line y1="50" x1="50" y2="100" x2="100" stroke="black" stroke-width="3"></line>
+            <line y1="100" x1="100" y2="50" x2="150" stroke-width="3"  stroke="black"></line>
+            <line y1="50" x1="250" y2="150" x2="150" stroke-width="3"  stroke="black"></line>
+            <line y1="150" x1="250" y2="100" x2="200" stroke-width="3"  stroke="black"></line>
+					</svg>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Tipos de marcas</h4>
+
+          <br>
+
+          <p>¡Marcas de contención!</p>
+
+          <svg width="600" height="250">
+						<rect fill="blue" stroke-width="3"  stroke="black" x="10" y="10" width="370" height="200"> </rect>
+						<rect fill="green" stroke-width="3"  stroke="black" x="20" y="20" width="200" height="180"> </rect>
+						<rect fill="green" stroke-width="3"  stroke="black" x="240" y="20" width="50" height="180"> </rect>
+						<rect fill="green" stroke-width="3"  stroke="black" x="310" y="20" width="50" height="180"> </rect>
+						<rect fill="yellow" stroke-width="3"  stroke="black" x="50" y="50" width="140" height="50"> </rect>
+						<rect fill="yellow" stroke-width="3"  stroke="black" x="50" y="120" width="140" height="50"> </rect>
+					</svg>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Tipos de marcas</h4>
+
+          <br>
+
+          <p>¡Glifos!</p>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Tipos de marcas</h4>
+
+          <br>
+
+          <p>¡Glifos!</p>
+
+          <svg width="600" height="250">
+
+            <rect fill="white" stroke="black" stroke-width="3px" x="25" width="115" y="40" height="170" stroke-dasharray="10"></rect>
+
+						<rect fill="blue" width="33" height="50" x="33" y="150"></rect>
+            <rect fill="orange" width="33" height="150" x="66" y="50"></rect>
+            <rect fill="green" width="33" height="100" x="99" y="100"></rect>
+
+            <rect fill="blue" width="33" height="50" x="183" y="150"></rect>
+            <rect fill="orange" width="33" height="150" x="216" y="50"></rect>
+            <rect fill="green" width="33" height="100" x="249" y="100"></rect>
+
+            <rect fill="blue" width="33" height="50" x="333" y="150"></rect>
+            <rect fill="orange" width="33" height="150" x="366" y="50"></rect>
+            <rect fill="green" width="33" height="100" x="399" y="100"></rect>
+
+            <rect fill="blue" width="33" height="50" x="483" y="150"></rect>
+            <rect fill="orange" width="33" height="150" x="516" y="50"></rect>
+            <rect fill="green" width="33" height="100" x="549" y="100"></rect>
+
+            <line x1="10" y1="200" x2="800" y2="200" stroke="black" stroke-width="3"></line>
+            <line x1="10" y1="200" x2="10" y2="0" stroke="black" stroke-width="3"></line>
+					</svg>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Glifos</h4>
+
+          <br>
+
+          <img src="./assets/freedom_of_expression_detail_3.jpg" height="400px">
+          <br>
+          <br>
+          <p style="font-size: 0.5em; color: grey; position: absolute; bottom: 2em;">(Fuente: <a href="https://www.visualcinnamon.com/portfolio/the-freedom-of-expression/"><i>The freedom of expression</i></a>)</p>
+
+        </section>
+        
+        <section data-background-iframe="https://nbremer.github.io/article19/"
+						style="height: 100%;" data-auto-animate data-auto-animate-unmatched="fade" data-background-interactive>
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Utilizar marcas y canales</h4>
+
+          <br>
+
+          <p>No todos los canales son iguales o equivalentes. La representación del mismo atributo a través de canales distintos los percibimos de forma distinta.</p>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Utilizar marcas y canales</h4>
+
+          <br>
+
+          <p>No todos los canales son iguales o equivalentes. La representación del mismo atributo a través de canales distintos los percibimos de forma distinta.</p>
+
+          <br>
+
+          <h4 style="color:black">Principio de expresividad</h4>
+          <h4 style="color:black">Principio de efectividad</h4>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Principio de expresividad</h4>
+          
+          <br>
+
+          <p>Una codificación visual utilizada debe expresar toda, y solamente, la información del atributo objetivo.</p>
+
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Principio de expresividad</h4>
+          
+          <br>
+
+          <p>Una codificación visual utilizada debe expresar toda, y solamente, la información del atributo objetivo.</p>
+
+          <br>
+
+          <p style="color:#f92696">Canales de identidad ↔️ Atributos categóricos*</p>
+          <p style="color:#f92696">Canales de magnitud ↔️ Atributos ordenados*</p>
+
+          <br />
+					<p>*Abstracción de datos.</p>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Principio de efectividad</h4>
+          
+          <br>
+
+          <p>La importancia de un atributo debe corresponder a la prominencia del canal utilizado, es decir, cuan perceptible es.</p>
+          
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Utilizar marcas y canales</h1>
+					<h1 style="font-size: 1.6em; color: black;">Codificaciones, marcas y canales</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

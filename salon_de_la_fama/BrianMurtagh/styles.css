@@ -1,0 +1,202 @@
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  background-color: #faf4f0;
+  color: #212121;
+  font-family: "Libre Baskerville", serif;
+}
+
+.master-container {
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.lines-graph-container {
+  max-width: 1300px;
+  width: 90%;
+  margin: 30px;
+  aspect-ratio: 16/9;
+  box-sizing: border-box;
+}
+.lines-graph-wrapper {
+  flex: 8;
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.details-container {
+  flex: 2;
+  background-color: lightgray;
+  padding: 15px;
+  background-color: #f1ebeb;
+}
+
+.selector {
+  background-color: #f1ebeb;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.4s;
+  color: #212121;
+  font-family: "Libre Baskerville", serif;
+}
+
+.active {
+  background-color: rgb(168, 168, 168);
+}
+
+.selector:hover {
+  background-color: gray;
+}
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: crosshair;
+}
+
+.focus circle {
+  fill: #ff73b8;
+}
+.focus {
+  z-index: 20;
+}
+.bar-graph {
+  height: 30px;
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.bar-graph-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.text-wrap {
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 18px;
+  margin: 15px 0px;
+}
+
+/* codigo de https://www.w3schools.com/howto/howto_css_switch.asp */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 15px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.areas {
+  opacity: 0.4;
+  pointer-events: visibleFill;
+}
+.areas:hover {
+  opacity: 1;
+}
+.no-margin {
+  margin-block-start: 3px;
+  margin-block-end: 3px;
+}
+.margin-top {
+  margin-top: 15px;
+}
+.signature {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 10px;
+}
+.inf-wrapper {
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inf-container {
+  max-width: 1200px;
+  text-align: justify;
+}
+.datos-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 3fr 2fr;
+}
+
+.datos-grid > p {
+  padding: 10px 25px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.datos-grid > p:nth-child(6n + 1),
+.datos-grid > p:nth-child(6n + 2),
+.datos-grid > p:nth-child(6n + 3) {
+  background-color: #ddd;
+}

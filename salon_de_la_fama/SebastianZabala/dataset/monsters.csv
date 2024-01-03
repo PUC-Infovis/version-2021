@@ -1,0 +1,325 @@
+Id,Name,Size,HP,Armor,CR,Alignment,Race,Fly,Burrow,Swim,Climb
+0,Aboleth,Large,135,17,10.0,Lawful Evil,aberration,False,False,True,False
+1,Acolyte,Medium,9,10,0.25,Any Alignment,humanoid,False,False,False,False
+2,Adult Black Dragon,Huge,195,19,14.0,Chaotic Evil,dragon,True,False,True,False
+3,Adult Blue Dragon,Huge,225,19,16.0,Lawful Evil,dragon,True,True,False,False
+4,Adult Brass Dragon,Huge,172,18,13.0,Chaotic Good,dragon,True,True,False,False
+5,Adult Bronze Dragon,Huge,212,19,15.0,Lawful Good,dragon,True,False,True,False
+6,Adult Copper Dragon,Huge,184,18,14.0,Chaotic Good,dragon,True,False,False,True
+7,Adult Gold Dragon,Huge,256,19,17.0,Lawful Good,dragon,True,False,True,False
+8,Adult Green Dragon,Huge,207,19,15.0,Lawful Evil,dragon,True,False,True,False
+9,Adult Red Dragon,Huge,256,19,17.0,Chaotic Evil,dragon,True,False,False,True
+10,Adult Silver Dragon,Huge,243,19,16.0,Lawful Good,dragon,True,False,False,False
+11,Adult White Dragon,Huge,200,18,13.0,Chaotic Evil,dragon,True,True,True,False
+12,Air Elemental,Large,90,15,5.0,Neutral,elemental,True,False,False,False
+13,Ancient Black Dragon,Gargantuan,367,22,21.0,Chaotic Evil,dragon,True,False,True,False
+14,Ancient Blue Dragon,Gargantuan,481,22,23.0,Lawful Evil,dragon,True,True,False,False
+15,Ancient Brass Dragon,Gargantuan,297,20,20.0,Chaotic Good,dragon,True,True,False,False
+16,Ancient Bronze Dragon,Gargantuan,444,22,22.0,Lawful Good,dragon,True,False,True,False
+17,Ancient Copper Dragon,Gargantuan,350,21,21.0,Chaotic Good,dragon,True,False,False,True
+18,Ancient Gold Dragon,Gargantuan,546,22,24.0,Lawful Good,dragon,True,False,True,False
+19,Ancient Green Dragon,Gargantuan,385,21,22.0,Lawful Evil,dragon,True,False,True,False
+20,Ancient Red Dragon,Gargantuan,546,22,24.0,Chaotic Evil,dragon,True,False,False,True
+21,Ancient Silver Dragon,Gargantuan,487,22,23.0,Lawful Good,dragon,True,False,False,False
+22,Ancient White Dragon,Gargantuan,333,20,20.0,Chaotic Evil,dragon,True,True,True,False
+23,Androsphinx,Large,199,17,17.0,Lawful Neutral,monstrosity,True,False,False,False
+24,Animated Armor,Medium,33,18,1.0,Unaligned,construct,False,False,False,False
+25,Ankheg,Large,39,14,2.0,Unaligned,monstrosity,False,True,False,False
+26,Ape,Medium,19,12,0.5,Unaligned,beast,False,False,False,True
+27,Archmage,Medium,99,12,12.0,Any Alignment,humanoid,False,False,False,False
+28,Assassin,Medium,78,15,8.0,Any Non-good Alignment,humanoid,False,False,False,False
+29,Awakened Shrub,Small,10,9,0.0,Unaligned,plant,False,False,False,False
+30,Awakened Tree,Huge,59,13,2.0,Unaligned,plant,False,False,False,False
+31,Axe Beak,Large,19,11,0.25,Unaligned,beast,False,False,False,False
+32,Azer,Medium,39,17,2.0,Lawful Neutral,elemental,False,False,False,False
+33,Baboon,Small,3,12,0.0,Unaligned,beast,False,False,False,True
+34,Badger,Tiny,3,10,0.0,Unaligned,beast,False,True,False,False
+35,Balor,Huge,262,19,19.0,Chaotic Evil,fiend,True,False,False,False
+36,Bandit,Medium,11,12,0.125,Any Non-lawful Alignment,humanoid,False,False,False,False
+37,Bandit Captain,Medium,65,15,2.0,Any Non-lawful Alignment,humanoid,False,False,False,False
+38,Barbed Devil,Medium,110,15,5.0,Lawful Evil,fiend,False,False,False,False
+39,Basilisk,Medium,52,15,3.0,Unaligned,monstrosity,False,False,False,False
+40,Bat,Tiny,1,12,0.0,Unaligned,beast,True,False,False,False
+41,Bearded Devil,Medium,52,13,3.0,Lawful Evil,fiend,False,False,False,False
+42,Behir,Huge,168,17,11.0,Neutral Evil,monstrosity,False,False,False,True
+43,Berserker,Medium,67,13,2.0,Any Chaotic Alignment,humanoid,False,False,False,False
+44,Black Bear,Medium,19,11,0.5,Unaligned,beast,False,False,False,True
+45,Black Dragon Wyrmling,Medium,33,17,2.0,Chaotic Evil,dragon,True,False,True,False
+46,Black Pudding,Large,85,7,4.0,Unaligned,ooze,False,False,False,True
+47,Blink Dog,Medium,22,13,0.25,Lawful Good,fey,False,False,False,False
+48,Blood Hawk,Small,7,12,0.125,Unaligned,beast,True,False,False,False
+49,Blue Dragon Wyrmling,Medium,52,17,3.0,Lawful Evil,dragon,True,True,False,False
+50,Boar,Medium,11,11,0.25,Unaligned,beast,False,False,False,False
+51,Bone Devil,Large,142,19,9.0,Lawful Evil,fiend,True,False,False,False
+52,Brass Dragon Wyrmling,Medium,16,16,1.0,Chaotic Good,dragon,True,True,False,False
+53,Bronze Dragon Wyrmling,Medium,32,17,2.0,Lawful Good,dragon,True,False,True,False
+54,Brown Bear,Large,34,11,1.0,Unaligned,beast,False,False,False,True
+55,Bugbear,Medium,27,16,1.0,Chaotic Evil,humanoid,False,False,False,False
+56,Bulette,Large,94,17,5.0,Unaligned,monstrosity,False,True,False,False
+57,Camel,Large,15,9,0.125,Unaligned,beast,False,False,False,False
+58,Cat,Tiny,2,12,0.0,Unaligned,beast,False,False,False,True
+59,Centaur,Large,45,12,2.0,Neutral Good,monstrosity,False,False,False,False
+60,Chain Devil,Medium,85,16,8.0,Lawful Evil,fiend,False,False,False,False
+61,Chimera,Large,114,14,6.0,Chaotic Evil,monstrosity,True,False,False,False
+62,Chuul,Large,93,16,4.0,Chaotic Evil,aberration,False,False,True,False
+63,Clay Golem,Large,133,14,9.0,Unaligned,construct,False,False,False,False
+64,Cloaker,Large,78,14,8.0,Chaotic Neutral,aberration,True,False,False,False
+65,Cloud Giant,Huge,200,14,9.0,Neutral,giant,False,False,False,False
+66,Cockatrice,Small,27,11,0.5,Unaligned,monstrosity,True,False,False,False
+67,Commoner,Medium,4,10,0.0,Any Alignment,humanoid,False,False,False,False
+68,Constrictor Snake,Large,13,12,0.25,Unaligned,beast,False,False,True,False
+69,Copper Dragon Wyrmling,Medium,22,16,1.0,Chaotic Good,dragon,True,False,False,True
+70,Couatl,Medium,97,19,4.0,Lawful Good,celestial,True,False,False,False
+71,Crab,Tiny,2,11,0.0,Unaligned,beast,False,False,True,False
+72,Crocodile,Large,19,12,0.5,Unaligned,beast,False,False,True,False
+73,Cult Fanatic,Medium,33,13,2.0,Any Non-good Alignment,humanoid,False,False,False,False
+74,Cultist,Medium,9,12,0.125,Any Non-good Alignment,humanoid,False,False,False,False
+75,Darkmantle,Small,22,11,0.5,Unaligned,monstrosity,True,False,False,False
+76,Death Dog,Medium,39,12,1.0,Neutral Evil,monstrosity,False,False,False,False
+77,Deep Gnome (Svirfneblin),Small,16,15,0.5,Neutral Good,humanoid,False,False,False,False
+78,Deer,Medium,4,13,0.0,Unaligned,beast,False,False,False,False
+79,Deva,Medium,136,17,10.0,Lawful Good,celestial,True,False,False,False
+80,Dire Wolf,Large,37,14,1.0,Unaligned,beast,False,False,False,False
+81,Diseased Giant Rat,Small,7,12,0.125,Unaligned,beast,False,False,False,False
+82,Djinni,Large,161,17,11.0,Chaotic Good,elemental,True,False,False,False
+83,Doppelganger,Medium,52,14,3.0,Unaligned,monstrosity,False,False,False,False
+84,Draft Horse,Large,19,10,0.25,Unaligned,beast,False,False,False,False
+85,Dragon Turtle,Gargantuan,341,20,17.0,Neutral,dragon,False,False,True,False
+86,Dretch,Small,18,11,0.25,Chaotic Evil,fiend,False,False,False,False
+87,Drider,Large,123,19,6.0,Chaotic Evil,monstrosity,False,False,False,True
+88,Drow,Medium,13,15,0.25,Neutral Evil,humanoid,False,False,False,False
+89,Druid,Medium,27,11,2.0,Any Alignment,humanoid,False,False,False,False
+90,Dryad,Medium,22,11,1.0,Neutral,fey,False,False,False,False
+91,Duergar,Medium,26,16,1.0,Lawful Evil,humanoid,False,False,False,False
+92,Dust Mephit,Small,17,12,0.5,Neutral Evil,elemental,True,False,False,False
+93,Eagle,Small,3,12,0.0,Unaligned,beast,True,False,False,False
+94,Earth Elemental,Large,126,17,5.0,Neutral,elemental,False,True,False,False
+95,Efreeti,Large,200,17,11.0,Lawful Evil,elemental,True,False,False,False
+96,Elephant,Huge,76,12,4.0,Unaligned,beast,False,False,False,False
+97,Elk,Large,13,10,0.25,Unaligned,beast,False,False,False,False
+98,Erinyes,Medium,153,18,12.0,Lawful Evil,fiend,True,False,False,False
+99,Ettercap,Medium,44,13,2.0,Neutral Evil,monstrosity,False,False,False,True
+100,Ettin,Large,85,12,4.0,Chaotic Evil,giant,False,False,False,False
+101,Fire Elemental,Large,102,13,5.0,Neutral,elemental,False,False,False,False
+102,Fire Giant,Huge,162,18,9.0,Lawful Evil,giant,False,False,False,False
+103,Flesh Golem,Medium,93,9,5.0,Neutral,construct,False,False,False,False
+104,Flying Snake,Tiny,5,14,0.125,Unaligned,beast,True,False,True,False
+105,Flying Sword,Small,17,17,0.25,Unaligned,construct,True,False,False,False
+106,Frog,Tiny,1,11,0.0,Unaligned,beast,False,False,True,False
+107,Frost Giant,Huge,138,15,8.0,Neutral Evil,giant,False,False,False,False
+108,Gargoyle,Medium,52,15,2.0,Chaotic Evil,elemental,True,False,False,False
+109,Gelatinous Cube,Large,84,6,2.0,Unaligned,ooze,False,False,False,False
+110,Ghast,Medium,36,13,2.0,Chaotic Evil,undead,False,False,False,False
+111,Ghost,Medium,45,11,4.0,Any Alignment,undead,True,False,False,False
+112,Ghoul,Medium,22,12,1.0,Chaotic Evil,undead,False,False,False,False
+113,Giant Ape,Huge,157,12,7.0,Unaligned,beast,False,False,False,True
+114,Giant Badger,Medium,13,10,0.25,Unaligned,beast,False,True,False,False
+115,Giant Bat,Large,22,13,0.25,Unaligned,beast,True,False,False,False
+116,Giant Boar,Large,42,12,2.0,Unaligned,beast,False,False,False,False
+117,Giant Centipede,Small,4,13,0.25,Unaligned,beast,False,False,False,True
+118,Giant Constrictor Snake,Huge,60,12,2.0,Unaligned,beast,False,False,True,False
+119,Giant Crab,Medium,13,15,0.125,Unaligned,beast,False,False,True,False
+120,Giant Crocodile,Huge,85,14,5.0,Unaligned,beast,False,False,True,False
+121,Giant Eagle,Large,26,13,1.0,Neutral Good,beast,True,False,False,False
+122,Giant Elk,Huge,42,14,2.0,Unaligned,beast,False,False,False,False
+123,Giant Fire Beetle,Small,4,13,0.0,Unaligned,beast,False,False,False,False
+124,Giant Frog,Medium,18,11,0.25,Unaligned,beast,False,False,True,False
+125,Giant Goat,Large,19,11,0.5,Unaligned,beast,False,False,False,False
+126,Giant Hyena,Large,45,12,1.0,Unaligned,beast,False,False,False,False
+127,Giant Lizard,Large,19,12,0.25,Unaligned,beast,False,False,False,True
+128,Giant Octopus,Large,52,11,1.0,Unaligned,beast,False,False,True,False
+129,Giant Owl,Large,19,12,0.25,Neutral,beast,True,False,False,False
+130,Giant Poisonous Snake,Medium,11,14,0.25,Unaligned,beast,False,False,True,False
+131,Giant Rat,Small,7,12,0.125,Unaligned,beast,False,False,False,False
+132,Giant Scorpion,Large,52,15,3.0,Unaligned,beast,False,False,False,False
+133,Giant Sea Horse,Large,16,13,0.5,Unaligned,beast,False,False,True,False
+134,Giant Shark,Huge,126,13,5.0,Unaligned,beast,False,False,False,False
+135,Giant Spider,Large,26,14,1.0,Unaligned,beast,False,False,False,True
+136,Giant Toad,Large,39,11,1.0,Unaligned,beast,False,False,True,False
+137,Giant Vulture,Large,22,10,1.0,Neutral Evil,beast,True,False,False,False
+138,Giant Wasp,Medium,13,12,0.5,Unaligned,beast,True,False,False,False
+139,Giant Weasel,Medium,9,13,0.125,Unaligned,beast,False,False,False,False
+140,Giant Wolf Spider,Medium,11,13,0.25,Unaligned,beast,False,False,False,True
+141,Gibbering Mouther,Medium,67,9,2.0,Neutral,aberration,False,False,True,False
+142,Glabrezu,Large,157,17,9.0,Chaotic Evil,fiend,False,False,False,False
+143,Gladiator,Medium,112,16,5.0,Any Alignment,humanoid,False,False,False,False
+144,Gnoll,Medium,22,15,0.5,Chaotic Evil,humanoid,False,False,False,False
+145,Goat,Medium,4,10,0.0,Unaligned,beast,False,False,False,False
+146,Goblin,Small,7,15,0.25,Neutral Evil,humanoid,False,False,False,False
+147,Gold Dragon Wyrmling,Medium,60,17,3.0,Lawful Good,dragon,True,False,True,False
+148,Gorgon,Large,114,19,5.0,Unaligned,monstrosity,False,False,False,False
+149,Gray Ooze,Medium,22,8,0.5,Unaligned,ooze,False,False,False,True
+150,Green Dragon Wyrmling,Medium,38,17,2.0,Lawful Evil,dragon,True,False,True,False
+151,Green Hag,Medium,82,17,3.0,Neutral Evil,fey,False,False,False,False
+152,Grick,Medium,27,14,2.0,Neutral,monstrosity,False,False,False,True
+153,Griffon,Large,59,12,2.0,Unaligned,monstrosity,True,False,False,False
+154,Grimlock,Medium,11,11,0.25,Neutral Evil,humanoid,False,False,False,False
+155,Guard,Medium,11,16,0.125,Any Alignment,humanoid,False,False,False,False
+156,Guardian Naga,Large,127,18,10.0,Lawful Good,monstrosity,False,False,False,False
+157,Gynosphinx,Large,136,17,11.0,Lawful Neutral,monstrosity,True,False,False,False
+158,Half-Red Dragon Veteran,Medium,65,18,5.0,Any,humanoid,False,False,False,False
+159,Harpy,Medium,38,11,1.0,Chaotic Evil,monstrosity,True,False,False,False
+160,Hawk,Tiny,1,13,0.0,Unaligned,beast,True,False,False,False
+161,Hell Hound,Medium,45,15,3.0,Lawful Evil,fiend,False,False,False,False
+162,Hezrou,Large,136,16,8.0,Chaotic Evil,fiend,False,False,False,False
+163,Hill Giant,Huge,105,13,5.0,Chaotic Evil,giant,False,False,False,False
+164,Hippogriff,Large,19,11,1.0,Unaligned,monstrosity,True,False,False,False
+165,Hobgoblin,Medium,11,18,0.5,Lawful Evil,humanoid,False,False,False,False
+166,Homunculus,Tiny,5,13,0.0,Neutral,construct,True,False,False,False
+167,Horned Devil,Large,178,18,11.0,Lawful Evil,fiend,True,False,False,False
+168,Hunter Shark,Large,45,12,2.0,Unaligned,beast,False,False,False,False
+169,Hydra,Huge,172,15,8.0,Unaligned,monstrosity,False,False,True,False
+170,Hyena,Medium,5,11,0.0,Unaligned,beast,False,False,False,False
+171,Ice Devil,Large,180,18,14.0,Lawful Evil,fiend,False,False,False,False
+172,Ice Mephit,Small,21,11,0.5,Neutral Evil,elemental,True,False,False,False
+173,Imp,Tiny,10,13,1.0,Lawful Evil,fiend,True,False,False,False
+174,Incubus,Medium,66,15,4.0,Neutral Evil,fiend,True,False,False,False
+175,Invisible Stalker,Medium,104,14,6.0,Neutral,elemental,True,False,False,False
+176,Iron Golem,Large,210,20,16.0,Unaligned,construct,False,False,False,False
+177,Jackal,Small,3,12,0.0,Unaligned,beast,False,False,False,False
+178,Killer Whale,Huge,90,12,3.0,Unaligned,beast,False,False,False,False
+179,Knight,Medium,52,18,3.0,Any Alignment,humanoid,False,False,False,False
+180,Kobold,Small,5,12,0.125,Lawful Evil,humanoid,False,False,False,False
+181,Kraken,Gargantuan,472,18,23.0,Chaotic Evil,monstrosity,False,False,True,False
+182,Lamia,Large,97,13,4.0,Chaotic Evil,monstrosity,False,False,False,False
+183,Lemure,Medium,13,7,0.0,Lawful Evil,fiend,False,False,False,False
+184,Lich,Medium,135,17,21.0,Any Evil Alignment,undead,False,False,False,False
+185,Lion,Large,26,12,1.0,Unaligned,beast,False,False,False,False
+186,Lizard,Tiny,2,10,0.0,Unaligned,beast,False,False,False,True
+187,Lizardfolk,Medium,22,15,0.5,Neutral,humanoid,False,False,True,False
+188,Mage,Medium,40,12,6.0,Any Alignment,humanoid,False,False,False,False
+189,Magma Mephit,Small,22,11,0.5,Neutral Evil,elemental,True,False,False,False
+190,Magmin,Small,9,14,0.5,Chaotic Neutral,elemental,False,False,False,False
+191,Mammoth,Huge,126,13,6.0,Unaligned,beast,False,False,False,False
+192,Manticore,Large,68,14,3.0,Lawful Evil,monstrosity,True,False,False,False
+193,Marilith,Large,189,18,16.0,Chaotic Evil,fiend,False,False,False,False
+194,Mastiff,Medium,5,12,0.125,Unaligned,beast,False,False,False,False
+195,Medusa,Medium,127,15,6.0,Lawful Evil,monstrosity,False,False,False,False
+196,Merfolk,Medium,11,11,0.125,Neutral,humanoid,False,False,True,False
+197,Merrow,Large,45,13,2.0,Chaotic Evil,monstrosity,False,False,True,False
+198,Mimic,Medium,58,12,2.0,Neutral,monstrosity,False,False,False,False
+199,Minotaur,Large,76,14,3.0,Chaotic Evil,monstrosity,False,False,False,False
+200,Minotaur Skeleton,Large,67,12,2.0,Lawful Evil,undead,False,False,False,False
+201,Mule,Medium,11,10,0.125,Unaligned,beast,False,False,False,False
+202,Mummy,Medium,58,11,3.0,Lawful Evil,undead,False,False,False,False
+203,Mummy Lord,Medium,97,17,15.0,Lawful Evil,undead,False,False,False,False
+204,Nalfeshnee,Large,184,18,13.0,Chaotic Evil,fiend,True,False,False,False
+205,Night Hag,Medium,112,17,5.0,Neutral Evil,fiend,False,False,False,False
+206,Nightmare,Large,68,13,3.0,Neutral Evil,fiend,True,False,False,False
+207,Noble,Medium,9,15,0.125,Any Alignment,humanoid,False,False,False,False
+208,Ochre Jelly,Large,45,8,2.0,Unaligned,ooze,False,False,False,True
+209,Octopus,Small,3,12,0.0,Unaligned,beast,False,False,True,False
+210,Ogre,Large,59,11,2.0,Chaotic Evil,giant,False,False,False,False
+211,Ogre Zombie,Large,85,8,2.0,Neutral Evil,undead,False,False,False,False
+212,Oni,Large,110,16,7.0,Lawful Evil,giant,True,False,False,False
+213,Orc,Medium,15,13,0.5,Chaotic Evil,humanoid,False,False,False,False
+214,Otyugh,Large,114,14,5.0,Neutral,aberration,False,False,False,False
+215,Owl,Tiny,1,11,0.0,Unaligned,beast,True,False,False,False
+216,Owlbear,Large,59,13,3.0,Unaligned,monstrosity,False,False,False,False
+217,Panther,Medium,13,12,0.25,Unaligned,beast,False,False,False,True
+218,Pegasus,Large,59,12,2.0,Chaotic Good,celestial,True,False,False,False
+219,Phase Spider,Large,32,13,3.0,Unaligned,monstrosity,False,False,False,True
+220,Pit Fiend,Large,300,19,20.0,Lawful Evil,fiend,True,False,False,False
+221,Planetar,Large,200,19,16.0,Lawful Good,celestial,True,False,False,False
+222,Plesiosaurus,Large,68,13,2.0,Unaligned,beast,False,False,True,False
+223,Poisonous Snake,Tiny,2,13,0.125,Unaligned,beast,False,False,True,False
+224,Polar Bear,Large,42,12,2.0,Unaligned,beast,False,False,True,False
+225,Pony,Medium,11,10,0.125,Unaligned,beast,False,False,False,False
+226,Priest,Medium,27,13,2.0,Any Alignment,humanoid,False,False,False,False
+227,Pseudodragon,Tiny,7,13,0.25,Neutral Good,dragon,True,False,False,False
+228,Purple Worm,Gargantuan,247,18,15.0,Unaligned,monstrosity,False,True,False,False
+229,Quasit,Tiny,7,13,1.0,Chaotic Evil,fiend,False,False,False,False
+230,Quipper,Tiny,1,13,0.0,Unaligned,beast,False,False,False,False
+231,Rakshasa,Medium,110,16,13.0,Lawful Evil,fiend,False,False,False,False
+232,Rat,Tiny,1,10,0.0,Unaligned,beast,False,False,False,False
+233,Raven,Tiny,1,12,0.0,Unaligned,beast,True,False,False,False
+234,Red Dragon Wyrmling,Medium,75,17,4.0,Chaotic Evil,dragon,True,False,False,True
+235,Reef Shark,Medium,22,12,0.5,Unaligned,beast,False,False,False,False
+236,Remorhaz,Huge,195,17,11.0,Unaligned,monstrosity,False,True,False,False
+237,Rhinoceros,Large,45,11,2.0,Unaligned,beast,False,False,False,False
+238,Riding Horse,Large,13,10,0.25,Unaligned,beast,False,False,False,False
+239,Roc,Gargantuan,248,15,11.0,Unaligned,monstrosity,True,False,False,False
+240,Roper,Large,93,20,5.0,Neutral Evil,monstrosity,False,False,False,True
+241,Rug of Smothering,Large,33,12,2.0,Unaligned,construct,False,False,False,False
+242,Rust Monster,Medium,27,14,0.5,Unaligned,monstrosity,False,False,False,False
+243,Saber-Toothed Tiger,Large,52,12,2.0,Unaligned,beast,False,False,False,False
+244,Sahuagin,Medium,22,12,0.5,Lawful Evil,humanoid,False,False,True,False
+245,Salamander,Large,90,15,5.0,Neutral Evil,elemental,False,False,False,False
+246,Satyr,Medium,31,14,0.5,Chaotic Neutral,fey,False,False,False,False
+247,Scorpion,Tiny,1,11,0.0,Unaligned,beast,False,False,False,False
+248,Scout,Medium,16,13,0.5,Any Alignment,humanoid,False,False,False,False
+249,Sea Hag,Medium,52,14,2.0,Chaotic Evil,fey,False,False,True,False
+250,Sea Horse,Tiny,1,11,0.0,Unaligned,beast,False,False,False,False
+251,Shadow,Medium,16,12,0.5,Chaotic Evil,undead,False,False,False,False
+252,Shambling Mound,Large,136,15,5.0,Unaligned,plant,False,False,True,False
+253,Shield Guardian,Large,142,17,7.0,Unaligned,construct,False,False,False,False
+254,Shrieker,Medium,13,5,0.0,Unaligned,plant,False,False,False,False
+255,Silver Dragon Wyrmling,Medium,45,17,2.0,Lawful Good,dragon,True,False,False,False
+256,Skeleton,Medium,13,13,0.25,Lawful Evil,undead,False,False,False,False
+257,Solar,Large,243,21,21.0,Lawful Good,celestial,True,False,False,False
+258,Specter,Medium,22,12,1.0,Chaotic Evil,undead,True,False,False,False
+259,Spider,Tiny,1,12,0.0,Unaligned,beast,False,False,False,True
+260,Spirit Naga,Large,75,15,8.0,Chaotic Evil,monstrosity,False,False,False,False
+261,Sprite,Tiny,2,15,0.25,Neutral Good,fey,True,False,False,False
+262,Spy,Medium,27,12,1.0,Any Alignment,humanoid,False,False,False,False
+263,Steam Mephit,Small,21,10,0.25,Neutral Evil,elemental,True,False,False,False
+264,Stirge,Tiny,2,14,0.125,Unaligned,beast,True,False,False,False
+265,Stone Giant,Huge,126,17,7.0,Neutral,giant,False,False,False,False
+266,Stone Golem,Large,178,17,10.0,Unaligned,construct,False,False,False,False
+267,Storm Giant,Huge,230,16,13.0,Chaotic Good,giant,False,False,True,False
+268,Succubus,Medium,66,15,4.0,Neutral Evil,fiend,True,False,False,False
+269,Succubus (Incubus),Medium,66,15,4.0,Neutral Evil,fiend,True,False,False,False
+270,Swarm of Bats,Medium,22,12,0.25,Unaligned,swarm of tiny beasts,True,False,False,False
+271,Swarm of Beetles,Medium,22,12,0.5,Unaligned,swarm of tiny beasts,False,True,False,True
+272,Swarm of Centipedes,Medium,22,12,0.5,Unaligned,swarm of tiny beasts,False,False,False,True
+273,Swarm of Insects,Medium,22,12,0.5,Unaligned,swarm of tiny beasts,False,False,False,True
+274,Swarm of Poisonous Snakes,Medium,36,14,2.0,Unaligned,swarm of tiny beasts,False,False,True,False
+275,Swarm of Quippers,Medium,28,13,1.0,Unaligned,swarm of tiny beasts,False,False,True,False
+276,Swarm of Rats,Medium,24,10,0.25,Unaligned,swarm of tiny beasts,False,False,False,False
+277,Swarm of Ravens,Medium,24,12,0.25,Unaligned,swarm of tiny beasts,True,False,False,False
+278,Swarm of Spiders,Medium,22,12,0.5,Unaligned,swarm of tiny beasts,False,False,False,True
+279,Swarm of Wasps,Medium,22,12,0.5,Unaligned,swarm of tiny beasts,True,False,False,False
+280,Tarrasque,Gargantuan,676,25,30.0,Unaligned,monstrosity,False,False,False,False
+281,Thug,Medium,32,11,0.5,Any Non-good Alignment,humanoid,False,False,False,False
+282,Tiger,Large,37,12,1.0,Unaligned,beast,False,False,False,False
+283,Treant,Huge,138,16,9.0,Chaotic Good,plant,False,False,False,False
+284,Tribal Warrior,Medium,11,12,0.125,Any Alignment,humanoid,False,False,False,False
+285,Triceratops,Huge,95,13,5.0,Unaligned,beast,False,False,False,False
+286,Troll,Large,84,15,5.0,Chaotic Evil,giant,False,False,False,False
+287,Tyrannosaurus Rex,Huge,136,13,8.0,Unaligned,beast,False,False,False,False
+288,Unicorn,Large,67,12,5.0,Lawful Good,celestial,False,False,False,False
+289,Vampire,Medium,144,16,13.0,Lawful Evil,undead,False,False,False,False
+290,Vampire Spawn,Medium,82,15,5.0,Neutral Evil,undead,False,False,False,False
+291,Veteran,Medium,58,17,3.0,Any Alignment,humanoid,False,False,False,False
+292,Violet Fungus,Medium,18,5,0.25,Unaligned,plant,False,False,False,False
+293,Vrock,Large,104,15,6.0,Chaotic Evil,fiend,True,False,False,False
+294,Vulture,Medium,5,10,0.0,Unaligned,beast,True,False,False,False
+295,Warhorse,Large,19,11,0.5,Unaligned,beast,False,False,False,False
+296,Warhorse Skeleton,Large,22,13,0.5,Lawful Evil,undead,False,False,False,False
+297,Water Elemental,Large,114,14,5.0,Neutral,elemental,False,False,True,False
+298,Weasel,Tiny,1,13,0.0,Unaligned,beast,False,False,False,False
+299,Werebear,Medium,135,10,5.0,Neutral Good,humanoid,False,False,False,True
+300,Wereboar,Medium,78,10,4.0,Neutral Evil,humanoid,False,False,False,False
+301,Wererat,Medium,33,12,2.0,Lawful Evil,humanoid,False,False,False,False
+302,Weretiger,Medium,120,12,4.0,Neutral,humanoid,False,False,False,False
+303,Werewolf,Medium,58,11,3.0,Chaotic Evil,humanoid,False,False,False,False
+304,White Dragon Wyrmling,Medium,32,16,2.0,Chaotic Evil,dragon,True,True,True,False
+305,Wight,Medium,45,14,3.0,Neutral Evil,undead,False,False,False,False
+306,Will-o'-Wisp,Tiny,22,19,2.0,Chaotic Evil,undead,True,False,False,False
+307,Winter Wolf,Large,75,13,3.0,Neutral Evil,monstrosity,False,False,False,False
+308,Wolf,Medium,11,13,0.25,Unaligned,beast,False,False,False,False
+309,Worg,Large,26,13,0.5,Neutral Evil,monstrosity,False,False,False,False
+310,Wraith,Medium,67,13,5.0,Neutral Evil,undead,True,False,False,False
+311,Wyvern,Large,110,13,6.0,Unaligned,dragon,True,False,False,False
+312,Xorn,Medium,73,19,5.0,Neutral,elemental,False,True,False,False
+313,Young Black Dragon,Large,127,18,7.0,Chaotic Evil,dragon,True,False,True,False
+314,Young Blue Dragon,Large,152,18,9.0,Lawful Evil,dragon,True,True,False,False
+315,Young Brass Dragon,Large,110,17,6.0,Chaotic Good,dragon,True,True,False,False
+316,Young Bronze Dragon,Large,142,18,8.0,Lawful Good,dragon,True,False,True,False
+317,Young Copper Dragon,Large,119,17,7.0,Chaotic Good,dragon,True,False,False,True
+318,Young Gold Dragon,Large,178,18,10.0,Lawful Good,dragon,True,False,True,False
+319,Young Green Dragon,Large,136,18,8.0,Lawful Evil,dragon,True,False,True,False
+320,Young Red Dragon,Large,178,18,10.0,Chaotic Evil,dragon,True,False,False,True
+321,Young Silver Dragon,Large,168,18,9.0,Lawful Good,dragon,True,False,False,False
+322,Young White Dragon,Large,133,17,6.0,Chaotic Evil,dragon,True,True,True,False
+323,Zombie,Medium,22,8,0.25,Neutral Evil,undead,False,False,False,False

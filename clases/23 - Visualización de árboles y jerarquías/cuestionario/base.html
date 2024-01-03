@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <meta charset="utf-8">
+    <title>Cuestionario jerarquías</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+
+  <body>
+    
+    <script>
+      const width = 600;
+      const height = 600;
+
+      const margin = {
+        top: 50,
+        bottom: 50,
+        left: 50,
+        right: 50,
+      };
+
+      const contenedor = d3
+        .select("body")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", `translate(${margin.top} ${margin.left})`);
+
+      const dibujarJerarquia = (raiz) => {
+
+        // Falta generar partición gráfica y aplicar a jerarquía
+
+        const color = d3.scaleSequential([8, 0], d3.interpolateMagma);
+
+        // Falta agregar rectángulos
+
+        // Falta agregar etiquetas
+      };
+
+      d3.json(
+        "https://raw.githubusercontent.com/PUC-Infovis/syllabus-2021/main/cuestionario-23/datos.json"
+      )
+        .then((datos) => {
+          const raiz = d3.hierarchy(datos, (d) => d.hijos);
+          raiz.sum((d) => d.valor);
+          dibujarJerarquia(raiz);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+    </script>
+  </body>
+</html>

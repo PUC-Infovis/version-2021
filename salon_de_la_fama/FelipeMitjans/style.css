@@ -1,0 +1,131 @@
+
+body {
+    background-color: #101044;
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 0%;
+    color: white;
+}
+
+div.div-vertical {
+    display:flex;
+    flex-direction:column;
+    gap: 20px
+}
+
+div.div-titulo {
+    margin:auto;
+}
+div.div-menu {
+    display:flex;
+    flex-direction:row;
+    margin:auto;
+    gap: 10px;
+}
+div.div-grafico {
+    margin:auto;
+    margin-left:10%;
+    margin-top:0%;
+    display:flex;
+}
+
+div.div-info {
+    width: 200px;
+}
+
+div.div-nombre{
+    height:60px;
+}
+
+div.div-boton{
+    margin:auto;
+}
+
+div.div-creditos{
+    height: 60px;
+    margin:auto
+    margin-left:0%
+}
+
+.creditos {
+    color:darkgray;
+    font: 14px sans-serif;
+    margin-bottom: 0%;
+}
+
+.info-text{
+    color:darkgray;
+}
+
+.categoria {
+    fill:darkgray;
+    font: 18px sans-serif;
+}
+
+.clave {
+    fill:darkgray;
+}
+
+
+/* div.button {
+    background-color:gray;
+    width: 100px;
+    height: 20px;
+}
+
+p.button-text{
+    color: #101044
+} */
+{/* <div style="width:500px;height:100px;border:1px solid #000;">This is a rectangle!</div> */}
+/* body {
+    font-family: 'roboto', sans-serif;
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 0%;
+    text-decoration: double underline magenta;
+}
+
+h2 {
+    text-decoration: underline magenta;
+}
+
+p {
+    font-size: small;
+    text-indent: 1.5em;
+    text-align: justify;
+}
+
+p.fuente {
+    text-align: right;
+    font-style: italic;
+    color: gray;
+}
+
+span.magenta-font {
+    color: magenta;
+}
+
+span.italic {
+    font-style: italic;
+}
+
+img#result {
+    height: 200px;
+}
+
+div.img-container {
+    flex: 4;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+text.x-tick {
+    font-size: 10px;
+} */

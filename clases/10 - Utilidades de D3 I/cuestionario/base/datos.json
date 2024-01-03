@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "atributo1": 80,
+    "atributo2": 2,
+    "atributo3": 230
+  },
+  {
+    "id": 2,
+    "atributo1": 120,
+    "atributo2": 5,
+    "atributo3": 50
+  },
+  {
+    "id": 3,
+    "atributo1": 140,
+    "atributo2": 3,
+    "atributo3": 560
+  },
+  {
+    "id": 4,
+    "atributo1": 540,
+    "atributo2": 6,
+    "atributo3": 120
+  },
+  {
+    "id": 5,
+    "atributo1": 250,
+    "atributo2": 3,
+    "atributo3": 10
+  },
+  {
+    "id": 6,
+    "atributo1": 300,
+    "atributo2": 8,
+    "atributo3": 340
+  },
+  {
+    "id": 7,
+    "atributo1": 150,
+    "atributo2": 10,
+    "atributo3": 150
+  },
+  {
+    "id": 8,
+    "atributo1": 440,
+    "atributo2": 5,
+    "atributo3": 340
+  }
+]

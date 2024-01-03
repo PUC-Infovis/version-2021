@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Visualización de redes y grafos</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+
+
+	</head>
+
+	<body>
+
+    <!-- https://observablehq.com/@larsvers/hexgrid-maps-with-d3-hexgrid -->
+
+		<!-- https://github.com/russellgoldenberg/scrollama -->
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+					<img src="./assets/calamardo.jpg" height="500px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de redes y grafos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenidos</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. <i>Datasets</i> de red</h4>
+					<h4 style="color: black;">2. Medidas en redes</h4>
+					<h4 style="color: black;">3. <i>Idioms</i> enlace-nodo</h4>
+					<h4 style="color: black;">4. Matriz de adyacencia</h4>
+        </section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h1 style="font-size: 1.6em;"><i>Datasets</i> de red</h1>
+					
+					<p>Representar situaciones donde existen relaciones entre dos o más ítems.</p>
+					<p>Compuestos por datos de tipo ítem (nodos) y de tipo enlace.</p>
+
+					<br>
+
+					<p style="font-size: 2em;">&#160;👱 → 🧑‍🍳 ↔ 🧑‍🌾</p>
+					<p style="font-size: 2em;">&#160; ↑ &#160;&#160;&#160;&#160;&#160;&#160; ↕ &#160;&#160;&#160;&#160;&#160;&#160; ↑</p>
+					<p style="font-size: 2em;">&#160;🦹 → 🧑‍🔧 ↔ 🧑‍🏫</p>
+					<p style="font-size: 2em;">&#160; ↓ &#160;&#160;&#160;&#160;&#160;&#160; ↓ &#160;&#160;&#160;&#160;&#160;&#160; ↕</p>
+					<p style="font-size: 2em;">&#160;🧑‍⚖️ ← 🧑‍🎨 ← 🧑‍🚀</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Objetivos comunes en abstracción de tareas</h1>
+
+					<br>
+
+					<h4 style="color: black">Caminos</h4>
+
+					<br>
+
+					<h4 style="color: black">Topología</h4>
+					
+				</section>
+
+				<!-- <section data-auto-animate data-auto-animate-unmatched="fade">
+
+
+
+					<img src="./assets/star_wars.png" height="400">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://moviegalaxies.com/movies/view/773/star-wars-episode-iv-a-new-hope/"> Star Wars: Episode IV - A New Hope </a> )</p>
+
+					<br>
+					
+					<ul>
+						<li>Diametro: 4</li>
+						<br>
+						<li>Distancia promedio entre nodos: 2.49</li>
+					</ul>
+
+				</section> -->
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;"><i>Idioms</i> enlace-nodo y matrices de adyacencia</h1>
+
+					<br>
+
+					<img src="./assets/comp_matriz_2.png" height="450" />
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: Libro "Visualization, Analysis and Design" )</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Posicionamiento dirigido por fuerzas</h1>
+
+					<br>
+
+					<video src="./assets/fuerza1.mov" height="350" data-autoplay loop>
+					</video>
+
+					<video src="./assets/fuerza2.mov" height="350" data-autoplay loop>
+					</video>
+
+					<br>
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://observablehq.com/@d3/force-directed-graph"> Force-Directed Graph (Observable) </a> )</p>
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://observablehq.com/@d3/force-directed-tree"> Force-Directed Tree (Observable) </a> )</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Cómo representar redes es un tema en continuo estudio</h1>
+
+					<br>
+
+					<img src="./assets/hiveplot.jpeg" height="450" />
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://academic.oup.com/bib/article/13/5/627/412507">  Hive plots—rational approach to visualizing networks </a> )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Cómo representar redes es un tema en continuo estudio</h1>
+
+					<br>
+
+					<img src="./assets/hiveplot2.jpeg" height="450" />
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://academic.oup.com/bib/article/13/5/627/412507">  Hive plots—rational approach to visualizing networks </a> )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Cómo representar redes es un tema en continuo estudio</h1>
+
+					<br>
+
+					<img src="./assets/hiveplot3.jpeg" height="450" />
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://academic.oup.com/bib/article/13/5/627/412507">  Hive plots—rational approach to visualizing networks </a> )</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Cómo representar redes es un tema en continuo estudio</h1>
+
+					<br>
+
+					<img src="./assets/fan_and_parallel_glyphs_1.png" height="450" />
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="http://www.cs.umd.edu/hcil/trs/2012-11/2012-11.pdf">  Motif Simplification: Improving Network Visualization Readabilitywith Fan and Parallel Glyphs </a> )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Cómo representar redes es un tema en continuo estudio</h1>
+
+					<br>
+
+					<img src="./assets/fan_and_parallel_glyphs_2.png" height="450" />
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="http://www.cs.umd.edu/hcil/trs/2012-11/2012-11.pdf">  Motif Simplification: Improving Network Visualization Readabilitywith Fan and Parallel Glyphs </a> )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Cómo representar redes es un tema en continuo estudio</h1>
+
+					<br>
+
+					<img src="./assets/fan_and_parallel_glyphs_3.png" height="450" />
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="http://www.cs.umd.edu/hcil/trs/2012-11/2012-11.pdf">  Motif Simplification: Improving Network Visualization Readabilitywith Fan and Parallel Glyphs </a> )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Cómo representar redes es un tema en continuo estudio</h1>
+
+					<br>
+
+					<img src="./assets/fan_and_parallel_glyphs_4.png" height="400" />
+					<img src="./assets/fan_and_parallel_glyphs_5.png" height="400" />
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="http://www.cs.umd.edu/hcil/trs/2012-11/2012-11.pdf">  Motif Simplification: Improving Network Visualization Readabilitywith Fan and Parallel Glyphs </a> )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Análisis de redes sociales</h1>
+
+					<br>
+
+					<img src="./assets/echo.svg" height="450" />
+
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="http://truthy.indiana.edu/demos/echo/">  EchoDemo </a> )</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+
+					<img src="./assets/cadem.png" height="450px"/>
+
+          
+          <p>Visualización de resultados de encuestas de preferencias para próximas elecciones presidenciales </p>
+          <p>Propuesta por estudiante Tristan Heuer.</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://cadem.cl/wp-content/uploads/2021/10/Track-PP-406-Octubre-S4-VF.pdf/">Encuesta Plaza Pública CADEM</a>)</p>
+
+				</section>
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+					<br>			<br>
+
+					<p>Estamos en plazo de realización de <span style="color: #f92696;">Hito 2</span>, el que termina el <span style="color: #f92696;"> jueves 11 de noviembre</span>.</p>
+					<br>
+
+					<p>Se vienen sesiones sobre: <span style="color: #f92696;">Posicionamiento dirigido por fuerzas en D3</span> (martes 9) y <span style="color: #f92696;">Abstracción de tareas</span> (jueves 11). ¡Quedan muy pocos contenidos!</p>
+					<br>
+					<p><span style="color: #f92696;">Jueves 11 de noviembre</span> se publica el  <span style="color: #f92696;">Examen</span>.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de redes y grafos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

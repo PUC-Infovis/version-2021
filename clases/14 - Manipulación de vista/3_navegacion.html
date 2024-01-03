@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Navegación</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Manipulación de vista</h1>
+					<h2 style="color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Navegación</h1>
+					<h1 style="font-size: 1.6em; color: black;">Manipulación de vista</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Navegación</h1>
+
+					<br>
+
+					<p>La acción de cambiar el punto de vista actual en una herramienta de visualización.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Navegación</h1>
+
+					<br>
+
+					<ul>
+						<li>Zoom</li>
+						<li>Traslación</li>
+						<li>Rotación</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Zooming geométrico</h1>
+
+					<br>
+
+					<p>La apariencia visual de los elementos son constantes independiente del nivel de zoom, sólo su escala cambia.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Zoom geométrico</h1>
+
+					<br>
+
+					<video height="400" src="./assets/zoom_geo.mov" data-autoplay loop>
+					</video>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://observablehq.com/@d3/zoom?collection=@d3/d3-zoom">Zoom (SVG) D3.js</a>)</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Zoom semántico</h1>
+
+					<br>
+
+					<p>La representación o apariencia de objetos se adapta a la cantidad de espacio disponible por el nivel de zoom actual.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Zoom semántico</h1>
+
+					<br>
+
+					<video height="400" src="./assets/zoom mapa.mov" data-autoplay loop>
+					</video>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://www.google.cl/maps/">Google Maps</a>)</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Zoom semántico</h1>
+
+					<br>
+
+					<video height="400" src="./assets/zoom sunburst.mov" data-autoplay loop>
+					</video>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://observablehq.com/@d3/zoomable-sunburst?collection=@d3/d3-hierarchy/">Zoomable Sunburst en D3.js</a>)</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Navegación restrigida</h1>
+
+					<br>
+
+					<p>Navegación completamente libre puede traer complicaciones para el usuario como pérdida o no ser hábil de encontrar puntos de vista convenientes.</p>
+
+					<br>
+
+					<p>Es buena idea definir límites y restringuir tipos de navegación.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Nevegación mediante selección y animación</h1>
+
+					<br>
+
+					<video height="400" src="./assets/zoom circlepacking.mov" data-autoplay loop>
+					</video>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://observablehq.com/@d3/zoomable-circle-packing">Zoomable Circle Packing en D3.js</a>)</p>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Navegación</h1>
+					<h1 style="font-size: 1.6em; color: black;">Manipulación de vista</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Separación matricial</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de datos tabulares</h1>
+					<h2 style="color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Separación matricial</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de datos tabulares</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Separación matricial</h1>
+
+					<br>
+
+					<svg width="600" height="300" viewBox="-20 -20 600 300">
+						<line x1="-10" y1="-10" x2="550" y2="-10" stroke="black" stroke-width="1" stroke-linecap="round"></line>
+            <line x1="540" y1="-20" x2="550" y2="-10" stroke="black" stroke-width="1" stroke-linecap="round"></line>
+						<line x1="540" y1="0" x2="550" y2="-10" stroke="black" stroke-width="1" stroke-linecap="round"></line>
+						
+						<line x1="-10" y1="-10" x2="-10" y2="250" stroke="black" stroke-width="1" stroke-linecap="round"></line>
+            <line x1="-20" y1="240" x2="-10" y2="250" stroke="black" stroke-width="1" stroke-linecap="round"></line>
+            <line x1="0" y1="240" x2="-10" y2="250" stroke="black" stroke-width="1" stroke-linecap="round"></line>
+
+            <line x1="0" y1="83" x2="500" y2="83" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="0" y1="180" x2="500" y2="180" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="100" y1="0" x2="100" y2="250" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="200" y1="0" x2="200" y2="250" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="300" y1="0" x2="300" y2="250" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="400" y1="0" x2="400" y2="250" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+					</svg>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Mapas de calor (<i>Heatmap</i>)</h3>
+
+					<br>
+
+					<img src="assets/heatmap.svg" height="300">
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://datavizcatalogue.com/methods/heatmap.html">DataViz Catalog</a>)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<table>
+						<tr>
+							<td style="color:#f92696"><i>Idiom</i></td>
+							<td style="max-width: 600px;">Mapa de calor.</td>      
+						</tr>
+						<tr>
+							<td style="color:#f92696">Qué: Datos</td>
+							<td style="max-width: 600px;">Tabular: dos atributos llave, y un atributo cuantitativo.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Cómo: Codificar</td>
+							<td style="max-width: 600px;">Marcas de área alineadas según matriz; <i>colormap</i> de color para atributo cuantitativo.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Porqué: Tareas</td>
+							<td style="max-width: 600px;">Encontrar agrupaciones, <i>outliers</i> y resumir.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Escala</td>
+							<td style="max-width: 600px;">Miles de celdas, valores de llaves en los cientos. Niveles para cuatitativo hasta la docena.</td>
+						</tr>
+					</table>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Matriz de gráficos de dispersión (<i>Scatterplot matrix</i>)</h3>
+
+
+					<img src="assets/scatterplot.png" height="450">
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://medium.com/plotly/what-is-a-splom-chart-make-scatterplot-matrices-in-python-8dc4998921c3">Artículo de Medium: What is a SPLOM chart?</a>)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<table>
+						<tr>
+							<td style="color:#f92696"><i>Idiom</i></td>
+							<td style="max-width: 600px;">Matriz de gráficos de dispersión.</td>      
+						</tr>
+						<tr>
+							<td style="color:#f92696">Qué: Datos</td>
+							<td style="max-width: 600px;">Tabular: múltiples atributos cuantitativos.</td>
+						</tr>
+
+						<tr>
+							<td style="color:#f92696">Qué: Derivados</td>
+							<td style="max-width: 600px;">Llave ordenadas: nombres de atributos ordenados.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Cómo: Codificar</td>
+							<td style="max-width: 600px;">Gráficos de dispersión en matriz 2D.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Porqué: Tareas</td>
+							<td style="max-width: 600px;">Encontrar correlación, tendencias y <i>outliers</i>.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Escala</td>
+							<td style="max-width: 600px;">Una docena de atributos. Cientos de ítems.</td>
+						</tr>
+					</table>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+
+					<img src="assets/small_bar_.png" height="450">
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://peltiertech.com/stacked-bar-chart-alternatives/">Stacked Bar Chart Alternatives</a>)</p>
+
+
+				</section>
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Separación matricial</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de datos tabulares</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

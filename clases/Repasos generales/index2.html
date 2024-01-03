@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Repaso general 28/10/2021</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+					<img src="./assets/cat_scale.jpg" height="500px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Repaso general 28/10/2021</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Visualización de Información hasta ahora</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Visualización de Información hasta ahora</h3>
+
+					<br>
+					<h4 style="color: black;">Visualización de datos tabulares</h4>
+					<h4 style="color: black;">Visualización de datos espaciales</h4>
+					<h4 style="color: black;">Manipulación de vista</h4>
+					<h4 style="color: black;"><i>Facet</i></h4>
+					<h4 style="color: black;">Reducción de datos</h4>
+
+					<br>
+
+					<h4 style="color: black;">Selecciones y <i>join</i> de datos en D3</h4>
+					<h4 style="color: black;">Utilidades de D3 I</h4>
+					<h4 style="color: black;">Utilidades de D3 II</h4>
+					<h4 style="color: black;"><i>Layouts</i> tabulares en D3</h4>
+					<h4 style="color: black;"><i>Zooming</i> y <i>panning</i> en D3</h4>
+					
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Saltamos entre nivel 3 y 4 del modelo</h3>
+
+
+					<div data-id="1" style="background: rgba(255, 165, 0, 0.3); color: rgba(0, 0, 0, 0.3); width: 55%; padding: .5em; margin: .5em; opacity: 0.8; margin-top: 3em;">
+						Caracterización de dominio
+						<div style="background: rgba(255, 255, 0, 0.3); color: rgba(0, 0, 0, 0.3); width: 90%; padding: .5em; margin: .5em;">
+							Abstracción de datos y tareas
+							<div style="background: rgba(173, 255, 47, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: .5em; margin: .5em;">
+								Codificación visual y de interacción
+								<div style="background: rgba(216, 112, 147, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: .5em; margin: .5em;">
+									Implementación algorítmica
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Codificación visual y de interacción</h3>
+					
+					<br>
+
+					<p>¿Qué marcas y canales ocuparé?</p>
+
+					<br>
+
+					<p>¿Ocuparé interacción de alguna forma?</p>
+					
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Codificación visual y de interacción</h3>
+					
+					<br>
+
+					<p>¿Qué marcas y canales ocuparé?</p>
+
+					<br>
+
+					<p>¿Ocuparé interacción de alguna forma?</p>
+
+					<br>
+
+					<ul>
+						<li>Principios de expresividad y efectividad</li>
+						<li>Principios de IHC y diseño</li>
+						<li>Consideraciones de percepción por canales específicos: color</li>
+						<li>Consideraciones para datos específicos: tabulares</li>
+						<li>Consideraciones para datos específicos: geométricos</li>
+						<li>Mi situación tiene complejidad, ¿qué opciones de estrategias tengo para afrontarlo?</li>
+					</ul>
+					
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Codificación visual y de interacción</h3>
+					
+					<br>
+
+					<p>El modelo de trabajo no es un camino directo hacia la mejor solución de visualización.</p>
+
+					<br>
+
+					<ol>
+						<li>Conocer tantos tipos de decisiones y sub-decisiones de diseño nos expande el repertorio de posibilidades. (Las visualizaciones del día también ayudan a eso)</li>
+						<br>
+						<li>Los principios nos dan direcciones a seguir.</li>
+						<br>
+						<li>El ideal sería encontrar varias posibles opciones válidas que satisfacen una situación.</li>
+						<br>
+						<li>Y luego decidir una.</li>
+					</ol>
+					
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Relevante para Entrega 2 e Hito 2</h3>
+
+					<br>
+
+					<h4 style="color: black;">Intro a la web: HTML, CSS y SVG</h4>
+					<h4 style="color: black;">Intro a la web: JS y D3</h4>
+
+					<h4 style="color: black;">Selecciones y <i>join</i> de datos en D3</h4>
+					<h4 style="color: black;">Utilidades de D3 I</h4>
+					<h4 style="color: black;">Utilidades de D3 II</h4>
+					<h4 style="color: black;"><i>Layouts</i> tabulares en D3</h4>
+					<h4 style="color: black;"><i>Zooming</i> y <i>panning</i> en D3</h4>
+					<h4 style="color: black;">Visualización de datos espaciales</h4>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Consejos para Hito 2 basados en Entrega 2</h3>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Consejos para Hito 2 basados en Entrega 2</h3>
+
+					<br>
+
+					<p>Si tienen dudas de conceptos específicos, comentenlos por el chat y los responderemos después.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Lista de funcionalidades y/o requerimientos</h3>
+
+					<br>
+					<p>Si bien se específican funcionalidades en grupos, estos grupos no son más que para ordenar los objetivos.</p>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Lista de funcionalidades y/o requerimientos</h3>
+
+					<br>
+					<p>Si bien se específican funcionalidades en grupos, estos grupos no son más que para ordenar los objetivos.</p>
+
+					<br>
+
+					<h3>Consejo: <span style="color: black;">Avancen según elementos en la lista y verifiquen lo que se espera con la </span> rúbrica </h3>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Lista de funcionalidades y/o requerimientos</h3>
+
+					<br>
+					<p>Si bien se específican funcionalidades en grupos, estos grupos no son más que para ordenar los objetivos.</p>
+
+					<br>
+
+					<h3>Consejo: <span style="color: black;">Avancen según elementos en la lista y verifiquen lo que se espera con la </span> rúbrica </h3>
+					<h3>Consejo: <span style="color: black;">La rúbrica es la fuente de la verdad, no el ejemplo adjunto. </h3>
+
+				</section>
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3>Consejo: <span style="color: black;">Seguir mínimos de implementación </span> </h3>
+          
+					<br>
+
+					<p>Versión 6 o 7 de D3.js y CSS de ustedes, no otras librerías o <i>frameworks</i> a menos que explicitamente dicho.</p>
+          
+
+					<pre data-id="code1"><code data-trim class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Título de herramienta&lt;/title&gt;
+    &lt;link href=&quot;estilo.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+    &lt;script src=&quot;https://d3js.org/d3.v7.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    ...
+    &lt;script src='programa.js' charset='utf-8'&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code></pre>
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3>Consejo: <span style="color: black;">Creanse el cuento de la evaluación, están desarrollando una herramienta para alguien. </span> </h3>
+
+					<ul>
+						
+					</ul>
+          
+					<br>
+
+
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3>Consejo: <span style="color: black;">Creanse el cuento de la evaluación, están desarrollando una herramienta para alguien. </span> </h3>
+
+					<ul>
+						<li>No usen de título "Evaluación" o "Hito 2". </li>
+						<li>Piensen en la presentación de la información. </li>
+					</ul>
+          
+					<br>
+
+
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3>Consejo: <span style="color: black;">Creanse el cuento de la evaluación, están desarrollando una herramienta para alguien. </span> </h3>
+          
+					<ul>
+						<li>No usen de título "Evaluación" o "Hito 2". </li>
+						<li>Piensen en la presentación de la información. </li>
+					</ul>
+					
+					<br>
+					<br>
+					<br>
+
+					<h3>Consejo: <span style="color: black;">No solo las visualizaciones son importantes en una herramienta, también lo son los elementos contextuales. </span> </h3>
+
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3>Consejo: <span style="color: black;">Creanse el cuento de la evaluación, están desarrollando una herramienta para alguien. </span> </h3>
+          
+					<ul>
+						<li>No usen de título "Evaluación" o "Hito 2". </li>
+						<li>Piensen en la presentación de la información. </li>
+					</ul>
+					
+					<br>
+					<br>
+					<br>
+
+					<h3>Consejo: <span style="color: black;">No solo las visualizaciones son importantes en una herramienta, también lo son los elementos contextuales. </span> </h3>
+
+					<ul>
+						<li>Recuerden agregar el título, contexto y fuente de datos (está en rúbrica). </li>
+						<li>Recuerden agregar títulos a gráficos individuales y títulos a ejes. </li>
+					</ul>
+
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Consejo: <span style="color: black;">Utilizar <i>join</i> de datos cuando puedan. D3 se basa en esto.</span> </h3>
+					
+					<br>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Consejo: <span style="color: black;">Utilizar <i>join</i> de datos cuando puedan. D3 se basa en esto.</span> </h3>
+					
+					<br>
+
+					<pre data-id="code2"><code data-trim class="js">
+            for(let i = 0; i < 5; i++) {
+              const color = ...
+              const d = ...
+              contenedor
+                .append("path")
+                .attr("color", color)
+                .attr("d", d)
+                ...
+            }
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Consejo: <span style="color: black;">Utilizar <i>join</i> de datos cuando puedan. D3 se basa en esto.</span> </h3>
+					
+					<br>
+
+					<pre data-id="code2"><code data-trim class="js">
+            contenedor
+              .selectAll("path")
+              .data(elementos)
+              .enter()
+              .append("path")
+              .attr("color", ...)
+              .attr("d", ...)
+              ...
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Consejo: <span style="color: black;">Utilizar <i>join</i> de datos cuando puedan. D3 se basa en esto.</span> </h3>
+					
+					<br>
+
+					<pre data-id="code2"><code data-trim class="js">
+            const select = document.getElementById("select");
+            datos.forEach(d => {
+              const option = document.createElement("option");
+              option.value = d;
+              option.text = d;
+              select.appendChild(option)
+            });
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Consejo: <span style="color: black;">Utilizar <i>join</i> de datos cuando puedan. D3 se basa en esto.</span> </h3>
+					
+					<br>
+
+					<pre data-id="code2"><code data-trim class="js">
+            d3.select("#select")
+              .selectAll("option")
+              .data(datos)
+              .enter()
+              .append("option")
+              .attr("value", d => d)
+              .text(d => d);
+					</code></pre>
+
+				</section>
+	
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Consejo: <span style="color: black;">Pregunten cuando no saben. Están los foros y Discord. ¡Aprovechenlos!</span> </h3>
+					
+					<br>
+
+					<h3>Consejo: <span style="color: black;">Comenzar con anticipación.</span> </h3>
+
+				</section>
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>¿Tienen consejos que compartirse entre ustedes?</h3>
+				
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>¿Más dudas?</h3>
+					<h3>¿O dudas específicas?</h3>
+				
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Próximamente</h3>
+
+					<br>
+
+					<h4 style="color: black;">Más sesiones de implementación</h4>
+					<h4 style="color: black;">Visualización de redes y jerarquías</h4>
+					<h4 style="color: black;">Nos aproximamos al examen del curso</h4>
+					
+				</section>
+				
+        
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Repaso general 28/10/2021</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Nos vemos!</h2>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

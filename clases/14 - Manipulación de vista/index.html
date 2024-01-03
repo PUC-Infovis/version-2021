@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Manipulación de vista</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>10 de octubre: día mundial de la salud mental</h1>
+					<h2 style="color: black;">Semana de la salud mental</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Cómo se han sentido durante el semestre?</h3>
+					<h3>¿Qué aprensiones han sentido el último tiempo?</h3>
+					<h3>¿Qué les ha ayudado a cuidar su salud mental durante el semestre?</h3>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Algunos equipos de apoyo que pueden ser de ayuda:</h3>
+
+					<br />
+					<br />
+					
+					<ul>
+						<li>Centro de Salud Mental Estudiantil de la UC: apoyo.saludestudiantil.uc.cl</li><br />
+						<li>Unidad de Bienestar de la Escuela de Ingeniería: Patricia Galilea (pgalilea@ing.puc.cl) y Macarena Falcón (mfalcon@ing.puc.cl)</li><br />
+						<li>Equipo de Acompañamiento Estudiantil de la Dirección de Pregrado: orientacionestudiantil@ing.puc.cl o se puede reportar dificultades a través de Siding</li><br />
+						<li>Unidad de Bienestar del Centro de Alumnos de Ingeniería: https://www.instagram.com/caipuc_bienestar</li><br />
+						<li>Bienestar en InfoVis: Daniela Flores (diflores@uc.cl) y Fernando Florenzano (faflorenzano@ing.puc.cl)</li>
+					</ul>
+				</section>
+
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Guía de redes de apoyo</h3>
+					
+					<br>
+					
+					<img src="./assets/redes_de_apoyo.png" height="400"/>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Manipulación de vista</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. Cambios en el tiempo</h4>
+					<h4 style="color: black;">2. Selección</h4>
+					<h4 style="color: black;">3. Navegación </h4>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Manipulación de vista</h1>
+
+					<br>
+
+					<p>Decisiones de diseño que realizan cambios en lo que se muestra en una herramienta de visualización de información.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;"><i>Visual clutter</i></h1>
+
+					<br>
+
+
+					<img src="./assets/Visual-Cluttering-Problem.png" height="350"/>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://www.researchgate.net/profile/Daria_Hookk/publication/327155473/figure/fig11/AS:669566803910674@1536648574517/Visual-Cluttering-Problem.png">enlace</a>)</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Manipulación de vista</h1>
+
+					<br>
+
+					<p>Esta es <strong>una</strong> posible estrategia de manejar complejidad de un <i>dataset</i>. Otras son:</p>
+
+					<h4>Derivación de datos</h4>
+					<h4><i>Facet</i> de vistas</h4>
+					<h4>Reducción de datos</h4>
+				</section>
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Manipulación de vista</h1>
+
+					<br>
+
+					<h4 style="color: black;">Cambios en el tiempo</h4>
+					<h4 style="color: black;">Selección</h4>
+					<h4 style="color: black;">Navegación</h4>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Manipulación de vista</h1>
+
+					<br>
+
+					<h4 style="color: black;">Cambios en el tiempo</h4>
+					<ul>
+						<li>Cambiar decisiones de diseño</li>
+						<li>Cambiar datos</li>
+						<li>Cambiar en conjunto a otras acciones</li>
+						<li>...</li>
+					</ul>
+					<br>
+					<br>
+					<h4 style="color: black;">Selección</h4>
+					<ul>
+						<li>Cómo seleccionar</li>
+						<li>Qué seleccionar</li>
+						<li>Qué gatilla una selección</li>
+						<li>Cuenta con énfasis</li>
+						<li>...</li>
+					</ul>
+					<br>
+					<br>
+					<h4 style="color: black;">Navegación</h4>
+					<ul>
+						<li>Qué tipos de navegación se proveen</li>
+						<li>Zoom geométrico o semántico</li>
+						<li>Se restringue en algún sentido</li>
+						<li>...</li>
+					</ul>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+
+					<div data-id="1" style="background: rgba(255, 165, 0, 0.3); color: rgba(0, 0, 0, 0.3); width: 55%; padding: .5em; margin: .5em; opacity: 0.8; margin-top: 3em;">
+						Caracterización de dominio
+						<div style="background: rgba(255, 255, 0, 0.3); color: rgba(0, 0, 0, 0.3); width: 90%; padding: .5em; margin: .5em;">
+							Abstracción de datos y tareas
+							<div style="background: rgba(173, 255, 47, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: .5em; margin: .5em;">
+								Codificación visual y de interacción
+								<div style="background: rgba(216, 112, 147, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: .5em; margin: .5em;">
+									Implementación algorítmica
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</section>
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3 style="color: black;">(dato, tarea, <i style="color: #f92696;">idiom</i>)</h3>
+
+					<br>
+
+					<h4><i>Idioms</i> visuales</h4>
+					<h4><i>Idioms</i> de interacción</h4>
+					
+				</section>
+
+				<!-- <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Cambios en el tiempo autogatillados</h3>
+					
+					<br>
+					
+					<img src="./assets/cambio_tiempo_animacion.png" height="400"/>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://www.nytimes.com/interactive/2018/03/19/upshot/race-class-white-and-black-men.html">Extensive Data Shows Punishing
+						Reach of Racism for Black Boys</a>)</p>
+
+
+				</section> -->
+
+				<!-- <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Cambios en el tiempo por interacción de usuario </h3>
+					
+					<br>
+          <h4>Visualización del día</h4>
+          					
+					<img src="./assets/vis_del_dia.png" height="400"/>
+
+					<p>Propuesto por estudiante Daniela Concha.</p>
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://cinemetrics.site/">Cinemetrics</a>)</p>
+
+
+				</section> -->
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<!-- <h3>Selección es más que un par de clics</h3>
+					
+					<br> -->
+					
+					<img src="./assets/seleccion_variada.png" height="400"/>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://pudding.cool/2017/02/new-slang/">Pudding: New Slang</a>)</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<!-- <h3>Selección y énfasis</h3>
+					
+					<br> -->
+					
+					<img src="./assets/seleccion_enfasis.png" height="400"/>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://pudding.cool/2017/06/best-sellers/">Pudding: Best Sellers</a>)</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<!-- <h3>Zoom y traslación</h3>
+					
+					<br> -->
+					
+					<img src="./assets/zoom_basico.png" height="400"/>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://pudding.cool/2019/07/book-covers/">11 Years of Top-Selling Book Covers, Arranged by Visual Similarity</a>)</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<!-- <h3>Zoom y traslación</h3>
+					
+					<br> -->
+					
+					<img src="./assets/zoom_semantico.png" height="400"/>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://pudding.cool/2019/05/people-map/">A People Map of the US</a>)</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Uso máximo de cambios en el tiempo: <i>Storytelling</i> de datos mediante <i>scrolling</i></h3>
+					
+					<br>
+					
+					<img src="./assets/story1.png" height="120"/>
+					<img src="./assets/story2.png" height="120"/>
+					<img src="./assets/story3.png" height="120"/>
+					<img src="./assets/story4.png" height="120"/>
+					<img src="./assets/story5.png" height="120"/>
+					<img src="./assets/story6.png" height="120"/>
+					<img src="./assets/story7.png" height="120"/>
+					<img src="./assets/story8.png" height="120"/>
+					<img src="./assets/story9.png" height="120"/>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://pudding.cool/2018/07/women-in-congress/">Women in congress</a>)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Uso máximo de cambios en el tiempo: <i>Storytelling</i> de datos mediante <i>scrolling</i></h3>
+					
+					<br>
+					<ul>
+						<li>Cambios de <i>idiom</i> y codificaciones a los largo del documento.</li>
+						<br>
+						<li>Navegación local en <i>idioms</i>: zoom y traslación</li>
+						<br>
+						<li>Selección local en <i>idioms</i> enlazado a énfasis</li>
+						<br>
+						<li>Documento completo tiene una especie de navegación lineal mediante <i>scrolling</i> que gatilla todos los cambios en el tiempo.</li>
+					</ul>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+					<br>
+				
+
+          <p>Mañana es la Ayudantía 7 sobre <span style="color: #f92696;">Manipulación y marcas en D3.js</span>.</p>
+          
+          <br>
+
+          <p>Sesión de jueves 23 de septiembre revisamos <span style="color: #f92696;">Zooming y panning en D3.js</span>.</p>
+          
+          <br>
+
+					<p>Jueves 07 de octubre (20:00) termina plazo de <span style="color: #f92696;">Entrega 2</span>.</p>
+
+					<br>
+
+					<p>Hasta viernes 08 de octubre se puede responder <span style="color: #f92696;">Encuesta Medio Semestre</span>.</p>
+
+					
+				</section>
+
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Visualización del día - Semana de salud mental</h3>
+
+					<img src="./assets/vis_del_dia_2.png" height="400px"/>
+
+          
+          <p>Advertencia antes te visitar: Datos sobre suicidio en Paises Bajos. </p>
+          <p>Propuesta por entidad anónima.</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://www.studioterp.nl/a-view-on-despair-a-datavisualization-project-by-studio-terp/">A view on despair</a>)</p>
+
+        </section>
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Manipulación de vista</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Nos vemos!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

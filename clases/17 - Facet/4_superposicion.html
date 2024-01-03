@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Superposición de capas</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1><i>Facet</i></h1>
+					<h2 style="color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Superposición de capas</h1>
+					<h1 style="font-size: 1.6em; color: black;"><i>Facet</i></h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Superposición de capas</h1>
+
+					<br>
+
+					<p>Generar y colocar capas una sobre la otra para producir una sola vista.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Superposición de capas</h1>
+
+					<svg width="500" height="400">
+						
+						<rect fill="none" stroke="black" stroke-width="3" x="100" y="100" width="300" height="200"></rect>
+						<rect fill="none" stroke="black" stroke-width="3" x="110" y="110" width="300" height="200"></rect>
+						<rect fill="none" stroke="black" stroke-width="3" x="120" y="120" width="300" height="200"></rect>
+						<rect fill="none" stroke="black" stroke-width="3" x="130" y="130" width="300" height="200"></rect>
+
+					</svg>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Superposición de capas</h1>
+
+					<svg width="500" height="400">
+						
+						<rect fill="none" stroke="black" stroke-width="3" x="100" y="100" width="300" height="200"></rect>
+						<rect fill="blue" x="150" y="150" height="100" width="20"></rect>
+						<rect fill="blue" x="250" y="150" height="100" width="20"></rect>
+						<rect fill="blue" x="200" y="150" height="100" width="20"></rect>
+					</svg>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Capas diferenciables</h1>
+
+					<svg width="500" height="400">
+						
+						<rect fill="none" stroke="black" stroke-width="3" x="100" y="100" width="300" height="200"></rect>
+						<rect fill="blue" x="150" y="150" height="100" width="20"></rect>
+						<rect fill="blue" x="250" y="150" height="100" width="20"></rect>
+						<rect fill="blue" x="200" y="150" height="100" width="20"></rect>
+
+						<rect fill="none" stroke="black" stroke-width="3" x="110" y="110" width="300" height="200"></rect>
+						<circle cx="300" cy="200" r="10" fill="red"></circle>
+						<circle cx="330" cy="200" r="10" fill="red"></circle>
+						<circle cx="360" cy="200" r="10" fill="red"></circle>
+					</svg>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Gráficos de línea múltiples</h1>
+
+          <img src="./assets/lineas_capas.png" height="400" />
+					<p style="font-size: 0.5em; color: grey;">(Fuente: Libro "Visualization, Analysis and Design" )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Gráficos de línea múltiples versus pequeños múltiples de área</h1>
+
+          <img src="./assets/areas_versus_lineas.png" height="400" />
+					<p style="font-size: 0.5em; color: grey;">(Fuente: Libro "Visualization, Analysis and Design" )</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Capas estáticas y dinámicas</h1>
+
+          <img src="./assets/enfasis_grafo.png" height="400" />
+					<p style="font-size: 0.5em; color: grey;">(Fuente: Libro "Visualization, Analysis and Design" )</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Superposición de capas</h1>
+					<h1 style="font-size: 1.6em; color: black;"><i>Facet</i></h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

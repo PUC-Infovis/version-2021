@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Examen</title>
+    <link rel="stylesheet" type="text/css" href="informe1.css"/>
+</head>
+<body>
+    <h1>Informe Examen</h1>
+
+    <h2>Características de dominio</h2>
+    <h3>Naturaleza de los datos a trabajar</h3>
+    <p>Para este trabajo se utilizaron dos dataset iniciales:</p>
+    <ul>
+        <li>extinct-languages.csv</li>
+
+        <li>family.csv</li>
+    </ul>
+    <p>Estos datasets fueron analizados y procesados en el archivo analisis y preprocesamiento.ipynb, para así después generar el archivo data.csv, el cual fue usado para generar la visualización.</p>
+
+    <h4>extinct-languages.csv</h4>
+    <p>Este dataset fue obtenido de <a href="https://www.kaggle.com/the-guardian/extinct-languages">Kaggle</a> y presenta una serie de lenguas que se encuentran extintas o en peligro de extinción.</p>
+    <p>En si, este dataset nos presenta información básica de los lenguajes: nombre, países relacionados, ubicación geográfica, cantidad de hablantes y, lo más importante, el grado de peligro este lenguaje. Cada lenguaje puede tomar uno de los siguientes 5 valores:</p>
+    <ol>
+        <li><span class="bold">Vulnerable:</span> la mayoría de los niños hablan el idioma, pero puede estar restringido a ciertos dominios (por ejemplo, el hogar).</li>
+        <li><span class="bold">Definitivamente en peligro:</span> los niños ya no aprenden el idioma como “lengua materna” en el hogar.</li>
+        <li><span class="bold">Severo peligro:</span> el idioma lo hablan los abuelos y las generaciones mayores; si bien la generación de padres puede entenderlo, no se lo hablan a los niños ni entre ellos.</li>
+        <li><span class="bold">Peligro crítico:</span> los hablantes más jóvenes son los abuelos y los mayores, y hablan el idioma de forma parcial y con poca frecuencia.</li>
+        <li><span class="bold">Extinto:</span> no quedan hablantes.</li>
+    </ol>
+
+    <h4>family.csv</h4>
+    <p>Este dataset fue obtenido de <a href="https://linguistlist.org/forms/langs/get-extinct.cfm">linguistlist.org</a> y gracias a este dataset podemos identificar las familias y subgrupos de varios de los lenguajes obtenidos en el dataset anterior. Acá se produce una jerarquía, ya que las familias de lenguajes, contienen los subgrupos de lenguajes, por lo que nos permite generar nuevos tipos de relaciones entre los lenguajes.</p>
+
+    <h3>Potencial usuario objetivo de la herramienta y tipo de uso que tendrá la herramienta</h3>
+    <!-- <p>Se espera que el usuario que utilice la herramienta sea alguien que busque interactuar con la misma para obtener información, ya sea mediante lo que se entrega directamente desde ella o las conclusiones que pueda sacar a partir de las distintas interacciones que esta ofrece.</p> -->
+    <p>El usuario objetivo al cual se apunta es aquella persona curiosa por conocer distintos tipos de lenguas en peligro de extinción, pero que no sabe por si misma tanto sobre ellas. Le es importante luego ser capaz de encontrar nuevas lenguas que antes no conocía, aprender sobre su nivel de vulnerabilidad, cantidad de hablantes, ubicación geográfica y relaciones con otras lenguas.</p>
+    <p>A partir de esta herramienta se espera que el usuario pueda identificar lenguas extintas o en peligro de extinción, para así poder obtener información de ellas y generar relaciones entre las mismas, por ejemplo, si en verdad existe una relación el grado de peligro y la cantidad de hablantes de una lengua.</p>
+    <p>Además se puede identificar su ubicación en el mapa, por lo que nos permite determinar qué sectores del mundo tienen una mayor cantidad de estos lenguajes.</p>
+    <p>También podemos generar conexiones entre estas lenguas, ya que algunas de ellas comparten familia y subgrupo. Sumado con el punto anterior, esto nos permite ver hasta dónde se expandieron dichas lenguas.</p>
+
+    <!-- <h3>Tipo de uso que tendrá la herramienta</h3> -->
+    <p>Esta será una herramienta interactiva, por lo que el usuario podrá aplicar filtros sobre los datos mostrados, decidir qué información ver y seleccionar los distintos lenguajes para así obtener más información de los mismo.</p>
+    <!-- <p>El contenido de la visualización será estático, dado que los datos se obtienen a partir del archivo data.csv y este no se modifica a partir de las interacciones del usuario.</p> -->
+
+    <h2>Abstracción de datos y tareas</h2>
+    
+
+    <h3>Tarea 1</h3>
+    <p class="tarea">Descubrir correlaciones entre la ubicación geográfica de los lenguajes y el grado de peligro del mismo.</p>
+    <p>A partir de estas relaciones que encontrará el usuario podrá, por ejemplo, determinar si ciertos continentes o países presentan una major concentración de lenguajes extintos o en peligro de extinción y el grado de peligro de los mismo.</p>
+
+    <h3>Tarea 2</h3>
+    <p class="tarea">Sondear el (valor individual) de lenguas en base grado de peligro de extinción y número de hablantes.</p>
+    <p>El usuario será capaz de encontrar y conocer lenguas en base a caracteristicas de ellas. Podría llegar a encontrar similitudes entre los datos también, por ejemplo una relación entre la cantidad de hablantes del lenguaje y el grado de peligro del mismo. Estas relaciones le permitirán al usuario comprobar si una baja cantidad de hablantes siempre implica un alto grado de peligro o viceversa.</p>
+
+    <h3>Tarea 3</h3>
+    <p class="tarea">Identificar caminos de relaciones entre las distintas lenguas y los lugares a los que pertenecen.</p>
+    <p>A partir de estas consultas el usuario podrá descubrir vínculos entre los datos e identificar hasta qué lugares del mundo se expandieron ciertas familias lingüísticas, por ejemplo, la familia “Yenisei Ostyak” se encuentra presente tanto en Papúa Nueva Guinea como en Rusia.</p>
+    
+
+    <h3>Abstracción de datos</h3>
+
+    <p>Datos singulares presentes hay variados: las entidades prinicipales son ítems (las lenguas), que son descritas a través de múltiples atributos (grado de peligro, número de hablantes, etc...), también hay enlaces representados por las relaciones de familias de lenguajes, y posicisiones al trabajar con datos geográficos.</p>
+
+    <p>En cuanto a atributos, contamos con:</p>
+    <div class="descripcion">
+        <p class="header">Nombre</p>
+        <p class="header">Descripción</p>
+        <p class="header">Abstracción</p>
+
+        <p>id</p>
+        <p>Identificador único del lenguaje.</p>
+        <p>Categorico <br> Llave</p>
+
+        <p>ISO639-3 codes</p>
+        <p>Código ISO639-3 del lenguaje. Se utiliza para para identificar las Familias y Subgrupos de los lenguajes en el preprocesamiento.</p>
+        <p>Categorico <br> Llave</p>
+
+        <p>Name in English</p>
+        <p>Nombre del lenguaje en inglés.</p>
+        <p>Categorico <br> Llave</p>
+
+        <p>Name in the language</p>
+        <p>Nombre del lenguaje en su idioma.</p>
+        <p>Categorico <br> Llave</p>
+
+        <p>Degree of endangerment</p>
+        <p>Grado de peligro del lenguaje.</p>
+        <p>
+            Ordenado<br>
+            Ordinal<br>
+            Secuencial<br>
+            No cíclico<br>
+            Valor
+        </p>
+
+        <p>Number of speakers</p>
+        <p>Número de hablantes.</p>
+        <p>
+            Ordenado<br>
+            Cuantitativo<br>
+            Secuencial<br>
+            No cíclico<br>
+            Valor
+        </p>
+
+        <p>Latitude</p>
+        <p>Latitud de donde se ubica el lenguaje.</p>
+        <p>
+            Ordenado<br>
+            Cuantitativo<br>
+            Secuencial*<br>
+            Cíclico*<br>
+            Valor
+        </p>
+
+        <p>Longitude</p>
+        <p>Longitud de donde se ubica el lenguaje.</p>
+        <p>
+            Ordenado<br>
+            Cuantitativo<br>
+            Secuencial*<br>
+            Cíclico*<br>
+            Valor
+        </p>
+
+        <p>Family</p>
+        <p>Familia a la que pertenece el lenguaje.</p>
+        <p>Categorico<br>
+            Valor</p>
+
+        <p>Subgroup</p>
+        <p>Subgrupo al que pertenece el lenguaje.</p>
+        <p>Categorico<br>
+            Valor</p>
+
+
+    </div>
+
+    <br >
+
+    <p>*Los atributos de longitud y latitud pueden catalogarse como divergentes y cíclicos al seguir la semántica numérica en la cual están basadas. Pero en aspectos prácticos de este caso, la semántica divergente no es tan relevante, por lo que se eligue secuencial.</p>
+
+
+    <h2>Codificación visual y de interacción</h2>
+    <h3>Tarea 1: Ubicación geográfica y grado de peligro</h3>
+    <div class="grupo">
+        <p>Para representar los nodos en el mapa, se optó por usar colores neutros y claros en el fondo y los países, para así resaltar los puntos que representan los puntos que representarán los lenguajes.</p>
+        <p>Para representar el mapa, se escogió la proyección de Mercator, ya que es una proyección a la que la mayoría de los de los usuarios se encuentran acostumbrados. Además, como no se utilizan escalas entre los países no es necesario mantener las proporciones entre ellos. En cuanto a sus posiciones de nodos y geometrías de paises, se utilizan sus valores directamente a través de la proyección mencionada, ya que se tratan de valores geométricos simples. </p>
+        <p>Para representar los distintos lenguajes se utilizaron nodos en el mapa, los cuales representan el grado de peligro y cantidad de hablantes. Además, al pasar el mouse por sobre el nodo, se abrirá un tooltip que mostrará el nombre, nombre nativo y la cantidad de hablantes del lenguaje.</p>
+        <p>Para representar el grado de peligro de los datos, se utilizó una escala de color que resalta por sobre los colores del mapa. Esta escala es un punto medio entre una escala categórica y ordenada, ya que los colores presentan un orden, pero no es una escala lineal. Así simulamos una escala "ordinal" para expresar (principio) de la mejor manera posible posible.</p>
+        <p>La cantidad de hablantes de un lenguaje se representa por medio del tamaño del nodo. Al ser un canal de magnitud, según principio de expresividad se empareja bien con el atributo cuantitativo. Pero tiene el problema que potencialmente se genera solapes entres nodos. Debido a esto:</p>
+        <ul>
+            <li>Se puede activar y desactivar la opción de mostrar la cantidad de hablantes de un lenguaje.</li>
+            <li>Al momento de hacer zoom se mantendrá constante el porte de los puntos, por lo que así se podrán distinguir los puntos que se solapan y la escala se mantiene constante.</li>
+        </ul>
+    </div>
+
+    <h3>Tarea 2: Filtros de los datos</h3>
+    <div class="grupo">
+        <p>Para permitir el sondeo fácil de las lenguas, se decide utilizar filtros dinámicos entre los datos. Para esto se utilizan dos herramientas distintas que permiten realizar selección de las lenguas mostradas actualmente:</p>
+        <ul>
+            <li>Switches para indicar si se debe mostrar los lenguajes de un cierto grado de peligro.</li>
+            <li>Slider de rango para indicar rangos de hablantes que presentar en la visualización.</li>
+        </ul>
+        <p>Se utilizaron los switches, debido a que que facilitan la selección y filtración en base a múltiples valores y simple para el usuario el saber si se encuentra activado o no.</p>
+        <p>Para los rangos se utilizaron los sliders, ya que permite seleccionar con facilidad valores numéricos. Además, se limito los valores que puede tomar (de 0 a 7000), ya que los datos se encuentran muy dispersos (de 0 a 7 millones), por lo que se optó por acotar los valores en los 3 primeros cuartiles. </p>
+    </div>
+
+    <h3>Tarea 3: Conexiones entre familas</h3>
+    <div class="grupo">
+        <p>Para mostrar los caminos que se generan entre los lenguajes de una misma familia, se separa completamente de la visualización original, debido a que la cantidad de datos para esta tarea es muy reducida. Entonces, para activar esta opción el usuario deberá activar un switch. Para evitar problemas con los datos, se desactivaron las opciones de filtros y solo se puede activar y desactivar el que se muestre la cantidad de hablantes.</p>
+        <p>Para representar los caminos se utilizan líneas entre los nodos de una misma familia y solo se pueden ver cuando se pasa el mouse por sobre uno de los lenguajes. Esto se hizo, debido a que si no se sobre saturaba el mapa y se dificulta la visualización de las conexiones.</p>
+        <p>Además, al momento de pasar el mouse por el nodo y se cambiará el color de los nodos que no están conectados con el mismo, así se centra la atención del usuario en lo que se está mostrando.</p>
+        <p>En cuanto al tooltip que se nombró en la tarea 1, este seguirá apareciendo al momento de pasar el mouse por sobre el nodo, pero adicionalmente se agregará la información de la familia y el subgrupo del lenguaje.</p>
+    </div>
+    
+
+</body>
+</html>

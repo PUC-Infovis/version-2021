@@ -1,0 +1,95 @@
+{
+    "nombre": "A",
+    "hijos": [
+        {
+            "nombre": "B",
+            "hijos": [
+                {
+                    "nombre": "D",
+                    "hijos": []
+                },
+                {
+                    "nombre": "E",
+                    "hijos": [
+                        {
+                            "nombre": "I",
+                            "hijos": []
+                        },
+                        {
+                            "nombre": "J",
+                            "hijos": []
+                        },
+                        {
+                            "nombre": "K",
+                            "hijos": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "C",
+            "hijos": [
+                {
+                    "nombre": "F",
+                    "hijos": [
+                        {
+                            "nombre": "L",
+                            "hijos": [
+                                
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "G",
+                    "hijos": [
+                        {
+                            "nombre": "M",
+                            "hijos": []
+                        },
+                        {
+                            "nombre": "N",
+                            "hijos": [
+                                {
+                                    "nombre": "R",
+                                    "hijos": []
+                                },
+                                {
+                                    "nombre": "S",
+                                    "hijos": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nombre": "H",
+                    "hijos": [
+                        {
+                            "nombre": "O",
+                            "hijos": []
+                        },
+                        {
+                            "nombre": "P",
+                            "hijos": [
+                                {
+                                    "nombre": "T",
+                                    "hijos": []
+                                },
+                                {
+                                    "nombre": "U",
+                                    "hijos": []
+                                }
+                            ]
+                        },
+                        {
+                            "nombre": "Q",
+                            "hijos": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

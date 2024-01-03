@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Reducción de datos</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2020-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Reducción de datos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2020-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Repaso</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Repaso</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. Reducción de datos</h4>
+					<h4 style="color: black;">2. Agregación</h4>
+					<h4 style="color: black;">3. Reducción de dimensionalidad</h4>
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Estrategias de manejar complejidad de un <i>dataset</i></h1>
+
+					<br>
+
+					<h4 style="color: black">Derivación de datos</h4>
+					<h4 style="color: black">Manipulación de vista</h4>
+					<h4 style="color: black"><i>Facet</i> de vistas</h4>
+					<h4>Reducción de datos</h4>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Reducción de datos</h1>
+
+					<br>
+
+					<p>Decisiones de diseño que involucran reducir (o incrementar) la cantidad de información mostrada en una visualización.</p>
+
+					<p>Puede aplicarse tanto sobre ítems como sobre atributos.</p>
+
+					<br>
+
+					<h4 style="color: black">Filtración</h4>
+					<h4 style="color: black">Agregación</h4>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Filtración de ítems y atributos</h3>
+					<br>
+
+          <img src="./assets/gapminder.png" height="350px"/>
+
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://www.gapminder.org/tools/">Gapminder</a> )</p>
+				
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Agregación de ítems: histograma</h3>
+					
+					<br>
+
+          <img src="./assets/histograma.svg" height="350px"/>
+
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://datavizcatalogue.com/methods/histogram.html/">Histogram - DataVis Cataloga</a> )</p>
+				
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Agregación de ítems: histograma</h3>
+					<br>
+
+          
+          <img src="./assets/population_pyramid.png" height="350px"/>
+
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://datavizcatalogue.com/methods/population_pyramid.html/">Population pyramid - DataVis Cataloga</a> )</p>
+				
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Agregación de ítems: caja y bigotes</h3>
+					<br>
+
+          
+          <img src="./assets/box_plot.png" height="350px"/>
+
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://datavizcatalogue.com/methods/box_plot.html/">Box and Whisker Plot - DataVis Cataloga</a> )</p>
+				
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Agregación de ítems: violín</h3>
+					<br>
+
+          
+          <img src="./assets/violin_plot.svg" height="350px"/>
+
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://datavizcatalogue.com/methods/violin_plot.html">Violin plot - DataVis Cataloga</a> )</p>
+				
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Agregación espacial</h3>
+					
+					<br>
+          
+          <img src="./assets/agregacion_espacial.png" height="350px"/>
+
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://www.zeit.de/feature/streetdirectory-streetnames-origin-germany-infographic-english?utm_referrer=https%3A%2F%2Fwww.informationisbeautifulawards.com%2Fshowcase%2F3135-streetscapes-mozart-marx-and-a-dictator">Streetscapes</a> )</p>
+				
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Filtración y agregación cómo exploración</h3>
+          
+          <img src="./assets/jerarquia_colapsable.png" height="400px"/>
+
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://observablehq.com/@d3/collapsible-tree">Collapsible Tree  - Observable	</a> )</p>
+				
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Filtración y agregación cómo exploración</h3>
+          
+          <img src="./assets/film.png" height="400px"/>
+
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://pudding.cool/2017/03/film-dialogue/">Film Dialogue  - Pudding	</a> )</p>
+				
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Reducción de dimensionalidad</h1>
+
+					<br>
+
+					<p>Transformación de datos multidimensionales a datos de pocas dimensiones sin perder las caracterizaciones originales.</p>
+					
+
+					<br>
+
+					<img height="200" src="./assets/Dimensionality-reduction-results-of-the-S-curve-with-outliers-a-S-curve-with-both.png" >
+					</img>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://www.researchgate.net/figure/Dimensionality-reduction-results-of-the-S-curve-with-outliers-a-S-curve-with-both_fig4_222386027">Research Gate</a>)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Más dudas?</h3>
+
+				</section>
+
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+          
+          <img src="./assets/drowning.png" height="400px"/>
+
+          <p style>Propuesto por persona anónima.</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://graphics.reuters.com/ENVIRONMENT-PLASTIC/0100B275155/index.html"> Drowning in plastic </a> )</p>
+				
+				</section>
+				
+        
+        
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+          <br>
+
+					<p>Jueves 5 de noviembre termina plazo de <span style="color: #f92696;">Entrega 3</span> y se publica <span style="color: #f92696;">Hito 3</span>.</p>
+
+					<br>
+
+					<p>Se vienen sesiones sobre:  <span style="color: #f92696;"><i>Brushing</i>, agregación y vistas en D3.js</span> (jueves 5) .</p>
+
+				</section>
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Reducción de datos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2020-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Nos vemos!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

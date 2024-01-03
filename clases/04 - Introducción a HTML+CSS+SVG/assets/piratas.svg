@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1189.1451" height="748.73059" viewBox="0 0 1189.1451 794.41896" xml:space="preserve">
+<defs>
+ <linearGradient id="lg" x1="188" y1="484" x2="1261" y2="484" gradientUnits="userSpaceOnUse">
+  <stop style="stop-color:#b6ddc7;stop-opacity:1" offset="0"/>
+  <stop style="stop-color:#ffffff;stop-opacity:1" offset="1"/>
+ </linearGradient>
+</defs>
+<g transform="translate(-50,-104)" style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round">
+ <rect style="fill:url(#lg);stroke:#000000;stroke-width:3" width="1073" height="592" x="188" y="188"/>
+ <g style="stroke:#000000">
+  <line x1="178" y1="188" x2="1261" y2="188"/>
+  <line x1="178" y1="272" x2="1261" y2="272"/>
+  <line x1="178" y1="357" x2="1261" y2="357"/>
+  <line x1="178" y1="443" x2="1261" y2="443"/>
+  <line x1="178" y1="529" x2="1261" y2="529"/>
+  <line x1="178" y1="611" x2="1261" y2="611"/>
+  <line x1="178" y1="698" x2="1261" y2="698"/>
+  <line x1="178" y1="780" x2="1261" y2="780"/>
+  <line x1="188" y1="189" x2="188" y2="791"/>
+  <line x1="343" y1="189" x2="343" y2="791"/>
+  <line x1="497" y1="189" x2="497" y2="791"/>
+  <line x1="650" y1="189" x2="650" y2="791"/>
+  <line x1="803" y1="189" x2="803" y2="791"/>
+  <line x1="955" y1="189" x2="955" y2="791"/>
+  <line x1="1111" y1="188" x2="1111" y2="790"/>
+  <line x1="1261" y1="189" x2="1261" y2="791"/>
+ </g>
+ <path style="stroke:#3BB3C2;stroke-width:3" d="m 264.468,576.484 c 50.466,-0.38314 103.967,-5.06699 156.61,-17.1912 49.452,-11.3886 100.827,-32.5926 152.167,-49.7782 51.7646,-17.3278 100.613,-33.5791 154.265,-52.2874 50.0558,-17.4545 101.897,-34.5277 153.569,-49.3714 52.7688,-15.1596 99.6525,-44.7116 151.033,-65.4709 51.3823,-20.7593 106.297,-36.6015 157.709,-51.4435"/>
+ <g style="stroke:#44916C;fill:#3C746B">
+  <circle cx="264" cy="577" r="12"/>
+  <circle cx="419" cy="560" r="12"/>
+  <circle cx="572" cy="510" r="12"/>
+  <circle cx="725" cy="458" r="12"/>
+  <circle cx="880" cy="408" r="12"/>
+  <circle cx="1030" cy="342" r="12"/>
+  <circle cx="1187" cy="291" r="12"/>
+ </g>
+ <g style="text-align:center;text-anchor:middle;fill-opacity:1;stroke:none;font-family:Arial">
+  <g style="font-size:42px;fill:#000000">
+   <text x="727" y="146"><tspan x="727" y="146">Global Average Temperature vs. Number of Pirates</tspan></text>
+   <text x="-487" y="53" transform="matrix(0,-1,1,0,0,0)"><tspan x="-487" y="53">Global Average Temperature, °C</tspan></text>
+   <text x="727" y="879"><tspan x="727" y="879">Number of Pirates (Approximate)</tspan></text>
+   <text x="264" y="826"><tspan x="264" y="826">35000</tspan></text>
+   <text x="419" y="826"><tspan x="419" y="826">45000</tspan></text>
+   <text x="573" y="826"><tspan x="573" y="826">20000</tspan></text>
+   <text x="727" y="826"><tspan x="727" y="826">15000</tspan></text>
+   <text x="883" y="826"><tspan x="883" y="826">5000</tspan></text>
+   <text x="1036" y="826"><tspan x="1036" y="826">400</tspan></text>
+   <text x="1191" y="826"><tspan x="1191" y="826">17</tspan></text>
+   <g style="text-align:end;text-anchor:end">
+    <text x="168" y="203"><tspan x="168" y="203">16.5</tspan></text>
+    <text x="168" y="287"><tspan x="168" y="287">16.0</tspan></text>
+    <text x="168" y="373"><tspan x="168" y="373">15.5</tspan></text>
+    <text x="168" y="459"><tspan x="168" y="459">15.0</tspan></text>
+    <text x="168" y="545"><tspan x="168" y="545">14.5</tspan></text>
+    <text x="168" y="626"><tspan x="168" y="626">14.0</tspan></text>
+    <text x="168" y="712"><tspan x="168" y="712">13.5</tspan></text>
+    <text x="168" y="796"><tspan x="168" y="796">13.0</tspan></text>
+   </g>
+  </g>
+  <g style="font-size:32px;fill:#000080">
+   <text x="1188" y="267"><tspan x="1188" y="267">2000</tspan></text>
+   <text x="1029" y="318"><tspan x="1029" y="318">1980</tspan></text>
+   <text x="878" y="384"><tspan x="878" y="384">1940</tspan></text>
+   <text x="724" y="432"><tspan x="724" y="432">1920</tspan></text>
+   <text x="571" y="485"><tspan x="571" y="485">1880</tspan></text>
+   <text x="417" y="524"><tspan x="417" y="524">1860</tspan></text>
+   <text x="263" y="555"><tspan x="263" y="555">1820</tspan></text>
+  </g>
+ </g>
+</g>
+</svg>

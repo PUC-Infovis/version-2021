@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SVG</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<code>&lt;path d=&quot;M<span style="color: magenta;">10,60</span>L<span style="color: blue;">40,90</span>L<span style="color: red;">60,10</span>L<span style="color: green;">190,10</span>&quot; fill=&quot;none&quot; fill=&quot;black&quot;&gt;&lt;/path&gt;</code>
+          
+          <svg width="450" height="400">
+            <!-- <rect x="100" y="100" width="400" height="400" fill="white" stroke="black" stroke-dasharray="4"></rect> -->
+            
+            <path fill="none" stroke="black" d="M10,60L40,90L60,10L190,10" transform="translate(100, 100)"></path>
+
+            <text x="50" y="160" font-size="15" fill="magenta">(10, 60)</text>
+            <text x="120" y="210" font-size="15" fill="blue">(40, 90)</text>
+            <text x="140" y="100" font-size="15" fill="red">(60, 10)</text>
+            <text x="260" y="100" font-size="15" fill="green">(190, 10)</text>
+						<!-- <text x="300" y="80">(100, 0)</text>
+						<text x="30" y="330">(0, 100)</text>
+            <text x="300" y="330">(100, 100)</text> -->
+
+            <!-- <line x1="110" y1="75" x2="290" y2="75" stroke="black" stroke-dasharray="4"></line>
+            <line x1="280" y1="70" x2="290" y2="75" stroke="black"></line>
+            <line x1="280" y1="80" x2="290" y2="75" stroke="black"></line>
+
+            <line x1="75" y1="95" x2="75" y2="300" stroke="black" stroke-dasharray="4"></line>
+            <line x1="70" y1="290" x2="75" y2="300" stroke="black"></line>
+            <line x1="80" y1="290" x2="75" y2="300" stroke="black"></line> -->
+          </svg>
+        </section>
+
+			</div>
+
+    </div>
+    
+
+  </div>
+
+</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

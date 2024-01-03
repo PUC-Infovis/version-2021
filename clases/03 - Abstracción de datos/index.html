@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Abstracción de datos</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>También, les tengo una pregunta sobre el largo de las sesiones en vivo.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Más equipo docente!</h3>
+
+					<br>
+
+					<h4 style="color: black;">Javiera Saavedra 🐑</h4>
+
+					<ul>
+						<li>Ayudante de apoyo en corrección</li>
+						<li>Estudiante de Major Ingeniería de Software y Título Civil Computación</li>
+						<li>Le gusta bailar, nailart, lettering, papas fritas, gatos y Selena Gómez (ewe).</li>
+						<li>Prefiere pronombres femeninos (ella/la)</li>
+					</ul>
+
+					<br>
+					<br>
+
+					<h4 style="color: black;">Sebastián Carrasco 🤔</h4>
+
+					<ul>
+						<li>Ayudante de apoyo en corrección</li>
+						<li>Estudiante de Major Ingeniería de Software y Título Civil Computación</li>
+						<li>Le gusta el futbol, rugby, hacer ejercicio, star wars y videojuegos</li>
+						<li>Prefiere pronombres masculinos (el/lo)</li>
+					</ul>
+
+					<br>
+					<br>
+
+					<h4 style="color: black;">Francisca Ibarra <img height="30" style="vertical-align: bottom; margin: 0;" src="https://i.pinimg.com/originals/26/02/83/2602835e667803df42dbcc551d8762fd.jpg"/></h4>
+
+					<ul>
+						<li>Ayudante de apoyo extra part-time</li>
+						<li>Estudiante de Major Computación y Título Civil Computación</li>
+						<li>Le gusta dibujar, pintar, tejer, videojuegos, todas las cosas de terror y cualquiera sea mi obsesión de la semana..</li>
+						<li>Prefiere pronombres femeninos (ella/la)</li>
+					
+					</ul>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Abstracción de datos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>El contenido</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>El contenido</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. Semantica y tipos de datos</h4>
+					<h4 style="color: black;">2. Tipos de <i>datasets</i></h4>
+					<h4 style="color: black;">3. Tipos de atributos</h4>
+					<h4 style="color: black;">4. Abstracción y derivaciones de datos</h4>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Modelo anidado</h3>
+          
+          <br>
+					
+					<div data-id="1" style="background: rgba(255, 165, 0, 0.3); color: rgba(0, 0, 0, 0.3); width: 55%; padding: .5em; margin: .5em; opacity: 0.8; margin-top: 3em;">
+						Caracterización de dominio
+						<div style="background: rgba(255, 255, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: .5em; margin: .5em;">
+							Abstracción de datos y tareas
+							<div style="background: rgba(173, 255, 47, 0.3); color: rgba(0, 0, 0, 0.3); width: 90%; padding: .5em; margin: .5em;">
+								Codificación visual y de interacción
+								<div style="background: rgba(216, 112, 147, 0.3); color: rgba(0, 0, 0, 0.3); width: 90%; padding: .5em; margin: .5em;">
+									Implementación algorítmica
+								</div>
+							</div>
+						</div>
+					</div>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Abtraccion de datos</h3>
+
+					<br>
+
+					<p>Sub-proceso en proceso de diseño de visualizaciones donde se analiza los datos a representar y se catalogan según su naturaleza.</p>
+          
+          <br>
+
+          <ul>
+            <li>Tipos de datos singulares</li>
+            <li>Tipos de atributos</li>
+            <li>Tipo de <i>dataset</i> completo</li>
+          </ul>
+					
+        </section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Abtraccion de datos</h3>
+
+					<br>
+
+					<p>Sub-proceso en proceso de diseño de visualizaciones donde se analiza los datos a representar y se catalogan según su naturaleza.</p>
+          
+          <br>
+
+          <ul>
+            <li>Tipos de datos singulares</li>
+            <li>Tipos de atributos</li>
+            <li>Tipo de <i>dataset</i> completo</li>
+          </ul>
+
+					<br>
+
+					<p>Este proceso no se trata de encontrar la verdad absoluta sobre los datos trabajados, si no de entender su naturaleza según el contexto y los intereses que hay de por medio. Por lo tanto, el mismo dato se puede catalogar de formas distintas <span style="color:#f92696;">dependiendo del contexto</span>. </p>
+					
+        </section>
+
+
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Tipos de datos singulares</h3>
+
+					<br>
+
+					<h4 style="color: black;">Atributo 📏</h4>
+					<h4 style="color: black;">Ítem 🔘</h4>
+					<h4 style="color: black;">Enlace 🔃</h4>
+					<h4 style="color: black;">Posición 📍</h4>
+					<h4 style="color: black;">Grilla 🥅🗑</h4>
+					
+        </section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3>Tipos de <i>datasets</i></h3>
+
+					<br>
+
+					<h4 style="color: black;">Tablas o tabulares 📄</h4>
+					<h4 style="color: black;">Redes 🕸</h4>
+					<h4 style="color: black;">Geométricos 🔷🗺</h4>
+          <h4 style="color: black;">Otros: campos, conjuntos, clusters y listas...</h4>
+          
+          <br>
+          <br>
+
+          <h4 style="color: black;">Estáticos ⏸ versus dinámicos ⏩</h4>
+					
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Abstracción de caso </h3>
+
+					<br>
+
+					<p>Visualización de La Tercera: <a href="https://interactivo.latercera.com/muertos-covid-santiago/muertos-covid-santiago-data/">Del 1 al 10 mil: Cómo Santiago se transformó en una de las ciudades con más muertos por covid-19</a>.</p>
+
+					<img src="./assets/vis_la_tercera.png" height="400px"/>
+
+        </section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Abstracción de caso </h3>
+
+					<br>
+
+					<p>Tipos de datos singulares:</p>
+					<ul>
+						<li>Ítem: Casos de muertes, comunas del radio urbano de la Región Metropolitana. </li>
+						<li>Atributos: Sexo de caso, estado de caso (confirmado o sospechoso), latitud de caso, longitud de caso, ...; formas de comunas. </li>
+						<li>Posiciones: Latitud de caso, longitud de caso; formas de comunas. </li>
+					</ul>
+        </section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Abstracción de caso </h3>
+
+					<br>
+
+					<p>Tipos de datos singulares:</p>
+					<ul>
+						<li>Ítem: Casos de muertes, comunas del radio urbano de la Región Metropolitana. </li>
+						<li>Atributos: Sexo de caso, estado de caso (confirmado o sospechoso), latitud de caso, longitud de caso, ...; formas de comunas. </li>
+						<li>Posiciones: Latitud de caso, longitud de caso; formas de comunas. </li>
+					</ul>
+
+					<p>Tipo(s) de datasets:</p>
+
+					<ul>
+						<li>Tabular: Entidades siendo descritas.</li>
+						<li>Geométrico: Aparición de posiciones.</li>
+					</ul>
+        </section>
+
+
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Tipos de atributos</h3>
+					
+					<br>
+
+					<h4 style="color: black;">Categóricos 🏷</h4>
+					<h4 style="color: black;">Ordenados 📶</h4>
+					<h4 style="color: black; padding-left: 2em;">Ordinales 🔢</h4>
+					<h4 style="color: black; padding-left: 2em;">Cuantitativos ➕➖</h4>
+          
+          <br>
+					<br>
+
+          <h4 style="color: black;">Secuencial ⬆️ versus divergente ⬆️⬇️</h4>
+          <h4 style="color: black;">Ciclicos 🔄 o no</h4>
+
+          <br>
+          <br>
+          
+          <h4 style="color: black;">Llave 🔑 versus valor</h4>
+
+
+        </section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Abstracción de caso </h3>
+
+					<br>
+
+					<p>Visualización de La Tercera: <a href="https://interactivo.latercera.com/muertos-covid-santiago/muertos-covid-santiago-data/">Del 1 al 10 mil: Cómo Santiago se transformó en una de las ciudades con más muertos por covid-19</a>.</p>
+
+					<img src="./assets/vis_la_tercera.png" height="400px"/>
+
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Abstracción de caso </h3>
+
+					<br>
+
+					<p>Tipos de atributos:</p>
+					<ul>
+						<li>Estado de un caso: Categórico y atributo de valor. </li>
+						<li>Latitud geográfica de un caso: Ordenado cuantitativo, secuencial, no cíclico y atributo de valor. </li>
+						<li>Fecha (en semanas) de un caso: Ordenado ordinal, secuencial, no cíclico y atributo de valor. </li>
+					</ul>
+        </section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Principio de expresividad</h3>
+
+					          
+          <br>
+
+          <p>Una codificación visual utilizada debe expresar toda, y solamente, la información del atributo objetivo.</p>
+
+          <br>
+
+          <p style="color:#f92696">Canales de identidad ↔️ Atributos categóricos</p>
+          <p style="color:#f92696">Canales de magnitud ↔️ Atributos ordenados</p>
+
+        </section>
+        
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Derivación de datos</h3>
+          
+          <br>
+
+					<p>Proceso de transformación de datos iniciales a otra forma, y realizar su abstracción una vez transformado.</p>
+
+					<br>
+					<p>Temperatura 🌡:</p>
+					<p> 25°C, -14°C, 27°C, 11°C, 40°C (Cuantitativo)</p>
+					<p> Cálido, Frío, Caluroso, Frío, Caluroso (Ordinal)</p>
+					<p> Seguro, Peligroso, Seguro, Seguro, Peligroso (Categórico)</p>
+
+					<br>
+
+					<p>También puede involucrar múltiples atributos o ítems: </p>
+					<ul>
+						<li>Multiplicar el total de ventas de un artículo por su precio obteniendo el total de ganancias obtenidas.</li>
+						<li>Promediar las notas de un estudiante en un curso para obtener su rendimiento medio.</li>
+						<li>...</li>
+					</ul>
+
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+
+					<br />
+          
+          <img src="./assets/1_napolean_minard.png" height="400px"/>
+
+          <p style>Propuesto por estudiante: Sapoipilla (?).</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://cdns.tblsft.com/sites/default/files/pages/1_napolean_minard.png">Carte figurative des pertes successives en hommes de l'Armée Française dans la campagne de Russie 1812–1813)</a></p>
+					<p style="font-size: 0.5em; color: grey">(Creador: <a href="https://en.wikipedia.org/wiki/Charles_Joseph_Minard">Charles Joseph Minard)</a></p>
+				
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+          <br>
+					<p>Recuerden responder los <span style="color: #f92696;">Cuestionarios</span> asociados a esta semana y la anterior.</p>
+
+					<p>Jueves realizaremos actividad sobre <span style="color: #f92696;">Introducción a HTML, CSS y SVG</span>.</p>
+
+					<p>Miércoles (mañana) se realizará primera <span style="color: #f92696;">Ayudantía</span> del curso. </p>
+
+				</section>
+        
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Abstracción de datos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Nos vemos!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

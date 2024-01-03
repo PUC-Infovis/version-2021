@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introducción a JavaScript y D3.js</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Introducción a JavaScript y D3.js</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. JavaScript I</h4>
+					<h4 style="color: black;">2. JavaScript II</h4>
+					<h4 style="color: black;">3. DOM</h4>
+					<h4 style="color: black;">4. D3.js</h4>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Implementación algorítmica</h3>
+					<ul>
+						<li>Código.</li>
+						<li>Nivel técnico tecnológico.</li>
+						<li>Se revisa eficiencia, escalabilidad y dificultad.</li>
+					</ul>
+					
+					<div data-id="1" style="background: rgba(255, 165, 0, 0.3); color: rgba(0, 0, 0, 0.3); width: 55%; padding: .5em; margin: .5em; opacity: 0.8; margin-top: 3em;">
+						Caracterización de dominio
+						<div style="background: rgba(255, 255, 0, 0.3); color: rgba(0, 0, 0, 0.3); width: 90%; padding: .5em; margin: .5em;">
+							Abstracción de datos y tareas
+							<div style="background: rgba(173, 255, 47, 0.3); color: rgba(0, 0, 0, 0.3); width: 90%; padding: .5em; margin: .5em;">
+								Codificación visual y de interacción
+								<div style="background: rgba(216, 112, 147, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: .5em; margin: .5em;">
+									Implementación algorítmica
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<pre data-id="code"><code data-trim data-line-numbers class="js">
+            // programa_1.js
+            let arreglo = [];
+
+            for (let numero = 0; numero <= 20; numero += 2) {
+              arreglo.push(numero);
+            }
+
+            for (numero of arreglo) {
+              console.log(numero);
+            }
+          </code></pre>
+
+          <pre data-id="code2"><code data-trim data-line-numbers="11" class="html">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                
+              &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;title&gt;Ejemplo con JS 1&lt;/title&gt;
+              &lt;/head&gt;
+            
+              &lt;body&gt;
+                
+                &lt;script src='programa_1.js' charset='utf-8'&gt;&lt;/script&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code></pre>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">JavaScript</h1>
+
+          <br>
+          <p>¡Es mucho! Iremos revisando detalles nuevos a medida que pasa el curso.</p>
+
+          <p>Ten curiosidad y busca en la web por referencias de aprendizaje. Recomiendo: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN Web Docs</a>.</p>
+          
+          <p>¡O pregúntanos! 😄</p>
+				</section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ocument <span style="color: #f92696;">O</span>bject <span style="color: #f92696;">M</span>odel</h2>
+
+          <br>
+
+          <pre data-id="code1"><code data-trim data-line-numbers class="javascript">
+            const raiz = document.getElementById("raiz");
+            const principal = document.getElementById("principal");
+            
+            let contador = 0;
+            
+            principal.addEventListener("click", () => {
+              contador += 1;
+            
+              const parrafo = document.createElement("p");
+              const texto = document.createTextNode(`Número de clics: ${contador}`);
+              parrafo.appendChild(texto);
+            
+              raiz.appendChild(parrafo);
+            });            
+          </code></pre>
+
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+          
+          <img src="./assets/us_gun_death.png" height="400px"/>
+
+          <p style>Propuesto por estudiante Rosita Muñoz.</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://guns.periscopic.com/">U.S. Gun Deaths</a>)</p>
+				
+        </section>
+
+        <!-- <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">
+						D3.js
+					</h1>
+
+					<br>
+
+					<ul>
+            <li>Su intención es utilizar HTML, CSS y SVG para crear visualizaciones.</li>
+            <li>Apareció en un momento en que esto no era común para herramientas de visualización.</li>
+            <li>Escrita por Mike Bostock.</li>
+					</ul>
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">
+						D3.js
+					</h1>
+
+					<br>
+
+					<p>NO es una librería de visualización de alto nivel.</p>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim class="javascript">
+            const grafico_de_barra = crear(); // ❌
+            grafico_de_barra.graficar(); // ❌
+					</code></pre>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">
+						D3.js
+					</h1>
+
+					<br>
+
+					<p>Utilizaremos la versión 5 en el curso.</p>
+          
+          <p>👀 con encontrar recursos y ejemplos escritos en la versión 3 o 4.</p>
+
+          <p>Podrán encontrar muchos ejemplos en la web.</p>
+
+					<p>Le dedicaremos tiempo a aprender D3.js en el curso. ¡Aprovechenlo!</p>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">
+					  Utilizar D3
+          </h1>
+          
+          <br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers="7" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Ejemplo con D3&lt;/title&gt;
+    &lt;script src=&quot;https://d3js.org/d3.v5.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    
+    &lt;script src='programa_4.js' charset='utf-8'&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code></pre>
+        </section>
+      
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Más dudas?</h3>
+
+				</section> -->
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">¡Actividad grupal!</h4>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">¡Actividad grupal!</h4>
+
+					<p>Cada grupo asignado a una <span style="color: #f92696;">Sala de Zoom</span> debe completar en conjunto un programa de JavaScript que extiende un documento HTML.  Los objetivos a lograr como grupo son:
+					</p>
+
+					<ul>
+						<li>Escribir una lista no ordenada en el documento HTML con los nombres de las personas que forman el grupo.</li>
+						<li>El programa contiene una lista de datos que hay que codificar mediante un o varios elementos SVG en el documento HTML. El programa debe agregar dichos datos en base a sus valores, de manera que alterar los valores alteren el resultado llegado. El cómo codificar los datos mediante elementos SVG queda a criterio del grupo. </li>
+						<li>Al hacer clic sobre el o los elementos SVG agregados, estos deben desaparecer del documento.</li>
+					</ul>
+
+					<!-- <p>Se les entregará el siguiente código base:</p> -->
+<!-- 
+					<pre data-id="code1"><code data-trim data-line-numbers class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Ejercicio HTML+SVG&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Integrantes --&gt;
+    &lt;ul&gt;
+    &lt;/ul&gt;
+
+    &lt;!-- Dibujo --&gt;
+    &lt;!-- Objetivo: X --&gt;
+    &lt;svg width=&quot;500&quot; height=&quot;500&quot;&gt;
+    &lt;/svg&gt;
+  &lt;/body&gt;
+&lt;/html&gt;						
+				</code></pre> -->
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">¡Actividad grupal!</h4>
+
+					<br />
+
+
+					<p>Les recomendamos que por grupo asignen:</p>
+
+					<ul>
+						<li>Al menos una persona que tenga el material del curso y documentación de JavaScript a mano para consultarla.</li>
+						<li>Al menos una persona que recompile dudas que surgieron en el grupo al realizar la actividad y se mentienen al final de la actividad.</li>
+						<li>Al menos una persona que se encargue de escribir y extender el documento HTML y programa JavaScript.</li>
+						<li>El resto puede apoyar a quienes escriban.</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">¡Actividad grupal!</h4>
+
+          <br>
+
+					<p>Para colaborar en el código, pueden:</p>
+
+					<ul>
+						<li>Colaborar en <a href="https://www.codingrooms.com/compiler/html-css-js/">Coding Rooms</a></li>
+						<li>Colaborar en <a href="https://jsfiddle.net/">JSFiddle</a></li>
+						<li>Colaborar en <a href="https://liveweave.com/">Liveweave</a></li>
+						<li>Encargar a una persona que comparta pantalla y escriba.</li>
+					</ul>
+
+					<p>El equipo docente les preparó salas en <span style="color: #f92696;">Coding Rooms</span>. Para ingresar y colaborar deben entrar a un enlace y luego:</p>
+					
+					<ol>
+						<li>Por defecto, entrarán a la sala solo con permiso de lectura, por lo que un ayudante les asignará el rol de editor a les primeres que entren.</li>
+						<li>Si ya tienen rol de editor, pueden darle este rol a otros estudiantes. Para ello:
+							<ol>
+								<li>Presionen el botón ‘Share’ en la parte  superior derecha.
+								</li>
+								<li>En el cuadro desplegado, cambia el rol de todes les ‘Viewer’ a ‘Editor’ (<span style="color: #f92696;">Si no salen en el cuadro desplegado, recarguen la página</span>)
+								</li>
+							</ol>
+
+						</li>
+						<li>Para poder ver cómo va quedando su código, despliguen la vista de navegador en el botón ‘View Webpage’ de la parte inferior derecha.</li>
+						<li>¡Listo! Ya pueden ponerse a trabajar conjuntamente en su HTML y SVG.</li>
+					</ol>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">¡Actividad grupal!</h4>
+
+					<p>Salas y documentos asignados:</p>
+					
+					<ul>
+						<li>Sala 1: <a href="https://app.codingrooms.com/w/XiMxCUrupnKl">Documento en Coding Room</a> </li>
+						<li>Sala 2: <a href="https://app.codingrooms.com/w/UBhXoDD2qwny">Documento en Coding Room </a> </li>
+						<li>Sala 3: <a href="https://app.codingrooms.com/w/bQyOi8h7iNrA">Documento en Coding Room </a> </li>
+						<li>Sala 4: <a href="https://app.codingrooms.com/w/6NTCC16boeuf">Documento en Coding Room </a> </li>
+						<li>Sala 5: <a href="https://app.codingrooms.com/w/9HWvRx7xv4Ag">Documento en Coding Room </a> </li>
+						<li>Sala 6: <a href="https://app.codingrooms.com/w/JmWNRe0tWNmw">Documento en Coding Room </a> </li>
+						<li>Sala 7: <a href="https://app.codingrooms.com/w/BLdDKf0kvbEY">Documento en Coding Room </a> </li>
+						<li>Sala 8: <a href="https://app.codingrooms.com/w/4h4GKSXuoeVD">Documento en Coding Room </a> </li>
+						<li>Sala 9: <a href="https://app.codingrooms.com/w/ezg6og2lvUxL">Documento en Coding Room </a> </li>
+						<li>Sala 10: <a href="https://app.codingrooms.com/w/wO3uus3Guin5">Documento en Coding Room </a> </li>
+						<li>Sala 11: <a href="https://app.codingrooms.com/w/uCUPdAIN4TCU">Documento en Coding Room </a> </li>
+						<li>Sala 12: <a href="https://app.codingrooms.com/w/PBYTg6AtRJga">Documento en Coding Room </a> </li>
+						<li>Sala 13: <a href="https://app.codingrooms.com/w/FlCOvOn3b6bM">Documento en Coding Room </a> </li>
+						<li>Sala 14: <a href="https://app.codingrooms.com/w/kMWa5e0rHXs1">Documento en Coding Room </a> </li>
+						<li>Sala 15: <a href="https://app.codingrooms.com/w/vkngLEbqLEt8">Documento en Coding Room </a> </li>
+						<li>Sala 16: <a href="https://app.codingrooms.com/w/RBfBPd4C0fwt">Documento en Coding Room </a> </li>
+						<li>Sala 17: <a href="https://app.codingrooms.com/w/KHTvl7jS5DNb">Documento en Coding Room </a> </li>
+						<li>Sala 18: <a href="https://app.codingrooms.com/w/hC2T50ZrbHi6">Documento en Coding Room </a> </li>
+						<li>Sala 19: <a href="https://app.codingrooms.com/w/5Xu8r59izfpM">Documento en Coding Room </a> </li>
+						<li>Sala 20: <a href="https://app.codingrooms.com/w/N4PC7FK5p5Wc">Documento en Coding Room </a> </li>
+					</ul>
+
+
+				</section>
+
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Resultados de actividad grupal</h4>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+          <br>
+          <p>Hoy (11:30) se publica el enunciado de <span style="color: #f92696;">Entrega 1</span>.</p>
+          
+					<p>Próximo jueves se publica el enunciado de <span style="color: #f92696;">Hito 1</span>.</p>
+					
+					<p>Próxima semana revisaremos el material de <span style="color: #f92696;">Color</span> e <span style="color: #f92696;">Principios de diseño en visualización</span>.</p>
+          
+				</section>
+        
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Introducción a JavaScript y D3.js</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Nos vemos!</h2>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

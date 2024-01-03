@@ -1,0 +1,363 @@
+{
+    "Collection_name":"Oscars best female actor winners",
+    "Span":"1970-2020",
+    "Objects":[
+        {
+            "Name":"Glenda Jackson",
+            "Year":1970,
+            "Movie":"Women in Love",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Jane Fonda",
+            "Year":1971,
+            "Movie":"Klute",
+            "Sign":"Piscies",
+            "Element":"Water"
+        },
+        {
+            "Name":"Liza Minelli",
+            "Year":1972,
+            "Movie":"Cabaret",
+            "Sign":"Aries",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Glenda Jackson",
+            "Year":1973,
+            "Movie":"A Touch Of Class",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Ellen Burstyn",
+            "Year":1974,
+            "Movie":"Alice Doesn't Live Here Anymore",
+            "Sign":"Sagittarius",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Louise Fletcher",
+            "Year":1975,
+            "Movie":"One Flew Over the Cuckoo's Nest",
+            "Sign":"Cancer",
+            "Element":"Water"
+        },
+        {
+            "Name":"Faye Dunaway",
+            "Year":1976,
+            "Movie":"Network",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Diane Keaton",
+            "Year":1977,
+            "Movie":"Annie Hall",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Jane Fonda",
+            "Year":1978,
+            "Movie":"Coming Home",
+            "Sign":"Piscies",
+            "Element":"Water"
+        },
+        {
+            "Name":"Sally Field",
+            "Year":1979,
+            "Movie":"Norma Rae",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Sissy Spacek",
+            "Year":1980,
+            "Movie":"Coal Miner's Daughter",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Katherine Hepburn",
+            "Year":1981,
+            "Movie":"On Golden Pond",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Meryl Streep",
+            "Year":1982,
+            "Movie":"Sophie's Choice",
+            "Sign":"Cancer",
+            "Element":"Water"
+        },
+        {
+            "Name":"Shirley MacLaine",
+            "Year":1983,
+            "Movie":"Terms of Endearment",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Sally Field ",
+            "Year":1984,
+            "Movie":"Places in the Heart",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Geraldine Page",
+            "Year":1985,
+            "Movie":"The Trip to Bountiful",
+            "Sign":"Sagittarius",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Marlee Matlin",
+            "Year":1986,
+            "Movie":"Children of a Lesser God",
+            "Sign":"Virgo",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Cher",
+            "Year":1987,
+            "Movie":"Moonstruck",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Jodie Foster",
+            "Year":1988,
+            "Movie":"The Accused",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Jessica Tandy",
+            "Year":1989,
+            "Movie":"Driving Miss Daisy",
+            "Sign":"Gemini",
+            "Element":"Air"
+        },
+        {
+            "Name":"Kathy Bates",
+            "Year":1990,
+            "Movie":"Misery",
+            "Sign":"Cancer",
+            "Element":"Water"
+        },
+        {
+            "Name":"Jodi Foster",
+            "Year":1991,
+            "Movie":"The Silence of the Lambs",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Ema Thompson",
+            "Year":1992,
+            "Movie":"Howards End",
+            "Sign":"Libra",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Holly Hunter",
+            "Year":1993,
+            "Movie":"The Piano",
+            "Sign":"Piscies",
+            "Element":"Water"
+        },
+        {
+            "Name":"Jessica Lange",
+            "Year":1994,
+            "Movie":"Blue Sky",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Susan Sarandon",
+            "Year":1995,
+            "Movie":"Dead Man Walking",
+            "Sign":"Libra",
+            "Element":"Air"
+        },
+        {
+            "Name":"Frances McDormand",
+            "Year":1996,
+            "Movie":"Fargo",
+            "Sign":"Cancer",
+            "Element":"Water"
+        },
+        {
+            "Name":"Helen Hunt",
+            "Year":1997,
+            "Movie":"As Good as it Gets",
+            "Sign":"Gemini",
+            "Element":"Air"
+        },
+        {
+            "Name":"Gwyneth Paltrow",
+            "Year":1998,
+            "Movie":"Shakespeare in Love",
+            "Sign":"Libra",
+            "Element":"Air"
+        },
+        {
+            "Name":"Hilary Swank",
+            "Year":1999,
+            "Movie":"Boys Don't Cry",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Julia Roberts",
+            "Year":2000,
+            "Movie":"Erin Brockovich",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Halle Berry",
+            "Year":2001,
+            "Movie":"Monster's Ball",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Nicole Kidman",
+            "Year":2002,
+            "Movie":"The Hours",
+            "Sign":"Gemini",
+            "Element":"Air"
+        },
+        {
+            "Name":"Charlize Theron",
+            "Year":2003,
+            "Movie":"Monster",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Hilary Swank",
+            "Year":2004,
+            "Movie":"Million Dollar Baby",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Reese Witherspoon",
+            "Year":2005,
+            "Movie":"Walk the Line",
+            "Sign":"Aries",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Helen Mirren",
+            "Year":2006,
+            "Movie":"The Queen",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Marion Cotillard",
+            "Year":2007,
+            "Movie":"La Vie en Rose",
+            "Sign":"Libra",
+            "Element":"Air"
+        },
+        {
+            "Name":"Kate Winslet",
+            "Year":2008,
+            "Movie":"The Reader",
+            "Sign":"Libra",
+            "Element":"Air"
+        },
+        {
+            "Name":"Sandra Bullock",
+            "Year":2009,
+            "Movie":"The Blind Side",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Natalie Portman",
+            "Year":2010,
+            "Movie":"Black Swan",
+            "Sign":"Gemini",
+            "Element":"Air"
+        },
+        {
+            "Name":"Meryl Streep",
+            "Year":2011,
+            "Movie":"The Iron Lady",
+            "Sign":"Cancer",
+            "Element":"Water"
+        },
+        {
+            "Name":"Jennifer Lawrence",
+            "Year":2012,
+            "Movie":"Silver Linings Playbook",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Cate Blanchett",
+            "Year":2013,
+            "Movie":"Blue Jasmine",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Julianne Moore",
+            "Year":2014,
+            "Movie":"Still Alice",
+            "Sign":"Sagittarius",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Brie Larson",
+            "Year":2015,
+            "Movie":"Room",
+            "Sign":"Libra",
+            "Element":"Air"
+        },
+        {
+            "Name":"Frances McDormand",
+            "Year":2016,
+            "Movie":"Three Billboards Outside Ebbing, Missouri",
+            "Sign":"Cancer",
+            "Element":"Water"
+        },
+        {
+            "Name":"Emma Stone",
+            "Year":2017,
+            "Movie":"La La Land",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Olivia Colman",
+            "Year":2018,
+            "Movie":"The Favourite",
+            "Sign":"Aquarius",
+            "Element":"Air"
+        },
+        {
+            "Name":"Renée Zellweger",
+            "Year":2019,
+            "Movie":"Judy",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Frances McDormand",
+            "Year":2020,
+            "Movie":"Nomadland",
+            "Sign":"Cancer",
+            "Element":"Water"
+        }
+    ]
+}

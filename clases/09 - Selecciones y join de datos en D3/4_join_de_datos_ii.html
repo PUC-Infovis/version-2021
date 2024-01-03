@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Join de datos en D3.js II</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+
+    <style>
+      .link {
+        stroke: #969696;
+      }
+
+      .join, .link, .node rect {
+        fill: none;
+        stroke: #636363;
+        stroke-width: 1.5px;
+      }
+
+      .node .element rect {
+        fill: #bdbdbd;
+        stroke: none;
+      }
+
+      svg {
+        font: 10px sans-serif;
+      }
+
+      circle {
+        fill: none;
+        fill-opacity: .2;
+        stroke: black;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ?print-pdf -->
+
+    <div class="reveal">
+
+      <div class="slides">
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h1>Selecciones y <i>join</i> de datos en D3.js</h1>
+          <h2 style="color: black;">IIC2026 </h2>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h1><i>Join</i> de datos en D3.js II</h1>
+          <h1 style="font-size: 1.6em; color: black;">Selecciones y <i>join</i> de datos en D3.js</h1>
+          <h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><code>seleccion.data</code></h3>
+
+          <br>
+
+          <ul>
+            <li>Hay datos que no se le asocian elementos ➡️ <i>enter</i></li>
+            <li>Hay elementos y datos que se asocian entre ellos ➡️ <i>update</i></li>
+            <li>Hay elementos que no se le asocian datos ➡️ <i>exit</i></li>
+          </ul>
+
+          <br>
+          <br>
+          <br>
+
+          <svg data-id="svg" width="720" height="240">
+            <g transform="translate(0,128)">
+              <g transform="translate(300)">
+              <circle r="110" style="fill: rgb(49, 130, 189);"></circle>
+              <text y="-120" dy=".35em" text-anchor="middle" style="font-weight: bold;">Datos</text>
+              <text x="-50" dy=".35em" text-anchor="middle">Enter</text>
+              </g>
+              <text x="360" dy=".35em" text-anchor="middle">Update</text>
+              <g transform="translate(420)">
+              <circle r="110" style="fill: rgb(230, 85, 13);"></circle>
+              <text y="-120" dy=".35em" text-anchor="middle" style="font-weight: bold;">Elementos</text>
+              <text x="50" dy=".35em" text-anchor="middle">Exit</text>
+              </g>
+            </g>
+          </svg>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><code>seleccion.data</code></h3>
+
+          <br>
+
+          <ul>
+            <li>Hay datos que no se le asocian elementos ➡️ <i>enter</i></li>
+            <li>Hay elementos y datos que se asocian entre ellos ➡️ <i>update</i></li>
+            <li>Elementos desaparecen ➡️ <i>exit</i></li>
+          </ul>
+
+          <br>
+          <br>
+          <br>
+
+          <svg data-id="svg" width="720" height="240">
+            <g transform="translate(0,128)">
+              <g transform="translate(300)">
+              <circle r="110" style="fill: rgb(49, 130, 189);"></circle>
+              <text y="-120" dy=".35em" text-anchor="middle" style="font-weight: bold;">Datos</text>
+              <text x="-50" dy=".35em" text-anchor="middle">Enter</text>
+              </g>
+              <text x="360" dy=".35em" text-anchor="middle">Update</text>
+              <g transform="translate(420)">
+              <circle r="110" style="fill: rgb(230, 85, 13);"></circle>
+              <text y="-120" dy=".35em" text-anchor="middle" style="font-weight: bold;">Elementos</text>
+              <text x="50" dy=".35em" text-anchor="middle">Exit</text>
+              </g>
+            </g>
+          </svg>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><code>seleccion.data</code></h3>
+
+          <br>
+
+          <ul>
+            <li>Nuevos datos aparecen ➡️ <i>enter</i></li>
+            <li>Hay elementos y datos que se asocian entre ellos ➡️ <i>update</i></li>
+            <li>Elementos desaparecen ➡️ <i>exit</i></li>
+          </ul>
+
+          <br>
+          <br>
+          <br>
+
+          <svg data-id="svg" width="720" height="240">
+            <g transform="translate(0,128)">
+              <g transform="translate(300)">
+              <circle r="110" style="fill: rgb(49, 130, 189);"></circle>
+              <text y="-120" dy=".35em" text-anchor="middle" style="font-weight: bold;">Datos</text>
+              <text x="-50" dy=".35em" text-anchor="middle">Enter</text>
+              </g>
+              <text x="360" dy=".35em" text-anchor="middle">Update</text>
+              <g transform="translate(420)">
+              <circle r="110" style="fill: rgb(230, 85, 13);"></circle>
+              <text y="-120" dy=".35em" text-anchor="middle" style="font-weight: bold;">Elementos</text>
+              <text x="50" dy=".35em" text-anchor="middle">Exit</text>
+              </g>
+            </g>
+          </svg>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><code>seleccion.data</code></h3>
+
+          <br>
+
+          <ul>
+            <li>Nuevos datos aparecen ➡️ <i>enter</i></li>
+            <li>Datos cambian ➡️ <i>update</i></li>
+            <li>Elementos desaparecen ➡️ <i>exit</i></li>
+          </ul>
+
+          <br>
+          <br>
+          <br>
+
+          <svg data-id="svg" width="720" height="240">
+            <g transform="translate(0,128)">
+              <g transform="translate(300)">
+              <circle r="110" style="fill: rgb(49, 130, 189);"></circle>
+              <text y="-120" dy=".35em" text-anchor="middle" style="font-weight: bold;">Datos</text>
+              <text x="-50" dy=".35em" text-anchor="middle">Enter</text>
+              </g>
+              <text x="360" dy=".35em" text-anchor="middle">Update</text>
+              <g transform="translate(420)">
+              <circle r="110" style="fill: rgb(230, 85, 13);"></circle>
+              <text y="-120" dy=".35em" text-anchor="middle" style="font-weight: bold;">Elementos</text>
+              <text x="50" dy=".35em" text-anchor="middle">Exit</text>
+              </g>
+            </g>
+          </svg>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3>Método <code>join</code> para flujo usual de <i>data join</i></h3>
+
+          <br>
+
+          <pre data-id="code2"><code data-trim data-line-numbers class="js">
+            svg
+              .selectAll("rect")
+              .data(datos)
+              .join("rect");
+          </code></pre>
+
+          <pre data-id="code2"><code data-trim data-line-numbers class="js">
+            svg
+              .selectAll("rect")
+              .data(datos)
+              .join(
+                enter => enter.append("rect"),
+                update => update,
+                exit => exit.remove()
+              );
+          </code></pre>
+        </section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h1><i>Join</i> de datos en D3.js II</h1>
+          <h1 style="font-size: 1.6em; color: black;">Selecciones y <i>join</i> de datos en D3.js</h1>
+          <h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+          <br>
+          <h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+        </section>
+
+      </div>
+
+    </div>
+
+    <link rel="stylesheet" href="../plugin/highlight/dracula.css">
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            center: true,
+            hash: true,
+            plugins: [ RevealHighlight ]
+        });
+    </script>
+
+  </body>
+</html>

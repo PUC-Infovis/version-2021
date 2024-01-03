@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Introducción a HTML, CSS y SVG</h1>
+					<h2 style="color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>HTML</h1>
+					<h1 style="font-size: 1.6em; color: black;">Introducción a HTML, CSS y SVG</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">HTML</h1>
+
+					<br>
+
+					<ul>
+						<li>Lenguaje de marcado.</li>
+						<li>Una de las tecnologías básicas de la web.</li>
+						<li>Toda página web en funcionamiento es un documento HTML.</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2 style="font-size: 1.6em; color: black;"><span style="color: #f92696;">H</span>yper<span style="color: #f92696;">T</span>ext <span style="color: #f92696;">M</span>arkup <span style="color: #f92696;">L</span>anguage</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">H</span>yper<span style="color: #f92696;">T</span>ext <span style="color: #f92696;">M</span>arkup <span style="color: #f92696;">L</span>anguage</h2>
+
+					<br>
+
+					<ul>
+						<li>Documentos de texto con información añadida.</li>
+						<li>Permiten agregar enlaces e incluso multimedia.</li>
+						<li>Es el trabajo de un <span style="color: #f92696;">navegador web</span> leer estor archivos de texto e interpretarlos visualmente.</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Etiquetas</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Etiquetas</h3>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers="|1|3" class="hljs">
+						<etiqueta>
+						  (contenido)
+						</etiqueta>
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Etiquetas</h3>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers="|1|3|5|7">
+						<h1> Un título </h1>
+
+						<p> Un párrafo </p>
+
+						<h2> Un subtítulo </h2>
+
+						<p> Otro párrafo </p>
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Etiquetas</h3>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers="1,5|2-4" class="html">
+						<ul> 
+						  <li>Primer elemento de lista.</li>
+						  <li>Segundo elemento de lista.</li>
+						  <li>Tercer elemento de lista.</li>
+						</ul>
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Estructura de documento completo</h3>
+
+					<br>
+
+					<pre data-id="code"><code data-trim data-line-numbers class="html">
+&lt;!DOCTYPE html&gt;
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Estructura de documento completo</h3>
+
+					<br>
+
+					<pre data-id="code"><code data-trim data-line-numbers="2,4" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;/html&gt;
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Estructura de documento completo</h3>
+
+					<br>
+
+					<pre data-id="code"><code data-trim data-line-numbers="|8-10|4-6" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    
+  &lt;head&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+  &lt;/body&gt;
+
+&lt;/html&gt;
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Estructura de documento completo</h3>
+
+					<br>
+
+					<pre data-id="code"><code data-trim data-line-numbers="8-24" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    
+  &lt;head&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    
+    &lt;h1&gt; Un t&iacute;tulo &lt;/h1&gt;
+
+    &lt;p&gt; Un p&aacute;rrafo &lt;/p&gt;
+
+    &lt;h2&gt; Un subt&iacute;tulo &lt;/h2&gt;
+
+    &lt;p&gt; Otro p&aacute;rrafo &lt;/p&gt;
+
+    &lt;ul&gt; 
+      &lt;li&gt;Primer elemento de lista.&lt;/li&gt;
+      &lt;li&gt;Segundo elemento de lista.&lt;/li&gt;
+      &lt;li&gt;Tercer elemento de lista.&lt;/li&gt;
+    &lt;/ul&gt;
+    
+  &lt;/body&gt;
+
+&lt;/html&gt;
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Estructura de documento completo</h3>
+
+					<br>
+
+					<pre data-id="code"><code data-trim data-line-numbers="4-7|5|6" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Título de documento completo&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    
+    &lt;h1&gt; Un t&iacute;tulo &lt;/h1&gt;
+
+    &lt;p&gt; Un p&aacute;rrafo &lt;/p&gt;
+
+    &lt;h2&gt; Un subt&iacute;tulo &lt;/h2&gt;
+
+    &lt;p&gt; Otro p&aacute;rrafo &lt;/p&gt;
+
+    &lt;ul&gt; 
+      &lt;li&gt;Primer elemento de lista.&lt;/li&gt;
+      &lt;li&gt;Segundo elemento de lista.&lt;/li&gt;
+      &lt;li&gt;Tercer elemento de lista.&lt;/li&gt;
+    &lt;/ul&gt;
+    
+  &lt;/body&gt;
+
+&lt;/html&gt;
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Atributos</h3>
+
+					<br>
+
+				<pre><code data-trim data-line-numbers="5" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Título de documento completo&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt; 
+    ...
+  &lt;/body&gt;
+
+&lt;/html&gt;
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Atributos</h3>
+
+					<br>
+
+				<pre><code data-trim data-line-numbers="1|3" class="html">
+					&lt;a href=&quot;https://cursos.canvas.uc.cl/&quot;&gt;Soy un enlace a Canvas!&lt;/a&gt;
+
+					&lt;img src=&quot;./ruta/a/la/imagen.png&quot;&gt;&lt;/img&gt;
+				</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Atributos</h3>
+
+					<br>
+
+					<p>Existen atributos globales:</p>
+
+					<ul>
+						<li>
+							<code>id</code>
+						</li>
+						<li>
+							<code>class</code>
+						</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3><code>id</code></h3>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers class="html">
+						<h1 id="principal"> Soy el único título principal</h1>
+						<h2> Yo no uwu </h2>
+					</code></pre>
+
+					<br>
+
+					<ul>
+						<li>Permite identificar elemento específico en todo el documento.</li>
+						<li>Es único, solo un elemento puede tener un identificador específico.</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3><code>class</code></h3>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers class="html">
+						<p class="importante"> Soy un párrafo importante</p>
+						<p class="importante"> También soy importante</p>
+						<p> Yo no uwu </p>
+					</code></pre>
+
+
+					<br>
+
+					<ul>
+						<li>Permite identificar grupos de elementos todo el documento.</li>
+						<li>Múltiples elementos pueden compartir un valor de clase.</li>
+					</ul>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>HTML</h1>
+					<h1 style="font-size: 1.6em; color: black;">Introducción a HTML, CSS y SVG</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

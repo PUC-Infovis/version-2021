@@ -1,0 +1,42 @@
+{
+    "nodos": [
+        {
+            "nombre": "A",
+            "color": "red"
+        },
+        {
+            "nombre": "B",
+            "color": "magenta"
+        },
+        {
+            "nombre": "C",
+            "color": "blue"
+        },
+        {
+            "nombre": "D",
+            "color": "orange"
+        },
+        {
+            "nombre": "E",
+            "color": "green"
+        }
+    ],
+    "enlaces": [
+        {
+            "source": "A",
+            "target": "B"
+        },
+        {
+            "source": "A",
+            "target": "C"
+        },
+        {
+            "source": "A",
+            "target": "D"
+        },
+        {
+            "source": "A",
+            "target": "E"
+        }
+    ]
+}

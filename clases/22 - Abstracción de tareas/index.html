@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Abstracción de tareas</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+          <img src="./assets/naranjo.png" height="500px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Abstracción de tareas</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. Abstracción de tareas</h4>
+					<h4 style="color: black;">2. Acciones en tareas: Analizar</h4>
+					<h4 style="color: black;">3. Acciones en tareas: Bísqueda y consulta</h4>
+					<h4 style="color: black;">4. Objetivos en tareas</h4>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Abstracción de datos y tareas</h3>
+					<ul>
+						<li>Traer las particularidades del contexto al mismo lenguaje.</li>
+						<li>Definir el qué y por qué de la herramienta.</li>
+						<li>Seleccionar los aspectos a consideración.</li>
+					</ul>
+					
+					
+
+					<div data-id="1" style="background: rgba(255, 165, 0, 0.3); color: rgba(0, 0, 0, 0.3); width: 55%; padding: .5em; margin: .5em; opacity: 0.8; margin-top: 3em;">
+						Caracterización de dominio
+						<div style="background: rgba(255, 255, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: .5em; margin: .5em;">
+							Abstracción de datos y tareas
+							<div style="background: rgba(173, 255, 47, 0.3); color: rgba(0, 0, 0, 0.3); width: 90%; padding: .5em; margin: .5em;">
+								Codificación visual y de interacción
+								<div style="background: rgba(216, 112, 147, 0.3); color: rgba(0, 0, 0, 0.3); width: 90%; padding: .5em; margin: .5em;">
+									Implementación algorítmica
+								</div>
+							</div>
+						</div>
+					</div>
+					
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Tareas en visualización</h3>
+
+					<br>
+
+					<p>	
+						<span data-id="s1">Tarea = acción (verbo) + objetivo (sustantivo)</span>
+						<span>+ ...</span>
+					</p>
+				</section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Acciones</h3>
+
+          <br>
+
+          <h4 style="color: black;">Analizar</h4>
+          <div style="width: 30%; display: inline-block;">
+            <h5 style="color: black;">Consumir</h5>
+            <ul>
+              <li><span style="color:#f92696; font-weight: 600;">Descubrir</span></li>
+              <li><span style="color:#f92696; font-weight: 600;">Presentar</span></li>
+              <li><span style="color:#f92696; font-weight: 600;">Disfrutar</span></li>
+            </ul>
+          </div>
+
+          <div style="width: 30%; display: inline-block;">
+            <h5 style="color: black;">Producir</h5>
+            <ul>
+              <li><span style="color:#f92696; font-weight: 600;">Anotar</span></li>
+              <li><span style="color:#f92696; font-weight: 600;">Registrar</span></li>
+              <li><span style="color:#f92696; font-weight: 600;">Derivar</span></li>
+            </ul>
+          </div>
+
+          <br>
+          <br>
+
+          <h4 style="color: black;">Búsqueda</h4>
+
+          <table data-id="table" style="display: inline-block; vertical-align: middle;">
+						<tr style>
+							<th></th>
+							<th>Elemento ✅</th>
+							<th>Elemento ❌</th>
+						</tr>
+
+						<tr style>
+							<th>Ubicación ✅</th>
+							<th style="color:#f92696">Ubicar (<i>Lookup</i>)</th>
+							<th style="color:#f92696">Sondear (<i>Browse</i>)</th>
+
+						</tr>
+
+						<tr style>
+							<th>Ubicación ❌</th>
+							<th style="color:#f92696">Localizar (<i>Locate</i>)</th>
+							<th style="color:#f92696">Explorar (<i>Explore</i>)</th>
+
+						</tr>
+
+					</table> 
+
+          <br>
+          <br>
+        
+
+          <h4 style="color: black;">Consulta</h4>
+
+          <ul>
+            <li><span style="color:#f92696; font-weight: 600;">Identificar</span></li>
+            <li><span style="color:#f92696; font-weight: 600;">Comparar</span></li>
+            <li><span style="color:#f92696; font-weight: 600;">Resumir</span></li>
+          </ul>
+
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Objetivos</h3>
+
+          <h4 style="color: black;">Todo tipo de dato</h4>
+
+          <ul>
+            <li><span style="color:#f92696; font-weight: 600;">Tendencias</span></li>
+            <li><span style="color:#f92696; font-weight: 600;">Partes aisladas</span></li>
+            <li><span style="color:#f92696; font-weight: 600;">Características</span></li>
+          </ul>
+
+          <br>
+          <br>
+        
+
+          <h4 style="color: black;">Atributos</h4>
+
+          <div style="width: 30%; display: inline-block;">
+            <h5 style="color: black;">Un atributo</h5>
+            <ul>
+              <li><span style="color:#f92696; font-weight: 600;">Valor individual</span></li>
+              <li><span style="color:#f92696; font-weight: 600;">Distribución</span></li>
+              <li><span style="color:#f92696; font-weight: 600;">Extremos</span></li>
+            </ul>
+          </div>
+
+          <div style="width: 30%; display: inline-block;">
+            <h5 style="color: black;">Varios atributos</h5>
+            <ul>
+              <li><span style="color:#f92696; font-weight: 600;">Dependencia</span></li>
+              <li><span style="color:#f92696; font-weight: 600;">Correlación</span></li>
+              <li><span style="color:#f92696; font-weight: 600;">Similaridad</span></li>
+            </ul>
+          </div>
+
+          
+          <br>
+          <br>
+        
+
+          <h4 style="color: black;">Redes</h4>
+
+          <ul>
+            <li><span style="color:#f92696; font-weight: 600;">Topología</span></li>
+            <li><span style="color:#f92696; font-weight: 600;">Caminos</span></li>
+          </ul>
+
+          <br>
+          <br>
+        
+          <h4 style="color: black;">Espaciales</h4>
+
+          <ul>
+            <li><span style="color:#f92696; font-weight: 600;">Forma</span></li>
+          </ul>
+        </section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Tareas en visualización</h3>
+
+					<br>
+
+					<ul>
+						<li><span style="font-weight: bolder; color: #f92696;">Presentar</span> la <span style="font-weight: bolder; color: #f92696;">tendencia</span> de precipitaciones de distintas estaciones de medición a lo largo de Chile.</li>
+						<li><span style="font-weight: bolder; color: #f92696;">Sondear</span> estaciones de medición según el valor de <span style="font-weight: bolder; color: #f92696;">atributo individual</span>: ubicación geográfica.</li>
+						<li><span style="font-weight: bolder; color: #f92696;">Comparar</span> la <span style="font-weight: bolder; color: #f92696;">tendencia</span> de precipitaciones a lo largo del tiempo entre dos o más estaciones de medición seleccionadas.</li>
+					</ul>
+				</section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Ejemplo examen</h3>
+
+          <br>
+
+          <img src="./assets/ejemplo.png" height="400px"/>
+
+          
+          <p>Visualización interactiva creada por ex-estudiante del curso Valeria Riquelme sobre el amor y la felicidad en el mundo.</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://puc-infovis.github.io/version-2020/salon_de_la_fama/Riquelme_Valeria/index.html"> Sobre el Amor... y su relación con la Felicidad - Salón de la fama InfoVis 2020 </a>)</p>
+
+
+				</section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Ejemplo examen</h3>
+
+					<br>
+
+					<ul>
+            <li> <span style="font-weight: bolder; color: #f92696;">Descubrir</span> como <span style="font-weight: bolder; color: #f92696;">distribuye</span> la puntuación de amor a lo largo del mundo. </li>
+						<li><span style="font-weight: bolder; color: #f92696;">Descubrir</span> si existe una  <span style="font-weight: bolder; color: #f92696;">correlación</span> entre las puntuaciones de amor (Percent Feeling Love) y felicidad (Happiness Score).</li>
+						<li> <span style="font-weight: bolder; color: #f92696;">Identificar extremos</span>  en la diferencia de las puntuaciones de amor y felicidad (Dif Love Happ). </li>
+            <li> <span style="font-weight: bolder; color: #f92696;">Localizar</span> a un país <span style="font-weight: bolder; color: #f92696;">(valor de nombre)</span> en base a su valor de puntuaciones de amor (Percent Feeling Love) y felicidad (Happiness Score). </li>
+            <li> <span style="font-weight: bolder; color: #f92696;">Localizar</span> <span style="font-weight: bolder; color: #f92696;">valor individual</span> de puntuaciones de un país en base a su ubicación. </li>
+
+					</ul>
+				</section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Caracterización de dominio => Abstracción de tareas</h3>
+
+          <br>
+
+          <p>El contexto, y la intencionalidad detrás del problema de visualización, son la base para determinar las tareas de la situación.</p>
+
+          <br>
+          <p>Ejemplo:</p>
+          <p>"La situación se abordó con una perspectiva de poder ser presentada a cualquier usuario, tenga o no conocimiento previo del tema. Por lo tanto, esto se tendrá en mente a lo largo de todo los pasos del modelo. Por ejemplo, entregándole guías e instrucciones al usuario dentro de la herramienta. Por lo mismo, se intentará que la herramienta muestre información que sea desconocida por el usuario y que lo sorprenda. "</p>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Sobre acciones de tareas: ¡No son categorías excluyentes!</h3>
+
+          <br>
+
+          <p>Varios tipos de acciones del mismo nivel pueden detectarse en un problema de visualización. Como también varias tareas con mismas acciones pero con distintos objetivos.</p>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Sobre acciones de tareas: ¿Debo pensar en acciones en la visualización lista o en acciones de usuario?</h3>
+
+          <br>
+
+          <p>¡Depende del momento!</p>
+
+          <p>El problema en adelantarse y pensar en tareas con un tipo de codificación específica, es que nos sesgamos y viramos la atención de las tareas principales que se buscan resolver.</p>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Sobre acciones de tareas: ¿Debo pensar en acciones en la visualización lista o en acciones de usuario?</h3>
+
+          <br>
+
+          <p>¡Depende del momento!</p>
+
+          <p>El problema en adelantarse y pensar en tareas con un tipo de codificación específica, es que nos sesgamos y viramos la atención de las tareas principales que se buscan resolver.</p>
+
+          <p>Si te encuentras en las etapas iniciales del diseño de una nueva visualización, intenta establecer las tareas principales que buscas atacar. </p>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Dudas</h3>
+
+          <br>
+          
+          <ul>
+            <li>¿hay situaciones en que no sea recomendable ver las tareas por separado? se me ocurre que a veces podria generarse un trade-off y si una se experimenta mejor otra se experimenta peor (Fuente: Loom)</li>
+          </ul>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Dudas</h3>
+
+          <br>
+          
+          <ul>
+            <li>¿hay situaciones en que no sea recomendable ver las tareas por separado? se me ocurre que a veces podria generarse un trade-off y si una se experimenta mejor otra se experimenta peor (Fuente: Loom)</li>
+          </ul>
+
+          <br>
+          <br>          <br>
+          <br>
+
+          <h3>¿Más dudas?</h3>
+
+        </section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+
+					<img src="./assets/vis_del_dia.png" height="400px"/>
+
+          
+          <p>Visualización interactiva creada por ayudante del curso Francisco Guiñez sobre Violencia Policial en Minneapolis.</p>
+          <p>Propuesta por... ¡mi!.</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://puc-infovis.github.io/version-2020/salon_de_la_fama/Gui%C3%B1ez_Francisco/Visualizaci%C3%B3n/index.html"> Minneapolis: Violencia Policial y Racismo - Salón de la fama InfoVis 2020 </a>)</p>
+
+				</section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+
+					<br>
+
+					<ul>
+            <li> <span style="font-weight: bolder; color: #f92696;">Descubrir distribuciones de datos</span>. Descubrir cómo se distribuyen los casos de violencia según atributos 
+              como el género o la raza. </li>
+						<li><span style="font-weight: bolder; color: #f92696;">Explorar las 
+              diferentes ubicaciones y valores individuales</span>. Explorar los diferentes 
+              barrios de Minneapolis y conocer sus características particulares 
+              dentro del dataset.</li>
+						<li> <span style="font-weight: bolder; color: #f92696;">Resumir las 
+              diferentes valores de atributos de todo o parte del dataset</span>. Resumir la 
+              información de todos o parte de los barrios de Minneapolis, incluyendo
+              atributos como el total de casos de la selección o el promedio de
+              determinados atributos. </li>
+					</ul>
+				</section>
+        
+        <!-- <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+          
+          <img src="./assets/out_of_sight.png" height="400px"/>
+
+          <p style>Propuesto por estudiante Daniela Concha</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente visualización: <a href="http://drones.pitchinteractive.com/"><i>Out of Sight, Out of Mind</i></a>)</p>
+				
+        </section> -->
+
+        <!-- <section data-background-iframe="http://drones.pitchinteractive.com/"
+        style="height: 100%;" data-auto-animate data-auto-animate-unmatched="fade" data-background-interactive>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>¡Visualización del día!</h3>
+          
+          <br>
+
+          <p>Algunas tareas detectadas:</p>
+          <ul>
+            <li>Presentar distribución de tipos de víctima por ataques de dron.</li>
+            <li>Descubrir (valor individual de) descripciones de ataques de dron.</li>
+            <li>Sondear (valor individual de) ataques. </li>
+            <li>Explorar (valor individual de) ataques. </li>
+            <li>Identificar distribución de tipos de victima por fecha. </li>
+            <li>Comparar distribución de tipos de victima por fecha. </li>
+            <li>Resumir distribución de tipos de victima. </li>
+          </ul>
+        </section> -->
+
+        
+
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+					<br>			<br>
+
+					<p>	Hoy termina plazo de  <span style="color: #f92696;">Hito 2</span> a las 20:00.</p>
+					<br>
+
+					<p>Hoy se publica <span style="color: #f92696;">Examen</span>.</p>
+
+					<br>
+					<p>Se vienen sesiones sobre: <span style="color: #f92696;">Visualización de jerarquía y árboles</span> (martes 16) y <span style="color: #f92696;">Sesión de repaso general pensada en el Examen</span> (jueves 18).</p>
+					
+
+				</section>
+        
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Abstracción de tareas</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Nos vemos!</h2>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

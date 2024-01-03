@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+    <title>Dungeons & Graphs</title>
+    <link rel='stylesheet' href='/style/index.css'>
+</head>
+
+<body>
+    <div class="horizontal-flex-container" style="display: flex; margin-left: 2em; margin-right: 2em;">
+        <div id='filters-container' style="flex: 3;">
+            <div>
+                <h1> Dungeons & Graphs </h1>
+                <h3>A D&D monster's manual visualization</h3>
+                <p class="description">
+                    This is a tool intended to help struggling dungeon masters visualize the monster's manual repertoire
+                    of abominations.
+                    You can filter the shown monsters by altering the fields below. Available monsters will appear in
+                    the scatter plot to the right.
+                    <br>
+                    <br>
+                    <strong>Tip</strong>: select a pair of monsters with your left and right click to compare them.
+                </p>
+            </div>
+            <div class="card">
+                <div id='name-filter'>
+                    <p> Filter by name </p>
+                </div>
+                <div id='size-scale'>
+                    <p> Scale area to size </p>
+                </div>
+                <div id='race-filter'>
+                    <p> Filter by race</p>
+                </div>
+                <div id='size-filter'>
+                    <p> Filter by size </p>
+                </div>
+                <div id='alignment-filter'>
+                    <p> Filter by alignment</p>
+                </div>
+                <br></br>
+                <div id='clear-filter'></div>
+            </div>
+        </div>
+        <div id="scatter-container" style="flex: 5;">
+            <svg id=scatter-svg></svg>
+        </div>
+        <div id="selected-container" style="flex: 4; margin-top: 5%;">
+            <div class='row'>
+                <div class='column' id="left-column">
+                </div>
+                <div class='column' id="middle-column">
+                </div>
+                <div class='column' id="right-column">
+                </div>
+            </div>
+            <div class="row" id="hp-container">
+            </div>
+            <div class="row" id="armor-container">
+            </div>
+        </div>
+    </div>
+
+    <div class="horizontal-flex-container" style="display: flex;">
+    </div>
+    <p class="sign">By Sebastián Zabala Martinez (@szabala)</p>
+    <p class="sign">Using <a
+            href="https://www.kaggle.com/patrickgomes/dungeons-and-dragons-5e-monsters">this dataset</a> scrapped from
+        Roll20</p>
+    <script src='./monsters.js'></script>
+</body>
+
+</html>

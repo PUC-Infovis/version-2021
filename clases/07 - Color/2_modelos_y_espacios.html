@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Modelos y espacios de color</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Color</h1>
+					<h2 style="color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Modelos y espacios de color</h1>
+					<h1 style="font-size: 1.6em; color: black;">Color</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>¿Qué era el color?</h3>
+
+					<br>
+					
+					<ul>
+						<li>Los colores se experimentan como combinaciones de frecuencias de luz que entran a nuestros ojos.</li>
+						<br>
+						<li>Reproducción aditiva, mediante emisión de luces que suma colores. </li>
+						<br>
+						<li>Reproducción sustractiva, mediante mezcla de pigmentos que restan colores. </li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Modelos de color</h3>
+
+					<br>
+
+					<p>Modelo aditivo: <span style="background-color: red; padding: 3px;">R</span><span style="background-color: lime; padding: 3px;">G</span><span style="background-color: blue; color: white; padding: 3px;">B</span>.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Modelos de color</h3>
+
+					<br>
+
+					<p>Modelo aditivo: <span style="background-color: red; padding: 3px;">R</span><span style="background-color: lime; padding: 3px;">G</span><span style="background-color: blue; color: white; padding: 3px;">B</span>.</p>
+
+					<br>
+
+					<p>Modelos sustractivos: <span style="background-color: red; padding: 3px;">R</span><span style="background-color: yellow; padding: 3px;">Y</span><span style="background-color: blue; color: white; padding: 3px;">B</span> y <span style="background-color: cyan; padding: 3px;">C</span><span style="background-color: magenta; padding: 3px;">M</span><span style="background-color: yellow; padding: 3px;">Y</span><span style="background-color: black; color: white; padding: 3px;">K</span>.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Modelos de color</h3>
+
+					<br>
+
+					<p>Abstracciones que buscan representar los colores, muchas veces de forma matemática</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Modelos de color: RGB</h3>
+
+					<br>
+
+					<p><code>(<span style="color: red;">40</span>, <span style="color:lime;">12</span>, <span style="color: blue;">89</span>)</code> o <code>#<span style="color: red;">2C</span><span style="color:lime;">0C</span><span style="color: blue;">59</span></code></p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Modelos de color: RGB</h3>
+
+					<br>
+
+					<p><code>(<span style="color: red;">40</span>, <span style="color:lime;">12</span>, <span style="color: blue;">89</span>)</code> o <code>#<span style="color: red;">2C</span><span style="color:lime;">0C</span><span style="color: blue;">59</span></code></p>
+
+					<br>
+
+					<img src="./assets/1599px-RGB_color_cube.svg.png" height="250">
+
+					<br>
+					<br>
+					<p style="font-size: 0.5em; color: grey; position: absolute; bottom: 2em;">(Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:RGB_color_cube.svg">Wikimedia</a> )</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Espacios de color</h3>
+
+					<br>
+
+					<p>Organización reproducible de colores. Puede ser arbitraria, mediante nombres identificadores, o incluso matemática.</p>
+
+					<svg width="600" height="300">
+
+						<text x="50" y="50" font-family="monospace">(150, 12, 89)</text>
+						<line x1="220" y1="45" x2="320" y2="45" stroke="black" stroke-width="2"></line>
+						<rect x="340" y="35" height="20" width="70" fill="rgb(150, 12, 89)"></rect>
+
+						<text x="50" y="150" font-family="monospace">(0, 0, 255)</text>
+						<line x1="220" y1="145" x2="320" y2="145" stroke="black" stroke-width="2"></line>
+						<rect x="340" y="135" height="20" width="70" fill="rgb(0, 0, 255)"></rect>
+
+						<text x="50" y="250" font-family="monospace">(22, 200, 130)</text>
+						<line x1="220" y1="245" x2="320" y2="245" stroke="black" stroke-width="2"></line>
+						<rect x="340" y="235" height="20" width="70" fill="rgb(22, 200, 130)"></rect>
+
+					</svg>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Modelo o espacio de color?</h3>
+
+					<br>
+
+					<p>Se suelen usar indistintivamente, ya que están sumamamente relaciondados.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Rojo, verde y azul como canales</h3>
+
+					<br>
+
+					<svg width="600" height="100">
+
+						<text x="50" y="50" font-family="monospace">(?, ?, 0)</text>
+						<line x1="190" y1="45" x2="320" y2="45" stroke="black" stroke-width="2"></line>
+						<rect x="340" y="35" height="20" width="70" fill="rgb(230, 170, 0)"></rect>
+					</svg>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>HSL y HSV</h3>
+
+					<br>
+
+					<p>Alternativas al modelo RGB, utilizando canales más intuitivos:</p>
+
+					<br>
+
+					<ul>
+						<li>Matiz (<i>hue</i>)</li>
+						<br>
+						<li>Saturación (<i>saturation</i>)</li>
+						<br>
+						<li>Luminosidad o valor (<i>lightness/value</i>)</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<ul>
+						<li>Matiz (<i>hue</i>)</li>
+						<br>
+						<li>Saturación (<i>saturation</i>)</li>
+						<br>
+						<li>Luminosidad o valor (<i>lightness/value</i>)</li>
+					</ul>
+
+					<br>
+					<br>
+
+							
+					<img src="./assets/HSL.png" height="300">
+					<img src="./assets/HSV.png" height="300">
+
+					<br>
+					<br>
+					<p style="font-size: 0.5em; color: grey; position: absolute; bottom: 2em;">(Fuente imagen: <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">Wikipedia</a> )</p>
+
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Modelos y espacios de color</h1>
+					<h1 style="font-size: 1.6em; color: black;">Color</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

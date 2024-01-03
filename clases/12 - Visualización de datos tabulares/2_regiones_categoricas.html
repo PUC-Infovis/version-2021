@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Definición de regiones categóricas</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de datos tabulares</h1>
+					<h2 style="color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Definición de regiones categóricas</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de datos tabulares</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Codificación de atributos categóricos</h1>
+
+					<br>
+
+					<ul>
+						<li>Posición en escala común (magnitud) ❌</li>
+						<br>
+						<li>Posición en escala no alineada (magnitud) ❌</li>
+						<br>
+						<li>Largo (magnitud) ❌</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Regiones espaciales ✅</h1>
+
+					<br>
+
+					<p>Áreas distinguibles, con límites y contiguas entre ellas.</p>
+
+					<br>
+
+					<svg width="600" height="300">
+            <line x1="0" y1="100" x2="595" y2="100" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="0" y1="200" x2="595" y2="200" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="100" y1="0" x2="100" y2="300" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="200" y1="0" x2="200" y2="300" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="300" y1="0" x2="300" y2="300" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="400" y1="0" x2="400" y2="300" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="500" y1="0" x2="500" y2="300" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+					</svg>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Definición de regiones categóricas</h1>
+
+					<br>
+
+					<ul>
+						<li>Separar regiones ✂️</li>
+						<br>
+						<li>Alinear regiones 📐</li>
+						<br>
+						<li>Ordenar regiones 📶</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Una llave - Organización de lista</h1>
+
+					<br>
+					<br>
+
+					<svg width="600" height="350">
+            <line x1="50" y1="340" x2="550" y2="340" stroke="black" stroke-width="1" stroke-linecap="round"></line>
+            <line x1="540" y1="330" x2="550" y2="340" stroke="black" stroke-width="1" stroke-linecap="round"></line>
+            <line x1="540" y1="350" x2="550" y2="340" stroke="black" stroke-width="1" stroke-linecap="round"></line>
+
+						<line x1="100" y1="0" x2="100" y2="300" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="200" y1="0" x2="200" y2="300" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="300" y1="0" x2="300" y2="300" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="400" y1="0" x2="400" y2="300" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+            <line x1="500" y1="0" x2="500" y2="300" stroke="black" stroke-width="3" stroke-linecap="round" stroke-dasharray="12"></line>
+					
+					</svg>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Gráfico de barra (<i>Bar chart</i>)</h3>
+
+					<br>
+
+					<img src="assets/graficos_de_barras.svg" height="300">
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://datavizcatalogue.com/ES/metodos/graficos_de_barras.html">DataViz Catalog</a>)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<table>
+						<tr>
+							<td style="color:#f92696"><i>Idiom</i></td>
+							<td style="max-width: 600px;">Gráfico de barra.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Qué: Datos</td>
+							<td style="max-width: 600px;">Tabular: un atributo de valor y cuantitativo; un atributo llave categórico.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Cómo: Codificar</td>
+							<td style="max-width: 600px;">Marcas de línea. Expresar valor de atributo cuantitativo con largo de barra, separar regiones mediante artibuto de llave.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Porqué: Tareas</td>
+							<td style="max-width: 600px;">Ubicar y comparar valores.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Escala</td>
+							<td style="max-width: 600px;">Docenas a cientos de llaves.</td>
+						</tr>
+					</table>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Gráfico de barra (<i>Bar chart</i>)</h3>
+
+					<br>
+
+					<img src="assets/barras_ordenadas.png" height="300">
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: Libro "Visualization, Analysis and Design" )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Gráfico de barras apiladas (<i>Stacked bar chart</i>)</h3>
+
+					<br>
+
+					<img src="assets/grafico_de_barras_apiladas.png" height="300">
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://datavizcatalogue.com/ES/metodos/grafico_de_barras_apiladas.html">DataViz Catalog</a>)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<table>
+						<tr>
+							<td style="color:#f92696"><i>Idiom</i></td>
+							<td style="max-width: 600px;">Gráfico de barras apiladas.</td>      
+						</tr>
+						<tr>
+							<td style="color:#f92696">Qué: Datos</td>
+							<td style="max-width: 600px;">Tabular: un atributo de valor y cuantitativo; dos atributos llave categóricos y de llave en conjunto.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Cómo: Codificar</td>
+							<td style="max-width: 600px;">Glifo de barra con sub componentes codificados por largo para cada categoría de de atributo llave secundario. Separar regiones mediante artibuto de llave principal.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Porqué: Tareas</td>
+							<td style="max-width: 600px;">Relación parte a total, ubicar valores, encontrar tendencias.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Escala</td>
+							<td style="max-width: 600px;">Docenas a cientos de valores en atributo llave principal. Varios hasta una docena para llave secundaria.</td>
+						</tr>
+					</table>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Gráfico de punto y gráfico de línea (<i>Dot chat and line chart </i>)</h3>
+
+					<br>
+
+					<img src="assets/dot_and_line.png" height="300">
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: Libro "Visualization, Analysis and Design" )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<table>
+						<tr>
+							<td style="color:#f92696"><i>Idiom</i></td>
+							<td style="max-width: 600px;">Gráfico de punto.</td>      
+						</tr>
+						<tr>
+							<td style="color:#f92696">Qué: Datos</td>
+							<td style="max-width: 600px;">Tabular: un atributo de valor y cuantitativo; un atributo llave categóricos u ordenado.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Cómo: Codificar</td>
+							<td style="max-width: 600px;">Expresar valor de atributo cuantitativo mediante posición y uso de puntos como marca. Separar/ordenar regiones mediante artibuto de llave.</td>
+						</tr>
+						
+					</table>
+
+					<br>
+					<br>
+
+					<table>
+						<tr>
+							<td style="color:#f92696"><i>Idiom</i></td>
+							<td style="max-width: 600px;">Gráfico de línea.</td>      
+						</tr>
+						<tr>
+							<td style="color:#f92696">Qué: Datos</td>
+							<td style="max-width: 600px;">Tabular: un atributo de valor y cuantitativo; un atributo llave ordenado.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Cómo: Codificar</td>
+							<td style="max-width: 600px;">Gráfico de punto con marcas de conexión entre puntos.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Porqué: Tareas</td>
+							<td style="max-width: 600px;">Mostrar tendencia.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Escala</td>
+							<td style="max-width: 600px;">Cientos de valores en atributo llave.</td>
+						</tr>
+					</table>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Gráfico de línea mejor con llave ordenada</h3>
+
+					<br>
+
+					<img src="assets/bar_versus_line.png" height="300">
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: Libro "Visualization, Analysis and Design" )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Definición de regiones categóricas</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de datos tabulares</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

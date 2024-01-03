@@ -1,0 +1,1121 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Selecciones y join de datos en D3.js</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+
+		<style>
+      .link {
+        stroke: #969696;
+      }
+
+      .join, .link, .node rect {
+        fill: none;
+        stroke: #636363;
+        stroke-width: 1.5px;
+      }
+
+      .node .element rect {
+        fill: #bdbdbd;
+        stroke: none;
+      }
+
+      svg {
+        font: 10px sans-serif;
+      }
+
+      circle {
+        fill: none;
+        fill-opacity: .2;
+        stroke: black;
+        stroke-width: 1.5px;
+      }
+		</style>
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Selecciones y <i>join</i> de datos en D3.js</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. Selecciones en D3.js I</h4>
+					<h4 style="color: black;">2. Selecciones en D3.js II</h4>
+					<h4 style="color: black;">3. <i>Join</i> de datos en D3.js I</h4>
+					<h4 style="color: black;">4. <i>Join</i> de datos en D3.js II</h4>
+				</section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">
+						D3.js
+					</h1>
+
+          <br />
+
+					<ul>
+            <li>Su intención es utilizar HTML, CSS y SVG para crear visualizaciones.</li>
+            <li>Apareció en un momento en que esto no era común para herramientas de visualización.</li>
+            <li>Escrita por Mike Bostock.</li>
+					</ul>
+
+          <br />
+
+
+          <img src="./assets/d3.png" height="200px""/>
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">
+						D3.js
+					</h1>
+
+					<br>
+
+					<p>NO es una librería de visualización de alto nivel.</p>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim class="javascript">
+            const grafico_de_barra = d3.crear(); // ❌
+            grafico_de_barra.graficar(); // ❌
+					</code></pre>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">
+						D3.js
+					</h1>
+
+					<br>
+
+					<p>Utilizaremos la versión 6 o 7 en el curso.</p>
+          
+          <p>👀 con encontrar recursos y ejemplos escritos en la versiones anteriores.</p>
+
+          <p>Podrán encontrar muchos ejemplos en la web.</p>
+
+					<p>Le dedicaremos tiempo a aprender D3.js en el curso. ¡Aprovechenlo!</p>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">
+					  Utilizar D3
+          </h1>
+          
+          <br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers="7" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Ejemplo con D3&lt;/title&gt;
+    &lt;script src=&quot;https://d3js.org/d3.v7.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    
+    &lt;script src='programa.js' charset='utf-8'&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code></pre>
+        </section>
+      
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ata <span style="color: #f92696;">D</span>riven <span style="color: #f92696;">D</span>ocuments</h2>
+					
+					<br>
+
+					<p>Librería  escrita en JavaScript para manipular documentos basándose en datos.</p>
+
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						Selecciones
+					</h3>
+
+					<br>
+
+          <p>Objeto de D3.js que se comporta como una colección de elementos HTML.</p>
+          
+          <br>
+          <pre><code data-trim class="js">
+            d3.select()
+          </code></pre>
+
+          <pre><code data-trim class="js">
+            d3.selectAll()
+					</code></pre>
+					
+					<pre><code data-trim class="js">
+            seleccion.select()
+					</code></pre>
+					
+					<pre><code data-trim class="js">
+            seleccion.selectAll()
+          </code></pre>
+          
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Selecciones</h3>
+
+					<br>
+
+					<pre data-id="code3"><code data-trim class="js">
+d3.selectAll("rect")
+  .attr("y", 50)
+  .style("fill", "red")
+  .attr("x", (d, i, all) => 100 * i);
+          </code></pre>
+          
+          <pre data-id="code4"><code data-trim class="html" data-line-numbers="2-4">
+&lt;svg&gt;
+  &lt;rect y=&quot;50&quot; style=&quot;fill: red&quot; x=&quot;0&quot;&gt;&lt;/rect&gt;
+  &lt;rect y=&quot;50&quot; style=&quot;fill: red&quot; x=&quot;100&quot;&gt;&lt;/rect&gt;
+  &lt;rect y=&quot;50&quot; style=&quot;fill: red&quot; x=&quot;200&quot;&gt;&lt;/rect&gt;
+&lt;/svg&gt;
+          </code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <p>Antes:</p>
+					<pre data-id="code-pre"><code data-trim class="html" data-line-numbers="2-4">
+&lt;body&gt;
+  &lt;ul&gt;&lt;/ul&gt;
+  &lt;ul&gt;&lt;/ul&gt;
+  &lt;ul&gt;&lt;/ul&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+          <br>
+          <pre data-id="code2"><code data-trim class="js">
+            d3.selectAll("ul")
+              .append("li");
+          </code></pre>
+
+          <br>
+          <p>Después:</p>
+					<pre data-id="code-post"><code data-trim class="html" data-line-numbers="3,6,9">
+&lt;body&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Múltiples grupos</h3>
+          <br>
+
+					<pre data-id="code"><code data-trim class="js">
+            d3.selectAll("ul");
+          </code></pre>
+          <br>
+
+					<svg data-id="svg1" width="800" height="180" style="margin: 1em 0px 1em -40px;">
+						<g class="left" transform="translate(40,0) scale(1.5)">
+							<g class="link">
+								<path class="to-array from-selection" d="M51.483333587646484,48C75.74166679382324,48 75.74166679382324,48 100,48"></path>
+								<path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,12 200,12"></path>
+								<path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,36 200,36"></path>
+								<path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,60 200,60"></path>
+								<path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,84 200,84"></path>
+							</g>
+							<g class="node">
+								<g class="selection" transform="translate(0,48)">
+									<rect ry="6" rx="6" y="-10" height="20" width="51.483333587646484"></rect>
+									<text dy=".35em" x="6">selección</text>
+								</g>
+								<g class="array" transform="translate(100,48)">
+									<rect ry="6" rx="6" y="-10" height="20" width="37.60000038146973"></rect>
+									<text dy=".35em" x="10">html</text>
+								</g>
+								<g class="element" transform="translate(200,12)">
+									<rect ry="6" rx="6" y="-10" height="20" width="50"></rect>
+									<text dy=".35em" x="20">ul</text>
+								</g>
+								<g class="element" transform="translate(200,36)">
+									<rect ry="6" rx="6" y="-10" height="20" width="50"></rect>
+									<text dy=".35em" x="20">ul</text>
+								</g>
+								<g class="element" transform="translate(200,60)">
+									<rect ry="6" rx="6" y="-10" height="20" width="50"></rect>
+									<text dy=".35em" x="20">ul</text>
+								</g>
+								<g class="element" transform="translate(200,84)">
+									<rect ry="6" rx="6" y="-10" height="20" width="50"></rect>
+									<text dy=".35em" x="20">ul</text>
+								</g>
+							</g>
+						</g>
+					</svg>
+
+				</section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Múltiples grupos</h3>
+          <br>
+
+					<pre data-id="code"><code data-trim class="js">
+            d3.selectAll("ul")
+              .selectAll("li");
+          </code></pre>
+          <br>
+
+					<svg data-id="svg1" width="800" height="180" style="margin: 1em 0px 1em -40px;">
+						<g class="left" transform="translate(40,0) scale(1.5)">
+							<g class="link">
+								<path class="to-array from-selection" d="M51.483333587646484,48C75.74166679382324,48 75.74166679382324,48 100,48"></path>
+								<path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,12 200,12"></path>
+								<path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,36 200,36"></path>
+								<path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,60 200,60"></path>
+								<path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,84 200,84"></path>
+							</g>
+							<g class="node">
+								<g class="selection" transform="translate(0,48)">
+									<rect ry="6" rx="6" y="-10" height="20" width="51.483333587646484"></rect>
+									<text dy=".35em" x="6">selección</text>
+								</g>
+								<g class="array" transform="translate(100,48)">
+									<rect ry="6" rx="6" y="-10" height="20" width="37.60000038146973"></rect>
+									<text dy=".35em" x="10">html</text>
+								</g>
+								<g class="element" transform="translate(200,12)">
+									<rect ry="6" rx="6" y="-10" height="20" width="50"></rect>
+									<text dy=".35em" x="20">ul</text>
+								</g>
+								<g class="element" transform="translate(200,36)">
+									<rect ry="6" rx="6" y="-10" height="20" width="50"></rect>
+									<text dy=".35em" x="20">ul</text>
+								</g>
+								<g class="element" transform="translate(200,60)">
+									<rect ry="6" rx="6" y="-10" height="20" width="50"></rect>
+									<text dy=".35em" x="20">ul</text>
+								</g>
+								<g class="element" transform="translate(200,84)">
+									<rect ry="6" rx="6" y="-10" height="20" width="50"></rect>
+									<text dy=".35em" x="20">ul</text>
+								</g>
+							</g>
+						</g>
+					</svg>
+
+				</section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Múltiples grupos</h3>
+          <br>
+
+					<pre data-id="code"><code data-trim class="js">
+            d3.selectAll("ul")
+              .selectAll("li");
+          </code></pre>
+          <br>
+
+					<svg width="800" height="384" style="margin: 1em 0px 1em -40px;">
+            
+            <g class="left" transform="translate(40,0)">
+              <g class="link">
+                <path class="to-array from-selection" d="M51.483333587646484,192C75.74166679382324,192 75.74166679382324,48 100,48"></path>
+                <path class="to-array from-selection" d="M51.483333587646484,192C75.74166679382324,192 75.74166679382324,144 100,144"></path>
+                <path class="to-array from-selection" d="M51.483333587646484,192C75.74166679382324,192 75.74166679382324,240 100,240"></path>
+                <path class="to-array from-selection" d="M51.483333587646484,192C75.74166679382324,192 75.74166679382324,336 100,336"></path>
+                <path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,12 200,12"></path>
+                <path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,36 200,36"></path>
+                <path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,60 200,60"></path>
+                <path class="to-element from-array" d="M137.60000038146973,48C168.80000019073486,48 168.80000019073486,84 200,84"></path>
+                <path class="to-element from-array" d="M137.60000038146973,144C168.80000019073486,144 168.80000019073486,108 200,108"></path>
+                <path class="to-element from-array" d="M137.60000038146973,144C168.80000019073486,144 168.80000019073486,132 200,132"></path>
+                <path class="to-element from-array" d="M137.60000038146973,144C168.80000019073486,144 168.80000019073486,156 200,156"></path>
+                <path class="to-element from-array" d="M137.60000038146973,144C168.80000019073486,144 168.80000019073486,180 200,180"></path>
+                <path class="to-element from-array" d="M137.60000038146973,240C168.80000019073486,240 168.80000019073486,204 200,204"></path>
+                <path class="to-element from-array" d="M137.60000038146973,240C168.80000019073486,240 168.80000019073486,228 200,228"></path>
+                <path class="to-element from-array" d="M137.60000038146973,240C168.80000019073486,240 168.80000019073486,252 200,252"></path>
+                <path class="to-element from-array" d="M137.60000038146973,240C168.80000019073486,240 168.80000019073486,276 200,276"></path>
+                <path class="to-element from-array" d="M137.60000038146973,336C168.80000019073486,336 168.80000019073486,300 200,300"></path>
+                <path class="to-element from-array" d="M137.60000038146973,336C168.80000019073486,336 168.80000019073486,324 200,324"></path>
+                <path class="to-element from-array" d="M137.60000038146973,336C168.80000019073486,336 168.80000019073486,348 200,348"></path>
+                <path class="to-element from-array" d="M137.60000038146973,336C168.80000019073486,336 168.80000019073486,372 200,372"></path>
+              </g>
+              <g class="node">
+                <g class="selection" transform="translate(0,192)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="51.483333587646484"></rect>
+                  <text dy=".35em" x="6">selección</text>
+                </g>
+                <g class="element" transform="translate(200,12)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,36)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,60)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,84)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,108)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,132)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,156)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,180)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,204)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,228)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,252)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,276)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,300)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,324)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,348)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="element" transform="translate(200,372)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                  <text dy=".35em" x="15">li</text>
+                </g>
+                <g class="array" transform="translate(100,48)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="37.60000038146973"></rect>
+                  <text dy=".35em" x="15">ul</text>
+                </g>
+                <g class="array" transform="translate(100,144)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="37.60000038146973"></rect>
+                  <text dy=".35em" x="15">ul</text>
+                </g>
+                <g class="array" transform="translate(100,240)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="37.60000038146973"></rect>
+                  <text dy=".35em" x="15">ul</text>
+                </g>
+                <g class="array" transform="translate(100,336)">
+                  <rect ry="6" rx="6" y="-10" height="20" width="37.60000038146973"></rect>
+                  <text dy=".35em" x="15">ul</text>
+                </g>
+              </g>
+            </g>
+          </svg>
+
+				</section>
+
+
+				<!-- <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Duda publicada</h3>
+
+					<br>
+
+					<ul>
+						<li>Si yo hago un <code>selectAll("li")</code> por ejemplo en verdad no va a seleccionar todos todos todos, sino que seleccionará todos los que se encuentren en el primer grupo? Por lo que debo de cierta forma ir avanzando de a poco en los grupos para llegar a un elemento que puede estar muy al fondo?</li>
+					</ul>
+				</section> -->
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><code>seleccion.data</code></h3>
+
+          <br>
+
+          <ul>
+            <li>Hay datos que no se le asocian elementos ➡️ <i>enter</i></li>
+            <li>Hay elementos y datos que se asocian entre ellos ➡️ <i>update</i></li>
+            <li>Hay elementos que no se le asocian datos ➡️ <i>exit</i></li>
+          </ul>
+
+          <br>
+          <br>
+          <br>
+
+          <svg data-id="svg" width="720" height="240">
+            <g transform="translate(0,128)">
+              <g transform="translate(300)">
+              <circle r="110" style="fill: rgb(49, 130, 189);"></circle>
+              <text y="-120" dy=".35em" text-anchor="middle" style="font-weight: bold;">Datos</text>
+              <text x="-50" dy=".35em" text-anchor="middle">Enter</text>
+              </g>
+              <text x="360" dy=".35em" text-anchor="middle">Update</text>
+              <g transform="translate(420)">
+              <circle r="110" style="fill: rgb(230, 85, 13);"></circle>
+              <text y="-120" dy=".35em" text-anchor="middle" style="font-weight: bold;">Elementos</text>
+              <text x="50" dy=".35em" text-anchor="middle">Exit</text>
+              </g>
+            </g>
+          </svg>
+
+        </section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Update</i></h3>
+          
+          <br>
+
+          <pre data-id="code2"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            d3.select("#svg")
+              .selectAll("rect")
+              .data(datos);
+          </code></pre>
+          
+          <pre data-id="code1"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 120 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 64 --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Update</i></h3>
+          
+          <br>
+
+          <pre data-id="code2"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            const update = d3.select("#svg")
+              .selectAll("rect")
+              .data(datos);
+          </code></pre>
+          
+          <pre data-id="code1"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 120 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 64 --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Update</i></h3>
+          
+          <br>
+
+          <pre data-id="code2"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            const update = d3.select("#svg")
+              .selectAll("rect")
+              .data(datos);
+
+            update.attr("width", 50)
+              .attr("y", 0)
+              .attr("x", (d, i, all) => i * 100);
+          </code></pre>
+          
+          <pre data-id="code1"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 120 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 64 --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Update</i></h3>
+          
+          <br>
+
+          <pre data-id="code2"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            const update = d3.select("#svg")
+              .selectAll("rect")
+              .data(datos);
+            
+            update.attr("width", 50)
+              .attr("y", 0)
+              .attr("x", (d, i, all) => i * 100);
+          </code></pre>
+          
+          <pre data-id="code1"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;0&quot;&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;100&quot;&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;200&quot;&gt;&lt;/rect&gt; &lt;!-- 120 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;300&quot;&gt;&lt;/rect&gt; &lt;!-- 64 --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Update</i></h3>
+          
+          <br>
+
+          <pre data-id="code2"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            const update = d3.select("#svg")
+              .selectAll("rect")
+              .data(datos);
+            
+            update.attr("width", 50)
+              .attr("y", 0)
+              .attr("x", (d, i, all) => i * 100)
+              .attr("height", (d, i, all) => 2 * d);
+          </code></pre>
+          
+          <pre data-id="code1"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;0&quot;&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;100&quot;&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;200&quot;&gt;&lt;/rect&gt; &lt;!-- 120 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;300&quot;&gt;&lt;/rect&gt; &lt;!-- 64 --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Update</i></h3>
+          
+          <br>
+
+          <pre data-id="code2"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            const update = d3.select("#svg")
+              .selectAll("rect")
+              .data(datos);
+            
+            update.attr("width", 50)
+              .attr("y", 0)
+              .attr("x", (d, i, all) => i * 100)
+              .attr("height", (d, i, all) => 2 * d);
+          </code></pre>
+          
+          <pre data-id="code1"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;0&quot; height=&quot;46&quot;&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;100&quot; height=&quot;90&quot;&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;200&quot; height=&quot;240&quot;&gt;&lt;/rect&gt; &lt;!-- 120 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;300&quot; height=&quot;128&quot;&gt;&lt;/rect&gt; &lt;!-- 64 --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Update</i></h3>
+          
+          <br>
+
+          <pre data-id="code2"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            const update = d3.select("#svg")
+              .selectAll("rect")
+              .data(datos);
+            
+            update.attr("width", 50)
+              .attr("y", 0)
+              .attr("x", (d, i, all) => i * 100)
+              .attr("height", (d, i, all) => 2 * d);
+          </code></pre>
+          
+          <svg width="400" height="250">
+            <rect width="50" y="0" x="0" height="46"></rect> <!-- 23 -->
+            <rect width="50" y="0" x="100" height="90"></rect> <!-- 45 -->
+            <rect width="50" y="0" x="200" height="240"></rect> <!-- 120 -->
+            <rect width="50" y="0" x="300" height="128"></rect> <!-- 64 -->
+          </svg>
+          
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Duda publicada</h3>
+
+					<br>
+
+					<ul>
+						<li>Respecto al atributo "d" en <code>(d, i, all)</code>; el parametro lo reconoce como dato por ser "d" o por la posicion dentro de la funcion?</li>
+					</ul>
+				</section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Exit</i></h3>
+
+          <pre data-id="code11"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+          <pre data-id="code22"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45];
+
+            d3.select("#svg")
+              .selectAll("rect")
+              .data(datos);
+          </code></pre>
+          
+          <pre data-id="code11"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- ? --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- ? --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Exit</i></h3>
+
+          <pre data-id="code11"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+          <pre data-id="code22"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45];
+
+            const update = d3.select("#svg")
+              .selectAll("rect")
+              .data(datos);
+
+            update.exit().remove();
+          </code></pre>
+          
+          <pre data-id="code11"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- ? --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- ? --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Exit</i></h3>
+
+          <pre data-id="code11"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+              &lt;rect&gt;&lt;/rect&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+          <pre data-id="code22"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45];
+
+            const update = d3.select("#svg")
+              .selectAll("rect")
+              .data(datos);
+
+            update.exit().remove();
+          </code></pre>
+          
+          <pre data-id="code11"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Enter</i></h3>
+
+          <pre data-id="code111"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+          <pre data-id="code221"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            d3.select("#svg")
+              .selectAll("rect")
+              .data(datos);
+          </code></pre>
+          
+          <pre data-id="code112"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;!-- ? --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Enter</i></h3>
+
+          <pre data-id="code111"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+          <pre data-id="code221"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            d3.select("#svg")
+              .selectAll("rect")
+              .data(datos)
+              .enter();
+          </code></pre>
+          
+          <pre data-id="code112"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;!-- ? --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Enter</i></h3>
+
+          <pre data-id="code111"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+          <pre data-id="code221"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            d3.select("#svg")
+              .selectAll("rect")
+              .data(datos)
+              .enter()
+              .append("rect");
+          </code></pre>
+          
+          <pre data-id="code112"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;!-- ? --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Enter</i></h3>
+
+          <pre data-id="code111"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+          <pre data-id="code221"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            d3.select("#svg")
+              .selectAll("rect")
+              .data(datos)
+              .enter()
+              .append("rect");
+          </code></pre>
+          
+          <pre data-id="code112"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 120 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 64 --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Enter</i></h3>
+          
+          <pre data-id="code221"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            d3.select("#svg")
+              .selectAll("rect")
+              .data(datos)
+              .enter()
+              .append("rect")
+              .attr("width", 50)
+              .attr("y", 0)
+              .attr("x", (d, i, all) => i * 100)
+              .attr("height", (d, i, all) => 2 * d);
+          </code></pre>
+          
+          <pre data-id="code112"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 120 --&gt;
+              &lt;rect&gt;&lt;/rect&gt; &lt;!-- 64 --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3><i>Enter</i></h3>
+          
+          <pre data-id="code221"><code data-trim class="js" data-line-numbers>
+            const datos = [23, 45, 120, 64];
+
+            d3.select("#svg")
+              .selectAll("rect")
+              .data(datos)
+              .enter()
+              .append("rect")
+              .attr("width", 50)
+              .attr("y", 0)
+              .attr("x", (d, i, all) => i * 100)
+              .attr("height", (d, i, all) => 2 * d);
+          </code></pre>
+          
+          <pre data-id="code112"><code data-trim class="html">
+            &lt;svg id=&quot;svg&quot; width=&quot;400&quot; height=&quot;250&quot;&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;0&quot; height=&quot;46&quot;&gt;&lt;/rect&gt; &lt;!-- 23 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;100&quot; height=&quot;90&quot;&gt;&lt;/rect&gt; &lt;!-- 45 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;200&quot; height=&quot;240&quot;&gt;&lt;/rect&gt; &lt;!-- 120 --&gt;
+              &lt;rect width=&quot;50&quot; y=&quot;0&quot; x=&quot;300&quot; height=&quot;128&quot;&gt;&lt;/rect&gt; &lt;!-- 64 --&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+				</section>
+				
+<!-- 
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <pre data-id="code2"><code data-trim data-line-numbers="|1|3|5|7-15" class="js">
+const svg = d3.select("body").append("svg");
+
+const datos = [150, 256, 130, 0, 23, 422, 235];
+
+svg.attr("width", 50 + datos.length * 100).attr("height", 500);
+
+svg
+  .selectAll("rect")
+  .data(datos)
+  .enter()
+  .append("rect")
+  .attr("width", 50)
+  .attr("fill", "magenta")
+  .attr("height", (d) => d)
+  .attr("x", (_, i) => 50 + i * 100);
+          </code></pre>
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h3>Método <code>join</code> para flujo usual de <i>data join</i></h3>
+
+          <br>
+
+          <pre data-id="code2"><code data-trim data-line-numbers class="js">
+            svg
+              .selectAll("rect")
+              .data(datos)
+              .join("rect");
+          </code></pre>
+
+          <pre data-id="code2"><code data-trim data-line-numbers class="js">
+            svg
+              .selectAll("rect")
+              .data(datos)
+              .join(
+                enter => enter.append("rect"),
+                update => update,
+                exit => exit.remove()
+              );
+          </code></pre>
+				</section> -->
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Algunas aclaraciones</h3>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Algunas aclaraciones</h3>
+
+					<br>
+
+					<ul>
+						<li>La vinculación entre elementos y datos mediante <code>data</code> queda en los elementos, no en la selección misma.</li>
+						<br>
+						<li>La vinculación de un elemento a un dato potencialmente se sobre escribe con más llamadas a <code>data</code>.</li>
+						<br>
+						<li>La vinculación entre arreglo de datos se hace por grupo, en vez de a nivel de selección.</li>
+					</ul>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+
+					<br>
+
+					<img src="./assets/vis_del_dia.png" width="100%"/>
+
+          
+          <p style>Propuesto por estudiante Claudia González.</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://mkorostoff.github.io/1-pixel-wealth/">Wealth shown to scale</a>)</p>
+				
+				</section>
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+					<br>
+
+
+					<p>Próximo martes revisaremos el material de <span style="color: #f92696;">Utilidades de D3 I</span>.</p>
+
+					<p>Próximo jueves revisaremos el material de <span style="color: #f92696;">Utilidades de D3 II</span>.</p>
+
+					
+					<p>Domingo 26 de septiembre (20:00:00) termina plazo de <span style="color: #f92696;">Hito 1</span>.</p>
+					
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Selecciones y <i>join</i> de datos en D3.js</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

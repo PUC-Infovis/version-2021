@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Color</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Color</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+					<br>
+
+					<p>Mañana (8 de septiembre) se realiza Ayudantía sobre  <span style="color: #f92696;">Introducción a JS + D3.js</span>.</p>
+					
+					<p>Jueves revisamos <span style="color: #f92696;">Principios de diseño en visualización</span>.</p>
+
+					<p>Jueves 9 de septiembre a las <span style="color: #f92696; font-weight: 600;">20:00</span>  termina plazo de <span style="color: #f92696;">Entrega 1</span> y se publica enunciado de  <span style="color: #f92696;">Hito 1</span>.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. Qué es el color</h4>
+					<h4 style="color: black;">2. Modelos y espacios de color</h4>
+					<h4 style="color: black;">3. Percepción de canales de color</h4>
+					<h4 style="color: black;">4. <i>Colormaps</i></h4>
+				</section>
+				
+				<!-- <section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Conos en la retina</h3>
+
+					<br>
+
+					<p>Células que interactuan con con ciertas frecuencias de luz, y se perciben como color.</p>
+
+
+					<br>
+
+					<img src="./assets/retina.jpg" height="350"/>
+					<br />
+					<br />
+
+					<p style="font-size: 0.5em; color: grey; position: absolute; bottom: 2em;">(Fuente imagen: <a href="https://es.wikipedia.org/wiki/Retina">Wikipedia</a> )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Conos en la retina</h3>
+
+					<br>
+
+					<ul>
+						<li><span style="background-color: red">Frecuencias bajas</span></li>
+						<li><span style="background-color: lime">Frecuencias medias</span></li>
+						<li><span style="background-color: blue; color: white">Frecuencias altas</span></li>
+					</ul>
+
+					<br>
+
+					<img src="./assets/mezclas_rgb.png">
+					<br>
+					<br>
+					<p style="font-size: 0.5em; color: grey; position: absolute; bottom: 2em;">(Fuente imagen: <a href="https://es.wikipedia.org/wiki/Espectro_visible#/media/Archivo:Computer_color_spectrum.svg">Wikipedia</a> )</p>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Modelos de color</h3>
+
+					<br>
+
+					<p>Abstracciones que buscan representar los colores, muchas veces de forma matemática</p>
+
+					<br><br>
+
+					<h3>Espacios de color</h3>
+
+					<br>
+
+					<p>Organización reproducible de colores. Puede ser arbitraria, mediante nombres identificadores, o incluso matemática.</p>
+
+
+				</section> -->
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Modelos de color: RGB</h3>
+
+					<br>
+
+					<img src="./assets/Rune_RGB.png">
+
+
+
+					<br>
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://programmingdesignsystems.com/color/color-models-and-color-spaces/index.html#color-models-and-color-spaces-JDQ1fRD">Libro virtual: "Programming Design Systems"; de Rune Madsen </a> )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>CSS soporta RGB como modelo y en hexadecimal </h3>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers="" class="css">
+						.importante {
+						  color: rgb(255, 0, 0); /* rojo */
+						}
+
+						.parrafo {
+						  color: #ffffff; /* blanco */
+						}
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Modelos de color: HSV</h3>
+
+					<br>
+
+					<img src="./assets/Rune_HSV.png">
+
+
+
+					<br>
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://programmingdesignsystems.com/color/color-models-and-color-spaces/index.html#color-models-and-color-spaces-JDQ1fRD">Libro virtual: "Programming Design Systems"; de Rune Madsen </a> )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Modelos de color: HSL</h3>
+
+					<br>
+
+					<img src="./assets/Rune_HSL.png">
+
+
+
+					<br>
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://programmingdesignsystems.com/color/color-models-and-color-spaces/index.html#color-models-and-color-spaces-JDQ1fRD">Libro virtual: "Programming Design Systems"; de Rune Madsen </a> )</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>CSS soporta HSL como modelo </h3>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers="" class="css">
+						.importante {
+						  color: hsl(0, 100%, 50%); /* rojo */
+						}
+
+						.parrafo {
+						  color:  hsl(0, 0%, 0%);  /* negro */
+						}
+					</code></pre>
+
+				</section>
+
+				<!-- <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>RGB</h3>
+
+					<br>
+					<h4 style="color: black;">versus</h4>
+					<br>
+					<h3>HSL - HSV</h3>
+
+
+				</section> -->
+
+				<!-- <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em; color:#f92696;"><i>Ranking</i> de canales</h4>
+
+          <img src="./assets/ranking.png" height="500" />
+					<p style="font-size: 0.5em; color: grey;">(Fuente: Libro "Visualization, Analysis and Design" )</p>
+
+
+				</section> -->
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Pasos no son perfectos en HSL</h3>
+
+					<br>
+
+					<svg width="810" height="350">
+
+						<text x="50" y="50" font-family="monospace">(250,  00%, 50%)</text>
+						<line x1="240" y1="45" x2="320" y2="45" stroke="black" stroke-width="2"></line>
+						<rect x="340" y="35" height="20" width="70" fill="hsl(250, 00%, 50%)"></rect>
+
+						<text x="50" y="100" font-family="monospace">(250,  20%, 50%)</text>
+						<line x1="240" y1="95" x2="320" y2="95" stroke="black" stroke-width="2"></line>
+						<rect x="340" y="85" height="20" width="70" fill="hsl(250, 20%, 50%)"></rect>
+
+						<text x="50" y="150" font-family="monospace">(250,  40%, 50%)</text>
+						<line x1="240" y1="145" x2="320" y2="145" stroke="black" stroke-width="2"></line>
+						<rect x="340" y="135" height="20" width="70" fill="hsl(250, 40%, 50%)"></rect>
+
+						<text x="50" y="200" font-family="monospace">(250,  60%, 50%)</text>
+						<line x1="240" y1="195" x2="320" y2="195" stroke="black" stroke-width="2"></line>
+						<rect x="340" y="185" height="20" width="70" fill="hsl(250, 60%, 50%)"></rect>
+
+						<text x="50" y="250" font-family="monospace">(250,  80%, 50%)</text>
+						<line x1="240" y1="245" x2="320" y2="245" stroke="black" stroke-width="2"></line>
+						<rect x="340" y="235" height="20" width="70" fill="hsl(250, 80%, 50%)"></rect>
+
+						<text x="50" y="300" font-family="monospace">(250,  100%, 50%)</text>
+						<line x1="240" y1="295" x2="320" y2="295" stroke="black" stroke-width="2"></line>
+						<rect x="340" y="285" height="20" width="70" fill="hsl(250, 100%, 50%)"></rect>
+
+
+
+						<text x="450" y="50" font-family="monospace">(250,  100%, 0%)</text>
+						<line x1="640" y1="45" x2="720" y2="45" stroke="black" stroke-width="2"></line>
+						<rect x="740" y="35" height="20" width="70" fill="hsl(250, 100%, 0%)"></rect>
+
+						<text x="450" y="100" font-family="monospace">(250,  100%, 20%)</text>
+						<line x1="640" y1="95" x2="720" y2="95" stroke="black" stroke-width="2"></line>
+						<rect x="740" y="85" height="20" width="70" fill="hsl(250, 100%, 20%)"></rect>
+
+						<text x="450" y="150" font-family="monospace">(250,  100%, 40%)</text>
+						<line x1="640" y1="145" x2="720" y2="145" stroke="black" stroke-width="2"></line>
+						<rect x="740" y="135" height="20" width="70" fill="hsl(250, 100%, 40%)"></rect>
+
+						<text x="450" y="200" font-family="monospace">(250,  100%, 60%)</text>
+						<line x1="640" y1="195" x2="720" y2="195" stroke="black" stroke-width="2"></line>
+						<rect x="740" y="185" height="20" width="70" fill="hsl(250, 100%, 60%)"></rect>
+
+						<text x="450" y="250" font-family="monospace">(250,  100%, 80%)</text>
+						<line x1="640" y1="245" x2="720" y2="245" stroke="black" stroke-width="2"></line>
+						<rect x="740" y="235" height="20" width="70" fill="hsl(250, 100%, 80%)"></rect>
+
+						<text x="450" y="300" font-family="monospace">(250,  100%, 100%)</text>
+						<line x1="660" y1="295" x2="720" y2="295" stroke="black" stroke-width="2"></line>
+						<rect x="740" y="285" height="20" width="70" fill="hsl(250, 100%, 100%)" stroke="black"></rect>
+					</svg>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h1 style="font-size: 1.6em;"><i>Colormaps</i></h1>
+          
+          <br>
+
+          <p>Asociación entre datos y colores.</p>
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <h4><i>Colormaps</i> continuos</h4>
+
+          <br>
+
+          <img src="./assets/rainbow.png" height="60">
+
+					<p data-id="cd2" style="font-size: 0.5em; color: grey;">(Fuente <i>color maps</i>: <a href="https://github.com/d3/d3-scale-chromatic">D3 Scale Chromatic</a>)</p>
+
+
+          <br>
+          <br>
+
+          <h4><i>Colormaps</i> segmentados</h4>
+
+          <br>
+
+          <img src="./assets/Paired.png" height="50">
+
+					<p data-id="c2d" style="font-size: 0.5em; color: grey;">(Fuente <i>color maps</i>: <a href="https://github.com/d3/d3-scale-chromatic">D3 Scale Chromatic</a>)</p>
+
+
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3><i>Colormaps</i> categóricos</h3>
+
+
+          <img src="./assets/Set2.png" height="50">
+					<p data-id="cd" style="font-size: 0.5em; color: grey;">(Fuente <i>color maps</i>: <a href="https://github.com/d3/d3-scale-chromatic">D3 Scale Chromatic</a> )</p>
+
+          <br>
+
+          <h3><i>Colormaps</i> secuenciales</h3>
+
+          <img src="./assets/Greys.png" height="50">
+					<p data-id="cd" style="font-size: 0.5em; color: grey;">(Fuente <i>color maps</i>: <a href="https://github.com/d3/d3-scale-chromatic">D3 Scale Chromatic</a> )</p>
+
+					<br>
+					
+					<h3><i>Colormaps</i> divergentes</h3>
+
+          <img src="./assets/RdGy.png" height="50">
+					<p style="font-size: 0.5em; color: grey;">(Fuente <i>color maps </i>: <a href="https://github.com/d3/d3-scale-chromatic">D3 Scale Chromatic</a>)</p>
+
+
+        </section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Herramientas de utilidad:</h3>
+
+					<br>
+
+					<ul>
+						<li>Escalas ya programadas: <a href="https://github.com/d3/d3-scale-chromatic">d3-scale-chromatic</a></li>
+						<li><i>Colormaps</i> ya escogidos con cuidado: <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">Color Brewer</a></li>
+						<li>Visualizar página web en blanco y negro: <a href="https://superuser.com/questions/330830/how-to-turn-web-pages-in-browser-into-black-white-grayscale">Publicación en Superuser</a></li>
+						<li>Visualizar página web simulando daltonismo: <a href="https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa">Colorblinding (Extensión de Google Chrome)</a></li>
+						<li>¡Experimentando y probando con tu cuenta!</li>
+					</ul>
+
+				</section>
+				
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Caso</h3>
+          
+          <img src="./assets/mapa_rainbox.jpg" height="400px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">¡Mini actividad grupal!</h4>
+
+					<br />
+
+					<p>Nos separaremos en grupos brevemente (5 minutos de discusión) para hacer críticas sobre algunos casos de visualizaciones.</p>
+
+					<p>Deben consensuar como grupo y definir una <span style="color: #f92696;">crítica sobre el uso de <i>colormaps</i></span> por caso, y eventualmente proponer una mejora. Puede ser tanto positiva como negativa. </p>
+
+					<p>Discutiremos todes juntes luego sus críticas.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h4>Caso 1</h4>
+          
+          <img src="./assets/colores_anos.png" height="500px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h4>Caso 2 (Visualización del día)</h4>
+          
+          <img src="./assets/color_lgbtqia.png" height="500px"/>
+
+				</section>
+      
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Color</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Nos vemos!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

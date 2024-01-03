@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Validación en visualización</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2020-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Validación en visualización</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2020-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Repaso</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Repaso</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. Validación y tipos de resolución</h4>
+					<h4 style="color: black;">2. Amenazas a la validez</h4>
+					<h4 style="color: black;">3. Enfoques de validación</h4>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3 data-id="title">Modelo en cascada de cuatro capas</h3>
+					<br>
+
+					<div data-id="1" style="background: rgba(255, 165, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em; opacity: 0.8;">
+						Caracterización de dominio
+						<div data-id="2" style="background: rgba(255, 255, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em;">
+							Abstracción de datos y tareas
+							<div data-id="3" style="background: rgba(173, 255, 47, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em;">
+								Codificación visual y de interacción
+								<div data-id="4" style="background: rgba(216, 112, 147, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em;">
+									Implementación algorítmica
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</section>
+
+
+				<!-- <section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Tipos de resolución</h3>
+					<br>
+					<br>
+
+					<h4 style="color: black;">Enfoque centrado en problema o necesidad</h4>
+					<br>
+					<h4 style="color: black;">Enfoque centrado en la técnica</h4>
+
+					
+				</section> -->
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Amenazas a la validez</h1>
+					<br>
+
+					<div data-id="5" style="background: rgba(255, 165, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em; opacity: 0.8;">
+						Problema incorrecto: Identificación de necesidades no fue acertada .
+						<div data-id="6" style="background: rgba(255, 255, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em;">
+							Abstracción incorrecta: Lo identificado no resuelven los problemas de usuarios.
+							<div data-id="7" style="background: rgba(173, 255, 47, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em;">
+								<i data-id="hey">Idiom</i> incorrecto: <i>Idioms</i> seleccionados no funcionan.
+								<div data-id="8" style="background: rgba(216, 112, 147, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em;">
+									Algoritmo incorrecto: Código sea muy lento o presenta errores.
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Enfoques de validación</h1>
+					<br>
+
+					<p>Los separaremos por niveles del modelo anidado.</p>
+
+					<br>
+
+					<p>Al mismo tiempo, hay dos tipos:</p>
+
+					<ul>
+						<li>Inmediatos</li>
+						<br>
+						<li>"Río abajo"</li>
+					</ul>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<div data-id="1" style="background: rgba(255, 165, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em; opacity: 0.8;">
+						Caracterización de dominio
+						<br>
+						<strong>✅❌ Validación inmediata</strong>
+						<div data-id="2" style="background: rgba(255, 255, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+							Abstracción de datos y tareas
+							<br>
+							<strong>✅❌ Validación inmediata</strong>
+							<div data-id="3" style="background: rgba(173, 255, 47, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+								Codificación visual y de interacción
+								<br>
+								<strong>✅❌ Validación inmediata</strong>
+								<div data-id="4" style="background: rgba(216, 112, 147, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+									Implementación algorítmica
+									<br>
+									<strong>✅❌ Validación inmediata</strong>
+									<div data-id="5" style="background: grey; color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+										¡Implementar sistema!
+									</div>
+									<strong>✅❌ Validación "río abajo"</strong>
+								</div>
+									<strong>✅❌ Validación "río abajo"</strong>
+							</div>
+									<strong>✅❌ Validación "río abajo"</strong>
+						</div>
+									<strong>✅❌ Validación "río abajo"</strong>
+					</div>
+					
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Enfoques de validación inmediatos</h1>
+
+					<br>
+
+					<div data-id="6" style="background: rgba(255, 165, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em; opacity: 0.8;">
+						Caracterización de dominio
+						<br>
+						<strong>✅❌ Realizar entrevistas a usuarios objetivos, o realizar estudios de campo de observación.</strong>
+						<div data-id="7"" style="background: rgba(255, 255, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+							Abstracción de datos y tareas
+							<br>
+							<div data-id="9" style="background: rgba(173, 255, 47, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+								Codificación visual y de interacción
+								<br>
+								<strong>✅❌ Justificar estas decisiones realizadas en base a principios de percepción y cognición.</strong>
+								<div data-id="10" style="background: rgba(216, 112, 147, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+									Implementación algorítmica
+									<br>
+									<strong>✅❌ Análisis de complejidad computacional de implementación.</strong>
+									<div data-id="9" style="background: grey; color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+										¡Implementar sistema!
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Ejemplo aplicado (a comienzo de semestre)</h3>
+
+					<br>
+
+					<p>Empresa de desarrollo de software <a href="https://gladius.cl/">Gladius SpA</a> desarrolla aplicación de gestión para una corredora de propiedades. Administrativos son capaces de ver todas las propiedades registradas en sistema, ver aquellas arrendadas y monitorear su estado. </p>
+
+					<p>Gladius busca ofrecerle más funcionalidades a su cliente (corredora de propiedadees), e intenta buscar oportunidades de visualización que entreguen valor a la herramienta. </p>
+
+					<p>Le entregan a alguien este proyecto (a mi). </p>
+
+					<p>Sin saber donde partir, ¡apliqué el modelo anidado!. </p>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/what1.jpeg" height="300px"/>
+					<img src="./assets/what2.jpeg" height="300px"/>
+					<img src="./assets/what3.jpeg" height="300px"/>
+
+				</section>
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/how1.jpeg" height="500px"/>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/how2.jpeg" height="500px"/>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/how3.jpeg" height="500px"/>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/how4.jpeg" height="500px"/>
+
+
+				</section>
+
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<img src="./assets/caso_again_3.png" height="500px"/>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Qué pudo mejorar?</h3>
+
+					<br>
+					
+					<p>La primera capa (caracterización de dominio) pudo guiar mucho mejor el proceso si se hubiera tenido contacto directo con los usuarios de la herramienta.</p>
+
+					<div data-id="6" style="background: rgba(255, 165, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em; opacity: 0.8;">
+						Caracterización de dominio
+						<br>
+						<strong>✅❌ Realizar entrevistas a usuarios objetivos, o realizar estudios de campo de observación.</strong>
+						<div data-id="7"" style="background: rgba(255, 255, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+							Abstracción de datos y tareas
+							<div data-id="9" style="background: rgba(173, 255, 47, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+								Codificación visual y de interacción
+								<div data-id="10" style="background: rgba(216, 112, 147, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+									Implementación algorítmica
+									<div data-id="9" style="background: grey; color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+										¡Implementar sistema!
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Enfoques de validación "rio abajo"</h1>
+
+					<div data-id="1" style="background: rgba(255, 165, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em; opacity: 0.8;">
+						Caracterización de dominio
+						<div data-id="2" style="background: rgba(255, 255, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+							Abstracción de datos y tareas
+							<div data-id="3" style="background: rgba(173, 255, 47, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+								Codificación visual y de interacción
+								<div data-id="4" style="background: rgba(216, 112, 147, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+									Implementación algorítmica
+									<div data-id="5" style="background: grey; color: rgba(0, 0, 0, 1); width: 90%; padding: 0.6em; margin: 1em;">
+										¡Implementar sistema!
+									</div>
+									<strong>✅❌ Medir tiempo de carga y respuesta en la práctica.</strong>
+								</div>
+								<strong>✅❌ Experimentos de laboratorio para medir impacto cuantitativo y cualitativo de desiciones o <i>idioms</i> aislados.</strong>
+								<!-- <strong>✅❌ Presentación y discusión cualitativa de imágenes o videos de propuesta de herramienta.</strong> -->
+							</div> 
+							
+							<strong>✅❌ Poner a prueba la herramienta con usuarios objetivos y recolectar anécdotas.</strong>
+							<strong>✅❌ Estudio de campo de herramienta en contexto de uso.</strong>
+						</div>
+						<strong>✅❌ Medir cómo se a adoptado la herramienta en el contexto que fue concebida.</strong>
+					</div>
+					
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Estudio de laboratorio de efectividad de distintos tipos de interacción</h3>
+
+
+					<img src="./assets/viss_base.png" height="400px"/>
+
+					<p style="color: grey">(Fuente: Evaluación de técnicas de interacción para comparación de mapas de densidad multiclase - Tésis de Lukas Svicarovic)</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Estudio de laboratorio de efectividad de distintos tipos de interacción</h3>
+
+
+					<img src="./assets/juxta.png" height="400px"/>
+
+					<p style="color: grey">(Fuente: Evaluación de técnicas de interacción para comparación de mapas de densidad multiclase - Tésis de Lukas Svicarovic)</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Estudio de laboratorio de efectividad de distintos tipos de interacción</h3>
+
+
+					<img src="./assets/magic_lens.png" height="400px"/>
+
+					<p style="color: grey">(Fuente: Evaluación de técnicas de interacción para comparación de mapas de densidad multiclase - Tésis de Lukas Svicarovic)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Estudio de laboratorio de efectividad de distintos tipos de interacción</h3>
+
+
+					<img src="./assets/to.png" height="400px"/>
+
+					<p style="color: grey">(Fuente: Evaluación de técnicas de interacción para comparación de mapas de densidad multiclase - Tésis de Lukas Svicarovic)</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Estudio de laboratorio de efectividad de distintos tipos de interacción</h3>
+
+
+					<img src="./assets/swipe.png" height="350px"/>
+
+					<p style="color: grey">(Fuente: Evaluación de técnicas de interacción para comparación de mapas de densidad multiclase - Tésis de Lukas Svicarovic)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Estudio de laboratorio de efectividad de distintos tipos de interacción</h3>
+
+
+					<img src="./assets/tipo_preguntas.png" height="300px"/>
+
+					<p style="color: grey">(Fuente: Evaluación de técnicas de interacción para comparación de mapas de densidad multiclase - Tésis de Lukas Svicarovic)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Estudio de laboratorio de efectividad de distintos tipos de interacción</h3>
+
+
+					<img src="./assets/interfaz_test.png" height="400px"/>
+
+					<p style="color: grey">(Fuente: Evaluación de técnicas de interacción para comparación de mapas de densidad multiclase - Tésis de Lukas Svicarovic)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Estudio de laboratorio de efectividad de distintos tipos de interacción</h3>
+
+
+					<img src="./assets/resumen_resultados.png" height="400px"/>
+
+					<p style="color: grey">(Fuente: Evaluación de técnicas de interacción para comparación de mapas de densidad multiclase - Tésis de Lukas Svicarovic)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Estudio de laboratorio de efectividad de distintos tipos de interacción</h3>
+
+
+					<img src="./assets/preferencias.png" height="400px"/>
+
+					<p style="color: grey">(Fuente: Evaluación de técnicas de interacción para comparación de mapas de densidad multiclase - Tésis de Lukas Svicarovic)</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Más dudas?</h3>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Cómo van con el examen?</h3>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Cómo van con el examen?</h3>
+
+					<br>
+
+					<p>Les recomiendo que para este jueves hayan: </p>
+
+					<h4>Leido el enunciado</h4>
+					<h4>Seleccionado el tema y <i>dataset(s)</i> a trabajar.</h4>
+
+				</section>
+
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Visualización del día</h3>
+
+					<br>
+
+					<img src="./assets/vis_del_dia.png" height="400px"/>
+
+					<p style>Propuesto por estudiante Eduardo</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://graphics.reuters.com/USA-ELECTION/RESULTS/jznvnjyjzvl/index.html"><i>How Joe Biden won the U.S. presidential election</i></a>)</p>
+				
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+					<br>
+
+					<p>Estamos en primera semana de plazo de <span style="color: #f92696;">Examen</span> (entrega 10 de diciembre).</p>
+
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+					<br>
+
+					<p>Estamos en primera semana de plazo de <span style="color: #f92696;">Examen</span> (entrega 10 de diciembre).</p>
+
+					<br>
+
+					<p>¡Ya no queda material! Desde el jueves, usaremos el horario del curso como <span style="color: #f92696;">espacio de trabajo para examen</span> (jueves 26, martes 1 y jueves 3).</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+					<br>
+
+					<p>Estamos en primera semana de plazo de <span style="color: #f92696;">Examen</span> (entrega 10 de diciembre).</p>
+
+					<br>
+
+					<p>¡Ya no queda material! Desde el jueves, usaremos el horario del curso como <span style="color: #f92696;">espacio de trabajo para examen</span> (jueves 26, martes 1 y jueves 3).</p>
+
+
+					<br>
+
+					<p>Recorrecciones <span style="color: #f92696;">Hito 2</span> y <span style="color: #f92696;">Entrega 3</span> publicadas. Corrección <span style="color: #f92696;">Hito 3</span> en proceso.</p>
+
+
+				</section>
+
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Validación en visualización</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2020-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Nos vemos!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

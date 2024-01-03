@@ -1,0 +1,49 @@
+html, body {
+    display: flex;
+    height: 100%;
+    font-family: Raleway, Helvetica, sans-serif;
+    flex-flow: column;
+    align-items: center;
+}
+
+
+.information {
+    margin: 0 5%;
+    text-align: justify;
+}
+
+.information h1 {
+    text-align: center;
+}
+
+.contenedor {
+    margin: 0 5%;
+}
+
+.axis {
+    font-size: 15px;
+}
+
+.filter, .help {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.help {
+    margin-right: 10px;
+}
+
+.xAxis {
+    font-size: 20px;
+    color: #505050;
+}
+
+.title {
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bump {
+    margin-bottom: 30px;
+}

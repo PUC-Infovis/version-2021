@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>JavaScript I</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>JavaScript y D3</h1>
+					<h2 style="color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>JavaScript I</h1>
+					<h1 style="font-size: 1.6em; color: black;">JavaScript y D3</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">JavaScript</h1>
+
+					<br>
+
+					<ul>
+						<li>Lenguaje de programación de la web.</li>
+						<li>Es un lenguaje de alto nivel, interpretado y multiparadigma.</li>
+						<!-- <li></li> -->
+					</ul>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">JavaScript</h1>
+
+					<br>
+
+					<ul>
+						<li>Lenguaje de programación de la web.</li>
+						<li>Es un lenguaje de alto nivel, interpretado y multiparadigma.</li>
+						<li>Puede ejecutarse en un navegador web y afectar el contenido de una página.</li>
+						<li>Lo utilizaremos como lenguaje para construir visualizaciones a partir de datos.</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">JavaScript</h1>
+
+					<br>
+
+					<ul>
+						<li>Lenguaje en constante evolución.</li>
+						<li>Su estándar se llama ECMAScript (ES).</li>
+						<li>Consideraremos desde ES2015 o ES6 en este curso.</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">Declaraciones y variables</h1>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers class="js">
+						let miVariable = 1;
+						miVariable = 4;
+					</code></pre>
+
+					<pre data-id="code2"><code data-trim data-line-numbers class="js">
+						const miVariableConstante = 1;
+					</code></pre>
+
+					<pre data-id="code3"><code data-trim data-line-numbers class="js">
+						var miVariable = 1;
+						miVariable = 4;
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">Declaraciones y variables</h1>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers class="js">
+						let miVariable = 1;
+						miVariable = 4;
+					</code></pre>
+
+					<pre data-id="code2"><code data-trim data-line-numbers class="js has-highlights">
+						const miVariableConstante = 1;
+					</code></pre>
+
+					<pre data-id="code3"><code data-trim data-line-numbers class="js has-highlights">
+						var miVariable = 1;
+						miVariable = 4;
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">Declaraciones y variables</h1>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers class="js has-highlights">
+						let miVariable = 1;
+						miVariable = 4;
+					</code></pre>
+
+					<pre data-id="code2"><code data-trim data-line-numbers class="js">
+						const miVariableConstante = 1;
+					</code></pre>
+
+					<pre data-id="code3"><code data-trim data-line-numbers class="js has-highlights">
+						var miVariable = 1;
+						miVariable = 4;
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">Declaraciones y variables</h1>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers class="js has-highlights">
+						let miVariable = 1;
+						miVariable = 4;
+					</code></pre>
+
+					<pre data-id="code2"><code data-trim data-line-numbers class="js has-highlights">
+						const miVariableConstante = 1;
+					</code></pre>
+
+					<pre data-id="code3"><code data-trim data-line-numbers class="js">
+						var miVariable = 1;
+						miVariable = 4;
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">Declaraciones y variables</h1>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers class="js">
+						let miVariable = 1;
+						miVariable = 4;
+					</code></pre>
+
+					<pre data-id="code2"><code data-trim data-line-numbers class="js">
+						const miVariableConstante = 1;
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">Llaves para organizar el código</h1>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers class="js">
+            if (miVariable > 5) {
+              miVariable = miVariable / 2;
+            }
+					</code></pre>
+
+					<pre><code data-trim data-line-numbers class="js">
+            for (let i = 0; i < 10; i++) {
+              miVariable += i;
+            }
+					</code></pre>
+
+					<pre><code data-trim data-line-numbers class="js">
+            function miFuncion(arg1, arg2) {
+              return arg1 + 2 * args2;
+            }
+					</code></pre>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">Control de flujo</h1>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers="|1|4" class="js">
+            if (miVariable > 5 && miVariableConstante == 1) {
+              // se ejecuta si ambas cumplen
+              miVariable = miVariable / 2;
+            } else if (miVariable > 5 || miVariableConstante == 1) {
+              // se ejecuta si alguna cumple
+              miVariable -= 2;
+            } else {
+              miVariable = 0;
+            }
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Strings</i></h1>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers class="js">
+            const nombre = "Tamara";
+
+            const saludo = "¡Hola " + nombre + "!";
+
+					</code></pre>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Strings</i></h1>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers="5" class="js">
+            const nombre = "Tamara";
+
+            const saludo = "¡Hola " + nombre + "!";
+
+            const saludo2 = `¡Hola ${nombre}!`;
+					</code></pre>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Arrays</i></h1>
+
+					<br>
+
+					<pre data-id="code2"><code data-trim data-line-numbers class="js">
+            let arreglo = [3, 1, 4, 1, 5];
+
+            const variable = arreglo[0]; // 3
+
+            arreglo.push(9);
+					</code></pre>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Objects</i></h1>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers class="js">
+            let miObjeto = {nombre: "Tamara", apellido: "Munzner"};
+
+            const nombre = miObjeto["nombre"]; // "Tamara"
+
+            const apellido = miObjeto.apellido; // "Munzner"
+
+            miObjeto["curso"] = "Visualización de Información";
+            miObjeto.universidad = "British Columbia";
+					</code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">JavaScript</h1>
+
+          <br>
+          <p>¡Es mucho!</p>
+
+					<p>Ten curiosidad y busca en la web por referencias de aprendizaje. Recomiendo: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN Web Docs</a>.</p>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>JavaScript I</h1>
+					<h1 style="font-size: 1.6em; color: black;">JavaScript y D3</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

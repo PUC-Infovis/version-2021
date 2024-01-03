@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>JavaScript II</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>JavaScript y D3</h1>
+					<h2 style="color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>JavaScript II</h1>
+					<h1 style="font-size: 1.6em; color: black;">JavaScript y D3</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+				</section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">Iteración</h1>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers class="js">
+            let valor = 0;
+            let contador = 0;
+            while (contador < 10) {
+              valor += 2;
+              contador += 1;
+            }
+          </code></pre>
+          
+          <pre data-id="code1"><code data-trim data-line-numbers class="js">
+            let valor = 0;
+            for (let contador = 0; contador < 10; contador += 1) {
+              valor += 2;
+            }
+					</code></pre>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">Iteración</h1>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers class="js">
+            let valor = 0;
+            let contador = 0;
+            while (contador < 10) {
+              valor += 2;
+              contador += 1;
+            }
+          </code></pre>
+          
+          <pre data-id="code1"><code data-trim data-line-numbers class="js has-highlights">
+            let valor = 0;
+            for (let contador = 0; contador < 10; contador += 1) {
+              valor += 2;
+            }
+					</code></pre>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Fors</i></h1>
+
+					<br>
+          
+          <pre data-id="code1"><code data-trim data-line-numbers class="js">
+            let valor = 0;
+            for (let contador = 0; contador < 10; contador += 1) {
+              valor += 2;
+            }
+					</code></pre>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Fors</i></h1>
+
+					<br>
+          
+          <pre data-id="code1"><code data-trim data-line-numbers class="js">
+            let valor = 0;
+            for (let contador = 0; contador < 10; contador += 1) {
+              valor += 2;
+            }
+          </code></pre>
+
+          <pre data-id="code2"><code data-trim class="js">
+            let contador = 0
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Fors</i></h1>
+
+					<br>
+          
+          <pre data-id="code1"><code data-trim data-line-numbers class="js">
+            let valor = 0;
+            for (let contador = 0; contador < 10; contador += 1) {
+              valor += 2;
+            }
+          </code></pre>
+
+          <pre data-id="code2"><code data-trim class="js">
+            contador < 10
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Fors</i></h1>
+
+					<br>
+          
+          <pre data-id="code1"><code data-trim data-line-numbers class="js">
+            let valor = 0;
+            for (let contador = 0; contador < 10; contador += 1) {
+              valor += 2;
+            }
+          </code></pre>
+
+          <pre data-id="code2"><code data-trim class="js">
+            contador += 1
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Fors</i></h1>
+
+					<br>
+          
+          <pre data-id="code1"><code data-trim data-line-numbers class="js">
+            let valor = 0;
+            for (let contador = 0; contador < 10; contador += 1) {
+              valor += 2;
+            }
+          </code></pre>
+
+          <pre><code data-trim data-line-numbers class="js">
+            const arreglo = [1, 2, 3];
+            let suma = 0;
+            for (const element of arreglo) {
+              suma += 0;
+            }
+          </code></pre>
+
+          <pre><code data-trim data-line-numbers class="js">
+            const objeto = { a: 1, b: 2, c: 3 };
+            let suma = 0;
+            for (const propiedad in objeto) {
+              suma += objeto[propiedad]
+            }
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Fors</i></h1>
+
+					<br>
+          
+          <pre data-id="code1"><code data-trim data-line-numbers="2" class="js">
+            let valor = 0;
+            for (let contador = 0; contador < 10; contador += 1) {
+              valor += 2;
+            }
+          </code></pre>
+
+          <pre><code data-trim data-line-numbers="3" class="js">
+            const arreglo = [1, 2, 3];
+            let suma = 0;
+            for (const element of arreglo) {
+              suma += 0;
+            }
+          </code></pre>
+
+          <pre><code data-trim data-line-numbers="3" class="js">
+            const objeto = { a: 1, b: 2, c: 3 };
+            let suma = 0;
+            for (const propiedad in objeto) {
+              suma += objeto[propiedad]
+            }
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">Funciones</h1>
+
+					<br>
+          
+          <pre data-id="code"><code data-trim data-line-numbers class="js">
+            function sumar10(numero) {
+              return numero + 10;
+            }
+            
+            sumar10(6); // 16
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">Funciones</h1>
+
+					<br>
+          
+          <pre data-id="code"><code data-trim data-line-numbers class="js">
+            function sumar10(numero) {
+              return numero + 10;
+            }
+            
+            sumar10(6); // 16
+          </code></pre>
+
+          <pre><code data-trim data-line-numbers class="js">
+            const sumar10 = function(numero) {
+              return numero + 10;
+            }
+
+            sumar10(6); // 16
+          </code></pre>
+
+          <pre data-id="code3"><code data-trim data-line-numbers class="js">
+            const sumar10 = (numero) => numero + 10;
+
+            sumar10(6); // 16
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Arrow functions</i></h1>
+
+					<br>
+
+          <pre data-id="code3"><code data-trim data-line-numbers class="js">
+            const sumar10 = (numero) => numero + 10;
+
+            sumar10(6); // 16
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;"><i>Arrow functions</i></h1>
+
+					<br>
+
+          <pre data-id="code3"><code data-trim data-line-numbers class="js">
+            const algoMasComplicado = (arg1, arg2, arg3) => {
+              // ...
+              return valorResultado;
+            };
+
+            algoMasComplicado(1, 2, 3); // Algo complicado
+          </code></pre>
+          
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">JavaScript</h1>
+
+					<br>
+
+					<ul>
+						<li>Es posible ejecutarlo en un computador.</li>
+						<li>También funcione en el navegador, mientras ligado a un documento HTML.</li>
+						<li>Al abrirse un documento HTML se ejecutan programas de JavaScript asociados.</li>
+						<li>Podemos ver los resultados en una pestaña "Consola" en el inspector de elementos.</li>
+					</ul>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<pre data-id="code"><code data-trim data-line-numbers class="js">
+            let arreglo = [];
+
+            for (let numero = 0; numero <= 20; numero += 2) {
+              arreglo.push(numero);
+            }
+
+            for (numero of arreglo) {
+              console.log(numero);
+            }
+          </code></pre>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<pre data-id="code"><code data-trim data-line-numbers class="js">
+            // programa_1.js
+            let arreglo = [];
+
+            for (let numero = 0; numero <= 20; numero += 2) {
+              arreglo.push(numero);
+            }
+
+            for (numero of arreglo) {
+              console.log(numero);
+            }
+          </code></pre>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<pre data-id="code"><code data-trim data-line-numbers class="js">
+            // programa_1.js
+            let arreglo = [];
+
+            for (let numero = 0; numero <= 20; numero += 2) {
+              arreglo.push(numero);
+            }
+
+            for (numero of arreglo) {
+              console.log(numero);
+            }
+          </code></pre>
+
+          <pre data-id="code2"><code data-trim data-line-numbers="11" class="html">
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+                
+              &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;title&gt;Ejemplo con JS 1&lt;/title&gt;
+              &lt;/head&gt;
+            
+              &lt;body&gt;
+                
+                &lt;script src='programa_1.js' charset='utf-8'&gt;&lt;/script&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;
+          </code></pre>
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">JavaScript</h1>
+
+          <br>
+          <p>¡Es mucho! Iremos revisando detalles nuevos a medida que pasa el curso.</p>
+
+          <p>Ten curiosidad y busca en la web por referencias de aprendizaje. Recomiendo: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN Web Docs</a>.</p>
+          
+          <p>¡O pregúntanos! 😄</p>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>JavaScript II</h1>
+					<h1 style="font-size: 1.6em; color: black;">JavaScript y D3</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

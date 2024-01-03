@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Jerarquías y árboles</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<script src="../plugin/math/math.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de jerarquías y árboles</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Jerarquías y árboles</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de jerarquías y árboles</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Jerarquías y árboles</h1>
+
+          <img src="./assets/arbol1.png" height="300" />
+					<p style="font-size: 0.5em; color: grey;">(Fuente: Libro "Visualization, Analysis and Design" )</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;"><i>Idiom</i> nodo-enlace</h1>
+
+          <img src="./assets/arbol-nodo-enlace.png" height="450" />
+					<p style="font-size: 0.5em; color: grey;">(Fuente: Libro "Visualization, Analysis and Design" )</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Posicionamiento dirigido por fuerzas</h1>
+
+					
+					<video src="./assets/arbol_force.mov" height="350" data-autoplay loop>
+					</video>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://bl.ocks.org/mbostock/1062288">Collapsible Force Layout (bl.ocks)</a> )</p>
+
+
+				</section>
+				
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Jerarquías y árboles</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de jerarquías y árboles</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				plugins: [ RevealHighlight, RevealMath ]
+			});
+		</script>
+
+	</body>
+</html>

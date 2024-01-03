@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>CSS</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Introducción a HTML, CSS y SVG</h1>
+					<h2 style="color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">CSS</h1>
+					<h1 style="font-size: 1.6em; color: black;">Introducción a HTML, CSS y SVG</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2 style="font-size: 1.6em; color: black;"><span style="color: #f92696;">C</span>ascading <span style="color: #f92696;">S</span>tyle <span style="color: #f92696;">S</span>heets</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">C</span>ascading <span style="color: #f92696;">S</span>tyle <span style="color: #f92696;">S</span>heets</h2>
+
+					<br>
+
+					<ul>
+						<li>Languaje de hojas de estilo.</li>
+						<li>Permiten declarar propiedades visuales para HTML.</li>
+						<li>El <span style="color: #f92696;">navegador web</span> es quien interpreta dichas declaraciones.</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Declaraciones</h3>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers="|1|2" class="css">
+						p {
+						  color: blue;
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Declaraciones</h3>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers class="css">
+						p {
+						  color: blue;
+						}
+					</code></pre>
+
+					<pre data-id="code2"><code data-trim data-line-numbers="|1|2-4" class="css">
+						selector {
+						  propiedad_1: valor_1;
+						  propiedad_2: valor_2;
+						  ...
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Declaraciones</h3>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers class="css">
+						/* estilo.css (esto es un comentario en CSS) */
+						p {
+						  color: blue;
+						}
+					</code></pre>
+
+					<pre><code data-trim data-line-numbers="7" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+								
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;T&iacute;tulo de documento completo&lt;/title&gt;
+    &lt;link href=&quot;estilo.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Selectores</h3>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers="1" class="css">
+						li, h1, h2 {
+						  color: blue;
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Selectores</h3>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers="" class="css">
+						.importante {
+						  color: red;
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Selectores</h3>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers="" class="css">
+						.importante {
+						  color: red;
+						}
+					</code></pre>
+
+					<pre><code data-trim data-line-numbers="" class="css">
+						#principal {
+						  color: green;
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Más propiedades</h3>
+
+					<br>
+
+					<pre><code data-trim data-line-numbers="|2|3|4" class="css">
+						body {
+						  background-color: #eeeeee;
+						  font-family: monospace;
+						  font-size: 20px;
+						}
+					</code></pre>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>CSS</h1>
+					<h1 style="font-size: 1.6em; color: black;">Introducción a HTML, CSS y SVG</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

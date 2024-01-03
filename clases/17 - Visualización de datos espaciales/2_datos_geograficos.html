@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Datos geográficos</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<script src="../plugin/math/math.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de datos espaciales</h1>
+					<h2 style="color: black;">IIC2026 </h2>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Datos geográficos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de datos espaciales</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">GeoJSON</h1>
+
+					<br>
+
+					<p>Extensión de JSON y formato estándar para guardar y codificar datos georreferenciados en la web.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">GeoJSON</h1>
+
+					<br>
+
+					<pre><code data-trim class="js">
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ADMIN": "Aruba",
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -69.99693762899992,
+                12.577582098000036
+              ],
+              [
+                -69.93639075399994,
+                12.53172435100005
+              ],
+              ...
+            ]
+          ...
+          ]
+        ...
+      }
+    }
+  ...
+  ]
+}
+          </code></pre>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente - <a href="https://github.com/datasets/geo-countries/blob/master/data/countries.geojson"> Data Packaged Core Datasets: geocountries</a>)</p>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Datos geográficos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de datos espaciales</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				plugins: [ RevealHighlight, RevealMath ]
+			});
+		</script>
+
+	</body>
+</html>

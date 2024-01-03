@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Zooming y panning en D3.js</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+
+
+	</head>
+
+	<body>
+
+		<!-- https://github.com/russellgoldenberg/scrollama -->
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+					<img src="./assets/marge.jpg" height="500px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Zooming y panning en D3.js</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenido</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. d3-zoom</h4>
+					<h4 style="color: black;">2. Zoom sobre idioms I</h4>
+					<h4 style="color: black;">3. Zoom sobre idioms II</h4>
+        </section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">¡Actividad grupal!</h4>
+
+					<p>Cada grupo asignado a una <span style="color: #f92696;">Sala de Zoom</span> debe completar en conjunto un programa de JavaScript que extiende un documento HTML.  Los objetivos a lograr como grupo son:
+					</p>
+
+					<ul>
+						<li>Escribir una lista no ordenada en el documento HTML con los nombres de las personas que forman el grupo.</li>
+						<li>Completar un programa con puntos conectados por líneas que ya hemos visto, y <span style="color: #f92696;">agregarle comportamiento de zoom horizontal.</span>. </li>
+						<li>Que entiendan el funcionamiento del programa. Llamen a alguien del equipo docente para preguntar las partes que no entienden.</li>
+						<li>Llegen lo más lejos posible como grupos, <span style="color: #f92696;">está OK no terminar el objetivo hoy</span> :) </li>
+					</ul>
+
+ 
+
+				</section>
+
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">¡Actividad grupal!</h4>
+
+					<br />
+
+
+					<p>Les recomendamos que por grupo asignen:</p>
+
+					<ul>
+						<li>Al menos una persona que tenga el material del curso y documentación de D3.js a mano para consultarla.</li>
+						<li>Al menos una persona pendiente de las dudas que surjan para solicitar ayuda durante la actividad.</li>
+						<li>Al menos una persona que se encargue de escribir y extender el documento HTML y programa JavaScript.</li>
+						<li>El resto puede apoyar a quienes escriban o a otros roles.</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">¡Actividad grupal!</h4>
+
+          <br>
+
+					<p>Para colaborar en el código, pueden:</p>
+
+					<ul>
+						<li>Colaborar en <a href="https://www.codingrooms.com/compiler/html-css-js/">Coding Rooms</a></li>
+						<li>Colaborar en <a href="https://jsfiddle.net/">JSFiddle</a></li>
+						<li>Colaborar en <a href="https://liveweave.com/">Liveweave</a></li>
+						<li>Encargar a una persona que comparta pantalla y escriba.</li>
+					</ul>
+
+					<p>El equipo docente les preparó salas en <span style="color: #f92696;">Coding Rooms</span>. Para ingresar y colaborar deben entrar a un enlace y luego:</p>
+					
+					<ol>
+						<li>Por defecto, entrarán a la sala solo con permiso de lectura, por lo que un ayudante les asignará el rol de editor a les primeres que entren.</li>
+						<li>Si ya tienen rol de editor, pueden darle este rol a otros estudiantes. Para ello:
+							<ol>
+								<li>Presionen el botón ‘Share’ en la parte  superior derecha.
+								</li>
+								<li>En el cuadro desplegado, cambia el rol de todes les ‘Viewer’ a ‘Editor’ (<span style="color: #f92696;">Si no salen en el cuadro desplegado, recarguen la página</span>)
+								</li>
+							</ol>
+
+						</li>
+						<li>Para poder ver cómo va quedando su código, despliguen la vista de navegador en el botón ‘View Webpage’ de la parte inferior derecha.</li>
+						<li>¡Listo! Ya pueden ponerse a trabajar conjuntamente en su HTML y SVG.</li>
+					</ol>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">¡Actividad grupal!</h4>
+
+					<p>Salas y documentos asignados:</p>
+					
+					<ul>
+						<li>Sala 1: <a href="https://app.codingrooms.com/w/XiMxCUrupnKl">Documento en Coding Room</a> </li>
+						<li>Sala 2: <a href="https://app.codingrooms.com/w/UBhXoDD2qwny">Documento en Coding Room </a> </li>
+						<li>Sala 3: <a href="https://app.codingrooms.com/w/bQyOi8h7iNrA">Documento en Coding Room </a> </li>
+						<li>Sala 4: <a href="https://app.codingrooms.com/w/6NTCC16boeuf">Documento en Coding Room </a> </li>
+						<li>Sala 5: <a href="https://app.codingrooms.com/w/9HWvRx7xv4Ag">Documento en Coding Room </a> </li>
+						<li>Sala 6: <a href="https://app.codingrooms.com/w/JmWNRe0tWNmw">Documento en Coding Room </a> </li>
+						<li>Sala 7: <a href="https://app.codingrooms.com/w/BLdDKf0kvbEY">Documento en Coding Room </a> </li>
+						<li>Sala 8: <a href="https://app.codingrooms.com/w/4h4GKSXuoeVD">Documento en Coding Room </a> </li>
+						<li>Sala 9: <a href="https://app.codingrooms.com/w/ezg6og2lvUxL">Documento en Coding Room </a> </li>
+						<li>Sala 10: <a href="https://app.codingrooms.com/w/wO3uus3Guin5">Documento en Coding Room </a> </li>
+						<!-- <li>Sala 11: <a href="https://app.codingrooms.com/w/uCUPdAIN4TCU">Documento en Coding Room </a> </li>
+						<li>Sala 12: <a href="https://app.codingrooms.com/w/PBYTg6AtRJga">Documento en Coding Room </a> </li>
+						<li>Sala 13: <a href="https://app.codingrooms.com/w/FlCOvOn3b6bM">Documento en Coding Room </a> </li>
+						<li>Sala 14: <a href="https://app.codingrooms.com/w/kMWa5e0rHXs1">Documento en Coding Room </a> </li>
+						<li>Sala 15: <a href="https://app.codingrooms.com/w/vkngLEbqLEt8">Documento en Coding Room </a> </li>
+						<li>Sala 16: <a href="https://app.codingrooms.com/w/RBfBPd4C0fwt">Documento en Coding Room </a> </li>
+						<li>Sala 17: <a href="https://app.codingrooms.com/w/KHTvl7jS5DNb">Documento en Coding Room </a> </li>
+						<li>Sala 18: <a href="https://app.codingrooms.com/w/hC2T50ZrbHi6">Documento en Coding Room </a> </li>
+						<li>Sala 19: <a href="https://app.codingrooms.com/w/5Xu8r59izfpM">Documento en Coding Room </a> </li>
+						<li>Sala 20: <a href="https://app.codingrooms.com/w/N4PC7FK5p5Wc">Documento en Coding Room </a> </li> -->
+					</ul>
+
+
+				</section>
+
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Resultados de actividad grupal</h4>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+
+					<img src="./assets/listen_wiki.png" height="400px"/>
+
+          
+          <p>Cambios en vivo sobre Wikipedia mediante sonido. </p>
+          <p>Propuesta por entidad anónima.</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="http://listen.hatnote.com/">Listen to Wikipedia</a>)</p>
+
+        </section>
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+					<br>
+
+					<p>Hoy (20:00) es la entrega del <span style="color: #f92696;">Entrega 2</span>.</p>
+					<br>
+
+					<p>Hasta viernes 08 de octubre se puede responder <span style="color: #f92696;">Encuesta Medio Semestre</span>.</p>
+
+					
+					<br>
+
+					<p>Se vienen sesiones sobre: <span style="color: #f92696;">Visualización de datos espaciales</span> (martes 12) y <span style="color: #f92696;"><i>Facet</i></span> (jueves 14).</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Zooming y panning en D3.js</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

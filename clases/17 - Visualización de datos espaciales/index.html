@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Visualización de datos espaciales</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+		
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2020-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de datos espaciales</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2020-2</h2>
+				</section>
+
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Repaso</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Repaso</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. Codificación de datos geométricos</h4>
+					<h4 style="color: black;">2. Datos geográficos</h4>
+					<h4 style="color: black;">3. Proyecciones</h4>
+					<h4 style="color: black;">4. <i>Idioms</i> para datos geográficos en D3.js</h4>
+				</section>
+				
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Utilizar geometría entregada</h1>
+
+					<br>
+
+					<p>Si realmente es uno de los focos y puntos de interés identificados en la abstracción de tareas y datos. </p>
+
+					<img src="./assets/africa.png" height="300">
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">GeoJSON</h1>
+
+					<br>
+
+					<pre><code data-trim class="js">
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ADMIN": "Aruba",
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -69.99693762899992,
+                12.577582098000036
+              ],
+              [
+                -69.93639075399994,
+                12.53172435100005
+              ],
+              ...
+            ]
+          ...
+          ]
+        ...
+      }
+    }
+  ...
+  ]
+}
+          </code></pre>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente - <a href="https://github.com/datasets/geo-countries/blob/master/data/countries.geojson"> Data Packaged Core Datasets: geocountries</a>)</p>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Cargado en D3.js</h1>
+
+					<br>
+
+					<pre><code data-trim class="js">
+const caminosGeo = d3.geoPath().projection(proyeccion);
+svg
+  .selectAll("path")
+  .data(datos.features)
+  .enter()
+  .append("path")
+  .attr("d", caminosGeo)
+  .attr("fill", "blue")
+  .attr("opacity", 0.3)
+  .attr("stroke", "blue");
+          </code></pre>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Proyecciones</h1>
+
+					<br>
+					
+					<pre><code data-trim class="js">
+						d3.geoMercator().fitSize([width, height], datos);
+
+						d3.geoCylindricalEqualArea().fitSize([width, height], datos);
+
+						d3.geoWinkel3().fitSize([width, height], datos);
+					</code></pre>
+
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Proyecciones</h1>
+
+					<br>
+					
+					<p>Las distintas alternativas de proyecciones proveen un <i>trade-off</i> entre fidelidad de tamaño y fidelidad de forma.</p>
+					
+					<br>
+
+					<p>No hay una proyección correcta, la decisión de qué proyección usar puede considerarse de diseño, que depende de la situación de aplicación.</p>
+					
+					<br>
+
+					<p>Puedes explorar <a href="https://observablehq.com/@d3/projection-transitions">aquí</a> distintas opciones de proyección provistas por D3.js.</p>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Ejemplos de <i>idioms</i></h1>
+
+					<br>
+
+					<img src="./assets/california_quakes.png" height="350px"/> 
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey;">(Fuente - <a href="https://www.nytimes.com/interactive/2019/07/19/us/california-earthquakes.html">How Two Big Earthquakes Triggered 16,000 More in Southern California</a>)</p>
+
+					
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Ejemplos de <i>idioms</i></h1>
+
+					<br>
+
+					<img src="./assets/jail_in_us.png" height="350px"/> 
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey;">(Fuente - <a href="https://pudding.cool/2017/01/shape-of-slavery/">The Shape of Slavery</a>)</p>
+
+					
+				</section>
+
+
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualizaciones del día!</h3>
+          
+          <img src="./assets/population_us.png" height="400px"/>
+
+          <p style>Propuesto por estudiante Daniela Concha.</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://demographics.virginia.edu/DotMap/">The Racial Dot Map)</a></p>
+				
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualizaciones del día!</h3>
+          
+          <img src="./assets/1_napolean_minard.png" height="400px"/>
+
+          <p style>Propuesto por estudiantes: Gerardo Crot y Francisco.</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://cdns.tblsft.com/sites/default/files/pages/1_napolean_minard.png">Carte figurative des pertes successives en hommes de l'Armée Française dans la campagne de Russie 1812–1813)</a></p>
+					<p style="font-size: 0.5em; color: grey">(Creador: <a href="https://en.wikipedia.org/wiki/Charles_Joseph_Minard">Charles Joseph Minard)</a></p>
+				
+				</section>
+
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h4 style="font-size: 1.6em;">Más sobre datos geográficos</h4>
+
+					<br>
+
+					<p>Algunos archivos GeoJSON pueden ser muy pesados. Mientras más objetos geométricos definidos, y mientras más detalle, más peso.</p>
+					
+					<br>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h4 style="font-size: 1.6em;">Más sobre datos geográficos</h4>
+
+					<br>
+
+					<p>Algunos archivos GeoJSON pueden ser muy pesados. Mientras más objetos geométricos definidos, y mientras más detalle, más peso.</p>
+					
+					<br>
+
+					<p>Algunas opciones para reducir tamaño total:</p>
+
+					<ul>
+						<li>Evitar guardar archivos con indentaciones incluidas. ¡Los espcios pesan!</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h4 style="font-size: 1.6em;">Más sobre datos geográficos</h4>
+
+					<br>
+
+					<p>Algunos archivos GeoJSON pueden ser muy pesados. Mientras más objetos geométricos definidos, y mientras más detalle, más peso.</p>
+					
+					<br>
+
+					<p>Algunas opciones para reducir tamaño total:</p>
+
+					<ul>
+						<li>Evitar guardar archivos con indentaciones incluidas. ¡Los espcios pesan!</li>
+						<br>
+						<li>Remover todo dato no geométrico que no vaya a ser usado.</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h4 style="font-size: 1.6em;">Más sobre datos geográficos</h4>
+
+					<br>
+
+					<p>Algunos archivos GeoJSON pueden ser muy pesados. Mientras más objetos geométricos definidos, y mientras más detalle, más peso.</p>
+					
+					<br>
+
+					<p>Algunas opciones para reducir tamaño total:</p>
+
+					<ul>
+						<li>Evitar guardar archivos con indentaciones incluidas. ¡Los espcios pesan!</li>
+						<br>
+						<li>Remover todo dato no geométrico que no vaya a ser usado.</li>
+						<br>
+						<li>También hay alternativas de transformación de formato que suelen reducir tamaño: <a href="https://github.com/topojson/topojson">TopoJSON</a>.</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h4 style="font-size: 1.6em;">Más sobre datos geográficos</h4>
+
+					<br>
+
+					<p>Algunos archivos GeoJSON pueden ser muy pesados. Mientras más objetos geométricos definidos, y mientras más detalle, más peso.</p>
+					
+					<br>
+
+					<p>Algunas opciones para reducir tamaño total:</p>
+
+					<ul>
+						<li>Evitar guardar archivos con indentaciones incluidas. ¡Los espcios pesan!</li>
+						<br>
+						<li>Remover todo dato no geométrico que no vaya a ser usado.</li>
+						<br>
+						<li>También hay alternativas de transformación de formato que suelen reducir tamaño: <a href="https://github.com/topojson/topojson">TopoJSON</a>.</li>
+						<br>
+						<li>También hay soluciones que reducen detalle de archivos de geometría: <a href="https://github.com/topojson/topojson-simplify/blob/master/README.md#toposimplify"><code>toposimplify</code></a>.</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h4 style="font-size: 1.6em;">Más sobre datos geográficos</h4>
+
+					<br>
+
+					<p>Algunos archivos GeoJSON pueden ser muy pesados. Mientras más objetos geométricos definidos, y mientras más detalle, más peso.</p>
+					
+					<br>
+
+					<p>Algunas opciones para reducir tamaño total:</p>
+
+					<ul>
+						<li>Evitar guardar archivos con indentaciones incluidas. ¡Los espcios pesan!</li>
+						<br>
+						<li>Remover todo dato no geométrico que no vaya a ser usado.</li>
+						<br>
+						<li>También hay alternativas de transformación de formato que suelen reducir tamaño: <a href="https://github.com/topojson/topojson">TopoJSON</a>.</li>
+						<br>
+						<li>También hay soluciones que reducen detalle de archivos de geometría: <a href="https://github.com/topojson/topojson-simplify/blob/master/README.md#toposimplify"><code>toposimplify</code></a>.</li>
+						<br>
+						<li>Si no se puede reducir mucho el tamaño, ¡agregar un mensaje al usuario que le explique!</li>
+					</ul>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h4 style="font-size: 1.6em;">Más sobre datos geográficos</h4>
+
+					<br>
+
+					<p>Si no encuentras archivos GeoJSON para tus datos, puedes obtenerlos transformando otros formatos:</p>
+				
+
+					<ul>
+						<li>Shapefile a GeoJSON: <a href="https://github.com/mbostock/shapefile/blob/master/README.md#shp2json"><code>shape2json</code></a>.</li>
+						<br>
+						<li>Shapefile a GeoJSON: <a href="https://github.com/topojson/topojson-client/blob/master/README.md#topo2geo"><code>topo2geo</code></a>.</li>
+					</ul>
+
+				</section>
+				
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Más dudas?</h3>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización de la semana!</h3>
+          
+          <img src="./assets/plebicito.jpg" height="450px"/>
+
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://www.instagram.com/p/CGzpTzBlYmP/">Instagram: Maparaucania </a></p>
+				
+				</section>
+
+        
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+          <br>
+
+					<p>Este jueves (29 de octubre) se publica <span style="color: #f92696;">Entrega 3</span>. Jueves siguiente (5 de noviembre) se publica <span style="color: #f92696;">Hito 3</span>.</p>
+
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+          <br>
+
+					<p>Este jueves (29 de octubre) se publica <span style="color: #f92696;">Entrega 3</span>. Jueves siguiente (5 de noviembre) se publica <span style="color: #f92696;">Hito 3</span>.</p>
+
+					<br>
+
+					<p>Se vienen sesiones sobre: <span style="color: #f92696;"><i>Facet</i></span> (jueves 29) y <span style="color: #f92696;">Reducción de datos</span> (martes 3) .</p>
+
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+          <br>
+
+					<p>Este jueves (29 de octubre) se publica <span style="color: #f92696;">Entrega 3</span>. Jueves siguiente (5 de noviembre) se publica <span style="color: #f92696;">Hito 3</span>.</p>
+
+					<br>
+
+					<p>Se vienen sesiones sobre: <span style="color: #f92696;"><i>Facet</i></span> (jueves 29) y <span style="color: #f92696;">Reducción de datos</span> (martes 3) .</p>
+
+
+					<br>
+
+					<p>Correcciones de <span style="color: #f92696;">Hito 2</span> están en proceso.</p>
+
+
+
+				</section>
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de datos espaciales</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2020-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Nos vemos!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

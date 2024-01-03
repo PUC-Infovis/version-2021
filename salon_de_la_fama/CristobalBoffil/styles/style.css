@@ -1,0 +1,103 @@
+body {
+  font-family: 'roboto', sans-serif;
+  width: 90%;
+  margin: auto;
+}
+
+div.main-container {
+  display: flex;
+}
+
+.graphics {
+  flex: 9;
+  margin: auto;
+  height: 500;
+}
+
+.selectors {
+  flex: 4;
+  margin: auto;
+}
+
+.buscador {
+  padding: 10px;
+  padding-top: 0px;
+  background-color: #3B4CCA;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  border: 1.5px solid #141414;
+}
+select {
+  width: 55%;
+  margin: auto;
+}
+
+button.search-button {
+  border: 1px solid #141414;
+  border-radius: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+}
+
+button.search-button:hover {
+  opacity: 0.7;
+}
+
+button.clear-button {
+  border: 1px solid #141414;
+  border-radius: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+}
+
+button.clear-button:hover {
+  opacity: 0.7;
+}
+
+#pokemon-list{
+  margin-top: 0px;
+  padding-top: 3px;
+  height: 450px;
+  overflow-y: scroll;
+  border: 1.5px solid #141414;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+
+#pokemon-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+#pokemon-list::-webkit-scrollbar-track {
+  background: #f1f1ec; 
+  border-radius: 10px;
+}
+
+#pokemon-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  height: 30px;
+  background: #a09f9f;
+}
+
+#ranking {
+  padding: 1px 10px;
+  margin-left: 10px;
+  background-color: #FF0000;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  border: 1.5px solid #141414;
+}
+
+#svg-container {
+  margin-top: 0px;
+  margin-left: 10px;
+  padding-top: 0px;
+  border: 1.5px solid #141414;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}

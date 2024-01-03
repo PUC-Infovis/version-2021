@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Proyecciones</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<script src="../plugin/math/math.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de datos espaciales</h1>
+					<h2 style="color: black;">IIC2026 </h2>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Proyecciones</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de datos espaciales</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Proyecciones</h1>
+
+					<br>
+					
+          <pre><code data-trim class="js">
+            const proyeccion = d3.geoMercator()
+          </code></pre>
+          
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Proyecciones</h1>
+
+					<br>
+					
+          <pre><code data-trim class="js">
+            const proyeccion = d3.geoMercator()
+          </code></pre>
+
+					<br>
+					
+					<p>Funciones que transforman coordenadas geográficas (tridimensionales) a puntos cartesianos (bidimensionales).</p>
+					
+          
+				</section>
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Proyección de Mercator</h1>
+
+					<br>
+					
+
+          <img src="./assets/mercator.JPG" height="400px"/> 
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey;">(Fuente - <a href="https://en.wikipedia.org/wiki/Mercator_projection"> Wikipedia: Mercator Wikipedia</a>)</p>
+
+          
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Proyección de Mercator</h1>
+
+					<br>
+					
+
+          <img src="./assets/proyeccion_distorcion.png" height="400px"/> 
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey;">(Fuente - <a href="http://mjmdavis.com/showing/2017/05/16/how-to-read-maps.html"> The problem with maps</a>)</p>
+
+          
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Proyección de Mercator</h1>
+
+					<br>
+					
+
+					<video src="./assets/the_true_size.mov" data-autoplay loop>
+					</video>
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey;">(Fuente - <a href="https://thetruesize.com"> The true size</a>)</p>
+
+          
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Proyecciones</h1>
+
+					<br>
+					
+					<p>Las distintas alternativas de proyecciones proveen un <i>trade-off</i> entre fidelidad de tamaño y fidelidad de forma.</p>
+					
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Proyecciones</h1>
+
+					<br>
+					
+					<p>Las distintas alternativas de proyecciones proveen un <i>trade-off</i> entre fidelidad de tamaño y fidelidad de forma.</p>
+					
+					<br>
+
+					<p>No hay una proyección correcta, la decisión de qué proyección usar puede considerarse de diseño, que depende de la situación de aplicación.</p>
+								</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;">Proyecciones</h1>
+
+					<br>
+					
+					<p>Las distintas alternativas de proyecciones proveen un <i>trade-off</i> entre fidelidad de tamaño y fidelidad de forma.</p>
+					
+					<br>
+
+					<p>No hay una proyección correcta, la decisión de qué proyección usar puede considerarse de diseño, que depende de la situación de aplicación.</p>
+					
+					<br>
+
+					<p>Puedes explorar <a href="https://observablehq.com/@d3/projection-transitions">aquí</a> distintas opciones de proyección provistas por D3.js.</p>
+				</section>
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Proyecciones</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de datos espaciales</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				plugins: [ RevealHighlight, RevealMath ]
+			});
+		</script>
+
+	</body>
+</html>

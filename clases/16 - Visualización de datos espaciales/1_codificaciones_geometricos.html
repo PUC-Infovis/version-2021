@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Codificación de datos geométricos</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<script src="../plugin/math/math.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de datos espaciales</h1>
+					<h2 style="color: black;">IIC2026 </h2>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Codificación de datos geométricos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de datos espaciales</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Visualización de datos espaciales</h1>
+
+					<br>
+
+					<p>La decisión de diseño principal a utilizar en este caso es: utilizar geometría entregada.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Utilizar geometría entregada</h1>
+
+					<br>
+
+					<p>Si realmente es uno de los focos y puntos de interés identificados en la abstracción de tareas y datos. </p>
+
+					<img src="./assets/africa.png" height="300">
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3><i>Datasets</i> de campo y datos singulares de grilla </h3>
+
+          <br>
+
+          <img src="./assets/campo.png" height="300px" style="margin-right: 50px;"/> 
+          <img src="./assets/scivis.jpg" height="300px"/> 
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey;">(Fuente: The Visualization Handbook (Hansen y Johnson))</p>
+          <p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://www.cs.rug.nl/svcg/SciVis/SciVis">Scientific Visualization Research</a>)</p>
+
+				</section>
+				
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3><i>Datasets</i> geométricos y geográficos </h3>
+
+          <br>
+
+          <img src="./assets/bubble_map.svg" height="300px"/> 
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey;">(Fuente - <a href="https://datavizcatalogue.com/methods/bubble_map.html">DataViz Catalogue: Bubble map</a>)</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3><i>Datasets</i> geométricos y geográficos </h3>
+
+          <br>
+
+          <img src="./assets/connection_map.png" height="300px"/> 
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey;">(Fuente - <a href="https://datavizcatalogue.com/methods/connection_map.html">DataViz Catalogue: Connection map</a>)</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3><i>Datasets</i> geométricos y geográficos </h3>
+
+          <br>
+
+          <img src="./assets/flow_map.png" height="300px"/> 
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey;">(Fuente - <a href="https://datavizcatalogue.com/methods/flow_map.html">DataViz Catalogue: Flow map</a>)</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					
+					<h3>Mapa coroplético </h3>
+
+
+          <img src="./assets/coropletico.png" height="400px"/> 
+
+          <br>
+
+          <p style="font-size: 0.5em; color: grey;">(Fuente - <a href="https://www.anychart.com/es/products/anymap/gallery/Maps_General_Features/World_Choropleth_Map.php"> AnyMap JS Maps : World Choropleth Map </a>)</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<table>
+						<tr>
+							<td style="color:#f92696"><i>Idiom</i></td>
+							<td style="max-width: 600px;">Mapa coroplético.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Qué: Datos</td>
+							<td style="max-width: 600px;">Geométrico: datos geográficos (formas) de regiones. Tabular: atributo de valor cuantitativo por región.</td>
+						</tr>
+						<tr>
+							<td style="color:#f92696">Cómo: Codificar</td>
+							<td style="max-width: 600px;">Espacio: utilizar geometría entregada por forma de regiones. Color codifica atributo mediante <i>colormap</i> ordenado.</td>
+						</tr>
+					</table>
+					
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Codificación de datos geométricos</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de datos espaciales</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				plugins: [ RevealHighlight, RevealMath ]
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,321 @@
+body {
+    font-family: 'roboto', sans-serif;
+    width: 90%;
+    margin: auto;
+    background-color:white;
+}
+
+#title{
+    font-size: 22px;
+    margin-bottom: 5px; 
+    text-align: center;
+    color: rgb(24, 112, 199);;
+}
+
+#comunas-container {
+    height: 78vh;
+    margin-bottom: 0px;
+    align-content: center;
+}
+
+#second_title{
+    margin-top: 40px;
+    margin-bottom: 0px;
+    padding: 0px;
+    width: 100%;
+    font-size: 20px; 
+    text-align: center;
+    color: rgb(24, 112, 199);;
+}
+
+#titulo_leyenda {
+    margin: auto;
+    width: 40%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-left: 4%;
+    color: rgb(61, 61, 61);
+}
+
+#leyenda {
+    margin: 5px 25% 0px 30%;
+    height: 10px;
+    width: 40%;
+    background: linear-gradient(to right, white 0%, yellow 50%, rgb(224, 10, 10) 100%);
+}
+
+#leyenda_container{
+    width:40%;
+    margin: auto;
+    align-content: center;
+    align-self: center;
+}
+#leyenda_left{
+    float:left;
+    width:10px;
+    color: rgb(61, 61, 61);
+}
+#leyenda_right{float:right;
+    width:10px;
+    color: rgb(61, 61, 61);
+}
+#leyenda_center{
+    margin:0 auto;
+    width:10px;
+    color: rgb(61, 61, 61);
+}
+
+#horizontal-flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#comunas_svg{
+    display: block;
+    margin: auto;
+}
+
+.dropdown-content {
+    display: block;
+    margin: auto;
+    background-color: #ddd;
+    min-width: 300px;
+    min-height: 30px;
+    overflow: auto;
+    border: 1px solid rgb(122, 122, 122);
+    z-index: 1;
+}
+
+#selector-container{
+    display: block;
+    margin: auto;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 10px;
+    top: 0px;
+}
+
+#graphic_svg{
+    display: block;
+    margin: 0 10px 10px 20px;
+}
+
+#tooltip {	
+    position: absolute;			
+    text-align: center;							
+    font: 16px sans-serif;		
+    background: rgb(255, 255, 255);	
+    border-color: dodgerblue;
+    border-style: solid;
+    border-width: medium;	
+    border-radius: 8px;			
+    pointer-events: none;	
+    z-index: 100;		
+}
+
+#head_tooltip {
+    padding: 10px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+#head_tooltip_region {
+    color: rgb(202, 198, 187);
+    font-weight: bold;
+}
+
+div.tooltip p {	
+    margin: 0px;
+    padding: 10px;
+}
+
+#tooltip_graphic {	
+    position: absolute;			
+    text-align: center;							
+    font: 16px sans-serif;		
+    background: rgb(255, 255, 255);	
+    border-color: dodgerblue;
+    border-style: solid;
+    border-width: medium;	
+    border-radius: 8px;			
+    pointer-events: none;	
+    z-index: 100;		
+}
+
+#head_tooltip_graphic {
+    padding: 10px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+.header_input_range {
+    display: inline-block; 
+    width: 100%;
+    padding-left: 10px;
+}
+
+.start_input_range {
+    float: right;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+.end_input_range {
+    float: left;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+/* Slider CSS: obtenido de http://w3.unpocodetodo.info/css3/input-type-range.php */
+#nRadius{
+    cursor: pointer;
+}
+#input_range-container {
+    display: block;
+    width: calc(90%);
+    margin: 20px 50px 10px 70px;
+}
+.inputDiv {
+    width: 95%;
+}
+.etiqueta {
+    width: 70px;
+    height: 20px;
+    position: relative;
+    z-index: 9;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 3px;
+    top: -15px;
+}
+.etiqueta:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 8;
+    background-color: dodgerblue;
+    position: relative;
+    left: 9px;
+}
+input[type='range'] {
+    display: block;
+    width: 100%;
+}
+input[type='range']:focus {
+    outline: none;
+}
+input[type='range'],
+    input[type='range']::-webkit-slider-runnable-track,
+    input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-thumb {
+    background-color: dodgerblue;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    margin-top: -9px;
+}
+input[type=range]::-moz-range-thumb {
+    background-color: dodgerblue;
+    width: 15px;
+    height: 15px;
+    border: 3px solid rgb(73, 73, 73);
+    border-radius: 50%;
+}
+input[type=range]::-ms-thumb {
+    background-color: dodgerblue;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #333;
+    border-radius: 50%;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    background-color: #777;
+    height: 3px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+}
+input[type=range]::-moz-range-track {
+    background-color: #777;
+    height: 3px;
+}
+input[type=range]::-ms-track {
+    background-color: #777;
+    height: 3px;
+}
+input[type=range]::-ms-fill-lower {
+    background-color: rgb(104, 104, 104);
+}
+input[type=range]::-ms-fill-upper {
+    background-color: rgb(104, 104, 104);
+} 
+
+/* Informe */
+#container_informe {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(123, 189, 255, 0.432);
+    color: rgb(31, 39, 46);
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 40px;
+    font-family:  "Open Sans", sans-serif;
+}
+
+.header {
+    text-align: center;
+}
+
+.item {
+    background-color: rgb(255, 255, 255, 0.3);
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.tareas {
+    display: flex;
+    flex-direction: row;
+}
+
+.tarea {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 33%;
+    
+}
+
+.descripcion-tarea {
+    text-align: justify;
+}
+.datos {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.dataset {
+    padding: 10px;
+    text-align: justify;
+}
+
+.justificacion {
+    text-align: justify;
+    margin: 5px 0px 3px 0px;
+}
+
+p {
+    margin-bottom: 0px;
+}

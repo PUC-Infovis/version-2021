@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Medidas en redes</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de redes y grafos</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Medidas en redes</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de redes y grafos</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+
+					<h1 style="font-size: 1.6em;">Clasificaciones de redes</h1>
+
+					<br>
+
+					<h4 style="color: black">Redes dirigidas o no dirigidas</h4>
+					<br>
+					<h4 style="color: black">Redes etiquetadas o con pesos</h4>
+					<br>
+					<h4 style="color: black">Jerarquías y/o árboles</h4>
+
+					<br>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+
+					<h1 style="font-size: 1.6em;">Clasificaciones de redes</h1>
+
+					<br>
+
+					<h4 style="color: black">Redes dirigidas o no dirigidas</h4>
+					<br>
+					<h4 style="color: black">Redes etiquetadas o con pesos</h4>
+					<br>
+					<h4 style="color: black">Jerarquías y/o árboles</h4>
+
+					<br>
+					<br>
+
+					<h1 style="font-size: 1.6em;">Medidas en redes</h1>
+
+					<br>
+
+					<p>Atributos  que describen redes, nodos o enlaces.</p>
+					
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Medidas de red</h1>
+
+					<br>
+
+					<ul>
+						<li>Número de nodos</li>
+						<br>
+						<li>Número de enlaces</li>
+					</ul>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+
+
+					<img src="./assets/star_wars.png" height="400">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://moviegalaxies.com/movies/view/773/star-wars-episode-iv-a-new-hope/"> Star Wars: Episode IV - A New Hope </a> )</p>
+
+					<br>
+					
+					<ul>
+						<li>Número de nodos: 42</li>
+						<br>
+						<li>Número de enlaces: 216</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+
+
+					<img src="./assets/star.png" height="200">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://en.wikipedia.org/wiki/Star_(graph_theory)"> Star (graph theory) (Wikipedia) </a> )</p>
+
+					<br>
+
+					<img src="./assets/bipartito.png" height="200">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://en.wikipedia.org/wiki/Complete_bipartite_graph"> Complete bipartite graph (Wikipedia) </a> )</p>
+
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Medidas de red</h1>
+
+					<br>
+
+					<ul>
+						<li>Diametro (distancia máxima entre nodos de una red)</li>
+						<br>
+						<li>Distancia promedio entre nodos</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+
+
+					<img src="./assets/star_wars.png" height="400">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://moviegalaxies.com/movies/view/773/star-wars-episode-iv-a-new-hope/"> Star Wars: Episode IV - A New Hope </a> )</p>
+
+					<br>
+					
+					<ul>
+						<li>Diametro: 4</li>
+						<br>
+						<li>Distancia promedio entre nodos: 2.49</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Medidas de nodos</h1>
+
+					<br>
+
+					<ul>
+						<li>Grado (cantidad de conexiones)</li>
+						<br>
+						<li>Cercanía (distancia promedio con otros nodos)</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+
+
+					<img src="./assets/luke.png" height="400">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://moviegalaxies.com/movies/view/773/star-wars-episode-iv-a-new-hope/"> Star Wars: Episode IV - A New Hope </a> )</p>
+
+					<br>
+					
+					<ul>
+						<li>Grado: 26</li>
+						<br>
+						<li>Cercanía: 1.44</li>
+					</ul>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+
+
+					<img src="./assets/raro.png" height="400">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://moviegalaxies.com/movies/view/773/star-wars-episode-iv-a-new-hope/"> Star Wars: Episode IV - A New Hope </a> )</p>
+
+					<br>
+					
+					<ul>
+						<li>Grado: 1</li>
+						<br>
+						<li>Cercanía: 2.95</li>
+					</ul>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Medidas en redes</h1>
+
+					<br>
+
+					<ul>
+						<li>Número de nodos</li>
+						<br>
+						<li>Número de enlaces</li>
+						<br>
+						<li>Diametro</li>
+						<br>
+						<li>Distancia promedio</li>
+						<br>
+						<li>Grado</li>
+						<br>
+						<li>Cercanía</li>
+						<br>
+						<li>...</li>
+						<br>
+						<li>...</li>
+					</ul>
+
+					
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Objetivos comunes en abstracción de tareas</h1>
+
+					<br>
+
+					<h4 style="color: black">Caminos</h4>
+
+					
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h1 style="font-size: 1.6em;">Objetivos comunes en abstracción de tareas</h1>
+
+					<br>
+
+					<h4 style="color: black">Caminos</h4>
+
+					<br>
+
+					<h4 style="color: black">Topología</h4>
+					
+				</section>
+
+
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Medidas en redes</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de redes y grafos</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

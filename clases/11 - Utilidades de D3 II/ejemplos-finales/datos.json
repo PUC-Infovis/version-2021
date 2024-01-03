@@ -1,0 +1,34 @@
+[
+  {
+    "categoria": "A",
+    "frecuencia": 100
+  },
+  {
+    "categoria": "B",
+    "frecuencia": 120
+  },
+  {
+    "categoria": "C",
+    "frecuencia": 140
+  },
+  {
+    "categoria": "D",
+    "frecuencia": 540
+  },
+  {
+    "categoria": "E",
+    "frecuencia": 250
+  },
+  {
+    "categoria": "F",
+    "frecuencia": 120
+  },
+  {
+    "categoria": "G",
+    "frecuencia": 150
+  },
+  {
+    "categoria": "H",
+    "frecuencia": 140
+  }
+]

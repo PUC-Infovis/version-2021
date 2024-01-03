@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "atributo1": 80,
+    "atributo2": 2,
+    "atributo3": 230
+  },
+  {
+    "id": 2,
+    "atributo1": 120,
+    "atributo2": 5,
+    "atributo3": 50
+  },
+  {
+    "id": 3,
+    "atributo1": 140,
+    "atributo2": 3,
+    "atributo3": 560
+  },
+  {
+    "id": 4,
+    "atributo1": 540,
+    "atributo2": 6,
+    "atributo3": 120
+  }
+]

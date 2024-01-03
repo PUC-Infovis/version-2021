@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Análisis en visualización</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2020-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Análisis en visualización</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2020-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Repaso</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Repaso</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. Necesidad de un modelo de trabajo</h4>
+					<h4 style="color: black;">2. Modelo anidado de análisis y validación</h4>
+					<h4 style="color: black;">3. Niveles del modelo anidado</h4>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3 id="titulo1">¿Cómo es trabajar en Visualización de Información?</h3>
+					<div style="margin-top: 1em; height: 60vh; display: table-cell; vertical-align: middle;">
+						<span data-id="1" style="padding-right: 1em; font-size: 2em; vertical-align: middle;">🧑‍💼📑</span>
+						<span data-id="2" style="padding-right: 1em; font-size: 3em; vertical-align: middle; color: #f92696;">→</span>
+						<span data-id="3" style="padding-right: .5em;font-size: 2em; vertical-align: middle;">🕵️</span>
+						<table data-id="table" style="display: inline-block; vertical-align: middle;">
+							<tr>
+								<th>...</th>
+								<th>...</th>
+								<th>...</th>
+							</tr>
+							<tr>
+							 	<th>400</th>
+							 	<th>12/02/03</th>
+							 	<th>A</th>
+							</tr>
+							<tr>
+							 	<td>500</td>
+							 	<td>14/02/03</td>
+							 	<td>B</td>
+							</tr>
+							<tr>
+								<td>300</td>
+								<td>15/02/03</td>
+								<td>B</td>
+							</tr>
+							<tr>
+							 	<td>400</td>
+							  	<td>17/02/03</td>
+							  	<td>C</td>
+							</tr>
+							<tr>
+								<th>...</th>
+								<th>...</th>
+								<th>...</th>
+							</tr>
+						</table> 
+						<span data-id="4" style="padding-left: 1em;padding-right: 1em; font-size: 3em; vertical-align: middle; color: #f92696;">→</span>
+						<span data-id="6" style="font-size: 2em; vertical-align: middle;">📊❌😞</span>
+					</div>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3><span data-id="pre">El modelo anidado</span> <span data-id="after"> o <i>framework</i> anidado</span></h3>
+					<br>
+					<p>Propuesto por <a href="https://www.cs.ubc.ca/~tmm/">Tamara Munzner</a>, en <a href="https://www.cs.ubc.ca/~tmm/vadbook/"><i>Visualization Analysis and Design</i></a>. </p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3><span data-id="what">¿Qué?</span> <span data-id="what2"> — datos</span></h3>
+					<br>
+					<h3><span data-id="why">¿Por qué?</span> <span data-id="why2"> — acciones o tareas</span></h3>
+					<br>
+					<h3><span data-id="how">¿Cómo?</span> <span data-id="how2"> — codificaciones o <i>idioms</i></span></h3>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3 data-id="title">Modelo en cascada de cuatro capas</h3>
+					<br>
+
+					<div data-id="1" style="background: rgba(255, 165, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em; opacity: 0.8;">
+						Caracterización de dominio
+						<div data-id="2" style="background: rgba(255, 255, 0, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em;">
+							Abstracción de datos y tareas
+							<div data-id="3" style="background: rgba(173, 255, 47, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em;">
+								Codificación visual y de interacción
+								<div data-id="4" style="background: rgba(216, 112, 147, 1); color: rgba(0, 0, 0, 1); width: 90%; padding: 1em; margin: 1em;">
+									Implementación algorítmica
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3> ¡Dudas! </h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3> ¡Dudas! </h3>
+					<br>
+
+					<ul>
+						<li>
+							¿Ejemplo de aplicación? (Loom: Niveles del modelo anidado)
+						</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Ejemplo aplicado</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Ejemplo aplicado</h3>
+
+					<br>
+
+					<p>Empresa de desarrollo de software <a href="https://gladius.cl/">Gladius SpA</a> desarrolla aplicación de gestión para una corredora de propiedades. Administrativos son capaces de ver todas las propiedades registradas en sistema, ver aquellas arrendadas y monitorear su estado. </p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Ejemplo aplicado</h3>
+
+					<br>
+
+					<p>Empresa de desarrollo de software <a href="https://gladius.cl/">Gladius SpA</a> desarrolla aplicación de gestión para una corredora de propiedades. Administrativos son capaces de ver todas las propiedades registradas en sistema, ver aquellas arrendadas y monitorear su estado. </p>
+
+					<p>Gladius busca ofrecerle más funcionalidades a su cliente (corredora de propiedadees), e intenta buscar oportunidades de visualización que entreguen valor a la herramienta. </p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Ejemplo aplicado</h3>
+
+					<br>
+
+					<p>Empresa de desarrollo de software <a href="https://gladius.cl/">Gladius SpA</a> desarrolla aplicación de gestión para una corredora de propiedades. Administrativos son capaces de ver todas las propiedades registradas en sistema, ver aquellas arrendadas y monitorear su estado. </p>
+
+					<p>Gladius busca ofrecerle más funcionalidades a su cliente (corredora de propiedadees), e intenta buscar oportunidades de visualización que entreguen valor a la herramienta. </p>
+
+					<p>Le entregan a alguien este proyecto (a mi). </p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Ejemplo aplicado</h3>
+
+					<br>
+
+					<p>Empresa de desarrollo de software <a href="https://gladius.cl/">Gladius SpA</a> desarrolla aplicación de gestión para una corredora de propiedades. Administrativos son capaces de ver todas las propiedades registradas en sistema, ver aquellas arrendadas y monitorear su estado. </p>
+
+					<p>Gladius busca ofrecerle más funcionalidades a su cliente (corredora de propiedadees), e intenta buscar oportunidades de visualización que entreguen valor a la herramienta. </p>
+
+					<p>Le entregan a alguien este proyecto (a mi). </p>
+
+					<p>Sin saber donde partir, ¡apliqué el modelo anidado!. </p>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>1. Caracterización de dominio</h3>
+
+					<br>
+
+					<p>Familiarización con la aplicación actual y el tipo de datos que maneja.</p>
+
+					<p>Formación de un perfil de usuario: administrativo de corredora de propiedades.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>2. Abstracción de datos y tareas</h3>
+
+					<br>
+
+					<p>Identificación y abstracción de datos de la plataforma.</p>
+
+					<p>Identificación y abstracción de tareas para usuario objetivo.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/what1.jpeg" height="600px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/what2.jpeg" height="600px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/what3.jpeg" height="600px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/why1.jpeg" height="600px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/why2.jpeg" height="600px"/>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>3. Codificación visual y de interacción</h3>
+
+					<br>
+
+					<p>Con los datos y tareas identificados, se proponen distintas opciones como posibilidades.</p>
+					<p>Se escogen subconjuntos de datos y tareas, y sobre eso se elige un cómo apropiado.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/how1.jpeg" height="600px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/how2.jpeg" height="600px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/how3.jpeg" height="600px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/how4.jpeg" height="600px"/>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/caso1.jpeg" height="500px"/>
+
+					<p>Idea: Visualizar la totalidad de deudas separadas por arriendos. </p>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/caso2.jpeg" height="500px"/>
+
+					<p>Valores aislados distorcionan la codificación, así que se agrega opción de cambiar la escala. </p>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>4. Implementación algoritmica</h3>
+
+					<br>
+
+					<p>Se implementan dos de las opciones propuestas inicialmente. Se utilizan tecnologías web ya que la aplicación original también lo era.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/caso3.png" height="600px"/>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/caso4.png" height="600px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>3. Codificación visual y de interacción (de nuevo)</h3>
+
+					<br>
+
+					<p>La totalidad de arriendos con deuda son difíciles de ver en conjunto, por la cantidad de arriendos y por las diferencias en monto.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<img src="./assets/how_again.jpeg" height="600px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>4. Implementación algoritmica (de nuevo)</h3>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<img src="./assets/caso_again_1.png" height="500px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<img src="./assets/caso_again_2.png" height="500px"/>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<img src="./assets/caso_again_3.png" height="500px"/>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Qué salió bien?</h3>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Qué salió bien?</h3>
+
+					<br>
+
+					<ul>
+						<li>Se tuvo alguna dirección en un inicio que no tenía.</li>
+						<li>Las elecciones de cada paso dieron aporte para el siguiente.</li>
+						<li>Durante el proceso se encontraron problemas y se pudo iterar para llegar a una mejor versión.</li>
+						<li>Se consiguieron dos visualizaciones que aportaron valor y se siguen usando hoy.</li>
+					</ul>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Qué pudo mejorar?</h3>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Qué pudo mejorar?</h3>
+
+					<br>
+					
+					<p>La primera capa (caracterización de dominio) pudo guiar mucho mejor el proceso si se hubiera tenido contacto directo con los usuarios de la herramienta.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¿Más dudas?</h3>
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3><span>¡</span><span data-id="no">Visualización del día</span><span>!</span></h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3><span data-id="ap">¿</span><span data-id="no">Visualización del día</span><span data-id="cl">?</span></h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3><span data-id="ap">¿</span><span data-id="no">Visualización del día</span><span data-id="cl">?</span></h3>
+
+					<br>
+
+					<p>Es un espacio que dedicaremos cada sesión a ver un ejemplo interesante de visualización. También se subirán a Canvas.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3><span data-id="ap">¿</span><span data-id="no">Visualización del día</span><span data-id="cl">?</span></h3>
+
+					<br>
+
+					<p>Es un espacio que dedicaremos cada sesión a ver un ejemplo interesante de visualización. También se subirán a Canvas.</p>
+
+
+					<p>La idea es estar continuamente viendo distintos ejemplos de visualización, ya sean buenos o malos.</p>
+				
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3><span data-id="ap">¿</span><span data-id="no">Visualización del día</span><span data-id="cl">?</span></h3>
+
+					<br>
+
+					<p>Es un espacio que dedicaremos cada sesión a ver un ejemplo interesante de visualización. También se subirán a Canvas.</p>
+
+
+					<p>La idea es estar continuamente viendo distintos ejemplos de visualización, ya sean buenos o malos.</p>
+
+
+					<p>Puedes proponer una visualización para que sea la visualización del día. Hay un <a href="https://forms.gle/cWzncDrALnBHF2wu5">formulario</a> en Canvas😄.</p>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Visualización del día</h3>
+
+					<br>
+
+					<img src="./assets/pie-paper.png" height="400px"/>
+
+					<p style>Propuesto por ayudante Vicente Valencia</p>
+					<p style="font-size: 0.5em; color: grey">(Fuente imagen: <a href="https://arxiv.org/abs/2006.02570"><i>Exploration of Interpretability Techniques for Deep COVID-19 Classification using Chest X-ray Images</i></a>)</p>
+				
+				</section>
+
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Análisis en visualización</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2020-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Nos vemos!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

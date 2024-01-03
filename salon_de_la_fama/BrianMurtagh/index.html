@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Examen | Brian Murtagh</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <div class="master-container">
+        <div class="lines-graph-wrapper">
+            <div class="lines-graph-container"></div>
+            <div>
+                <button class="selector active" id="button_casos_activos" onclick="selectedDisplay('activos')">Casos Activos</button>
+                <button class="selector" id="button_casos_totales" onclick="selectedDisplay('totales')">Casos Totales</button>
+            </div>
+        </div>
+        <div class="details-container">
+            <h2 id="title">Seleccione fecha en el gráfico</h2>
+
+            <div class="text-wrap">
+                <h4 class="no-margin">Casos Activos: </h4>
+                <h4 class="no-margin" id="activos_value">-</h4>
+            </div>
+            <div class="text-wrap">
+                <small>PCR Realizados:</small>
+                <small id="pcr_value">-</small>
+            </div>
+            <div class="text-wrap">
+                <small>Positividad Media:</small>
+                <small id="pos_value">-</small>
+            </div>
+            <div>
+                <div class="text-wrap">
+                    <h4>Casos Totales:</h4>
+                    <h4 id="total_value">-</h4>
+                </div>
+                
+                <div class="bar-graph-container">
+                    <div class="bar-graph" id="cases_graph"></div>
+                </div>
+            </div>
+            <div>
+                <div class="text-wrap">
+                    <h4>Pacientes UCI:</h4>
+                    <h4 id="uci_value">-</h4>
+                </div>
+                
+                <div class="bar-graph-container">
+                    <div class="bar-graph" id="uci_graph"></div>
+                </div>
+            </div>
+            <div>
+                <div class="text-wrap">
+                    <h4>Personas Vacunadas*:</h4>
+                    <h4 id="vacunas_personas_value">-</h4>
+                </div>
+                
+                <div class="bar-graph-container">
+                    <div class="bar-graph" id="vac_graph"></div>
+                </div>
+                <div class="text-wrap margin-top">
+                    <small>(*) Vacunas Totales Aplicadas:</small>
+                    <small id="vacunas_value">-</small>
+                </div>
+                <div class="text-wrap">
+                <label class="switch">
+                    <input onclick="toggleVac(this)" type="checkbox" id="vac_toogle">
+                    <span class="slider round"></span>
+                  </label>
+                  <small>Ver Avance de Vacunación</small>
+                </div>
+            </div>
+        </div>
+      <div class="signature">
+          <p>Brian Murtagh Fontanet | IIC2026</p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="grafico-lines.js"></script>
+    <script type="text/javascript" src="select.js"></script>
+    <script type="text/javascript" src="bar-graphs.js"></script>
+  </body>
+</html>

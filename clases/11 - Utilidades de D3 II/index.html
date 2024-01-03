@@ -1,0 +1,1252 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Utilidades en D3.js II</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+
+		<style>
+      .link {
+        stroke: #969696;
+      }
+
+      .join, .link, .node rect {
+        fill: none;
+        stroke: #636363;
+        stroke-width: 1.5px;
+      }
+
+      .node .element rect {
+        fill: #bdbdbd;
+        stroke: none;
+      }
+      
+      .node .key rect {
+        fill: #a1d99b;
+        stroke: none;
+      }
+
+      .node .key.exit rect {
+        fill: rgb(255, 95, 95);
+      }
+
+      .node .datum rect {
+        fill: #d9d9d9;
+        stroke: none;
+      }
+
+      .node .selection rect {
+        stroke: #e6550d;
+      }
+
+      .node .data rect {
+        stroke: #3182bd;
+      }
+
+      .link .from-data {
+        stroke: #3182bd;
+      }
+
+      svg {
+        font: 10px sans-serif;
+      }
+
+      circle {
+        fill: none;
+        fill-opacity: .2;
+        stroke: black;
+        stroke-width: 1.5px;
+      }
+    </style>
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Hola 👋! Espera mientras comienza la sesión.</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Antes que todo, ¿cómo están?</h3>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de Información</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Utilidades en D3.js II</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Contenidos</h3>
+
+					<br>
+
+					<h4 style="color: black;">1. Eventos en D3.js</h4>
+					<h4 style="color: black;">2. Transiciones de D3.js</h4>
+					<h4 style="color: black;">3. <i>Join</i> de datos personalizado</h4>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Más detalles para nuestro programa!</h3>
+
+          <br>
+          
+          <p>Comenzamos con una visualización estática.</p>
+
+          <br>
+
+          <p>Terminamos con una visualuzación dinámica e interactiva.</p>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          
+          <h3>Eventos</h3>
+
+          <br>
+
+          <pre data-id="code3"><code data-trim data-line-numbers="|133-136|107-116" class="js">
+const width = 600;
+const height = 400;
+const margin = {
+  top: 30,
+  bottom: 30,
+  right: 30,
+  left: 30,
+};
+
+const svg = d3
+  .select("body")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height);
+
+const boton = d3.select("body").append("button").text("Agregar elemento");
+
+const parrafo = d3.select("body").append("p");
+
+const contenedorEjeY = svg
+  .append("g")
+  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+const contenedorEjeX = svg
+  .append("g")
+  .attr("transform", `translate(${margin.left}, ${height - margin.bottom})`);
+
+const contenedorBarras = svg
+  .append("g")
+  .attr("transform", `translate(${margin.left} ${margin.top})`);
+
+function joinDeDatos(datos) {
+  const maximaFrecuencia = d3.max(datos, (d) => d.frecuencia);
+
+  const escalaAltura = d3
+    .scaleLinear()
+    .domain([0, maximaFrecuencia])
+    .range([0, height - margin.top - margin.bottom]);
+
+  const escalaY = d3
+    .scaleLinear()
+    .domain([0, maximaFrecuencia])
+    .range([height - margin.top - margin.bottom, 0]);
+
+  const ejeY = d3.axisLeft(escalaY);
+
+  contenedorEjeY
+    .transition()
+    .duration(1000)
+    .call(ejeY)
+    .selection()
+    .selectAll("line")
+    .attr("x1", width - margin.right - margin.left)
+    .attr("stroke-dasharray", "5")
+    .attr("opacity", 0.5);
+
+  const escalaX = d3
+    .scaleBand()
+    .domain(datos.map((d) => d.categoria))
+    .rangeRound([0, width - margin.right - margin.left])
+    .padding(0.5);
+
+  const ejeX = d3.axisBottom(escalaX);
+
+  contenedorEjeX
+    .transition()
+    .duration(1000)
+    .call(ejeX)
+    .selection()
+    .selectAll("text")
+    .attr("font-size", 20);
+
+  contenedorBarras
+    .selectAll("rect")
+    .data(datos, (d) => d.categoria)
+    .join(
+      (enter) =>
+        enter
+          .append("rect")
+          .attr("fill", "magenta")
+          .attr("y", height - margin.top - margin.bottom)
+          .attr("x", (d) => escalaX(d.categoria))
+          .attr("width", escalaX.bandwidth())
+          .attr("height", 0)
+          .transition()
+          .duration(1000)
+          .attr("height", (d) => escalaAltura(d.frecuencia))
+          .attr("y", (d) => escalaY(d.frecuencia))
+          .selection(),
+      (update) =>
+        update
+          .transition()
+          .duration(1000)
+          .attr("height", (d) => escalaAltura(d.frecuencia))
+          .attr("y", (d) => escalaY(d.frecuencia))
+          .attr("x", (d) => escalaX(d.categoria))
+          .attr("width", escalaX.bandwidth())
+          .selection(),
+      (exit) =>
+        exit
+          .transition()
+          .duration(500)
+          .attr("y", height - margin.top - margin.bottom)
+          .attr("height", 0)
+          .remove()
+    )
+    .on("mouseenter", (_, d) => {
+      parrafo.text(`Categoría: ${d.categoria}, Frecuencia: ${d.frecuencia}`);
+    })
+    .on("mouseleave", () => {
+      parrafo.text("");
+    })
+    .on("click", (_, d) => {
+      datos.splice(datos.indexOf(d), 1);
+      joinDeDatos(datos);
+    });
+}
+
+const datoNuevoRandom = (datos) => ({
+  categoria: String.fromCharCode(
+    datos[datos.length - 1].categoria.charCodeAt(0) + 1
+  ),
+  frecuencia: Math.floor(Math.random() * 800),
+});
+
+let datos;
+
+d3.json("datos.json")
+  .then((datosCargados) => {
+    console.log(datosCargados);
+    datos = datosCargados;
+    joinDeDatos(datos);
+    boton.on("click", () => {
+      datos.push(datoNuevoRandom(datos));
+      joinDeDatos(datos);
+    });
+  })
+  .catch((error) => console.log(error));
+          </code></pre>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          
+          <h3>Eventos</h3>
+
+          <br>
+
+          <p>¡Hay muchos tipos de eventos!</p>
+
+          <br>
+          
+          <ul>
+            <li><code>click</code></li>
+            <li><code>dbclick</code></li>
+            <li><code>change</code></li>
+            <li><code>dragstart</code></li>
+            <li><code>dragover</code></li>
+            <li>...</li>
+          </ul>
+
+          <br>
+
+          <p>Lista de eventos: <a href="https://developer.mozilla.org/en-US/docs/Web/Events#Standard_events">MDN</a></p>
+
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          
+          <h3>Transiciones</h3>
+
+          <br>
+
+          <pre data-id="code3"><code data-trim data-line-numbers="|78-88|91-97|100-105" class="js">
+const width = 600;
+const height = 400;
+const margin = {
+  top: 30,
+  bottom: 30,
+  right: 30,
+  left: 30,
+};
+
+const svg = d3
+  .select("body")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height);
+
+const boton = d3.select("body").append("button").text("Agregar elemento");
+
+const parrafo = d3.select("body").append("p");
+
+const contenedorEjeY = svg
+  .append("g")
+  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+const contenedorEjeX = svg
+  .append("g")
+  .attr("transform", `translate(${margin.left}, ${height - margin.bottom})`);
+
+const contenedorBarras = svg
+  .append("g")
+  .attr("transform", `translate(${margin.left} ${margin.top})`);
+
+function joinDeDatos(datos) {
+  const maximaFrecuencia = d3.max(datos, (d) => d.frecuencia);
+
+  const escalaAltura = d3
+    .scaleLinear()
+    .domain([0, maximaFrecuencia])
+    .range([0, height - margin.top - margin.bottom]);
+
+  const escalaY = d3
+    .scaleLinear()
+    .domain([0, maximaFrecuencia])
+    .range([height - margin.top - margin.bottom, 0]);
+
+  const ejeY = d3.axisLeft(escalaY);
+
+  contenedorEjeY
+    .transition()
+    .duration(1000)
+    .call(ejeY)
+    .selection()
+    .selectAll("line")
+    .attr("x1", width - margin.right - margin.left)
+    .attr("stroke-dasharray", "5")
+    .attr("opacity", 0.5);
+
+  const escalaX = d3
+    .scaleBand()
+    .domain(datos.map((d) => d.categoria))
+    .rangeRound([0, width - margin.right - margin.left])
+    .padding(0.5);
+
+  const ejeX = d3.axisBottom(escalaX);
+
+  contenedorEjeX
+    .transition()
+    .duration(1000)
+    .call(ejeX)
+    .selection()
+    .selectAll("text")
+    .attr("font-size", 20);
+
+  contenedorBarras
+    .selectAll("rect")
+    .data(datos, (d) => d.categoria)
+    .join(
+      (enter) =>
+        enter
+          .append("rect")
+          .attr("fill", "magenta")
+          .attr("y", height - margin.top - margin.bottom)
+          .attr("x", (d) => escalaX(d.categoria))
+          .attr("width", escalaX.bandwidth())
+          .attr("height", 0)
+          .transition()
+          .duration(1000)
+          .attr("height", (d) => escalaAltura(d.frecuencia))
+          .attr("y", (d) => escalaY(d.frecuencia))
+          .selection(),
+      (update) =>
+        update
+          .transition()
+          .duration(1000)
+          .attr("height", (d) => escalaAltura(d.frecuencia))
+          .attr("y", (d) => escalaY(d.frecuencia))
+          .attr("x", (d) => escalaX(d.categoria))
+          .attr("width", escalaX.bandwidth())
+          .selection(),
+      (exit) =>
+        exit
+          .transition()
+          .duration(500)
+          .attr("y", height - margin.top - margin.bottom)
+          .attr("height", 0)
+          .remove()
+    )
+    .on("mouseenter", (_, d) => {
+      parrafo.text(`Categoría: ${d.categoria}, Frecuencia: ${d.frecuencia}`);
+    })
+    .on("mouseleave", () => {
+      parrafo.text("");
+    })
+    .on("click", (_, d) => {
+      datos.splice(datos.indexOf(d), 1);
+      joinDeDatos(datos);
+    });
+}
+
+const datoNuevoRandom = (datos) => ({
+  categoria: String.fromCharCode(
+    datos[datos.length - 1].categoria.charCodeAt(0) + 1
+  ),
+  frecuencia: Math.floor(Math.random() * 800),
+});
+
+let datos;
+
+d3.json("datos.json")
+  .then((datosCargados) => {
+    console.log(datosCargados);
+    datos = datosCargados;
+    joinDeDatos(datos);
+    boton.on("click", () => {
+      datos.push(datoNuevoRandom(datos));
+      joinDeDatos(datos);
+    });
+  })
+  .catch((error) => console.log(error));
+          </code></pre>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          
+          <h3>Transiciones</h3>
+
+          <br>
+
+          <p>Detalles de transiciones en submódulo <a href="https://github.com/d3/d3-transition"><code>d3-transition</code></a>.</p>
+
+          <br>
+
+          <ul>
+            <li>Tienen un método <code style="color: #f92696">delay</code> para fijar un atraso.</li>
+            <li>Tienen un método <code style="color: #f92696">ease</code> para alterar como es el cambio en el tiempo.</li>
+          </ul>
+
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          
+          <h3><i>Join</i> de datos perzonalizado</h3>
+
+        </section>
+
+  
+          <section data-auto-animate data-auto-animate-unmatched="fade">
+  
+            <!-- 11 -->
+  
+            <svg width="800" height="120" style="margin: 1em 0px 1em -40px;">
+              <g class="left" transform="translate(40,0)">
+              <g class="link">
+                <path class="to-array from-selection" d="M51.483333587646484,60C75.74166679382324,60 75.74166679382324,60 100,60"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,12 200,12"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,36 200,36"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,60 200,60"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,84 200,84"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,108 200,108"></path>
+                <!-- <path class="to-key from-element" d="M247.5999984741211,12C273.79999923706055,12 273.79999923706055,12 300,12"></path>
+                <path class="to-key from-element" d="M247.5999984741211,36C273.79999923706055,36 273.79999923706055,36 300,36"></path>
+                <path class="to-key from-element" d="M247.5999984741211,60C273.79999923706055,60 273.79999923706055,60 300,60"></path>
+                <path class="to-key from-element" d="M247.5999984741211,84C273.79999923706055,84 273.79999923706055,84 300,84"></path>
+                <path class="to-key from-element" d="M247.5999984741211,108C273.79999923706055,108 273.79999923706055,108 300,108"></path> -->
+              </g>
+              <g class="node">
+              <g class="selection" transform="translate(0,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="51.483333587646484"></rect>
+                <text dy=".35em" x="6">selección</text>
+              </g>
+              <g class="array" transform="translate(100,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="37.60000038146973"></rect>
+                <text dy=".35em" x="6">grupo</text>
+              </g>
+              <g class="element" transform="translate(200,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <!-- <g class="key" transform="translate(300,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">0</text>
+              </g> -->
+              <g class="element" transform="translate(200,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <!-- <g class="key" transform="translate(300,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">1</text>
+              </g> -->
+              <g class="element" transform="translate(200,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <!-- <g class="key" transform="translate(300,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">2</text>
+              </g> -->
+              <g class="element" transform="translate(200,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <!-- <g class="key" transform="translate(300,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">3</text>
+              </g> -->
+              <g class="element" transform="translate(200,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <!-- <g class="key" transform="translate(300,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">4</text>
+              </g> -->
+            </g>
+              </g>
+              <g class="right" transform="translate(760,0)">
+              <g class="link">
+                <path class="to-array from-data" d="M-32,60C-66,60 -66,60 -100,60"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,12 -200,12"></path>
+                <!-- <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,36 -200,36"></path> -->
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,60 -200,60"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,84 -200,84"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,108 -200,108"></path>
+                <!-- <path class="to-key from-datum" d="M-232,12C-266,12 -266,12 -300,12"></path>
+                <path class="to-key from-datum" d="M-232,36C-266,36 -266,36 -300,36"></path>
+                <path class="to-key from-datum" d="M-232,60C-266,60 -266,60 -300,60"></path>
+                <path class="to-key from-datum" d="M-232,84C-266,84 -266,84 -300,84"></path>
+                <path class="to-key from-datum" d="M-232,108C-266,108 -266,108 -300,108"></path> -->
+              </g>
+              <g class="node">
+              <g class="data" transform="translate(0,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-28">datos</text>
+              </g>
+              <g class="array" transform="translate(-100,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="34.79999923706055" x="-34.79999923706055"></rect>
+                <text dy=".35em" x="-32">arreglo</text>
+              </g>
+              <g class="datum" transform="translate(-200,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">4</text>
+              </g>
+              <!-- <g class="key" transform="translate(-300,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">0</text>
+              </g> -->
+              <!-- <g class="datum" transform="translate(-200,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">5</text>
+              </g> -->
+              <!-- <g class="key" transform="translate(-300,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">1</text>
+              </g> -->
+              <g class="datum" transform="translate(-200,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">18</text>
+              </g>
+              <!-- <g class="key" transform="translate(-300,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">2</text>
+              </g> -->
+              <g class="datum" transform="translate(-200,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">23</text>
+              </g>
+              <!-- <g class="key" transform="translate(-300,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">3</text>
+              </g> -->
+              <g class="datum" transform="translate(-200,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">42</text>
+              </g>
+              <!-- <g class="key" transform="translate(-300,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">4</text>
+              </g> -->
+            </g>
+            </g>
+            </svg>
+  
+  
+  
+            <br>
+  
+            <pre><code data-trim data-line-numbers class="js">
+              selection.data(data);
+            </code></pre>
+  
+  
+            <svg width="800" height="120" style="margin: 1em 0px 1em -40px;">
+              <g class="left" transform="translate(40,0)">
+              <g class="link">
+                <path class="to-array from-selection" d="M51.483333587646484,60C75.74166679382324,60 75.74166679382324,60 100,60"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,12 200,12"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,36 200,36"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,60 200,60"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,84 200,84"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,108 200,108"></path>
+                <path class="to-key from-element" d="M247.5999984741211,12C273.79999923706055,12 273.79999923706055,12 300,12"></path>
+                <path class="to-key from-element" d="M247.5999984741211,36C273.79999923706055,36 273.79999923706055,36 300,36"></path>
+                <path class="to-key from-element" d="M247.5999984741211,60C273.79999923706055,60 273.79999923706055,60 300,60"></path>
+                <path class="to-key from-element" d="M247.5999984741211,84C273.79999923706055,84 273.79999923706055,84 300,84"></path>
+                <path class="to-key from-element" d="M247.5999984741211,108C273.79999923706055,108 273.79999923706055,108 300,108"></path>
+              </g>
+              <g class="node">
+              <g class="selection" transform="translate(0,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="51.483333587646484"></rect>
+                <text dy=".35em" x="6">selección</text>
+              </g>
+              <g class="array" transform="translate(100,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="37.60000038146973"></rect>
+                <text dy=".35em" x="6">grupo</text>
+              </g>
+              <g class="element" transform="translate(200,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <g class="key" transform="translate(300,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">0</text>
+              </g>
+              <g class="element" transform="translate(200,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <g class="key" transform="translate(300,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,24"></path>
+                <text dy=".35em" x="6">1</text>
+              </g>
+              <g class="element" transform="translate(200,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <g class="key" transform="translate(300,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,24"></path>
+                <text dy=".35em" x="6">2</text>
+              </g>
+              <g class="element" transform="translate(200,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <g class="key" transform="translate(300,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,24"></path>
+                <text dy=".35em" x="6">3</text>
+              </g>
+              <g class="element" transform="translate(200,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <g class="key exit" transform="translate(300,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <!-- <path class="join" d="M32,0C60,0 60,0 88,0"></path> -->
+                <text dy=".35em" x="6">4</text>
+              </g>
+            </g>
+              </g>
+              <g class="right" transform="translate(760,0)">
+              <g class="link">
+                <path class="to-array from-data" d="M-32,60C-66,60 -66,60 -100,60"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,12 -200,12"></path>
+                <!-- <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,36 -200,36"></path> -->
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,60 -200,60"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,84 -200,84"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,108 -200,108"></path>
+                <path class="to-key from-datum" d="M-232,12C-266,12 -266,12 -300,12"></path>
+                <!-- <path class="to-key from-datum" d="M-232,36C-266,36 -266,36 -300,36"></path> -->
+                <path class="to-key from-datum" d="M-232,60C-266,60 -266,60 -300,60"></path>
+                <path class="to-key from-datum" d="M-232,84C-266,84 -266,84 -300,84"></path>
+                <path class="to-key from-datum" d="M-232,108C-266,108 -266,108 -300,108"></path>
+              </g>
+              <g class="node">
+              <g class="data" transform="translate(0,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-28">datos</text>
+              </g>
+              <g class="array" transform="translate(-100,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="34.79999923706055" x="-34.79999923706055"></rect>
+                <text dy=".35em" x="-32">arreglo</text>
+              </g>
+              <g class="datum" transform="translate(-200,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">4</text>
+              </g>
+              <g class="key" transform="translate(-300,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">0</text>
+              </g>
+              <!-- <g class="datum" transform="translate(-200,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">5</text>
+              </g>
+              <g class="key" transform="translate(-300,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">1</text>
+              </g> -->
+              <g class="datum" transform="translate(-200,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">18</text>
+              </g>
+              <g class="key" transform="translate(-300,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">1</text>
+              </g>
+              <g class="datum" transform="translate(-200,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">23</text>
+              </g>
+              <g class="key" transform="translate(-300,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">2</text>
+              </g>
+              <g class="datum" transform="translate(-200,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">42</text>
+              </g>
+              <g class="key" transform="translate(-300,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">3</text>
+              </g>
+            </g>
+            </g>
+            </svg>
+          </section>
+
+          <!-- <section data-auto-animate data-auto-animate-unmatched="fade">
+          
+            <h3>Función de llave en <i>data join</i></h3>
+  
+            <br>
+  
+            <pre data-id="code3"><code data-trim data-line-numbers="|75" class="js">
+  const width = 600;
+  const height = 400;
+  const margin = {
+    top: 30,
+    bottom: 30,
+    right: 30,
+    left: 30,
+  };
+  
+  const svg = d3
+    .select("body")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+  
+  const boton = d3.select("body").append("button").text("Agregar elemento");
+  
+  const parrafo = d3.select("body").append("p");
+  
+  const contenedorEjeY = svg
+    .append("g")
+    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+  
+  const contenedorEjeX = svg
+    .append("g")
+    .attr("transform", `translate(${margin.left}, ${height - margin.bottom})`);
+  
+  const contenedorBarras = svg
+    .append("g")
+    .attr("transform", `translate(${margin.left} ${margin.top})`);
+  
+  function joinDeDatos(datos) {
+    const maximaFrecuencia = d3.max(datos, (d) => d.frecuencia);
+  
+    const escalaAltura = d3
+      .scaleLinear()
+      .domain([0, maximaFrecuencia])
+      .range([0, height - margin.top - margin.bottom]);
+  
+    const escalaY = d3
+      .scaleLinear()
+      .domain([0, maximaFrecuencia])
+      .range([height - margin.top - margin.bottom, 0]);
+  
+    const ejeY = d3.axisLeft(escalaY);
+  
+    contenedorEjeY
+      .transition()
+      .duration(1000)
+      .call(ejeY)
+      .selection()
+      .selectAll("line")
+      .attr("x1", width - margin.right - margin.left)
+      .attr("stroke-dasharray", "5")
+      .attr("opacity", 0.5);
+  
+    const escalaX = d3
+      .scaleBand()
+      .domain(datos.map((d) => d.categoria))
+      .rangeRound([0, width - margin.right - margin.left])
+      .padding(0.5);
+  
+    const ejeX = d3.axisBottom(escalaX);
+  
+    contenedorEjeX
+      .transition()
+      .duration(1000)
+      .call(ejeX)
+      .selection()
+      .selectAll("text")
+      .attr("font-size", 20);
+  
+    contenedorBarras
+      .selectAll("rect")
+      .data(datos, (d) => d.categoria)
+      .join(
+        (enter) =>
+          enter
+            .append("rect")
+            .attr("fill", "magenta")
+            .attr("y", height - margin.top - margin.bottom)
+            .attr("x", (d) => escalaX(d.categoria))
+            .attr("width", escalaX.bandwidth())
+            .attr("height", 0)
+            .transition()
+            .duration(1000)
+            .attr("height", (d) => escalaAltura(d.frecuencia))
+            .attr("y", (d) => escalaY(d.frecuencia))
+            .selection(),
+        (update) =>
+          update
+            .transition()
+            .duration(1000)
+            .attr("height", (d) => escalaAltura(d.frecuencia))
+            .attr("y", (d) => escalaY(d.frecuencia))
+            .attr("x", (d) => escalaX(d.categoria))
+            .attr("width", escalaX.bandwidth())
+            .selection(),
+        (exit) =>
+          exit
+            .transition()
+            .duration(500)
+            .attr("y", height - margin.top - margin.bottom)
+            .attr("height", 0)
+            .remove()
+      )
+      .on("mouseenter", (_, d) => {
+        parrafo.text(`Categoría: ${d.categoria}, Frecuencia: ${d.frecuencia}`);
+      })
+      .on("mouseleave", () => {
+        parrafo.text("");
+      })
+      .on("click", (_, d) => {
+        datos.splice(datos.indexOf(d), 1);
+        joinDeDatos(datos);
+      });
+  }
+  
+  const datoNuevoRandom = (datos) => ({
+    categoria: String.fromCharCode(
+      datos[datos.length - 1].categoria.charCodeAt(0) + 1
+    ),
+    frecuencia: Math.floor(Math.random() * 800),
+  });
+  
+  let datos;
+  
+  d3.json("datos.json")
+    .then((datosCargados) => {
+      console.log(datosCargados);
+      datos = datosCargados;
+      joinDeDatos(datos);
+      boton.on("click", () => {
+        datos.push(datoNuevoRandom(datos));
+        joinDeDatos(datos);
+      });
+    })
+    .catch((error) => console.log(error));
+            </code></pre>
+          </section> -->
+
+          <section data-auto-animate data-auto-animate-unmatched="fade">
+  
+            <!-- 11 -->
+  
+            <svg width="800" height="120" style="margin: 1em 0px 1em -40px;">
+              <g class="left" transform="translate(40,0)">
+              <g class="link">
+                <path class="to-array from-selection" d="M51.483333587646484,60C75.74166679382324,60 75.74166679382324,60 100,60"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,12 200,12"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,36 200,36"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,60 200,60"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,84 200,84"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,108 200,108"></path>
+                <!-- <path class="to-key from-element" d="M247.5999984741211,12C273.79999923706055,12 273.79999923706055,12 300,12"></path>
+                <path class="to-key from-element" d="M247.5999984741211,36C273.79999923706055,36 273.79999923706055,36 300,36"></path>
+                <path class="to-key from-element" d="M247.5999984741211,60C273.79999923706055,60 273.79999923706055,60 300,60"></path>
+                <path class="to-key from-element" d="M247.5999984741211,84C273.79999923706055,84 273.79999923706055,84 300,84"></path>
+                <path class="to-key from-element" d="M247.5999984741211,108C273.79999923706055,108 273.79999923706055,108 300,108"></path> -->
+              </g>
+              <g class="node">
+              <g class="selection" transform="translate(0,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="51.483333587646484"></rect>
+                <text dy=".35em" x="6">selección</text>
+              </g>
+              <g class="array" transform="translate(100,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="37.60000038146973"></rect>
+                <text dy=".35em" x="6">grupo</text>
+              </g>
+              <g class="element" transform="translate(200,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <!-- <g class="key" transform="translate(300,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">0</text>
+              </g> -->
+              <g class="element" transform="translate(200,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <!-- <g class="key" transform="translate(300,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">1</text>
+              </g> -->
+              <g class="element" transform="translate(200,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <!-- <g class="key" transform="translate(300,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">2</text>
+              </g> -->
+              <g class="element" transform="translate(200,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <!-- <g class="key" transform="translate(300,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">3</text>
+              </g> -->
+              <g class="element" transform="translate(200,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <!-- <g class="key" transform="translate(300,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">4</text>
+              </g> -->
+            </g>
+              </g>
+              <g class="right" transform="translate(760,0)">
+              <g class="link">
+                <path class="to-array from-data" d="M-32,60C-66,60 -66,60 -100,60"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,12 -200,12"></path>
+                <!-- <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,36 -200,36"></path> -->
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,60 -200,60"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,84 -200,84"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,108 -200,108"></path>
+                <!-- <path class="to-key from-datum" d="M-232,12C-266,12 -266,12 -300,12"></path>
+                <path class="to-key from-datum" d="M-232,36C-266,36 -266,36 -300,36"></path>
+                <path class="to-key from-datum" d="M-232,60C-266,60 -266,60 -300,60"></path>
+                <path class="to-key from-datum" d="M-232,84C-266,84 -266,84 -300,84"></path>
+                <path class="to-key from-datum" d="M-232,108C-266,108 -266,108 -300,108"></path> -->
+              </g>
+              <g class="node">
+              <g class="data" transform="translate(0,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-28">datos</text>
+              </g>
+              <g class="array" transform="translate(-100,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="34.79999923706055" x="-34.79999923706055"></rect>
+                <text dy=".35em" x="-32">arreglo</text>
+              </g>
+              <g class="datum" transform="translate(-200,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">4</text>
+              </g>
+              <!-- <g class="key" transform="translate(-300,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">0</text>
+              </g> -->
+              <!-- <g class="datum" transform="translate(-200,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">5</text>
+              </g> -->
+              <!-- <g class="key" transform="translate(-300,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">1</text>
+              </g> -->
+              <g class="datum" transform="translate(-200,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">18</text>
+              </g>
+              <!-- <g class="key" transform="translate(-300,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">2</text>
+              </g> -->
+              <g class="datum" transform="translate(-200,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">23</text>
+              </g>
+              <!-- <g class="key" transform="translate(-300,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">3</text>
+              </g> -->
+              <g class="datum" transform="translate(-200,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">42</text>
+              </g>
+              <!-- <g class="key" transform="translate(-300,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">4</text>
+              </g> -->
+            </g>
+            </g>
+            </svg>
+  
+  
+  
+            <br>
+  
+            <pre><code data-trim data-line-numbers class="js">
+              selection.data(data, (d) => d.llave);
+            </code></pre>
+  
+  
+            <svg width="800" height="120" style="margin: 1em 0px 1em -40px;">
+              <g class="left" transform="translate(40,0)">
+              <g class="link">
+                <path class="to-array from-selection" d="M51.483333587646484,60C75.74166679382324,60 75.74166679382324,60 100,60"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,12 200,12"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,36 200,36"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,60 200,60"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,84 200,84"></path>
+                <path class="to-element from-array" d="M137.60000038146973,60C168.80000019073486,60 168.80000019073486,108 200,108"></path>
+                <path class="to-key from-element" d="M247.5999984741211,12C273.79999923706055,12 273.79999923706055,12 300,12"></path>
+                <path class="to-key from-element" d="M247.5999984741211,36C273.79999923706055,36 273.79999923706055,36 300,36"></path>
+                <path class="to-key from-element" d="M247.5999984741211,60C273.79999923706055,60 273.79999923706055,60 300,60"></path>
+                <path class="to-key from-element" d="M247.5999984741211,84C273.79999923706055,84 273.79999923706055,84 300,84"></path>
+                <path class="to-key from-element" d="M247.5999984741211,108C273.79999923706055,108 273.79999923706055,108 300,108"></path>
+              </g>
+              <g class="node">
+              <g class="selection" transform="translate(0,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="51.483333587646484"></rect>
+                <text dy=".35em" x="6">selección</text>
+              </g>
+              <g class="array" transform="translate(100,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="37.60000038146973"></rect>
+                <text dy=".35em" x="6">grupo</text>
+              </g>
+              <g class="element" transform="translate(200,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <g class="key" transform="translate(300,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">A</text>
+              </g>
+              <g class="element" transform="translate(200,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <g class="key exit" transform="translate(300,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <!-- <path class="join" d="M32,0C60,0 60,0 88,0"></path> -->
+                <text dy=".35em" x="6">B</text>
+              </g>
+              <g class="element" transform="translate(200,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <g class="key" transform="translate(300,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">C</text>
+              </g>
+              <g class="element" transform="translate(200,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <g class="key" transform="translate(300,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">D</text>
+              </g>
+              <g class="element" transform="translate(200,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="47.599998474121094"></rect>
+                <text dy=".35em" x="6">rect</text>
+              </g>
+              <g class="key" transform="translate(300,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32"></rect>
+                <path class="join" d="M32,0C60,0 60,0 88,0"></path>
+                <text dy=".35em" x="6">E</text>
+              </g>
+            </g>
+              </g>
+              <g class="right" transform="translate(760,0)">
+              <g class="link">
+                <path class="to-array from-data" d="M-32,60C-66,60 -66,60 -100,60"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,12 -200,12"></path>
+                <!-- <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,36 -200,36"></path> -->
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,60 -200,60"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,84 -200,84"></path>
+                <path class="to-datum from-array" d="M-134.79999923706055,60C-167.39999961853027,60 -167.39999961853027,108 -200,108"></path>
+                <path class="to-key from-datum" d="M-232,12C-266,12 -266,12 -300,12"></path>
+                <!-- <path class="to-key from-datum" d="M-232,36C-266,36 -266,36 -300,36"></path> -->
+                <path class="to-key from-datum" d="M-232,60C-266,60 -266,60 -300,60"></path>
+                <path class="to-key from-datum" d="M-232,84C-266,84 -266,84 -300,84"></path>
+                <path class="to-key from-datum" d="M-232,108C-266,108 -266,108 -300,108"></path>
+              </g>
+              <g class="node">
+              <g class="data" transform="translate(0,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-28">datos</text>
+              </g>
+              <g class="array" transform="translate(-100,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="34.79999923706055" x="-34.79999923706055"></rect>
+                <text dy=".35em" x="-32">arreglo</text>
+              </g>
+              <g class="datum" transform="translate(-200,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">4</text>
+              </g>
+              <g class="key" transform="translate(-300,12)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">A</text>
+              </g>
+              <!-- <g class="datum" transform="translate(-200,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">5</text>
+              </g>
+              <g class="key" transform="translate(-300,36)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">1</text>
+              </g> -->
+              <g class="datum" transform="translate(-200,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">18</text>
+              </g>
+              <g class="key" transform="translate(-300,60)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">C</text>
+              </g>
+              <g class="datum" transform="translate(-200,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">23</text>
+              </g>
+              <g class="key" transform="translate(-300,84)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">D</text>
+              </g>
+              <g class="datum" transform="translate(-200,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">42</text>
+              </g>
+              <g class="key" transform="translate(-300,108)">
+                <rect ry="6" rx="6" y="-10" height="20" width="32" x="-32"></rect>
+                <text dy=".35em" x="-26">E</text>
+              </g>
+            </g>
+            </g>
+            </svg>
+          </section>
+
+
+          <section data-auto-animate data-auto-animate-unmatched="fade">
+
+            <h3>¡Practico entre todes!</h3>
+  
+          </section>
+
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>¡Visualización del día!</h3>
+
+					<img src="./assets/vis_del_dia.png" height="300px"/>
+
+          
+          <p>Página intectiva de información sobre armas nucleares. </p>
+
+          <p>Propuesta por estudiante "Java B".</p>
+
+					<p style="font-size: 0.5em; color: grey">(Fuente: <a href="https://outrider.org/nuclear-weapons/interactive/bomb-blast/?airburst=false&bomb=3&lat=-33.45&location=Santiago%2C%20Santiago%20Metropolitan%2C%20Chile&long=-70.66667">Outrider - Nuclear Weapons Interactive</a>)</p>
+
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+          <h3>Próximos eventos:</h3>
+          
+					<br>
+
+					<p>Próxima senaba revisaremos el material de <span style="color: #f92696;">Visualización de datos tabulares</span> y <span style="color: #f92696;"><i>Layouts</i> tabulares en D3.js</span>.</p>
+
+					<p>Domingo 26 de septiembre (20:00:00) termina plazo de <span style="color: #f92696;">Hito 1</span>.</p>
+					
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Utilidades en D3.js II</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de Información</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

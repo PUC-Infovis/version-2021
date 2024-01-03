@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Datasets de red</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<script src="../plugin/math/math.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Visualización de redes y grafos</h1>
+					<h2 style="color: black;">IIC2026 2021-2</h2>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1><i>Datasets</i> de red</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de redes y grafos</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h1 style="font-size: 1.6em;"><i>Datasets</i> de red</h1>
+					
+					<p>Representar situaciones donde existen relaciones entre dos o más ítems.</p>
+					<p>Compuestos por datos de tipo ítem (nodos) y de tipo enlace.</p>
+
+					<br>
+
+					<p style="font-size: 2em;">&#160;👱 → 🧑‍🍳 ↔ 🧑‍🌾</p>
+					<p style="font-size: 2em;">&#160; ↑ &#160;&#160;&#160;&#160;&#160;&#160; ↕ &#160;&#160;&#160;&#160;&#160;&#160; ↑</p>
+					<p style="font-size: 2em;">&#160;🦹 → 🧑‍🔧 ↔ 🧑‍🏫</p>
+					<p style="font-size: 2em;">&#160; ↓ &#160;&#160;&#160;&#160;&#160;&#160; ↓ &#160;&#160;&#160;&#160;&#160;&#160; ↕</p>
+					<p style="font-size: 2em;">&#160;🧑‍⚖️ ← 🧑‍🎨 ← 🧑‍🚀</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.6em;"><i>Datasets</i> de red</h1>
+
+          <br>
+
+					<img src="./assets/Flights-to-Rome-World-Map.jpg" height="400">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://www.flightradar24.com/blog/flights-to-rome-a-stunning-visualization-of-earths-mobility/">Flights to Rome: A Stunning Visualization of Earth’s Mobility</a> )</p>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Conceptos y términos</h3>
+
+					<br>
+
+					<h4>Relación</h4>
+
+					<br>
+
+					<p style="font-size: 2em;">&#160;🧬 → 🧬 ↔ 🧬</p>
+					<p style="font-size: 2em;">&#160; ↑ &#160;&#160;&#160;&#160;&#160;&#160; ↕ &#160;&#160;&#160;&#160;&#160;&#160; ↑</p>
+					<p style="font-size: 2em;">&#160;🧬 → 🧬 ↔ 🧬</p>
+					<p style="font-size: 2em;">&#160; ↓ &#160;&#160;&#160;&#160;&#160;&#160; ↓ &#160;&#160;&#160;&#160;&#160;&#160; ↕</p>
+					<p style="font-size: 2em;">&#160;🧬 ← 🧬 ← 🧬</p>
+					
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+
+
+					<h4>Relación</h4>
+
+					<br>
+
+					<p style="font-size: 2em;">&#160;🧬 → 🧬 ↔ 🧬</p>
+					<p style="font-size: 2em;">&#160; ↑ &#160;&#160;&#160;&#160;&#160;&#160; ↕ &#160;&#160;&#160;&#160;&#160;&#160; ↑</p>
+					<p style="font-size: 2em;">&#160;🧬 → 🧬 ↔ 🧬</p>
+					<p style="font-size: 2em;">&#160; ↓ &#160;&#160;&#160;&#160;&#160;&#160; ↓ &#160;&#160;&#160;&#160;&#160;&#160; ↕</p>
+					<p style="font-size: 2em;">&#160;🧬 ← 🧬 ← 🧬</p>
+
+					<br>
+
+					<h4>Nodos o vertices: 🧬</h4>
+					<h4>Enlaces, aristas o conexiones: <span style="color: black">↔, → , ←</span> </h4>
+					
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Grafos</h3>
+
+					<br>
+
+					<img src="./assets/graph.png" height="200">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://en.wikipedia.org/wiki/Graph_theory/">Graph Theory (Wikipedia)</a> )</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Red dirigida o no dirigida</h3>
+
+					<br>
+
+					<img src="./assets/dirigido_no_dirigido.png" height="300">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://www.raywenderlich.com/773-swift-algorithm-club-graphs-with-adjacency-list/">raywenderlich.com</a> )</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Red etiquetadas o con pesos</h3>
+
+					<br>
+
+					<img src="./assets/rdf-beatles.png" height="400">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://www.stardog.com/tutorials/data-model/">RDF Graph Data Model</a> )</p>
+
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Red etiquetadas o con pesos</h3>
+
+					<br>
+
+					<img src="./assets/Graceful_labeling.svg.png" height="300">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://en.wikipedia.org/wiki/Graph_labeling/">Graph labeling (Wikipedia)</a> )</p>
+
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade"">
+					
+					<h3>Jerarquías y/o árboles</h3>
+
+					<br>
+					
+					<img src="./assets/forest.png" height="300">
+					
+					<p style="font-size: 0.5em; color: grey;">(Fuente: <a href="https://ptwiddle.github.io/Graph-Theory-Notes/s_intro_trees.html">Trees (MAS341: Graph Theory)</a> )</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1><i>Datasets</i> de red</h1>
+					<h1 style="font-size: 1.6em; color: black;">Visualización de redes y grafos</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 2021-2</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				plugins: [ RevealHighlight, RevealMath ]
+			});
+		</script>
+
+	</body>
+</html>

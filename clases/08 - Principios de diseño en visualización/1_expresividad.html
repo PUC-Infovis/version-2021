@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Principios de expresividad</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+		<script src="../plugin/math/math.js"></script>
+
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Principios de diseño en visualización</h1>
+					<h2 style="color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Principios de expresividad</h1>
+					<h1 style="font-size: 1.6em; color: black;">Principios de diseño en visualización</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Principios de diseño en visualización</h3>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h3>Principios de diseño en visualización</h3>
+
+					<br>
+
+					<p>Consejos o guías que provienen del conocimiento práctico colectivo en Visualización de Información.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+          <h4 style="font-size: 1.6em;">Principio de expresividad</h4>
+          
+          <br>
+
+          <p>Una codificación visual utilizada debe expresar toda, y solamente, la información del atributo objetivo.</p>
+
+          <br>
+
+          <p style="color:#f92696">Canales de identidad ↔️ Atributos categóricos</p>
+          <p style="color:#f92696">Canales de magnitud ↔️ Atributos ordenados</p>
+          
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4><i>Data-ink ratio</i></h4>
+
+					<br>
+
+					<h4><i>Lie factor</i></h4>
+
+					<br>
+
+					<p>Por Edward Tufte</p>
+
+				</section>
+				
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Data-ink ratio</i></h4>
+
+					<br>
+
+					\[ data\_ink\_ratio = \frac{data\_ink}{total\_ink} \]
+
+					<br>
+
+					<p>Razón del uso de pixeles en una visualización.</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Data-ink ratio</i></h4>
+
+					<br>
+
+					\[ data\_ink\_ratio = \frac{data\_ink}{total\_ink} \longrightarrow 1 \]
+
+					<br>
+
+					<p>Justificar la mayor cantidad de pixeles usados.</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Data-ink ratio</i></h4>
+
+					<br>
+
+					<img src="./assets/chart 1.jpg"/>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://consultantjournal.com/blog/use-3d-charts-at-your-own-risk">enlace</a>)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Data-ink ratio</i></h4>
+
+					<br>
+
+					<img src="./assets/chart 2.jpg"/>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://consultantjournal.com/blog/use-3d-charts-at-your-own-risk">enlace</a>)</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Data-ink ratio</i></h4>
+
+					<br>
+
+					<svg width="500" height="500">
+
+						<rect fill="lightblue" x="50" y="50" height="400" width="450"></rect>
+
+						<rect fill="gray" x="62.5" y="100" height="350" width="25"></rect>
+						<text x="67.5" y="475">A</text>
+						<rect fill="gray" x="112.5" y="300" height="150" width="25"></rect>
+						<text x="117.5" y="475">B</text>
+						<rect fill="gray" x="162.5" y="150" height="300" width="25"></rect>
+						<text x="167.5" y="475">C</text>
+						<rect fill="gray" x="212.5" y="125" height="325" width="25"></rect>
+						<text x="217.5" y="475">D</text>
+						<rect fill="gray" x="262.5" y="50" height="400" width="25"></rect>
+						<text x="267.5" y="475">E</text>
+						<rect fill="gray" x="312.5" y="350" height="100" width="25"></rect>
+						<text x="317.5" y="475">F</text>
+						<rect fill="gray" x="362.5" y="325" height="125" width="25"></rect>
+						<text x="367.5" y="475">G</text>
+						<rect fill="gray" x="412.5" y="250" height="200" width="25"></rect>
+						<text x="417.5" y="475">H</text>
+						<rect fill="gray" x="462.5" y="100" height="350" width="25"></rect>
+						<text x="467.5" y="475">I</text>
+
+						<line x1="50" y1="50" x2="500" y2="50" stroke-width="2" stroke="black"></line>
+						<line x1="50" y1="150" x2="500" y2="150" stroke-width="2" stroke="black"></line>
+						<text x="0" y="155">15%</text>
+						<line x1="50" y1="250" x2="500" y2="250" stroke-width="2" stroke="black"></line>
+						<text x="0" y="255">10%</text>
+						<line x1="50" y1="350" x2="500" y2="350" stroke-width="2" stroke="black"></line>
+						<text x="0" y="355">05%</text>
+						<line x1="50" y1="450" x2="500" y2="450" stroke-width="2" stroke="black"></line>
+
+						<line x1="50" y1="50" x2="50" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="75" y1="50" x2="75" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="100" y1="50" x2="100" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="125" y1="50" x2="125" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="150" y1="50" x2="150" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="175" y1="50" x2="175" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="200" y1="50" x2="200" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="225" y1="50" x2="225" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="250" y1="50" x2="250" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="275" y1="50" x2="275" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="300" y1="50" x2="300" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="325" y1="50" x2="325" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="350" y1="50" x2="350" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="375" y1="50" x2="375" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="400" y1="50" x2="400" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="425" y1="50" x2="425" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="450" y1="50" x2="450" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="475" y1="50" x2="475" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="500" y1="50" x2="500" y2="450" stroke-width="2" stroke="black"></line>
+
+					</svg>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Data-ink ratio</i></h4>
+
+					<br>
+
+					<svg width="500" height="500">
+
+						<rect fill="white" x="50" y="50" height="400" width="450"></rect>
+
+						<rect fill="gray" x="62.5" y="100" height="350" width="25"></rect>
+						<text x="67.5" y="475">A</text>
+						<rect fill="gray" x="112.5" y="300" height="150" width="25"></rect>
+						<text x="117.5" y="475">B</text>
+						<rect fill="gray" x="162.5" y="150" height="300" width="25"></rect>
+						<text x="167.5" y="475">C</text>
+						<rect fill="gray" x="212.5" y="125" height="325" width="25"></rect>
+						<text x="217.5" y="475">D</text>
+						<rect fill="gray" x="262.5" y="50" height="400" width="25"></rect>
+						<text x="267.5" y="475">E</text>
+						<rect fill="gray" x="312.5" y="350" height="100" width="25"></rect>
+						<text x="317.5" y="475">F</text>
+						<rect fill="gray" x="362.5" y="325" height="125" width="25"></rect>
+						<text x="367.5" y="475">G</text>
+						<rect fill="gray" x="412.5" y="250" height="200" width="25"></rect>
+						<text x="417.5" y="475">H</text>
+						<rect fill="gray" x="462.5" y="100" height="350" width="25"></rect>
+						<text x="467.5" y="475">I</text>
+
+						<line x1="50" y1="50" x2="500" y2="50" stroke-width="2" stroke="black"></line>
+						<line x1="50" y1="150" x2="500" y2="150" stroke-width="2" stroke="black"></line>
+						<text x="0" y="155">15%</text>
+						<line x1="50" y1="250" x2="500" y2="250" stroke-width="2" stroke="black"></line>
+						<text x="0" y="255">10%</text>
+						<line x1="50" y1="350" x2="500" y2="350" stroke-width="2" stroke="black"></line>
+						<text x="0" y="355">05%</text>
+						<line x1="50" y1="450" x2="500" y2="450" stroke-width="2" stroke="black"></line>
+
+						<line x1="50" y1="50" x2="50" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="75" y1="50" x2="75" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="100" y1="50" x2="100" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="125" y1="50" x2="125" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="150" y1="50" x2="150" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="175" y1="50" x2="175" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="200" y1="50" x2="200" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="225" y1="50" x2="225" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="250" y1="50" x2="250" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="275" y1="50" x2="275" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="300" y1="50" x2="300" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="325" y1="50" x2="325" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="350" y1="50" x2="350" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="375" y1="50" x2="375" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="400" y1="50" x2="400" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="425" y1="50" x2="425" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="450" y1="50" x2="450" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="475" y1="50" x2="475" y2="450" stroke-width="2" stroke="black"></line>
+						<line x1="500" y1="50" x2="500" y2="450" stroke-width="2" stroke="black"></line>
+
+					</svg>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Data-ink ratio</i></h4>
+
+					<br>
+
+					<svg width="500" height="500">
+
+						<rect fill="white" x="50" y="50" height="400" width="450"></rect>
+
+						<rect fill="gray" x="62.5" y="100" height="350" width="25"></rect>
+						<text x="67.5" y="475">A</text>
+						<rect fill="gray" x="112.5" y="300" height="150" width="25"></rect>
+						<text x="117.5" y="475">B</text>
+						<rect fill="gray" x="162.5" y="150" height="300" width="25"></rect>
+						<text x="167.5" y="475">C</text>
+						<rect fill="gray" x="212.5" y="125" height="325" width="25"></rect>
+						<text x="217.5" y="475">D</text>
+						<rect fill="gray" x="262.5" y="50" height="400" width="25"></rect>
+						<text x="267.5" y="475">E</text>
+						<rect fill="gray" x="312.5" y="350" height="100" width="25"></rect>
+						<text x="317.5" y="475">F</text>
+						<rect fill="gray" x="362.5" y="325" height="125" width="25"></rect>
+						<text x="367.5" y="475">G</text>
+						<rect fill="gray" x="412.5" y="250" height="200" width="25"></rect>
+						<text x="417.5" y="475">H</text>
+						<rect fill="gray" x="462.5" y="100" height="350" width="25"></rect>
+						<text x="467.5" y="475">I</text>
+
+						<line x1="50" y1="50" x2="500" y2="50" stroke-width="2" stroke="black"></line>
+						<line x1="50" y1="150" x2="500" y2="150" stroke-width="2" stroke="black"></line>
+						<text x="0" y="155">15%</text>
+						<line x1="50" y1="250" x2="500" y2="250" stroke-width="2" stroke="black"></line>
+						<text x="0" y="255">10%</text>
+						<line x1="50" y1="350" x2="500" y2="350" stroke-width="2" stroke="black"></line>
+						<text x="0" y="355">05%</text>
+						<line x1="50" y1="450" x2="500" y2="450" stroke-width="2" stroke="black"></line>
+
+					</svg>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Data-ink ratio</i></h4>
+
+					<br>
+
+					<svg width="500" height="500">
+
+						<rect fill="white" x="50" y="50" height="400" width="450"></rect>
+
+						<rect fill="gray" x="62.5" y="100" height="350" width="25"></rect>
+						<text x="67.5" y="475">A</text>
+						<rect fill="gray" x="112.5" y="300" height="150" width="25"></rect>
+						<text x="117.5" y="475">B</text>
+						<rect fill="gray" x="162.5" y="150" height="300" width="25"></rect>
+						<text x="167.5" y="475">C</text>
+						<rect fill="gray" x="212.5" y="125" height="325" width="25"></rect>
+						<text x="217.5" y="475">D</text>
+						<rect fill="gray" x="262.5" y="50" height="400" width="25"></rect>
+						<text x="267.5" y="475">E</text>
+						<rect fill="gray" x="312.5" y="350" height="100" width="25"></rect>
+						<text x="317.5" y="475">F</text>
+						<rect fill="gray" x="362.5" y="325" height="125" width="25"></rect>
+						<text x="367.5" y="475">G</text>
+						<rect fill="gray" x="412.5" y="250" height="200" width="25"></rect>
+						<text x="417.5" y="475">H</text>
+						<rect fill="gray" x="462.5" y="100" height="350" width="25"></rect>
+						<text x="467.5" y="475">I</text>
+
+						<line x1="50" y1="50" x2="500" y2="50" stroke-width="2" stroke="white"></line>
+						<line x1="50" y1="150" x2="500" y2="150" stroke-width="2" stroke="white"></line>
+						<text x="0" y="155">15%</text>
+						<line x1="50" y1="250" x2="500" y2="250" stroke-width="2" stroke="white"></line>
+						<text x="0" y="255">10%</text>
+						<line x1="50" y1="350" x2="500" y2="350" stroke-width="2" stroke="white"></line>
+						<text x="0" y="355">05%</text>
+						<line x1="50" y1="450" x2="500" y2="450" stroke-width="2" stroke="white"></line>
+
+					</svg>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Lie factor</i></h4>
+
+					<br>
+
+					\[ lie \ factor = \frac{efecto \ de \ magnitud \ en \ vis}{efecto \ de \ magnitud \ en \ datos} \]
+
+					<br>
+
+					<p>Razón entre efectos de magnitud entre vis y datos.</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Lie factor</i></h4>
+
+					<br>
+
+					\[ lie \ factor = \frac{efecto \ de \ magnitud \ en \ vis}{efecto \ de \ magnitud \ en \ datos} \longrightarrow 1\]
+
+					<br>
+
+					<p>Magnitud en vis es fiel a magnitud en datos.</p>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Lie factor</i></h4>
+
+					<br>
+
+					<svg width="800" height="500">
+
+						<circle cy="250" cx="100" r="50" fill="white" stroke-width="2" stroke="black"></circle>
+						<text y="255" x="90">10</text>
+
+						<circle cy="250" cx="300" r="100" fill="white" stroke-width="2" stroke="black"></circle>
+						<text y="255" x="290">20</text>
+
+						<circle cy="250" cx="600" r="150" fill="white" stroke-width="2" stroke="black"></circle>
+						<text y="255" x="590">30</text>
+						
+					</svg>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Lie factor</i></h4>
+
+					<br>
+
+					<svg width="800" height="500">
+
+						<circle cy="250" cx="100" r="50" fill="white" stroke-width="2" stroke="black"></circle>
+						<text y="255" x="90">10</text>
+
+						<circle cy="250" cx="300" r="70.71" fill="white" stroke-width="2" stroke="black"></circle>
+						<text y="255" x="290">20</text>
+
+						<circle cy="250" cx="600" r="86.6" fill="white" stroke-width="2" stroke="black"></circle>
+						<text y="255" x="590">30</text>
+						
+					</svg>
+
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<h4 style="font-size: 1.6em;"><i>Lie factor</i></h4>
+
+					<br>
+
+
+					<img src="./assets/bar_chart_lie.png" height="450"/>
+
+					<p style="font-size: 0.5em; color: grey;">(Fuente imagen: <a href="https://www.eurofound.europa.eu/sites/default/files/ef_comparative_analytical_report/field_ef_documents/ef1539en.pdf">Eurofund report</a>)</p>
+
+
+				</section>
+
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Principios de expresividad</h1>
+					<h1 style="font-size: 1.6em; color: black;">Principios de diseño en visualización</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				math: {
+				mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				// pass other options into `MathJax.Hub.Config()`
+				TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				plugins: [ RevealHighlight, RevealMath ]
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,363 @@
+{
+    "Collection_name":"Oscars best male actor winners",
+    "Span":"1970-2020",
+    "Objects":[
+        {
+            "Name":"George C. Scott",
+            "Year":1970,
+            "Movie":"Patton",
+            "Sign":"Libra",
+            "Element":"Air"
+        },
+        {
+            "Name":"Gene Hackman",
+            "Year":1971,
+            "Movie":"The French Connection",
+            "Sign":"Aquarius",
+            "Element":"Air"
+        },
+        {
+            "Name":"Marlon Brando",
+            "Year":1972,
+            "Movie":"The Godfather",
+            "Sign":"Aries",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Jack Lemmon",
+            "Year":1973,
+            "Movie":"Save the Tiger",
+            "Sign":"Aquarius",
+            "Element":"Air"
+        },
+        {
+            "Name":"Art Carney",
+            "Year":1974,
+            "Movie":"Harry and Tonto",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Jack Nicholson",
+            "Year":1975,
+            "Movie":"One Flew Over the Cuckoo's Nest",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Peter Finch",
+            "Year":1976,
+            "Movie":"Network",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Richard Dreyfuss",
+            "Year":1977,
+            "Movie":"The Goodbye Girl",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Jon Voight",
+            "Year":1978,
+            "Movie":"Coming Home",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Dustin Hoffman",
+            "Year":1979,
+            "Movie":"Kramer vs. Kramer",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Robert De Niro",
+            "Year":1980,
+            "Movie":"Raging Bull",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Henry Fonda",
+            "Year":1981,
+            "Movie":"On Golden Pond",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Ben Kingsley",
+            "Year":1982,
+            "Movie":"Ghandi",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Robert Duvall",
+            "Year":1983,
+            "Movie":"Tender Mercies",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"F. Murray Abraham",
+            "Year":1984,
+            "Movie":"Amadeus",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"William Hurt",
+            "Year":1985,
+            "Movie":"Kiss of the Spider Woman",
+            "Sign":"Piscies",
+            "Element":"Water"
+        },
+        {
+            "Name":"Paul Newman",
+            "Year":1986,
+            "Movie":"The Color of Money",
+            "Sign":"Aquarius",
+            "Element":"Air"
+        },
+        {
+            "Name":"Michael Douglas",
+            "Year":1987,
+            "Movie":"Wall Street",
+            "Sign":"Libra",
+            "Element":"Air"
+        },
+        {
+            "Name":"Dustin Hoffman",
+            "Year":1988,
+            "Movie":"Rainman",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Daniel Day-Lewis",
+            "Year":1989,
+            "Movie":"My Left Foot",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Jeremy Irons",
+            "Year":1990,
+            "Movie":"Reversal of Fortune",
+            "Sign":"Virgo",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Anthony Hopkins",
+            "Year":1991,
+            "Movie":"The Silence of the Lambs",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Al Pacino",
+            "Year":1992,
+            "Movie":"Scent of a Woman",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Tom Hanks",
+            "Year":1993,
+            "Movie":"Philadelphia",
+            "Sign":"Cancer",
+            "Element":"Water"
+        },
+        {
+            "Name":"Tom Hanks",
+            "Year":1994,
+            "Movie":"Forrest Gump",
+            "Sign":"Cancer",
+            "Element":"Water"
+        },
+        {
+            "Name":"Nicholas Cage",
+            "Year":1995,
+            "Movie":"Leaving Las Vegas",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Geoffrey Rush",
+            "Year":1996,
+            "Movie":"Shine",
+            "Sign":"Cancer",
+            "Element":"Water"
+        },
+        {
+            "Name":"Jack Nicholson",
+            "Year":1997,
+            "Movie":"As Good as it Gets",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Roberto Benigni",
+            "Year":1998,
+            "Movie":"Life Is Beautiful",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Kevin Spacey",
+            "Year":1999,
+            "Movie":"American Beauty",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Russel Crowe",
+            "Year":2000,
+            "Movie":"Gladiator",
+            "Sign":"Aries",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Denzel Washington",
+            "Year":2001,
+            "Movie":"Training Day",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Adrien Brody",
+            "Year":2002,
+            "Movie":"The Pianist",
+            "Sign":"Aries",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Sean Penn",
+            "Year":2003,
+            "Movie":"Mystic River",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Jamie Foxx",
+            "Year":2004,
+            "Movie":"Ray",
+            "Sign":"Sagittarius",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Philip Seymour Hoffman",
+            "Year":2005,
+            "Movie":"Capote",
+            "Sign":"Aquarius",
+            "Element":"Air"
+        },
+        {
+            "Name":"Forest Whitaker",
+            "Year":2006,
+            "Movie":"The Last King of Scotland",
+            "Sign":"Cancer",
+            "Element":"Water"
+        },
+        {
+            "Name":"Daniel Day-Lewis",
+            "Year":2007,
+            "Movie":"Ther Will Be Blood",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Sean Penn",
+            "Year":2008,
+            "Movie":"Milk",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Jeff Bridges",
+            "Year":2009,
+            "Movie":"Crazy Heart",
+            "Sign":"Sagittarius",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Colin Firth",
+            "Year":2010,
+            "Movie":"The King's Speech",
+            "Sign":"Virgo",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Jean Dujardin",
+            "Year":2011,
+            "Movie":"The Artist",
+            "Sign":"Gemini",
+            "Element":"Air"
+        },
+        {
+            "Name":"Daniel Day-Lewis",
+            "Year":2012,
+            "Movie":"Lincoln",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Matthew McConaughey",
+            "Year":2013,
+            "Movie":"Dallas Buyers Club",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Eddie Redmayne",
+            "Year":2014,
+            "Movie":"The Theory of Everything",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Leonardo DiCaprio",
+            "Year":2015,
+            "Movie":"The Revenant",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Casey Affleck",
+            "Year":2016,
+            "Movie":"Manchester by the Sea",
+            "Sign":"Leo",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Gary Oldman",
+            "Year":2017,
+            "Movie":"Darkest Hour",
+            "Sign":"Aries",
+            "Element":"Fire"
+        },
+        {
+            "Name":"Rami Malek",
+            "Year":2018,
+            "Movie":"Bohemian Rhapsody",
+            "Sign":"Taurus",
+            "Element":"Earth"
+        },
+        {
+            "Name":"Joaquin Phoenix",
+            "Year":2019,
+            "Movie":"Joker",
+            "Sign":"Scorpio",
+            "Element":"Water"
+        },
+        {
+            "Name":"Anthony Hopkins",
+            "Year":2020,
+            "Movie":"The Father",
+            "Sign":"Capricorn",
+            "Element":"Earth"
+        }
+    ]
+}

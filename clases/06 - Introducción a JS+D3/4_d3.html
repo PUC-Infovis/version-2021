@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>D3.js</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>JavaScript y D3</h1>
+					<h2 style="color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>D3.js</h1>
+					<h1 style="font-size: 1.6em; color: black;">JavaScript y D3</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">
+						D3.js
+					</h1>
+
+					<br>
+
+					<p>Librería escrita en JavaScript para manipular documentos basándose en datos.</p>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">
+						DDD
+					</h1>
+
+					<br>
+
+					<p>Librería escrita en JavaScript para manipular documentos basándose en datos.</p>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2 style="font-size: 1.3em; color: black;"><span style="color: #f92696;">D</span>ata <span style="color: #f92696;">D</span>riven <span style="color: #f92696;">D</span>ocuments</h2>
+					
+					<br>
+
+					<p>Librería  escrita en JavaScript para manipular documentos basándose en datos.</p>
+
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">
+						D3.js
+					</h1>
+
+					<br>
+
+					<ul>
+            <li>Su intención es utilizar HTML, CSS y SVG para crear visualizaciones.</li>
+            <li>Apareció en un momento en que esto no era común para herramientas de visualización.</li>
+            <li>Escrita por Mike Bostock.</li>
+					</ul>
+          <br>
+          <br>
+          <ul>
+						<li>Artículo de propuesta: <a href="http://vis.stanford.edu/files/2011-D3-InfoVis.pdf">enlace</a>.</li>
+						<li>Sitio de D3.js: <a href="https://d3js.org/">enlace</a>.</li>
+					</ul>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">
+						D3.js
+					</h1>
+
+					<br>
+
+					<p>NO es una librería de visualización de alto nivel.</p>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim class="javascript">
+            const grafico_de_barra = crear(); // ❌
+            grafico_de_barra.graficar(); // ❌
+					</code></pre>
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">
+						D3.js
+					</h1>
+
+					<br>
+
+					<p>NO es una librería de visualización de alto nivel.</p>
+
+					<br>
+
+					<pre data-id="code1"><code data-trim class="javascript">
+            const grafico_de_barra = crear(); // ❌
+            grafico_de_barra.graficar(); // ❌
+          </code></pre>
+          
+          <br>
+
+					<p>Son herramientas para crear visualizaciones 🔨🔧🔩⚒️⚙️.</p>
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">
+						D3.js
+					</h1>
+
+					<br>
+
+					<p>Utilizaremos la versiones <span style="color: #f92696; font-weight: 700;">7</span> o <span style="color: #f92696; font-weight: 700;">6</span> en el curso.</p>
+
+          <br>
+          
+          <p>👀 con encontrar recursos y ejemplos escritos en la versión 3, 4 o 5.</p>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">
+					  Utilizar D3
+          </h1>
+          
+          <br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers="7" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Ejemplo con D3&lt;/title&gt;
+    &lt;script src=&quot;https://d3js.org/d3.v7.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    
+    &lt;script src='programa_4.js' charset='utf-8'&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code></pre>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">
+					  Utilizar D3
+          </h1>
+          
+          <br>
+
+					<pre data-id="code1"><code data-trim data-line-numbers="7" class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Ejemplo con D3&lt;/title&gt;
+    &lt;script src=&quot;./ruta/en/computador/d3.v7.min.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    
+    &lt;script src='programa_4.js' charset='utf-8'&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code></pre>
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1 style="font-size: 1.3em;">
+					  Utilizar D3
+          </h1>
+          
+          <br>
+
+					<pre data-id="code2"><code data-trim data-line-numbers="|1|3,9" class="js">
+const svg = d3.select("body").append("svg");
+
+const datos = [150, 256, 130, 0, 23, 422, 235];
+
+svg.attr("width", 50 + datos.length * 100).attr("height", 500);
+
+svg
+  .selectAll("rect")
+  .data(datos)
+  .enter()
+  .append("rect")
+  .attr("width", 50)
+  .attr("fill", "magenta")
+  .attr("height", (d) => d)
+  .attr("x", (_, i) => 50 + i * 100);
+
+          </code></pre>
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>D3.js</h1>
+					<h1 style="font-size: 1.6em; color: black;">JavaScript y D3</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026</h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <script src='https://d3js.org/d3.v7.min.js'></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="https://d3js.org/d3-geo-projection.v4.min.js"></script>
+    <title>Examen Manuel Aylwin Reyes</title>
+<link rel='stylesheet' href='./src/style.css'>
+</head>
+
+<body>
+    <div id="container_examen">
+        <div id='title-container' >
+            <p id="title">Casos activos de COVID-19 por comuna en el tiempo</p>
+        </div>
+        <div id="horizontal-flex-container" >
+            
+            <div id='comunas-container' style="flex: 6;">
+                <div id="selector-container">
+                    <input id="myInput" class="dropdown-content" onfocus="this.value=''" onchange="this.blur();" type="text" placeholder="Buscar Comuna..."  list="myDropdown">
+                        <datalist id="myDropdown">
+                        </datalist>
+                </div>
+                <div id='comunas-container'>
+                    <svg id=comunas_svg></svg>
+                    <p id="titulo_leyenda">Tasa de contagiados cada 10.000 habitantes</p>
+                    <div id="leyenda"></div>
+                    <div id="leyenda_container">
+                        <div id="leyenda_left">0</div>
+                        <div id="leyenda_right">>10</div>
+                        <div id="leyenda_center">5</div>
+                      </div>
+                </div>
+                
+            </div>
+            <div style="flex: 6;">
+                <p id="second_title">Total de casos activos de COVID-19 en Chile en el tiempo</p>
+                <div id=graphic_svg></div>
+                <div id="input_range-container">  
+                    <!-- Slider CSS: obtenido de http://w3.unpocodetodo.info/css3/input-type-range.php -->
+                    <div class="etiqueta"></div>              
+                    <div class="inputDiv">
+                        <input id="nRadius" class="slider" type="range" min="0" max="169">
+                    </div>                    
+                </div>
+                <div class="header_input_range">
+                    <div class="end_input_range">
+                        13/04/2020
+                    </div>
+                    <div class="start_input_range">
+                        26/11/2021
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div id="tooltip" style="display: none">
+            <div id="head_tooltip"><b>Comuna</b>
+                <div id="head_tooltip_region">Región</div>
+            </div>
+            <p><b>Población:</b></p>
+            <p><b>Casos Activos:</b></p>
+            <p><b>Tasa de casos Activos:</b><a>(x 10000 hab.)</a></p>
+        </div>
+        <div id="tooltip_graphic" style="display: none">
+            <div id="head_tooltip_graphic">Fecha:<b>Casos</b></div>
+        </div>
+    </div>
+    <script src='./src/scripts.js'></script>
+</body>
+</html>

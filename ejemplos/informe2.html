@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <meta charset="utf-8">
+    <title>Informe Examen IIC2026</title>
+    <link rel="shortcut icon" href="#" />
+    <link href="informe2.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+      <h1>Informe</h1>
+      <p class=sh1>Examen | IIC2026 - Visualización de Información</p>
+      <p class=sh1>Diciembre 2020</p>
+
+
+      <h2>Primer nivel: Caracterización de dominio</h2>
+      <h3>Contexto de los datos</h3>
+      <p>
+        Se utilizará el dataset <span class=code>police_use_of_force.csv</span>
+        disponible <a target="_blank" href="https://www.kaggle.com/paultimothymooney/minneapolis-police-stops-and-police-violence?select=police_use_of_force.csv">aquí</a>.
+        Además, este se apoyará en un conjunto de datos geométricos de elaboración 
+        propia hecho en Illustrator, que representa los diferentes barrios de la 
+        ciudad de Minneapolis.
+      </p>
+      <p>
+        El dataset describe hechos de violencia policial ocurridos en la ciudad 
+        de Minneapolis. Esto incluye, entre otras cosas, datos sobre el tipo de 
+        violencia ejercida, características de la víctica de violencia y atributos 
+        espaciales del lugar donde ocurrió el hecho. 
+      </p>
+      <p>
+        Toda la información del dataset fue recolectada manualmente por la policía 
+        de Minneapolis, por lo que en varias ocaciones faltan datos.
+      </p>
+      <p>
+        Luego del <a target="_blank" href="https://www.bbc.com/news/world-us-canada-52861726">asesinato de George Floyd</a> 
+        a manos de un policía y las <a target="_blank" href="https://bostonreview.net/race/elizabeth-hinton-minneapolis-uprising-context">protestas 
+        contra el racismo</a> que este hecho conllevó, estos datos adquirieron 
+        especial importancia para estudiar el comportamiento policial. Lo anterior,
+        porque una de las principales consignas era el rechazo al actuar racista y 
+        discriminatorio de las policías de Minneapolis y otros lugares de Estados 
+        Unidos.
+      </p>
+      <h3>Usuario objetivo</h3>
+      <p>
+        A grandes rasgos, la visualización que surga de este dataset estará 
+        dirigida a usuarios que tengan una vaga noción de las demandas levantadas 
+        por el movimiento Black Lives Matter, pero tengan interés en conocer más 
+        sobre la realidad en la ciudad de Minneapolis.
+      </p>
+      <p>
+        La herramienta buscará ser usada de forma interactiva para informar al 
+        usuario sobre el tema mencionado más arriba. Más específicamente, se 
+        desea otorgar al usuario la capacidad de navegar por los datos en busca 
+        de información de interés.
+      </p>
+      <p>
+        En cuanto al lenguaje, este trabajo estará enfocado en primera instancia
+        en usuarios de habla hispana. Por esto, cuando sea necesario utilizar 
+        textos estos estarán en Español, sin embargo, la herramienta se pensará para
+        ser entendida de la forma más intuitiva posible. Se aclara también que, dado 
+        que el dataset original está en Inglés, se podrían usar algunas palabras
+        en este idioma cuando no se encuentre una traducción lo suficientemente adecuada.
+      </p>
+         
+
+      <h2>Segundo nivel: Abstracción de datos y tareas</h2>
+      <h3>Abstracción de tareas</h3>
+      <ul>
+        <li>
+          <span class="mono bold">Primera tarea principal:</span> 
+          <span class=italic>Descubrir distribuciones de datos</span>. 
+          Descubrir cómo se distribuyen los casos de violencia según atributos 
+          como el género o la raza.
+        </li>
+        <li>
+          <span class="mono bold">Segunda tarea principal:</span> <span class=italic>Explorar las 
+          diferentes ubicaciones y valores individuales</span>. Explorar los diferentes 
+          barrios de Minneapolis y conocer sus características particulares 
+          dentro del dataset.
+        </li>
+        <li>
+          <span class="mono bold">Tercera tarea principal:</span> <span class=italic>Resumir las 
+          diferentes valores de atributos de todo o parte del dataset</span>. Resumir la 
+          información de todos o parte de los barrios de Minneapolis, incluyendo
+          atributos como el total de casos de la selección o el promedio de
+          determinados atributos.
+        </li>
+        <li>
+          <span class="mono bold">Cuarta tarea (adicional):</span> <span class=italic>Identificar 
+            la presencia de datos faltantes</span>. Conocer que atributos (y en que lugares) los policías 
+            dejaron sin registro la información.
+        </li>
+      </ul>
+
+      <h3>Abstracción de datos</h3>
+      <p>
+        A nivel de <span class="bold">conjunto de datos</span> tenemos, por un 
+        lado, que el dataset elaborado por la policía de Minneápolis es de tipo 
+        tabular. Por otro lado, el svg de elaboración propia especifíca la forma 
+        de los barrios de la ciudad, por lo que es un conjunto de tipo geométrico.
+      </p>
+      <p>
+        A nivel de <span class="bold">datos singulares</span>, se tienen presentes 
+        los siguientes:
+      </p>
+      <ul>
+        <li>
+          <span class="bold">Hecho de violencia (Ítem):</span> Corresponden a 
+          cada fila del dataset y contienen una serie de atributos que describen 
+          al ítem.
+        </li>
+        <li>
+          <span class="bold">Coordenadas figura barrio (Posición):</span> Corresponden 
+          a los puntos dentro del conjunto de datos geométrico que expresan las 
+          ubicaciones en un espacio bidimensional necesarias para describir la forma de 
+          cada uno de los barrios de la ciudad.
+        </li>
+        <li>
+          <span class="bold">Atributos:</span> En el dataset hay muchos datos 
+          singulares de tipo atributo, los cuales serán detallados a continuación.
+        </li>
+      </ul>
+      <p>
+        A nivel de <span class="bold">atributos</span>, los atributos presentes en el dataset 
+        y atingentes a las tareas descritas anteriormente son:
+      </p>
+      <ol>
+        <li>
+          <span class="bold mono">Is911Call</span>
+          <div>Describe si el hecho comenzó por una llamada al 911 o no.</div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Categórico</span>, los valores Yes y No no 
+              tienen un órden intrínseco.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="bold mono">SubjectInjury</span>
+          <div>Describe si la víctima de violencia sufrió una lesión o no.</div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Categórico</span>, los valores Yes y No no 
+              tienen un órden intrínseco.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="bold mono">ForceType</span>
+          <div>Especifica el tipo de fuerza ejercido por la policía.</div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Categórico</span>, dado que los diferentes 
+              tipos de fuerza no pueden ordenarse de forma intrínseca
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="bold mono">Race</span>
+          <div>Precisa la etnia con la que se reconoce la víctima de violencia.</div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Categórico</span>, ya que no hay un orden 
+              intrínseco que ordene las diferentes etnias.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="bold mono">Sex</span>
+          <div>Especifíca el sexo de la víctima de violencia.</div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Categórico</span>, porque el sexo no se puede 
+              ordenar intrínsecamente.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="bold mono">EventAge</span>
+          <div>
+            Contiene la edad que tenía la víctima de violencia al momento del 
+            suceso.
+          </div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Ordenado</span>, dado que los años tienen un 
+              orden intrínseco otorgado por ser numéricos y avanzar con el 
+              tiempo.
+            </li>
+            <li>
+              <span class="bold">Cuantitativo</span>, porque es posible realizar 
+              operaciones aritméticas exactas entre años.
+            </li>
+            <li>
+              <span class="bold">Secuencial</span>, porque la edad solo puede ser
+              positiva y no se detecta otro potencial valor "cero".
+            </li>
+            <li>
+              <span class="bold">No cíclico</span>, porque la edad de un 
+              individuo nunca disminuye, solo aumenta.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="bold mono">Neighborhood</span>
+          <div>
+            Detalla el nombre del vecindario de Minneapolis donde ocurrió el 
+            hecho.
+          </div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Categórico</span>, dado que los nombres de los 
+              barrios no pueden ordenarse de forma intrínseca.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <p>
+        Por otro lado, los <span class="bold">datos derivados</span> del dataset son:
+      </p>
+      <ol>
+        <li>
+          <span class="bold mono">Número total de casos</span>
+          <div>Describe el número total de casos seleccionados.</div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Ordenado</span>, dado que los números tienen un orden intrínseco.
+            </li>
+            <li>
+              <span class="bold">Cuantitativo</span>, ya que se pueden realizar
+              operaciones aritméticas con los valores.
+            </li>
+            <li>
+              <span class="bold">Secuencial</span>, porque no se detecta un 
+              potencial valor "cero".
+            </li>
+            <li>
+              <span class="bold">No cíclico</span>, debido a que los valores posibles parten
+              en cero y pueden aumentar indefinidamente.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="bold mono">Porcentaje de llamadas al 911</span>
+          <div>Describe el porcentaje del total de casos que involucró una llamada al 911.</div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Ordenado</span>, dado que los porcentajes tienen un 
+              orden intrínseco.
+            </li>
+            <li>
+              <span class="bold">Cuantitativo</span>, porque tiene sentido hacer 
+              operaciones aritméticas entre ellos.
+            </li>
+            <li>
+              <span class="bold">Secuencial</span>, porque no se detecta un 
+              potencial valor "cero".
+            </li>
+            <li>
+              <span class="bold">No cíclico</span>, porque no hay una conexión entre
+              el porcentaje menor y el mayor.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="bold mono">Porcentaje de víctimas con lesiones</span>
+          <div>Describe el porcentaje del total de víctimas que terminó con lesiones.</div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Ordenado</span>, dado que los porcentajes tienen un 
+              orden intrínseco.
+            </li>
+            <li>
+              <span class="bold">Cuantitativo</span>, porque tiene sentido hacer 
+              operaciones aritméticas entre porcentajes.
+            </li>
+            <li>
+              <span class="bold">Secuencial</span>, porque no se detecta un 
+              potencial valor "cero".
+            </li>
+            <li>
+              <span class="bold">No cíclico</span>, porque no hay una conexión entre
+              el porcentaje menor y el mayor.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="bold mono">Porcentaje de fuerza ejercida según tipo</span>
+          <div>
+            Esto involucra varios grupos derivados que describen el porcentaje de casos
+            ocurridos que involucraron el uso de determinado tipo de fuerza por parte 
+            de la policía. Entre los tipos de fuerza están: 
+            Corporal, Químico, Taser y Mordida
+          </div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Ordenado</span>, dado que los porcentajes tienen un 
+              orden intrínseco.
+            </li>
+            <li>
+              <span class="bold">Cuantitativo</span>, porque tiene sentido hacer 
+              operaciones aritméticas entre porcentajes.
+            </li>
+            <li>
+              <span class="bold">Secuencial</span>, porque no se detecta un 
+              potencial valor "cero".
+            </li>
+            <li>
+              <span class="bold">No cíclico</span>, porque no hay una conexión entre
+              el porcentaje menor y el mayor.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="bold mono">Porcentaje de víctimas de determinada etnia</span>
+          <div>
+            Esto involucra varios grupos derivados que describen el porcentaje de casos
+            ocurridos que involucraron a una víctima de una determinada etnia. Entre las
+            etnias posibles se tiene: 
+            Negra, Blanca, Asiática y Americana
+          </div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Ordenado</span>, dado que los porcentajes tienen un 
+              orden intrínseco.
+            </li>
+            <li>
+              <span class="bold">Cuantitativo</span>, porque tiene sentido hacer 
+              operaciones aritméticas entre porcentajes.
+            </li>
+            <li>
+              <span class="bold">Secuencial</span>, porque no se detecta un 
+              potencial valor "cero".
+            </li>
+            <li>
+              <span class="bold">No cíclico</span>, porque no hay una conexión entre
+              el porcentaje menor y el mayor.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="bold mono">Porcentaje de víctimas de determinado sexo</span>
+          <div>
+            Esto involucra varios grupos derivados que describen el porcentaje de casos
+            ocurridos que involucraron a una víctima de un determinado sexo. Entre los 
+            sexos descritos por la policía se detalla: 
+            Masculino, Femenino
+          </div>
+          <ul class="atrr">
+            <li>
+              <span class="bold">Ordenado</span>, dado que los porcentajes tienen un 
+              orden intrínseco.
+            </li>
+            <li>
+              <span class="bold">Cuantitativo</span>, porque tiene sentido hacer 
+              operaciones aritméticas entre porcentajes.
+            </li>
+            <li>
+              <span class="bold">Secuencial</span>, porque no se detecta un 
+              potencial valor "cero".
+            </li>
+            <li>
+              <span class="bold">No cíclico</span>, porque no hay una conexión entre
+              el porcentaje menor y el mayor.
+            </li>
+            <li>
+              <span class="bold">Valor</span>, sus valores no identifican al elemento en el dataset.
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>Tercer nivel: Codificación visual y de interacción</h2>
+      <p>
+        Para abordar las tareas especificadas, se utilizaron las siguientes 
+        marcas, canales, idioms visuales, idioms de interacción y decisiones 
+        de diseño:
+      </p>
+      <ul>
+        <li>
+          <h3>
+            Partición en 2 vistas <span class="italic">(Decisión de diseño)</span>
+          </h3>
+            <p>
+            Para facilitar la interacción del usuario con la visualización, se ha 
+            utilizado Facet para realizar 2 vistas coordinadas. Así, a la izquierda 
+            tenemos un mapa de la ciudad y a la derecha información relativa a los 
+            barrios seleccionados en el mapa.
+          </p>
+          <p>
+            Esta decisión se enfoca en facilitar el cumplimiento de la <span class="bold">Segunda Tarea Principal</span>,
+            además de permitir que la vista de la derecha se centre en la <span class="bold">Primera Tarea Principal</span>.
+          </p>
+        </li>
+        <li>
+          <h3>
+            Mapa de la ciudad de Minneapolis <span class="italic">(Idiom visual)</span>
+          </h3>
+          <p>
+            En la vista izquierda, se utilizará este idiom para representar la distribución
+            geográfica de los barrios de la ciudad. 
+          </p>
+          <p>
+            Esto tiene un interés muy centrado en cumplir la <span class="bold">Segunda Tarea Principal</span>.
+          </p>
+        </li>
+        <li>
+          <h3>
+            Formas de cada barrio <span class="italic">(Marca)</span>
+          </h3>
+          <p>
+            En el mapa de la ciudad, se utilizará esta marca bidimensional para mostrar individualmente
+            cada uno de los barrios. Esto tiene un interés muy centrado en cumplir la <span class="bold">Segunda Tarea Principal</span>. 
+            En línea con el idiom anterior, cada forma se corresponde con el área geográfica
+            del barrio en el mundo real.
+          </p>
+        </li>
+        <li>
+          <h3>
+            Color de los barrios <span class="italic">(Canal)</span>
+          </h3>
+          <p>
+            En cada barrio, el color indicará si el barrio está seleccionado (verde) o no (negro).
+          </p>
+          <p>
+            Adicionalmente, se tomó la decisión de diseño de no describir ninguna información del 
+            dataset a través del color de los barrios para: (1) facilitar la diferenciación entre barrios
+            seleccionados y no seleccionados, evitando la interferencia descriptiva y (2) resaltar la separación 
+            de funciones con la otra vista, delegando a los gráficos derechos la descripción de atributos
+            con mayor exactitud.
+          </p>
+          <p>
+            Esto aporta a cumplir la <span class="bold">Segunda Tarea Principal</span>, además de
+            facilitar el cumplimiento de la <span class="bold">Tercera Tarea Principal</span>, dado 
+            que un mapa completamente verde comunicaría que se está analizando la totalidad de los 
+            datos.
+          </p>
+        </li>
+        <li>
+          <h3>
+            Gráfico de barras acumulativo para representar distribuciones de características <span class="italic">(Idiom visual)</span>
+          </h3>
+          <p>
+            En la vista derecha, se utilizará este idiom para detallar la distribución de valores
+            dentro de cada atributo de interés. 
+          </p>
+          <p>
+            Dado que algunos atributos contienen demasiados valores posibles, para mantener el principio de expresividad se decidió
+            sintetizar el contenido del gráfico en una categoría "Otros" en los casos en que el valor esté presente en menos del 10%
+            de los casos.
+          </p>
+          <p>
+            Esto tiene un interés muy centrado en cumplir la <span class="bold">Primera Tarea Principal</span>.
+          </p>
+          </li>
+        <li>
+          <h3>
+            Línea para representar características <span class="italic">(Marca)</span>
+          </h3>
+          En los gráficos de barra acumulativos, se utilizará esta marca unidimensional para describir 
+          diferentes características de interés. Esto ayudará en la <span class="bold">Tercera Tarea Principal</span>. Además,
+          gracias a una decisión de diseño detallada más abajo, es en esta marca donde se verá más reflejada la 
+          <span class="bold">Cuarta Tarea (adicional)</span>.
+        </li>
+        <li>
+          <h3>
+            Largo de línea para representar porcentaje <span class="italic">(Canal)</span>
+          </h3>
+          En las líneas de los gráficos de barra acumulativos, se utilizará este canal para detallar el porcentaje
+          del total de datos que pertenecen a un determinado valor. Esto se hace cargo de cumplir la
+          <span class="bold">Primera</span> y <span class="bold">Tercera Tarea Principal</span>.
+        </li>
+        <li>
+          <h3>
+            Color de línea para representar un valor categórico <span class="italic">(Canal)</span>
+          </h3>
+          En los gráficos de barra acumulativos, se utilizará esta marca unidimensional para describir 
+          diferentes características de interés. Con motivo de cumplir con el principio de efectividad, 
+          se definió una paleta de colores compuesta por 2 duplas de colores complementarios, ayudando así
+          a diferenciarlos correctamente. Esto ayudará en la <span class="bold">Tercera Tarea Principal</span>.
+        </li>
+        <li>
+          <h3>
+            Incorporar valores faltantes <span class="italic">(Decisión de diseño)</span>
+          </h3>
+          <p>
+            Dado que el dataset cuanta con diversos valores faltantes, se decidió representar estos
+            como un valor especial adicional en los gráficos de barra. Así, en todos los gráficos el segmento
+            de más a la derecha será de color gris oscuro y representará a todos los valores sin registro en
+            el grupo de datos seleccionados actual.
+          </p>
+          <p>
+            Esto va en directa relación con el cumplimiento de la <span class="bold">Cuarta Tarea (adicional)</span> 
+            y complementa el cumplimiento de la <span class="bold">Primera Tarea Principal</span> y <span class="bold">Tercera Tarea Principal</span>, 
+            porque transparenta al usuario esta parte común a todas las distribuciones.
+          </p>
+        </li>
+        <li>
+          <h3>
+            Selección de barrios <span class="italic">(Idiom de interacción)</span>
+          </h3>
+          En el mapa, se permitirá la selección de barrios, Esta interacción tendrá efectos en los barrios que
+          se consideran para la vista de la derecha y se verá reflejada también en el color del
+          barrio respectivo (tal como se describió en el canal del color de los barrios más arriba).
+          Esto permitirá cumplir la <span class="bold">Segunda y Tercera Tarea Principal</span>.
+        </li>
+        <li>
+          <h3>
+            Navegación por los barrios <span class="italic">(Idiom de interacción)</span>
+          </h3>
+          Para facilitar la búsqueda de barrios, se añadieron 2 elementos de interacción.
+          Por un lado, la tonalidad de cada barrio se vuelve más clara cuando el cursor se
+          posiciona sobre él, esto ayuda al usuario a conocer en qué parte del mapa se encuentra.
+          Por otro lado, el nombre del barrio sobre el que se posiciona el cursor se mostrará en pantalla
+          en la esquina superior derecha del mapa.
+          Así, este idiom se enfoca en apoyar el cumplimiento de la <span class="bold">Segunda Tarea Principal</span>.
+        </li>
+        <li>
+          <h3>
+            Botones "Seleccionar todo" y "Borrar selección" <span class="italic">(Decisión de diseño)</span>
+          </h3>
+          <p>
+            Para agilizar la selección de barrios, se añaden los botones "Seleccionar todo" y "Borrar selección"
+            al lado izquierdo del mapa. Estos botones permiten seleccionar todos los barrios y dejar todos los barrios
+            sin selección respectivamente. 
+          </p>
+          <p>
+            Así, este idiom se enfoca en apoyar el cumplimiento de la <span class="bold">Segunda Tarea Principal</span> por facilitar
+            la selección de barrios y la <span class="bold">Tercera Tarea Principal</span>, por permitir mostrar rápidamente las características
+            del conjunto completo de datos.
+          </p>
+        </li>
+        <li>
+          <h3>
+            Tooltip en labels <span class="italic">(Decisión de diseño)</span>
+          </h3>
+          <p>
+            Para complementar el entendimiento de la información por parte del usuario,
+            se añade un tooltip con una descripción más detallada del significado de capacida
+            una de las características descritas en la visualización derecha. Esta información 
+            se despliega al realizar hover sobre uno de los labels de atributo.
+          </p>
+          <p>
+            Esta decisión de diseño ayudará en <span class="bold">todas las tareas</span>.
+          </p>
+        </li>
+      </ul>
+  </body>
+</html>

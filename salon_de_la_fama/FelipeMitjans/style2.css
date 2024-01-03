@@ -1,0 +1,13 @@
+body {
+    width: 80%;
+    margin-left: 5%;
+}
+
+p {
+    text-indent: 1.5em;
+    text-align:justify;
+}
+
+.italics {
+    font-style:italic;
+}

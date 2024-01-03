@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Selecciones en D3.js I</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/fdo.css" id="theme">
+	</head>
+
+	<body>
+
+		<!-- ?print-pdf -->
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Selecciones y <i>join</i> de datos en D3.js</h1>
+					<h2 style="color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Selecciones en D3.js I</h1>
+					<h1 style="font-size: 1.6em; color: black;">Selecciones y <i>join</i> de datos en D3.js</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						Selecciones
+					</h3>
+
+					<br>
+
+          <p>Objeto de D3.js que se comporta como una colección de elementos HTML.</p>
+          
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						Selecciones
+					</h3>
+
+					<br>
+
+          <p>Objeto de D3.js que se comporta como una colección de elementos HTML.</p>
+          
+          <br>
+          <pre><code data-trim class="js">
+            d3.select()
+          </code></pre>
+
+          <pre><code data-trim class="js">
+            d3.selectAll()
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						<code>d3.select</code>
+					</h3>
+          
+          <br>
+          <pre data-id="code1"><code data-trim class="js">
+            const seleccion = d3.select("p");
+          </code></pre>
+
+          <pre><code data-trim class="js">
+            const seleccion = d3.select(".importante");
+          </code></pre>
+
+          <pre><code data-trim class="js">
+            const seleccion = d3.select("#principal");
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						<code>d3.select</code>
+					</h3>
+          
+          <br>
+          <pre data-id="code1"><code data-trim class="js">
+            const seleccion = d3.select("p");
+          </code></pre>
+
+          <pre data-id="code2"><code data-trim class="html" data-line-numbers="2">
+&lt;body&gt;
+  &lt;p&gt;Soy un p&aacute;rrafo.&lt;/p&gt;
+  &lt;p&gt;&iexcl;Yo tambi&eacute;n!&lt;/p&gt;
+  &lt;p&gt;&iexcl;Hey! &iexcl;Yo igual!&lt;/p&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						<code>d3.select</code>
+					</h3>
+          
+          <br>
+          <pre data-id="code1"><code data-trim class="js">
+            const seleccion = d3.select(".importante");
+          </code></pre>
+
+          <pre data-id="code2"><code data-trim class="html" data-line-numbers="3">
+&lt;body&gt;
+  &lt;p&gt;Soy un p&aacute;rrafo no importante.&lt;/p&gt;
+  &lt;p class=&quot;importante&quot;&gt;Yo si soy importante.&lt;/p&gt;
+  &lt;p class=&quot;importante&quot;&gt;Yo tambi&eacute;n soy importante.&lt;/p&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						<code>d3.select</code>
+					</h3>
+          
+          <br>
+          <pre data-id="code1"><code data-trim class="js">
+            const seleccion = d3.select("#principal");
+          </code></pre>
+
+          <pre data-id="code2"><code data-trim class="html" data-line-numbers="4">
+&lt;body&gt;
+  &lt;h1&gt;Soy un t&iacute;tulo.&lt;/h1&gt;
+  &lt;p&gt;Soy un p&aacute;rrafo.&lt;/p&gt;
+  &lt;p id=&quot;principal&quot;&gt;Pero yo soy el principal.&lt;/p&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+        </section>
+        
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						<code>d3.selectAll</code>
+					</h3>
+          
+          <br>
+          <pre data-id="code"><code data-trim class="js">
+            const seleccion = d3.selectAll("p");
+          </code></pre>
+
+          <pre data-id="code3"><code data-trim class="html" data-line-numbers="2-4">
+&lt;body&gt;
+  &lt;p&gt;Soy un p&aacute;rrafo.&lt;/p&gt;
+  &lt;p&gt;&iexcl;Yo tambi&eacute;n!&lt;/p&gt;
+  &lt;p&gt;&iexcl;Hey! &iexcl;Yo igual!&lt;/p&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						<code>d3.selectAll</code>
+					</h3>
+          
+          <br>
+          <pre data-id="code"><code data-trim class="js">
+            const seleccion = d3.selectAll(".importante");
+          </code></pre>
+
+          <pre data-id="code3"><code data-trim class="html" data-line-numbers="3-4">
+&lt;body&gt;
+  &lt;p&gt;Soy un p&aacute;rrafo no importante.&lt;/p&gt;
+  &lt;p class=&quot;importante&quot;&gt;Yo si soy importante.&lt;/p&gt;
+  &lt;p class=&quot;importante&quot;&gt;Yo tambi&eacute;n soy importante.&lt;/p&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						<code>d3.selectAll</code>
+					</h3>
+          
+          <br>
+          <pre data-id="code"><code data-trim class="js">
+            const seleccion = d3.selectAll("#principal");
+          </code></pre>
+
+          <!-- <p><code style="color:#f92696">seleccion</code> contendría a los elementos destacados:</p> -->
+
+          <pre data-id="code3"><code data-trim class="html" data-line-numbers="4">
+&lt;body&gt;
+  &lt;h1&gt;Soy un t&iacute;tulo.&lt;/h1&gt;
+  &lt;p&gt;Soy un p&aacute;rrafo.&lt;/p&gt;
+  &lt;p id=&quot;principal&quot;&gt;Pero yo soy el principal.&lt;/p&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						<code>seleccion.attr</code>
+					</h3>
+          
+          <br>
+          <pre data-id="code1"><code data-trim class="js">
+            seleccion.attr(atributo, valor)
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <p>Antes:</p>
+					<pre data-id="code-pre"><code data-trim class="html" data-line-numbers="2-4">
+&lt;body&gt;
+  &lt;p&gt;Soy un p&aacute;rrafo.&lt;/p&gt;
+  &lt;p&gt;&iexcl;Yo tambi&eacute;n!&lt;/p&gt;
+  &lt;p&gt;&iexcl;Hey! &iexcl;Yo igual!&lt;/p&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+          <br>
+          <pre data-id="code1"><code data-trim class="js">
+            const seleccion = d3.selectAll("p");
+            seleccion.attr("class", "parrafo");
+          </code></pre>
+
+          <br>
+          <p>Después:</p>
+					<pre data-id="code-pre"><code data-trim class="html" data-line-numbers="2-4">
+&lt;body&gt;
+  &lt;p class=&quot;parrafo&quot;&gt;Soy un p&aacute;rrafo.&lt;/p&gt;
+  &lt;p class=&quot;parrafo&quot;&gt;&iexcl;Yo tambi&eacute;n!&lt;/p&gt;
+  &lt;p class=&quot;parrafo&quot;&gt;&iexcl;Hey! &iexcl;Yo igual!&lt;/p&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						<code>seleccion.style</code>
+					</h3>
+          
+          <br>
+          <pre data-id="code2"><code data-trim class="js">
+            seleccion.style(propiedad, valor)
+          </code></pre>
+          
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <p>Antes:</p>
+					<pre data-id="code-pre"><code data-trim class="html" data-line-numbers="2-4">
+&lt;svg&gt;
+  &lt;rect&gt;&lt;/rect&gt;
+  &lt;rect&gt;&lt;/rect&gt;
+  &lt;rect&gt;&lt;/rect&gt;
+&lt;/svg&gt;
+          </code></pre>
+          
+          <br>
+          <pre data-id="code2"><code data-trim class="js">
+            const seleccion = d3.selectAll("rect");
+            seleccion.style("fill", "red");
+          </code></pre>
+
+          <br>
+          <p>Después:</p>
+					<pre data-id="code-pre"><code data-trim class="html" data-line-numbers="2-4">
+&lt;svg&gt;
+  &lt;rect style=&quot;fill: red&quot;&gt;&lt;/rect&gt;
+  &lt;rect style=&quot;fill: red&quot;&gt;&lt;/rect&gt;
+  &lt;rect style=&quot;fill: red&quot;&gt;&lt;/rect&gt;
+&lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+					<pre data-id="code-pre"><code data-trim class="html" data-line-numbers="2-4">
+&lt;svg&gt;
+  &lt;rect style=&quot;fill: red&quot;&gt;&lt;/rect&gt;
+  &lt;rect style=&quot;fill: red&quot;&gt;&lt;/rect&gt;
+  &lt;rect style=&quot;fill: red&quot;&gt;&lt;/rect&gt;
+&lt;/svg&gt;
+          </code></pre>
+          
+          <p>Es equivalente a:</p>
+
+          <pre data-id="code"><code data-trim class="html" data-line-numbers="2-4">
+            &lt;svg&gt;
+              &lt;rect fill=&quot;red&quot;&gt;&lt;/rect&gt;
+              &lt;rect fill=&quot;red&quot;&gt;&lt;/rect&gt;
+              &lt;rect fill=&quot;red&quot;&gt;&lt;/rect&gt;
+            &lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						<i>Method chaining</i>
+					</h3>
+          
+          <br>
+          <pre data-id="code3"><code data-trim class="js" data-line-numbers>
+            const seleccion = d3.selectAll("rect");
+            seleccion.attr("x", 10);
+            seleccion.attr("y", 50);
+            seleccion.style("fill", "red");
+          </code></pre>
+
+          <p>Equivalente a:</p>
+
+          <pre data-id="code1"><code data-trim class="js" data-line-numbers="|1-2|2-3|3-4">
+            d3.selectAll("rect")
+              .attr("x", 10)
+              .attr("y", 50)
+              .style("fill", "red");
+          </code></pre>
+
+
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						Constantes o funciones
+					</h3>
+          
+          <br>
+
+          <pre data-id="code5"><code data-trim class="js" data-line-numbers>
+            d3.selectAll("rect")
+              .attr("x", 10);
+          </code></pre>
+
+          <pre data-id="code2"><code data-trim class="js" data-line-numbers>
+            d3.selectAll("rect")
+              .attr("x", () => 10);
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						Constantes o funciones
+					</h3>
+          
+          <br>
+
+          <pre data-id="code2"><code data-trim class="js" data-line-numbers>
+            d3.selectAll("rect")
+              .attr("x", (d, i, all) => 100 * i);
+          </code></pre>
+
+          <pre data-id="code4"><code data-trim class="html" data-line-numbers="2-4">
+&lt;svg&gt;
+  &lt;rect x=&quot;0&quot;&gt;&lt;/rect&gt;
+  &lt;rect x=&quot;100&quot;&gt;&lt;/rect&gt;
+  &lt;rect x=&quot;200&quot;&gt;&lt;/rect&gt;
+&lt;/svg&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>
+						<code>seleccion.append</code>
+					</h3>
+          
+          <br>
+          <pre data-id="code2"><code data-trim class="js">
+            seleccion.append(tipo)
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <p>Antes:</p>
+					<pre data-id="code-pre"><code data-trim class="html" data-line-numbers="2-4">
+&lt;body&gt;
+  &lt;ul&gt;&lt;/ul&gt;
+  &lt;ul&gt;&lt;/ul&gt;
+  &lt;ul&gt;&lt;/ul&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+          <br>
+          <pre data-id="code2"><code data-trim class="js">
+            d3.selectAll("ul")
+              .append("li");
+          </code></pre>
+
+          <br>
+          <p>Después:</p>
+					<pre data-id="code-post"><code data-trim class="html" data-line-numbers="3,6,9">
+&lt;body&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">
+
+          <p>Antes:</p>
+					<pre data-id="code-pre"><code data-trim class="html" data-line-numbers="2-4">
+&lt;body&gt;
+  &lt;ul&gt;&lt;/ul&gt;
+  &lt;ul&gt;&lt;/ul&gt;
+  &lt;ul&gt;&lt;/ul&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+          <br>
+          <pre data-id="code2"><code data-trim class="js">
+            d3.selectAll("ul")
+              .append("li")
+              .text("Primer ítem");
+          </code></pre>
+
+          <br>
+          <p>Después:</p>
+					<pre data-id="code-post"><code data-trim class="html" data-line-numbers="3,6,9">
+&lt;body&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Primer ítem&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Primer ítem&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Primer ítem&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+        </section>
+
+        <section data-auto-animate data-auto-animate-unmatched="fade">          
+          <pre data-id="code23"><code data-trim class="js">
+            const seleccionDeListas = d3.selectAll("ul");
+            
+            seleccionDeListas.append("li")
+              .style("color", "red")
+              .text("Primer ítem");
+
+            seleccionDeListas.append("li")
+              .style("color", "green")
+              .text("Segundo ítem");
+          </code></pre>
+
+					<pre data-id="code-post2"><code data-trim class="html" data-line-numbers="3-4,7-8,11-12">
+&lt;body&gt;
+  &lt;ul&gt;
+    &lt;li style=&quot;color: red&quot;&gt;Primer ítem&lt;/li&gt;
+    &lt;li style=&quot;color: green&quot;&gt;Segundo ítem&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li style=&quot;color: red&quot;&gt;Primer ítem&lt;/li&gt;
+    &lt;li style=&quot;color: green&quot;&gt;Segundo ítem&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li style=&quot;color: red&quot;&gt;Primer ítem&lt;/li&gt;
+    &lt;li style=&quot;color: green&quot;&gt;Segundo ítem&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+          </code></pre>
+          
+        </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h1>Selecciones en D3.js I</h1>
+					<h1 style="font-size: 1.6em; color: black;">Selecciones y <i>join</i> de datos en D3.js</h1>
+					<h2 style="font-size: 1.3em; color: black;">IIC2026 </h2>
+					<br>
+					<h2 style="font-size: 1.3em;">¡Deja tus preguntas en los comentarios!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

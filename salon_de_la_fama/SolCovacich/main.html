@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+    <meta charset="utf-8">
+    <title>Capítulos de Avatar: la leyenda de Aang</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="main">
+      <h1>Capítulos de Avatar: la leyenda de Aang</h1>
+    <div id='context'>
+        <p>Esta herramienta interactiva muestra los capítulos de Avatar: la leyenda de Aang según su puntación en IMDb, además de los diálogos por personaje de cada capítulo.
+            Cada burbuja representa un capítulo. Estos están ordenados por fecha de emisión y sus colores representan su temporada o libro:
+            azul para <mark class="water">Agua (Water)</mark>, verde para <mark class="earth">Tierra (Earth)</mark> y rojo para <mark class="fire">Fuego (Fire)</mark>. Además, el tamaño de las burbujas simboliza la cantidad de diálogos
+            que hay en el capítulo.
+        </p>
+        <p>Los datos utilizados para esta herramienta fueron obtenidos desde <a href=https://www.kaggle.com/ekrembayar/avatar-the-last-air-bender>Kaggle</a> y de <a href=https://avatar.fandom.com/es/wiki/Lista_de_episodios_de_Avatar:_La_Leyenda_de_Aang>Avatar Wiki</a>.</p>
+        <h3>¿Cómo usar la herramienta?</h3>
+        <h4>¡Explora!</h4>
+            <p>Mueve el cursor sobre las burbujas para ver el número y nombre del capítulo.</p>
+        <h4>Selecciona un capítulo</h4>
+            <p>Haz click en una de las burbujas para seleccionar el capítulo. Podrás ver información sobre el capítulo en el panel superior de la derecha.
+                Puedes hacer click nuevamente para deseleccionarlo.
+            </p>
+            <p>Verás también el botón de <mark>Ver cantidad de diálogos</mark>.
+            Hazle click y en el panel inferior verás la cantidad de veces que hablaron los personajes principales. ¡Puedes hacer esto con varios capítulos al mismo tiempo!</p>
+            <p>El botón <mark>Ver totales/Ver porcentajes</mark> te permitirá alternar entre ver los diálogos totales y los porcentajes de cada personaje.
+            Selecciona dos o más capítulos y pruébalo.</p>
+        <h4>Encuentra un capítulo específico</h4>
+            <p>También puedes seleccionar un capítulo directamente por su nombre. Búscalo en el selector.</p>
+        <h4>Filtra por personaje</h4>
+            <p>Puedes seleccionar un personaje de la lista y la herramienta resaltará los capítulos en los que habla ese personaje.
+            Si quieres volver a la vista original, solo presiona el botón <mark>Restaurar</mark>.
+            </p>
+    </div>
+    <div id="full-tool">
+        <div id="filters">
+            <select id='select-char'>
+                <option class='default-option' selected value='None'> -- Selecciona un personaje -- </option>
+            </select>
+            <select id='select-chap'>
+                <option class='default-option' selected value='None'> -- Selecciona un capitulo -- </option>
+            </select>
+            <button id='reset'>Restaurar</button>
+        </div>
+        <div id='scatter'></div>
+    </div>
+    </div>
+
+    <div id='chapt-info' class='panel'>
+        <!-- <div id='title-section'>  -->
+            <img id='element-symbol' src='img/air.png'>
+            <p id='info-name' class='info'>Haz click en un capítulo para ver detalles</p>
+        <!-- </div> -->
+        <!-- <div id='info-section'> -->
+            <p id='info-num' class='info'></p>
+            <p id="info-descr" class="info"></p>
+            <p id='info-book' class='info'></p>
+            <p id='info-director' class='info'></p>
+            <p id='info-rating' class='info'></p>
+            <div class='button-container'>
+                <button id='add-button' style='visibility: hidden;'>Ver cantidad de dialogos</button>
+            </div>
+    </div>
+    <div id='bar-panel' class='panel'>
+        <button id='normal-button' style="visibility: visible;"> Ver totales</button>
+        <button id='empty-button' style='visibility: visible;'>Vaciar</button>
+        <div class='legend'></div>
+        <div id='bars'></div>
+    </div>
+        <!-- </div> -->
+
+    <script src='main.js' charset='utf-8'></script>
+  </body>
+</html>
